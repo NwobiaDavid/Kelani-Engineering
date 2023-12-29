@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="bg-transparent pt-6 p-4"
+      className="bg-transparent pt-10 p-4"
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className=" bg-purple-400 py-1 px-2 rounded-full ">
@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
           >
             CTA
           </Link>
-
+            <div className="border mx-2 h-10 opacity-50 "></div>
           <motion.button
             onClick={toggleNav}
             className="ml-4 bg-purple-300 text-purple-700 rounded-full p-2 flex items-center justify-center focus:outline-none"
