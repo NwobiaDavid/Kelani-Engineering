@@ -4,6 +4,9 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import CustomerSection from "./subsidiaryComponents/CustomerSection";
 import Features from "./subsidiaryComponents/Features";
 import SlideshowSection from "./subsidiaryComponents/SlideshowSection";
+import ParallexCards from "./subsidiaryComponents/ParallexCards";
+import ConnectSection from "./subsidiaryComponents/ConnectSection";
+import FooterSection from "./subsidiaryComponents/FooterSection";
 
 const SubsidiaryPageOne = () => {
   return (
@@ -27,7 +30,7 @@ const SubsidiaryPageOne = () => {
             <div className="w-[60%] text-center flex flex-col items-center justify-center uppercase ">
                 <p className="text-white py-3 opacity-75 ">Kelani Consulting and Talent Management</p>
                 <h1 className="text-white font-semibold text-7xl mb-[4.7rem] ">enhance organizational performance </h1>
-                <div className=" py-2 w-fit flex justify-center items-center rounded-full px-5 bg-purple-300 ">
+                <div className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-5 bg-purple-300 ">
                     <Link to={"#"} className="" >GET CONNECTED </Link><IoIosArrowRoundForward size={30} />
                 </div>
             </div>
@@ -37,6 +40,12 @@ const SubsidiaryPageOne = () => {
       <CustomerSection />
       <Features/>
       <SlideshowSection/>
+      <ParallexCards />
+      <div className="bg-cover bg-no-repeat " style={{ background: `url(/assets/images/subsidiaryPagesImages/props/gggrain.svg) ` }}>
+        
+        <ConnectSection/>
+        <FooterSection />
+      </div>
 
     </div>
   );
