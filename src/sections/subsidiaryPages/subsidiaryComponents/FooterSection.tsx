@@ -37,7 +37,7 @@ const FooterSection: React.FC  = () => {
                 <input className='border-b  w-full mb-2 focus-within:border-black hover:border-black duration-150 outline-none p-3' placeholder='Name' type="text" />
                 <input className='border-b w-full mb-2 focus-within:border-black hover:border-black duration-150  outline-none p-3' placeholder='Phone Number' type="text" />
                 <input className='border-b  w-full mb-2 focus-within:border-black hover:border-black duration-150 outline-none p-3' placeholder='Selection' type="text" />
-                <textarea className='border-b w-full focus-within:border-black  hover:border-black outline-none p-3' placeholder='Message' name="" id="" cols={30} rows={10}></textarea>
+                <textarea className='border-b resize-none w-full focus-within:border-black  hover:border-black outline-none p-3' placeholder='Message' name="" id="" cols={30} rows={10}></textarea>
                 <div className="flex items-start justify-start w-full"><button className='text-left p-2 px-7 hover:bg-black hover:text-white duration-200 mt-5 outline-none border border-black rounded-full w-fit '>Send</button></div>
             </form>
         </div>
