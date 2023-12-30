@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="bg-transparent pt-10 p-4"
+      className="bg-transparent pt-10 p-4 z-30"
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className=" bg-purple-400 py-1 px-2 rounded-full ">
@@ -66,22 +66,23 @@ const Navbar: React.FC = () => {
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: isNavOpen ? "auto" : 0, opacity: isNavOpen ? 1 : 0 }}
         transition={{ duration: 0.3 }}
+        
       >
         <Link
           to="#"
-          className=" py-2 px-4 mx-2 block md:inline-block"
+          className=" py-2 text-white z-30 px-4 mx-2 block md:inline-block"
         >
           Home
         </Link>
         <Link
           to="#"
-          className="py-2 px-4 mx-2 block md:inline-block"
+          className="py-2 text-white z-30 px-4 mx-2 block md:inline-block"
         >
           About
         </Link>
         <Link
           to="#"
-          className=" py-2 px-4 mx-2 block md:inline-block"
+          className=" py-2 text-white z-30 px-4 mx-2 block md:inline-block"
         >
           Services
         </Link>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "./subsidiaryComponents/Navbar";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import CustomerSection from "./subsidiaryComponents/CustomerSection";
 
 const SubsidiaryPageOne = () => {
   return (
@@ -30,6 +31,8 @@ const SubsidiaryPageOne = () => {
             </div>
         </div>
       </div>
+
+      <CustomerSection />
 
     </div>
   );
