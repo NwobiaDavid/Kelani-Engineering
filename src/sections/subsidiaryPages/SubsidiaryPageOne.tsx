@@ -3,6 +3,7 @@ import Navbar from "./subsidiaryComponents/Navbar";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import CustomerSection from "./subsidiaryComponents/CustomerSection";
 import Features from "./subsidiaryComponents/Features";
+import SlideshowSection from "./subsidiaryComponents/SlideshowSection";
 
 const SubsidiaryPageOne = () => {
   return (
@@ -35,6 +36,7 @@ const SubsidiaryPageOne = () => {
 
       <CustomerSection />
       <Features/>
+      <SlideshowSection/>
 
     </div>
   );
