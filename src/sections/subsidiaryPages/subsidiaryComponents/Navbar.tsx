@@ -15,9 +15,9 @@ const Navbar: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="bg-transparent pt-10 p-4 z-30"
+      className="bg-transparent pt-5 lg:pt-10 p-4 z-30"
     >
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="lg:container lg:mx-auto flex justify-between items-center">
         <div className=" bg-purple-400 py-1 px-2 rounded-full ">
           <h1 className="text-xl text-transparent font-bold">Logo</h1>
         </div>
