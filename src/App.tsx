@@ -28,22 +28,22 @@ function App() {
 
   return (
     <>
-      // <Hero />
-      // <AboutCompany />
-      // <SubsidiaryShowcase />
-      // <SubsidiaryShowcase />
-      // <SubsidiaryShowcase />
-      // <Footer />
+       <Hero />
+       <AboutCompany />
+       <SubsidiaryShowcase />
+       <SubsidiaryShowcase />
+       <SubsidiaryShowcase />
+       <Footer />
       {/* <NavBar /> */}
       {/* <AboutCompany   /> */}
       {/* <Footer /> */}
       {/* <SubsidiaryShowcase /> */}
 
-      <Router>
+      {/* <Router>
       <Routes>
         <Route path="/"  element={<SubsidiaryPageOne/>} />
       </Routes>
-    </Router>
+    </Router> */}
     </>
   );
 }
