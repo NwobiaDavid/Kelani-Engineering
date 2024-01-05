@@ -138,6 +138,9 @@ const SlideshowSection: React.FC  = () => {
   return (
     <>
     <div className='lg:h-screen h-[1350px]  w-full px-2 lg:px-4 bg-black text-white '>
+            <div className='w-[100vw]  '>
+                <img className='h-[10rem] lg:h-[13rem]  w-full object-fill ' src='assets/images/subsidiaryPagesImages/props/Section[Gradient] (1).png' alt="" />
+            </div>
       
         
         <Carousel setApi={setApi} className="w-full pt-20 h-full overflow-x-hidden">
