@@ -46,7 +46,7 @@ const Features: React.FC = () => {
                     <div key={index} className='flex py-4 w-full md:w-[270px] mb-10 flex-col justify-center items-center'>
                         <img src={item.img} className='pb-4 md:p-0 w-[10rem] md:w-fit ' alt={item.head} />
                     <img src={item.img2} className='w-[100vw] lg:hidden' alt="" />
-                        <h1 className='text-purple-400 px-4 text-xl_2 font-semibold opacity-90 md:text-2xl mt-3 mb-6 '>{item.head}</h1>
+                        <h1 className='text-purple-400 px-4 text-xl_2 font-semibold opacity-90 md:text-2xl mt-3 mb-3 lg:mb-6 '>{item.head}</h1>
                         <p className='text-sm opacity-80 px-4 font-medium '>{item.desc}</p>
                     </div>
                 </div>

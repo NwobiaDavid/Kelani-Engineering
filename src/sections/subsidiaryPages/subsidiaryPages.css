@@ -11,8 +11,10 @@
   }
   
   /* Desktops and laptops  */
-  @media only screen and (min-width: 1224px) {
-    /* Styles */
+  @media only screen and (min-width: 1440px) {
+    .h123{
+      font-size: 15px;
+    }
   }
 
 /* features page */
