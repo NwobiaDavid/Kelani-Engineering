@@ -39,7 +39,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Hero />} />
-        {/* <Route path="/"  element={<SubsidiaryPageOne/>} /> */}
+        <Route path="/sub"  element={<SubsidiaryPageOne/>} />
       </Routes>
     </Router>
     </>

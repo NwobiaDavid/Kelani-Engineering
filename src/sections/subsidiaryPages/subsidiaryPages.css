@@ -1,3 +1,41 @@
+/* body {
+  height: 100vh;
+  margin: 0;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #333333 #ffffff;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 600px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #333333;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 10px;
+} */
+
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+/* ::-webkit-scrollbar-track{
+  background: red;
+} */
+/* ::-webkit-scrollbar-thumb { 
+  background: rgb(255 255 255 / 10%);
+  border-radius: 10px;
+} */
+/* ::-webkit-scrollbar-thumb:hover { 
+  background: rgb(255 255 255 / 15%);
+} */
+
 
 
 /* Smartphones (portrait) */
