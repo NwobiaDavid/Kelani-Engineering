@@ -35,7 +35,7 @@ const Features: React.FC = () => {
         },
     ]
   return (
-    <div className='bg-black lg:h-fit text-white'>
+    <div className='z-10 lg:h-fit text-white'>
         <div className='flex flex-col text-center justify-center items-center h-full '>
             <div className='flex justify-center lg:mt-auto mt-20 items-center mb-10'>
                 <h1 className='text-2_5xl font-semibold opacity-85 lg:text-4xl w-[90%] lg:w-[55%] '>Elevate Excellence: Strategize, Implement, and Optimize Engineering Dynamics at Scale for Unparalleled Industry Advancement</h1>
@@ -54,6 +54,7 @@ const Features: React.FC = () => {
             </div>
             
         </div>
+        {/* <div className="w-full opacity-20 h-[100px]  bg-gradient-to-b from-black via-purple-900 to-purple-800"> </div> */}
     </div>
   )
 }

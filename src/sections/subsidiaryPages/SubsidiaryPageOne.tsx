@@ -44,7 +44,7 @@ const SubsidiaryPageOne = () => {
   return (
     <div>
 
-      <div className="relative overflow-x-hidden bg-gray-300 ">
+      <div className="relative overflow-x-hidden bg-black ">
       
       
            {/* <svg
@@ -93,9 +93,13 @@ const SubsidiaryPageOne = () => {
             </div>
           </div>
           <CustomerSection />
-          <Features/>
-          {/* <SlideshowSection/> */}
-          <SlideshowSection2/>
+          <div className="relative  " >
+            <Features/>
+            {/* <SlideshowSection/> */}
+            <div className=" absolute top-[10rem]  w-full bg-gradient-to-b from-black via-purple-700  to-black opacity-15 h-[800px] ">
+            </div>
+            <SlideshowSection2/>
+          </div>
           <ParallexCards />
           <div className="bg-cover bg-no-repeat " style={{ background: `url(/assets/images/subsidiaryPagesImages/props/gggrain.svg) ` }}>
       

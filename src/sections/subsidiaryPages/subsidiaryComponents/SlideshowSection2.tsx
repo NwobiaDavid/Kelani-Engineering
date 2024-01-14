@@ -117,6 +117,11 @@ export default function SlideshowSection2() {
     const [display, setDisplay] = useState(0);
     const [showCard, setShowCard] = useState(0);
 
+    const [hover, setHover]= useState(false);
+    const [hover2, setHover2]= useState(false);
+
+
+
     const handleHeaderClick = (index: number) => {
         setDisplay(index);
         setShowCard(index);
@@ -124,12 +129,12 @@ export default function SlideshowSection2() {
 
     const handleNext = () => {
         setDisplay((prevDisplay) => (prevDisplay + 1) % content.length);
-        setShowCard((prevDisplay) => (prevDisplay + 1) % content.length)
+        // setShowCard((prevDisplay) => (prevDisplay + 1) % content.length)
     };
 
     const handlePrevious = () => {
         setDisplay((prevDisplay) => (prevDisplay - 1 + content.length) % content.length);
-        setShowCard((prevDisplay) => (prevDisplay - 1 + content.length) % content.length)
+        // setShowCard((prevDisplay) => (prevDisplay - 1 + content.length) % content.length)
     };
 
     const buttonRightVariants = {
@@ -139,19 +144,21 @@ export default function SlideshowSection2() {
 
     const buttonLeftVariants = {
         initial: { x: 0 },
-        hover: { x: [0, -40, 0, 20, 0], y: [0, 0, 0,30,0, 0, 0], opacity: [1, 0, 0, 0, 1], transition: { duration: 0.4 }  },
+        hover: { x: [ -40], opacity: [0], transition: { duration: 0.4 }  },
+        exit: { }
     };
 
     const containerVariants = {
-        initial: { opacity: 0, x: -50 },
+        initial: { opacity: 0, x: 50 },
         animate: { opacity: 1, x: 0 },
-        exit: { opacity: 0, x: 50 },
+        exit: { opacity: 0, x: -50 },
     };
 
     return (
 
-        <div className="lg:h-[1100px] h-[1350px] w-full lg:px-4 bg-black text-white " >
-            <div className='w-full mb-6 flex flex-col justify-center pt-24 items-center '>
+        <div className="lg:h-[1100px] h-[1350px] w-full z-30 text-white " >
+             {/* <div className="w-full h-[100px] bg-gradient-to-t opacity-20 from-black via-purple-900 to-purple-800"> </div> */}
+            <div className='w-full mb-6 flex flex-col lg:px-4 justify-center pt-10 items-center '>
 
                 <div className=' w-[65%] flex justify-center items-center ' >
                     <div className='flex  w-full lg:flex-row flex-col items-center mb-10 justify-center lg:justify-between '>
@@ -163,19 +170,35 @@ export default function SlideshowSection2() {
                             <h1 className='text-3xl lg:text-5xl my-5 opacity-90 font-semibold '>Roadmap for Industry Advancement</h1>
                         </div>
 
-                        <div className='flex mt-3 lg:mt-0 relative items-center justify-center lg:justify-between lg:w-[10%] md:w-[20%] w-full '>
+                        <div className='flex mt-3 lg:mt-0 relative items-center justify-center lg:justify-between lg:w-[15%] md:w-[20%] w-full '>
 
-                            <div className=' hover:bg-purple-400 rounded-full text-2xl  flex justify-center items-center border h-[50px] w-[50px] ' onClick={handlePrevious} >
-                                <motion.button variants={buttonLeftVariants} initial="initial" whileHover="hover" className="text-2xl flex justify-center items-center w-full h-full "  >
-                                    <BsArrowLeft />
+                        <motion.div className=' flex justify-center items-center h-[60px] w-[100px]  ' onClick={handlePrevious} >
+                                <motion.button onHoverStart={() => setHover((prev) => !prev)}  onHoverEnd={() => setHover((prev) => !prev)}  className=" overflow-hidden text-2xl rounded-full   relative border flex duration-200  hover:bg-purple-400 items-center w-[60px] h-full " >
+                                    <motion.div whileHover={{ x: hover ? -50 : 0, opacity: hover ? 1 : 0 }} transition={{  duration: 0.2  }}  className="flex justify-between items-center h-full w-[100px] absolute "  style={{ pointerEvents: hover ? 'auto' : 'none' }} >
+                                        <span className={hover? " opacity-0 " : " p-3 opacity-100 "}>
+                                            <BsArrowLeft />
+                                        </span>
+                                        <span className={hover ? "opacity-100 p-3  " : " opacity-0  "}>
+                                            <BsArrowLeft />
+                                        </span>
+                                    </motion.div>
                                 </motion.button>
-                            </div>
+                            </motion.div>
+
                             <div className="lg:hidden px-3 flex" >
                                 <h1>{display + 1}/{content.length}</h1>
                             </div>
-                            <motion.div className='hover:bg-purple-400  rounded-full  border flex justify-center items-center h-[50px] w-[50px]  ' onClick={handleNext} >
-                                <motion.button variants={buttonRightVariants} initial="initial" whileHover="hover" className="text-2xl flex justify-center items-center w-full h-full " >
-                                    <BsArrowRight />
+
+                            <motion.div className='  flex justify-center items-center h-[60px] w-[100px]  ' onClick={handleNext} >
+                                <motion.button onHoverStart={() => setHover2((prev) => !prev)}  onHoverEnd={() => setHover2((prev) => !prev)}  className=" overflow-hidden text-2xl rounded-full justify-end   relative border flex duration-200  hover:bg-purple-400 items-center w-[60px] h-full " >
+                                    <motion.div whileHover={{ x: hover2 ? 50 : 0, opacity: hover2 ? 1 : 0 }} transition={{  duration: 0.2  }}  className="flex justify-between items-center h-full w-[100px] absolute "  style={{ pointerEvents: hover2 ? 'auto' : 'none' }} >
+                                        <span className={hover2 ? "opacity-100 p-3  " : " opacity-0  "}>
+                                            <BsArrowRight />
+                                        </span>
+                                        <span className={hover2? " opacity-0 " : " p-3 opacity-100 "}>
+                                            <BsArrowRight />
+                                        </span>
+                                    </motion.div>
                                 </motion.button>
                             </motion.div>
 
@@ -204,7 +227,7 @@ export default function SlideshowSection2() {
                                 >
                                     <img
                                         className=' w-full -left-8 absolute '
-                                        src='assets/images/subsidiaryPagesImages/props/Light dash.png'
+                                        src='assets/images/subsidiaryPagesImages/props/svgviewer-output.svg'
                                         alt=''
                                     />
                                 </motion.div>
@@ -222,12 +245,12 @@ export default function SlideshowSection2() {
 
                     <motion.div
                         key={display}
-                        className="w-full lg:w-[70%] h-full flex lg:flex-row flex-col"
+                        className="w-full lg:w-[70%] z-50 h-full flex lg:flex-row flex-col"
                         variants={containerVariants}
                         initial="initial"
                         animate="animate"
                         exit="exit"
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: 0.2 }}
                     >
                         <div>
                             <img src={content[display].img} alt={`Slide ${display + 1}`} />
