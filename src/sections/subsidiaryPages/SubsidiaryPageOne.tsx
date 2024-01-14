@@ -10,7 +10,7 @@ import FooterSection from "./subsidiaryComponents/FooterSection";
 
 const SubsidiaryPageOne = () => {
   return (
-    <div className="relative overflow-x-hidden bg-gray-300 h-screen">
+    <div className="relative overflow-x-hidden bg-gray-300 ">
 
       <div className="absolute inset-0 bg-cover bg-center">
         <img
