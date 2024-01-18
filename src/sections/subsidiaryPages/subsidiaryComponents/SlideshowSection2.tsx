@@ -250,7 +250,7 @@ export default function SlideshowSection2() {
                         initial="initial"
                         animate="animate"
                         exit="exit"
-                        transition={{ duration: 0.2 }}
+                        transition={{ duration: 0.4 }}
                     >
                         <div>
                             <img src={content[display].img} alt={`Slide ${display + 1}`} />
