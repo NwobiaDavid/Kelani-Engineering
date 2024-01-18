@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 
 const FooterSection: React.FC  = () => {
   return (
-  <div className='lg:h-[700px] h-[1000px] flex justify-center bg-inherit items-center '>
+  <div className='lg:h-[700px] z-50 relative h-[1000px] flex justify-center bg-inherit items-center '>
 
       <div className=' m-5 lg:w-full h-[95%] bg-white flex flex-col lg:flex-row rounded-2xl border' >
         <div className='w-full lg:w-[50%] flex flex-col items-center justify-center text-center'>

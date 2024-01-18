@@ -44,7 +44,7 @@ const contents:Contents[] = [
 ]
 
   return (
-    <div className=" h-[1500px] lg:h-[800px]  pt-10 flex-col bg-black text-white w-full flex">
+    <div className=" h-[1500px] lg:h-[800px] z-50 relative pt-10 flex-col text-white w-full flex">
       {/* <motion.div className="flex">
         <ParallaxProvider>
           <Parallax

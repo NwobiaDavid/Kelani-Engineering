@@ -1,7 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 
 export default function CustomScrollbar() {
-  const { scrollY, scrollYProgress } = useScroll();
+  const { scrollY } = useScroll();
   const yRange = useTransform(scrollY, [0, document.body.scrollHeight - window.innerHeight], [0, 400]);
   // const imageBottom = useTransform(scrollY, [0, document.body.scrollHeight - window.innerHeight], [0, -400]);
 

@@ -175,10 +175,10 @@ export default function SlideshowSection2() {
                         <motion.div className=' flex justify-center items-center h-[60px] w-[100px]  ' onClick={handlePrevious} >
                                 <motion.button onHoverStart={() => setHover((prev) => !prev)}  onHoverEnd={() => setHover((prev) => !prev)}  className=" overflow-hidden text-2xl rounded-full   relative border flex duration-200  hover:bg-purple-400 items-center w-[60px] h-full " >
                                     <motion.div whileHover={{ x: hover ? -50 : 0, opacity: hover ? 1 : 0 }} transition={{  duration: 0.2  }}  className="flex justify-between items-center h-full w-[100px] absolute "  style={{ pointerEvents: hover ? 'auto' : 'none' }} >
-                                        <span className={hover? " opacity-0 " : " p-3 opacity-100 "}>
+                                        <span className={hover? " opacity-0 " : " absolute  p-3 opacity-100 "}>
                                             <BsArrowLeft />
                                         </span>
-                                        <span className={hover ? "opacity-100 p-3  " : " opacity-0  "}>
+                                        <span className={hover ? "opacity-100 p-3 pl-6 " : " opacity-0 pr-6 "}>
                                             <BsArrowLeft />
                                         </span>
                                     </motion.div>
@@ -192,10 +192,10 @@ export default function SlideshowSection2() {
                             <motion.div className='  flex justify-center items-center h-[60px] w-[100px]  ' onClick={handleNext} >
                                 <motion.button onHoverStart={() => setHover2((prev) => !prev)}  onHoverEnd={() => setHover2((prev) => !prev)}  className=" overflow-hidden text-2xl rounded-full justify-end   relative border flex duration-200  hover:bg-purple-400 items-center w-[60px] h-full " >
                                     <motion.div whileHover={{ x: hover2 ? 50 : 0, opacity: hover2 ? 1 : 0 }} transition={{  duration: 0.2  }}  className="flex justify-between items-center h-full w-[100px] absolute "  style={{ pointerEvents: hover2 ? 'auto' : 'none' }} >
-                                        <span className={hover2 ? "opacity-100 p-3  " : " opacity-0  "}>
+                                        <span className={hover2 ? "opacity-100 p-3 absolute   " : " opacity-0  "}>
                                             <BsArrowRight />
                                         </span>
-                                        <span className={hover2? " opacity-0 " : " p-3 opacity-100 "}>
+                                        <span className={hover2? " opacity-0  pr-6 " : " p-3 opacity-100 pl-6 "}>
                                             <BsArrowRight />
                                         </span>
                                     </motion.div>
