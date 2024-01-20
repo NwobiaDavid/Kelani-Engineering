@@ -1,18 +1,40 @@
+import { useEffect, useRef } from "react";
 import StatisticCard from "../components/StatisticCard";
-import "../styles/about-company.css"
+import "../styles/about-company.css";
+import { motion, useScroll, useTransform } from "framer-motion";
+import useScrollPosition from "../hooks/useScrollPosition";
 
 const AboutCompany = () => {
-  return (
-    <section className="statistics pt-[40px] lg:pt-[96px] page-container">
-      <figure>
-      <img
-        src="/assets/images/about-company.png"
-        loading="lazy"
-        id="w-node-_5d22fc73-eda1-0598-2d4b-c941630b3825-3378c76e"
-        alt=""
-        className=" statistics-image lg:max-h-[609px] xl:max-h-[609px]"
-      />
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"],
+  });
 
+  const sectionDecimalScroll = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
+
+  return (
+    <motion.section
+      ref={container}
+      // initial={{ opacity: 0.5, scale: 0.8 }}
+      animate={{
+        opacity: sectionDecimalScroll.get() > 0 ? 1 : 0,
+        scale: sectionDecimalScroll.get() > 0 ? 1 : 0.9,
+        y: sectionDecimalScroll.get() > 0 ? 0 : 50,
+        transition: { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] },
+      }}
+      className="statistics pt-[40px] lg:pt-[96px] page-container"
+    >
+      <figure className="overflow-hidden rounded-[10px]">
+        <motion.img
+          style={{ scale }}
+          src="/assets/images/about-company.png"
+          loading="lazy"
+          id="w-node-_5d22fc73-eda1-0598-2d4b-c941630b3825-3378c76e"
+          alt=""
+          className=" statistics-image lg:max-h-[609px] xl:max-h-[609px]"
+        />
       </figure>
       <div
         id="w-node-_6779c508-7cdc-c836-8a25-982507e523f5-3378c76e"
@@ -38,12 +60,12 @@ const AboutCompany = () => {
           </p>
         </div>
         <div className="div-block-5">
-          <StatisticCard />
-          <StatisticCard />
-          <StatisticCard />
+          <StatisticCard index={1} />
+          <StatisticCard index={2} />
+          <StatisticCard index={3} />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

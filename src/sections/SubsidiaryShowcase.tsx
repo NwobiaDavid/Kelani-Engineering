@@ -1,13 +1,15 @@
-import SpotlightCard from "../components/SpotlightCard";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Dispatch, RefObject, SetStateAction, useEffect, useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import TextGroup from "../components/TextGroup";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import Container from "../components/Container";
-import { useState } from "react";
+import SpotlightCard from "../components/SpotlightCard";
+import TextGroup from "../components/TextGroup";
 import useScreenSize from "../hooks/useScreenSize";
+import { useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 function SlideNextButton() {
   const swiper = useSwiper();
@@ -55,163 +57,214 @@ function SlidePrevButton() {
     </button>
   );
 }
-const SubsidiaryShowcase = () => {
-  const { width, height } = useScreenSize();
+const SubsidiaryShowcase = ({
+  type,
+  setScrollTops,
+}: {
+  type: string;
+  setScrollTops: Dispatch<
+    SetStateAction<{ industrials: number; power: number; consulting: number }>
+  >;
+}) => {
+  const { width } = useScreenSize();
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+  const sectionDecimalScroll = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      switch (type) {
+        case "industrials":
+          setScrollTops((prev) => ({
+            ...prev,
+            industrials: containerRef.current?.offsetTop - window.innerHeight,
+          }));
+          break;
+        case "power":
+          setScrollTops((prev) => ({
+            ...prev,
+            power: containerRef.current?.offsetTop - window.innerHeight,
+          }));
+          break;
+        case "consulting":
+          setScrollTops((prev) => ({
+            ...prev,
+            consulting: containerRef.current?.offsetTop - window.innerHeight,
+          }));
+          break;
+      }
+    }
+  }, [containerRef.current]);
   return (
-    <Container className="pb-[40px]">
-      <figure className="w-full h-[268px] relative">
-        <div className="top-0 left-0 absolute">
-          <h1 className="bg-[#FEFEFE] text-[26px] leading-[38.9px] md:text-[45px] lg:text-[43.2px] md:leading-[50.5px] px-[20px] lg:px-[24px] pt-[4px] lg:pt-[8px] pb-[8px] lg:pb-[16px] relative rounded-br-[23px] lg:rounded-br-[32px] font-semibold w-fit">
-            Kelani Engineering
-            <img
-              src="/assets/images/curved-fill-tl.svg"
-              className="w-[26px] h-[26px] md:w-[36px] md:h-[36px] absolute -right-[26px] md:-right-[36px] rotate-90 -top-[1px] md:top-0"
-            />
-            <img
-              src="/assets/images/curved-fill-tl.svg"
-              className="w-[26px] h-[26px] md:w-[36px] md:h-[36px] absolute left-0 rotate-90 -bottom-[26px] md:-bottom-[36px]"
-            />
-          </h1>
-        </div>
-        <img
-          className="w-full object-cover h-full rounded-tr-[24px] rounded-bl-[28px]  lg:rounded-tr-[28px] lg:rounded-bl-[32px]"
-          src="/assets/images/about-company.png"
-        />
-        <div className="bottom-0 -right-[1px] md:right-0 absolute">
-          <div className="relative w-[48px] h-[48px] rounded-tl-[32px] bg-[#FEFEFE] flex items-center justify-center p-[8px]">
-            <img
-              src="/assets/images/curved-fill-tl.svg"
-              className="w-[24px] h-[24px] absolute -right-0 -top-[23px] rotate-[270deg]"
-            />
-            <img
-              src="/assets/images/curved-fill-tl.svg"
-              className="w-[24px] h-[24px] absolute -left-[23px] rotate-[270deg] -bottom-[0px]"
-            />
-            <img src="/assets/images/icon-subsidiary-link.svg" className="" />
+    <Container className="pb-[40px]  bg-[#FEFEFE]">
+      <section className={type} ref={containerRef}>
+        <motion.figure
+          animate={{
+            opacity: sectionDecimalScroll.get() > 0 ? 1 : 0,
+            scale: sectionDecimalScroll.get() > 0 ? 1 : 0.9,
+            y: sectionDecimalScroll.get() > 0 ? 0 : 50,
+            transition: { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] },
+          }}
+          className="w-full h-[268px] relative overflow-hidden rounded-tr-[24px] rounded-bl-[28px]  lg:rounded-tr-[28px] lg:rounded-bl-[32px]"
+        >
+          <div className="top-0 left-0 absolute z-10">
+            <h1 className="bg-[#FEFEFE] text-[26px] leading-[38.9px] md:text-[45px] lg:text-[43.2px] md:leading-[50.5px] px-[20px] lg:px-[24px] pt-[4px] lg:pt-[8px] pb-[8px] lg:pb-[16px] relative rounded-br-[23px] lg:rounded-br-[32px] font-semibold w-fit">
+              Kelani Engineering
+              <img
+                src="/assets/images/curved-fill-tl.svg"
+                className="w-[26px] h-[26px] md:w-[36px] md:h-[36px] absolute -right-[26px] md:-right-[36px] rotate-90 -top-[1px] md:top-0"
+              />
+              <img
+                src="/assets/images/curved-fill-tl.svg"
+                className="w-[26px] h-[26px] md:w-[36px] md:h-[36px] absolute left-0 rotate-90 -bottom-[26px] md:-bottom-[36px]"
+              />
+            </h1>
           </div>
-        </div>
-      </figure>
-      <div className="mt-[20px] md:mt-[40px] flex flex-col lg:grid grid-cols-[55%_45%] border-[#D2DADF] border-t">
-        <div className="pt-[20px] md:pt-[40px]  border-[#D2DADF] lg:border-r  pb-0">
-          <div className="lg:pr-[56px] pb-[20px] lg:pb-[40px]">
-            <p className="text-[21px] leading-[31.7px] tracking-[-0.432px] lg:text-[32px] lg:leading-[36.24px] tracking--[0.432px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              obcaecati mollitia animi quia recusandae tempora dolores nihil,
-              fugit provident nostrum at optio quisquam ut facere magnam
-              doloribus incidunt soluta vel.
-            </p>
-            <div className="flex gap-[23px] mt-[23px] lg:mt-[40px] ">
-              <button className="flex items-center py-[12px] px-[24px] bg-[#FF9A53] text-[17.28px] text-white rounded-full leading-[26px]">
-                Know More
-              </button>
-              <button className="py-[12px] px-[24px] text-[17.28px] text-[#222222] border border-[#D2DADF] rounded-full leading-[26px]">
-                Contact Us
-              </button>
+          <motion.img
+            style={{ scale }}
+            className="w-full object-cover h-full rounded-tr-[24px] rounded-bl-[28px]  lg:rounded-tr-[28px] lg:rounded-bl-[32px] "
+            src="/assets/images/about-company.png"
+          />
+          <div className="bottom-0 -right-[1px] md:right-0 absolute">
+            <div className="relative w-[48px] h-[48px] rounded-tl-[32px] bg-[#FEFEFE] flex items-center justify-center p-[8px]">
+              <img
+                src="/assets/images/curved-fill-tl.svg"
+                className="w-[24px] h-[24px] absolute -right-0 -top-[23px] rotate-[270deg]"
+              />
+              <img
+                src="/assets/images/curved-fill-tl.svg"
+                className="w-[24px] h-[24px] absolute -left-[23px] rotate-[270deg] -bottom-[0px]"
+              />
+              <img src="/assets/images/icon-subsidiary-link.svg" className="" />
             </div>
           </div>
-          <div className="lg:hidden pb-[20px]">
-            <TextGroup
-              title="Outsourcing"
-              description="The business is also expanding its plastics operation to go into
-        recycling of plastics and repurposing projects like plastics to diesel
-        and other petrochemical products. This should also link to a form
-        reaching out for partnerships"
-            />
-            <TextGroup
-              title="Outsourcing"
-              description="The business is also expanding its plastics operation to go into
-        recycling of plastics and repurposing projects like plastics to diesel
-        and other petrochemical products. This should also link to a form
-        reaching out for partnerships"
-            />
-            <TextGroup
-              title="Outsourcing"
-              description="The business is also expanding its plastics operation to go into
-        recycling of plastics and repurposing projects like plastics to diesel
-        and other petrochemical products. This should also link to a form
-        reaching out for partnerships"
-            />
-          </div>
-          <div className="border-t border-[#D2DADF] lg:pr-[56px] pt-[40px] font-semibold pb-[129px] relative">
-            <h3 className="text-[14px] mb-[14px] lg:mb-[20px] font-semibold">
-              SPOTLIGHT
-            </h3>
-            <Swiper
-              className="static overflow-y-visible px-[2px]"
-              slidesPerView={width > 768 ? 2 : 1}
-              spaceBetween={23}
-            >
-              <SwiperSlide>
-                <SpotlightCard
-                  image="/assets/images/spotlight-image.png"
-                  description="Credit & financing facilities for businesses to work with our agreed partners for "
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SpotlightCard
-                  image="/assets/images/spotlight-image.png"
-                  description="Credit & financing facilities for businesses to work with our agreed partners for "
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SpotlightCard
-                  image="/assets/images/spotlight-image.png"
-                  description="Credit & financing facilities for businesses to work with our agreed partners for "
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SpotlightCard
-                  image="/assets/images/spotlight-image.png"
-                  description="Credit & financing facilities for businesses to work with our agreed partners for "
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SpotlightCard
-                  image="/assets/images/spotlight-image.png"
-                  description="Credit & financing facilities for businesses to work with our agreed partners for "
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SpotlightCard
-                  image="/assets/images/spotlight-image.png"
-                  description="Credit & financing facilities for businesses to work with our agreed partners for "
-                />
-              </SwiperSlide>
-              <div className="absolute bottom-[23px] flex items-center gap-[40px] z-10 w-full lg:pr-[46px]">
-                <p>01 - 05</p>
-                <div className="flex-grow h-[1px] bg-[#D2DADF]"></div>
-                <div className="gap-[9px] flex">
-                  <SlidePrevButton />
-                  <SlideNextButton />
-                </div>
+        </motion.figure>
+        <div className="mt-[20px] md:mt-[40px] flex flex-col lg:grid grid-cols-[55%_45%] border-[#D2DADF] border-t">
+          <div className="pt-[20px] md:pt-[40px]  border-[#D2DADF] lg:border-r  pb-0">
+            <div className="lg:pr-[56px] pb-[20px] lg:pb-[40px]">
+              <p className="text-[21px] leading-[31.7px] tracking-[-0.432px] lg:text-[32px] lg:leading-[36.24px] tracking--[0.432px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                obcaecati mollitia animi quia recusandae tempora dolores nihil,
+                fugit provident nostrum at optio quisquam ut facere magnam
+                doloribus incidunt soluta vel.
+              </p>
+              <div className="flex gap-[23px] mt-[23px] lg:mt-[40px] ">
+                <button className="flex items-center py-[12px] px-[24px] bg-[#FF9A53] text-[17.28px] text-white rounded-full leading-[26px]">
+                  Know More
+                </button>
+                <button className="py-[12px] px-[24px] text-[17.28px] text-[#222222] border border-[#D2DADF] rounded-full leading-[26px]">
+                  Contact Us
+                </button>
               </div>
-            </Swiper>
+            </div>
+            <div className="lg:hidden pb-[20px]">
+              <TextGroup
+                title="Outsourcing"
+                description="The business is also expanding its plastics operation to go into
+        recycling of plastics and repurposing projects like plastics to diesel
+        and other petrochemical products. This should also link to a form
+        reaching out for partnerships"
+              />
+              <TextGroup
+                title="Outsourcing"
+                description="The business is also expanding its plastics operation to go into
+        recycling of plastics and repurposing projects like plastics to diesel
+        and other petrochemical products. This should also link to a form
+        reaching out for partnerships"
+              />
+              <TextGroup
+                title="Outsourcing"
+                description="The business is also expanding its plastics operation to go into
+        recycling of plastics and repurposing projects like plastics to diesel
+        and other petrochemical products. This should also link to a form
+        reaching out for partnerships"
+              />
+            </div>
+            <div className="border-t border-[#D2DADF] lg:pr-[56px] pt-[40px] font-semibold pb-[129px] relative">
+              <h3 className="text-[14px] mb-[14px] lg:mb-[20px] font-semibold">
+                SPOTLIGHT
+              </h3>
+              <Swiper
+                className="static overflow-y-visible px-[2px]"
+                slidesPerView={width > 768 ? 2 : 1}
+                spaceBetween={23}
+              >
+                <SwiperSlide>
+                  <SpotlightCard
+                    image="/assets/images/spotlight-image.png"
+                    description="Credit & financing facilities for businesses to work with our agreed partners for "
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SpotlightCard
+                    image="/assets/images/spotlight-image.png"
+                    description="Credit & financing facilities for businesses to work with our agreed partners for "
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SpotlightCard
+                    image="/assets/images/spotlight-image.png"
+                    description="Credit & financing facilities for businesses to work with our agreed partners for "
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SpotlightCard
+                    image="/assets/images/spotlight-image.png"
+                    description="Credit & financing facilities for businesses to work with our agreed partners for "
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SpotlightCard
+                    image="/assets/images/spotlight-image.png"
+                    description="Credit & financing facilities for businesses to work with our agreed partners for "
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SpotlightCard
+                    image="/assets/images/spotlight-image.png"
+                    description="Credit & financing facilities for businesses to work with our agreed partners for "
+                  />
+                </SwiperSlide>
+                <div className="absolute bottom-[23px] flex items-center gap-[40px] z-10 w-full lg:pr-[46px]">
+                  <p>01 - 05</p>
+                  <div className="flex-grow h-[1px] bg-[#D2DADF]"></div>
+                  <div className="gap-[9px] flex">
+                    <SlidePrevButton />
+                    <SlideNextButton />
+                  </div>
+                </div>
+              </Swiper>
+            </div>
+          </div>
+          <div className="hidden lg:block">
+            <TextGroup
+              title="Outsourcing"
+              description="The business is also expanding its plastics operation to go into
+        recycling of plastics and repurposing projects like plastics to diesel
+        and other petrochemical products. This should also link to a form
+        reaching out for partnerships"
+            />
+            <TextGroup
+              title="Outsourcing"
+              description="The business is also expanding its plastics operation to go into
+        recycling of plastics and repurposing projects like plastics to diesel
+        and other petrochemical products. This should also link to a form
+        reaching out for partnerships"
+            />
+            <TextGroup
+              title="Outsourcing"
+              description="The business is also expanding its plastics operation to go into
+        recycling of plastics and repurposing projects like plastics to diesel
+        and other petrochemical products. This should also link to a form
+        reaching out for partnerships"
+            />
           </div>
         </div>
-        <div className="hidden lg:block">
-          <TextGroup
-            title="Outsourcing"
-            description="The business is also expanding its plastics operation to go into
-        recycling of plastics and repurposing projects like plastics to diesel
-        and other petrochemical products. This should also link to a form
-        reaching out for partnerships"
-          />
-          <TextGroup
-            title="Outsourcing"
-            description="The business is also expanding its plastics operation to go into
-        recycling of plastics and repurposing projects like plastics to diesel
-        and other petrochemical products. This should also link to a form
-        reaching out for partnerships"
-          />
-          <TextGroup
-            title="Outsourcing"
-            description="The business is also expanding its plastics operation to go into
-        recycling of plastics and repurposing projects like plastics to diesel
-        and other petrochemical products. This should also link to a form
-        reaching out for partnerships"
-          />
-        </div>
-      </div>
+      </section>
     </Container>
   );
 };

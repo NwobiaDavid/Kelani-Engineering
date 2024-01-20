@@ -1,24 +1,15 @@
-import "./App.css";
-import NavBar from "./components/NavBar";
-import AboutCompany from "./sections/AboutCompany";
-import Footer from "./sections/Footer";
-import Hero from "./sections/Hero";
-import SubsidiaryShowcase from "./sections/SubsidiaryShowcase";
 import Lenis from "@studio-freight/lenis";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import AboutCompany from './sections/AboutCompany'
 // import Footer from './sections/Footer'
 // import SubsidiaryShowcase from './sections/SubsidiaryShowcase'
+import Home from "./pages/Home";
 import SubsidiaryPageOne from "./sections/subsidiaryPages/SubsidiaryPageOne";
 import ParallaxCards from "./sections/subsidiaryPages/subsidiaryComponents/ParallexCards";
 
 function App() {
   const lenis = new Lenis();
-
-  lenis.on("scroll", (e) => {
-    console.log(e);
-  });
 
   function raf(time) {
     lenis.raf(time);
@@ -29,8 +20,6 @@ function App() {
 
   return (
     <>
-      
-
       {/* <NavBar /> */}
       {/* <AboutCompany   /> */}
       {/* <Footer /> */}
@@ -38,10 +27,14 @@ function App() {
 
       <Router>
         <Routes>
-          <Route path="/" element={<Hero />} />
-        <Route path="/sub"  element={<SubsidiaryPageOne/>} />
-      </Routes>
-    </Router>
+
+          <Route path="/" element={<Home lenis={lenis} />} />
+          {/* <ParallaxCards /> */}
+          <Route path="/subsidiary-one" element={<SubsidiaryPageOne />} />
+          <Route path="/parallax" element={<ParallaxCards />} />
+        </Routes>
+      </Router>
+
     </>
   );
 }
