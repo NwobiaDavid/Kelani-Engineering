@@ -45,13 +45,13 @@ const SubsidiaryPageOne = () => {
 
       {/* <div className="containerr z-50 "> */}
         <div id="hex-grid" className=" relative w-[100vw] h-full overflow-x-hidden "  >
-        <div  style={{ top: `${lightPosition.top}%`, left: `${lightPosition.left}%`,}} className="light opacity-20 z-10 top-[50%] left-[50%] rounded-full  bg-white w-[20rem] h-[20rem]  " > </div>
+        <div  style={{ top: `${lightPosition.top}%`, left: `${lightPosition.left}%`,}} className="light opacity-20 z-10 top-[50%] left-[50%] rounded-full  bg-white w-[40rem] h-[40rem]  " > </div>
         <div className="griddy z-20 bg-transparent " > </div>
             <div className="relative overflow-x-hidden bg-black ">
         
                 <div className="  md:h-screen h-[600px] relative" >
                   <div className="absolute inset-0 bg-cover bg-center">
-                    <div className=" absolute  z-50">
+                    <div className=" absolute w-full  z-50">
                       <img
                         className="w-full h-full opacity-50 object-cover"
                         // src="/assets/images/subsidiaryPagesImages/Rectangle 266 (2).png"
@@ -110,7 +110,7 @@ const SubsidiaryPageOne = () => {
         </div>
       {/* </div> */}
 
-      <div className="bg-white z-50 fixed">
+      <div className="bg-white hidden md:block z-50 fixed">
         <CustomScrollbar />
       </div>
 
