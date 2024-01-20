@@ -47,7 +47,7 @@ const ParallaxCards: React.FC = () => {
 
   return (
 
-    <div className=" h-[1500px] lg:h-dvh  pt-10 flex-col bg-black text-white w-full flex relative">
+    <div className=" h-[1500px] z-30 lg:h-dvh  pt-10 flex-col  text-white w-full flex relative">
       {/* <motion.div className="flex">
         <ParallaxProvider>
           <Parallax
