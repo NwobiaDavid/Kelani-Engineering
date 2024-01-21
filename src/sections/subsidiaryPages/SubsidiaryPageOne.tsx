@@ -13,7 +13,57 @@ import { useEffect, useState } from "react";
 import Footer from "../Footer";
 import { motion, useAnimation } from "framer-motion";
 
-const SubsidiaryPageOne = () => {
+
+interface Contents {
+  img: string;
+  img2: string;
+  head: string;
+  desc: string;
+  colour: string;
+}
+
+interface Contents_Slideshow {
+  img: string,
+  point1: string,
+  point2: string,
+  point3: string,
+  point4: string,
+  point5: string,
+  point6: string,
+  classname: string
+}
+
+interface Header {
+  text: string
+  className: string
+}
+
+interface SubProps {
+  hero_section: {
+    sub_text: string;
+    main_text: string;
+    home_img: string;
+    color: {
+      c700: string;
+      c500: string;
+      c400: string;
+      c300: string;
+    };
+  },
+  features_data: {
+      header: string;
+      contents: Contents[];
+    },
+
+  slideshow_section: {
+    dash: string;
+    content: Contents_Slideshow[];
+    header: Header[];
+  },
+  connect_text: string;
+}
+
+const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
 
   const [lightPosition, setLightPosition] = useState({ top: 0, left: 50 });
 
@@ -101,7 +151,7 @@ const SubsidiaryPageOne = () => {
               <div className=" absolute w-full  z-50">
                 <img
                   className="w-full h-full opacity-50 object-cover"
-                  src="/assets/images/subsidiaryPagesImages/Frame 63.png"
+                  src={sub.hero_section.home_img}
                   alt="background image"
                 />
               </div>
@@ -112,12 +162,12 @@ const SubsidiaryPageOne = () => {
                 className="absolute top-4 -right-10 lg:right-24 "
                 src="/assets/images/subsidiaryPagesImages/props/image.png" alt="" />
 
-              <Navbar />
+              <Navbar color={sub.hero_section.color} />
               
               <div className="flex h-full  flex-col justify-center items-center">
                 <div className="lg:w-[60%] z-50 w-[80%] text-center flex flex-col items-center justify-center uppercase ">
-                  <p className="text-white py-3 opacity-75 ">Kelani Consulting and Talent Management</p>
-                  <h1 className="text-white font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] ">enhance organizational performance </h1>
+                  <p className="text-white py-3 opacity-75 ">{sub.hero_section.sub_text}</p>
+                  <h1 className="text-white font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] ">{sub.hero_section.main_text}</h1>
                   <div className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white ">
                     <Link to={"#"} className="" >GET CONNECTED </Link><IoIosArrowRoundForward size={30} />
                   </div>
@@ -132,9 +182,9 @@ const SubsidiaryPageOne = () => {
 
 
           <div className="relative z-50 " >
-            <Features />
-            <div className=" absolute top-[10rem]  w-full bg-gradient-to-b from-black via-purple-700  to-black opacity-15 h-[800px] "> </div>
-            <SlideshowSection2 />
+            <Features data = {sub.features_data} />
+            <div style={{backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)`}} className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] "> </div>
+            <SlideshowSection2 colours={sub.hero_section.color} data={sub.slideshow_section} />
           </div>
 
           <ParallexCards />
@@ -142,7 +192,7 @@ const SubsidiaryPageOne = () => {
           <div className="bg-cover bg-no-repeat relative  bg-black " >
 
             <div className="relative rounded-b-full ">
-              <ConnectSection />
+              <ConnectSection text={sub.connect_text} />
 
               <motion.div
                 className="z-30 h-[2rem] relative"
@@ -165,7 +215,7 @@ const SubsidiaryPageOne = () => {
       </div>
 
       <div className="bg-white hidden md:block z-50 fixed">
-        <CustomScrollbar />
+        <CustomScrollbar barColor="#333" ellipseColor={sub.hero_section.color.c700} ellipseColor2={sub.hero_section.color.c500} ellipseColor3={sub.hero_section.color.c400}   />
       </div>
 
     </div>

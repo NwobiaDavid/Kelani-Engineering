@@ -7,6 +7,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import SubsidiaryPageOne from "./sections/subsidiaryPages/SubsidiaryPageOne";
 import ParallaxCards from "./sections/subsidiaryPages/subsidiaryComponents/ParallexCards";
+import { sub_one, sub_two } from "./sections/subsidiaryPages/subConstants";
 
 function App() {
   const lenis = new Lenis();
@@ -29,8 +30,8 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Home lenis={lenis} />} />
-          {/* <ParallaxCards /> */}
-          <Route path="/subsidiary-one" element={<SubsidiaryPageOne />} />
+          <Route path="/subsidiary-one" element={<SubsidiaryPageOne sub={sub_one} />} />
+          <Route path="/subsidiary-two" element={<SubsidiaryPageOne sub={sub_two} />} />
           <Route path="/parallax" element={<ParallaxCards />} />
         </Routes>
       </Router>

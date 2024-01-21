@@ -1,48 +1,11 @@
-import { motion, useTransform, useScroll } from "framer-motion";
-
-
-interface CustomScrollbarProps {
-  barColor?: string;
-  ellipseColor?: string;
-  ellipseColor2?: string;
-  ellipseColor3?: string;
-}
-
-const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", ellipseColor = "#8A2BE2", ellipseColor2= "#8A2BE2", ellipseColor3 = "#8A2BE2" }) => {
-  const { scrollY } = useScroll();
-  const yRange = useTransform(scrollY, [0, document.body.scrollHeight - window.innerHeight], [0, 400]);
-
-  return (
-    <motion.div
-      className="h-full flex justify-center items-center px-8"
-      style={{ position: "fixed", top: 0, right: 0 }}
-    >
-      <motion.div
-        className="scroll-bar  relative"
-        style={{
-          width: "2px",
-          height: "400px",
-          backgroundColor: barColor,
-          borderRadius: "4px",
-        }}
-      >
-        <div className="h-[400px] w-[10px] text-center relative">
-          <motion.div
-            className="flex flex-col justify-center items-center relative  -translate-x-1/2"
-            style={{
-              width: "100%",
-              height: yRange,
-              borderRadius: "4px",
-            }}
-          >
-            <svg
+<svg
               className="absolute w-auto h-[103.5%] origin-top js-svg-progress-bar"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 23 347"
             >
               <path
-                stroke={ellipseColor}
+                stroke="#8A2BE2"
                 stroke-width="0.5"
                 d="M12.07 0.851L12.07 340.851"
               ></path>
@@ -174,9 +137,9 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   y2="340.851"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color={ellipseColor}></stop>
-                  <stop offset="0.552" stop-color={ellipseColor2} stop-opacity="0.37"></stop>
-                  <stop offset="1" stop-color={ellipseColor3} stop-opacity="0"></stop>
+                  <stop stop-color="#8A2BE2"></stop>
+                  <stop offset="0.552" stop-color="#4B0082" stop-opacity="0.37"></stop>
+                  <stop offset="1" stop-color="#111" stop-opacity="0"></stop>
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_1881_22079"
@@ -186,9 +149,9 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   y2="340.851"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color={ellipseColor}></stop>
-                  <stop offset="0.552" stop-color={ellipseColor2} stop-opacity="0.37"></stop>
-                  <stop offset="1" stop-color={ellipseColor3} stop-opacity="0"></stop>
+                  <stop stop-color="#8A2BE2"></stop>
+                  <stop offset="0.552" stop-color="#4B0082" stop-opacity="0.37"></stop>
+                  <stop offset="1" stop-color="#111" stop-opacity="0"></stop>
                 </linearGradient>
                 <linearGradient
                   id="paint2_linear_1881_22079"
@@ -198,8 +161,8 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   y2="340.851"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color={ellipseColor}></stop>
-                  <stop offset="1" stop-color={ellipseColor} stop-opacity="0"></stop>
+                  <stop stop-color="#8A2BE2"></stop>
+                  <stop offset="1" stop-color="#8A2BE2" stop-opacity="0"></stop>
                 </linearGradient>
                 <linearGradient
                   id="paint3_linear_1881_22079"
@@ -209,8 +172,8 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   y2="340.851"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color={ellipseColor}></stop>
-                  <stop offset="1" stop-color={ellipseColor} stop-opacity="0"></stop>
+                  <stop stop-color="#8A2BE2"></stop>
+                  <stop offset="1" stop-color="#8A2BE2" stop-opacity="0"></stop>
                 </linearGradient>
                 <linearGradient
                   id="paint4_linear_1881_22079"
@@ -220,20 +183,8 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   y2="336.59"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color={ellipseColor}></stop>
-                  <stop offset="1" stop-color={ellipseColor} stop-opacity="0"></stop>
+                  <stop stop-color="#8A2BE2"></stop>
+                  <stop offset="1" stop-color="#8A2BE2" stop-opacity="0"></stop>
                 </linearGradient>
               </defs>
             </svg>
-
-
-          </motion.div>
-
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-}
-
-
-export default CustomScrollbar;

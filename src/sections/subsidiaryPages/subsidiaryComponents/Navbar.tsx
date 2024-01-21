@@ -2,7 +2,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  color: {
+    c700: string;
+    c500: string;
+    c400: string;
+    c300: string;
+  }
+}
+
+const Navbar: React.FC<{ color: NavbarProps }> = ({ color }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
@@ -18,21 +27,23 @@ const Navbar: React.FC = () => {
       className="bg-transparent pt-5 lg:pt-10 p-4 z-30"
     >
       <div className="lg:container z-[60] opacity-100 relative lg:mx-auto flex justify-between items-center">
-        <div className=" bg-purple-400 py-1 px-2 rounded-full ">
+      <div style={{backgroundColor: color.c400 }} className={`bg-${color}-400  py-1 px-2 rounded-full`}>
           <h1 className="text-xl text-transparent font-bold">Logo</h1>
         </div>
 
         <div className="flex items-center">
           <Link
             to="#"
-            className=" border font-semibold text-purple-500 border-purple-400 rounded-full py-2 px-5 mx-2 block md:inline-block"
+            style={{color: color.c500 }}
+            className={`text-${color}-500 border  font-semibold  border-color-400 rounded-full py-2 px-5 mx-2 block md:inline-block`}
           >
             CTA
           </Link>
             <div className="border mx-2 h-10 opacity-50 "></div>
           <motion.button
             onClick={toggleNav}
-            className="ml-4 bg-purple-300 text-purple-700 rounded-full p-2 flex items-center justify-center focus:outline-none"
+            style={{color: color.c700, backgroundColor: color.c300 }}
+            className={` ml-4 bg-${color}-300 text-${color}-700 rounded-full p-2 flex items-center justify-center focus:outline-none `}
             whileTap={{ scale: 0.95 }}
           >
             <motion.svg
