@@ -81,8 +81,8 @@ const SubsidiaryPageOne = () => {
     lightControls.start({
       top: `${lightPosition.top}%`,
       left: `${lightPosition.left}%`,
-      transition: { ease: 'easeInOut' },
-      // opacity: [0.5, 0.7],
+      transition: {ease: 'easeInOut' },
+      opacity: [0.2],
     });
   }, [lightPosition, lightControls]);
 
@@ -95,10 +95,10 @@ const SubsidiaryPageOne = () => {
 
       <motion.div
         animate={lightControls}
-        className="light opacity-10 z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
+        className="light  hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
       ></motion.div>
 
-        <div className="griddy z-20 bg-transparent " > </div>
+        <div className="griddy lg:block hidden z-20 bg-transparent " > </div>
         <div className="relative overflow-x-hidden bg-black ">
 
           <div className="  md:h-screen h-[600px] relative" >
