@@ -19,18 +19,24 @@ interface color {
     c500: string;
     c400: string;
     c300: string;
-  };
+  }
 
 interface SlideshowProps {
     dash: string;
     content: Contents[];
     header: Header[];
+    text: {
+        head: string;
+        sub: string;
+    }
 }
 
 interface Header {
     text: string;
     className: string;
 }
+
+
 
 function useHover(styleOnHover: CSSProperties, styleOnNotHover: CSSProperties = {})
 {
@@ -42,7 +48,8 @@ function useHover(styleOnHover: CSSProperties, styleOnNotHover: CSSProperties = 
     return {style, onMouseEnter, onMouseLeave}
 }
 
-const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = ({ data, colours }) => {
+
+const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color , text:Text  }> = ({ data, colours }) => {
  
 
     const hoverrs = useHover({backgroundColor: colours.c400})
@@ -84,9 +91,9 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
 
                         <div className='uppercase text-center lg:text-left '>
                             <p className='font-semibold lg:text-base text-xs opacity-60 tracking-wide '>
-                                INSTANT INSIGHTS FOR INFORMED ACTIONS:<br /> User SOLUTIONS FOR REAL-TIME DECISIONS
+                                {data.text.head}
                             </p>
-                            <h1 className='text-3xl lg:text-5xl my-5 opacity-90 font-semibold '>Roadmap for Industry Advancement</h1>
+                            <h1 className='text-3xl lg:text-5xl my-5 opacity-90 font-semibold '>{data.text.sub}</h1>
                         </div>
 
                         <div className='flex mt-3 lg:mt-0 relative items-center justify-center lg:justify-between lg:w-[15%] md:w-[20%] w-full '>

@@ -59,6 +59,10 @@ interface SubProps {
     dash: string;
     content: Contents_Slideshow[];
     header: Header[];
+    text: {
+      head: string;
+      sub: string;
+    }
   },
   connect_text: string;
 }
@@ -184,7 +188,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
           <div className="relative z-50 " >
             <Features data = {sub.features_data} />
             <div style={{backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)`}} className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] "> </div>
-            <SlideshowSection2 colours={sub.hero_section.color} data={sub.slideshow_section} />
+            <SlideshowSection2 colours={sub.hero_section.color} data={sub.slideshow_section} text={sub.slideshow_section.text} />
           </div>
 
           <ParallexCards />

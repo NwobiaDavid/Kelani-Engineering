@@ -147,7 +147,13 @@ export const sub_one = {
                 text: "Continuous Monitoring",
                 className: ""
             },
-        ]
+        ],
+
+        text: {
+            head: "INSTANT INSIGHTS FOR INFORMED ACTIONS:\n User SOLUTIONS FOR REAL-TIME DECISIONS ",
+            sub: "Roadmap for Industry Advancement"
+        },
+
       },
 
       connect_text: "Ready to dive into the endless possibilities that our solutions offer? Don't hesitate to connect with our passionate team! We're here to provide tailored support and guide you towards a triumphant journey. Get in touch now and let's make your dreams a reality!"
@@ -258,7 +264,11 @@ export const sub_two = {
                 text: "TURNKEY PROJECT SERVICES",
                 className: ""
             }
-        ]
+        ],
+        text: {
+            head: "INSTANT INSIGHTS FOR INFORMED ACTIONS:\n User SOLUTIONS FOR REAL-TIME DECISIONS ",
+            sub: "Roadmap for Industry Advancement"
+        },
       },
       connect_text: "Got burning questions or eager to unlock the potential of our solutions? It's time to make contact! Our devoted team is primed to provide tailored support. Reach out for a personalized journey toward your triumph!"
 
@@ -275,8 +285,8 @@ export const sub_two = {
 
 export const sub_three = {
     hero_section: {
-      sub_text: 'Kelani Industrials',
-      main_text: 'transforming industries, shaping the future.',
+      sub_text: 'Kelani POWER',
+      main_text: 'enhance organizational performance ',
       home_img: "/assets/images/subsidiaryPagesImages/pageThree/Img_Layer (2).png",
       color: {
         c700: "#15803d",
@@ -380,7 +390,11 @@ export const sub_three = {
                 text: "RESEARCH",
                 className: ""
             }
-        ]
+        ],
+        text: {
+            head: 'cost-effective power and energy investment stalwart energy research',
+            sub: "Charting the Course for Power and Energy Sector Advancement"
+        },
       },
       connect_text: "Have questions or ready to explore how our solutions can benefit you? Reach out to us! Our dedicated team is here to assist. Contact us for personalized assistance and let's embark on a journey towards your success."
 
