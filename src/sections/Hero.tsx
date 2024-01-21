@@ -12,7 +12,7 @@ import useScreenSize from "../hooks/useScreenSize";
 import TextAnimation from "../components/TextAnimation";
 import Lenis from "@studio-freight/lenis/types";
 
-const Hero = ({lenis}: {lenis: Lenis}) => {
+const Hero = ({ lenis }: { lenis: Lenis }) => {
   // const [navShowing, setNavShowing] = useState(false);
   const { navShowing, setNavShowing } = useNavStore();
   const { width } = useScreenSize();
@@ -34,17 +34,24 @@ const Hero = ({lenis}: {lenis: Lenis}) => {
   return (
     <div className="bg-[#FEFEFE] z-30" ref={containerRef}>
       <AnimatePresence>
-        {navShowing && <NavBar lenis={lenis} closeNav={() => setNavShowing(false)} />}
+        {navShowing && (
+          <NavBar lenis={lenis} closeNav={() => setNavShowing(false)} />
+        )}
       </AnimatePresence>
       <div className="pt-[30px] px-[12px] md:px-[24px] lg:px-[32px] max-w-[1440px] mx-auto ">
-        <div className="h-[60vh] md:h-[82vh] relative  rounded-[28px] overflow-hidden">
+        <div className="h-[50vh] md:h-[82vh] relative  rounded-[28px] overflow-hidden">
           <div className="w-full absolute top-0 p-[24px] flex justify-between z-20">
-            <div className="bg-[white] w-[200px] h-[30px] rounded-full"></div>
+            <div className=" px-[20px] h-[35px] rounded-full flex items-center justify-center">
+              <img
+                className=" h-[30px] "
+                src="/assets/images/kelani-logo.png"
+              />
+            </div>
             <motion.div
               onClick={() => setNavShowing(true)}
               whileHover={{ scale: 1.05, transition: { duration: 0.4 } }}
               whileTap={{ scale: 0.95, transition: { duration: 0.3 } }}
-              className="w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center cursor-pointer"
+              className="w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center cursor-pointer shadow-md"
             >
               <img src="/assets/images/icon-nav.svg" />
             </motion.div>
@@ -52,22 +59,13 @@ const Hero = ({lenis}: {lenis: Lenis}) => {
           <motion.img
             style={{ scale }}
             className="w-full h-full object-cover absolute -top-[2px] right-0 left-0 bottom-0"
-            src="/assets/images/about-company.png"
+            src="/assets/images/home.jpg"
           />
-          <div className="flex flex-col absolute -bottom-[3px] -left-[1px]">
-            <h1 className="bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[62.4px] leading-[39px] md:leading-[52px] lg:leading-[75.5px] px-[14px] md:px-[24px] pt-[10px] md:pt-[20px] pb-[10px] lg:pb-[8px] relative rounded-br-[20px] sm:rounded-br-none rounded-tr-[20px] md:rounded-br-none lg:rounded-tr-[28px] w-fit overflow">
-              {/* <motion.div
-                initial={{ y: getValueFromScreenSize(44, 57, 83) }}
-                animate={{
-                  y: 0,
-                  transition: { duration: 1.2, ease: [0.37, 0.16, 0.12, 1] },
-                }}
-              > */}
-              {/* Kelani Engineering */}
-              {/* </motion.div> */}
+          <div className="flex-col absolute -bottom-[3px] -left-[1px] hidden md:flex">
+            <h1 className="bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] md:px-[24px] pt-[10px] md:pt-[10px] pb-[10px] lg:pb-[4px] relative rounded-br-[20px] sm:rounded-br-none rounded-tr-[20px] md:rounded-br-none lg:rounded-tr-[28px] w-fit overflow">
               <TextAnimation
                 lineHeight={getValueFromScreenSize(44, 57, 83)}
-                text="Kelani Engineering"
+                text="Building Africa’s Future"
               />
               <img
                 src="/assets/images/curved-fill-tl.svg"
@@ -78,15 +76,15 @@ const Hero = ({lenis}: {lenis: Lenis}) => {
                 className="w-[26px] h-[26px] md:w-[36px] md:h-[36px] hidden sm:block absolute right-[-26px] md:right-[-36px] -bottom-[1px]"
               />
             </h1>
-            <h1 className="bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[62.4px] leading-[39px] md:leading-[52px] lg:leading-[75.5px] px-[14px] pb-[10px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[20px] lg:pb-[24px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex lg:gap-[18px]">
+            <h1 className="bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
               <TextAnimation
                 lineHeight={getValueFromScreenSize(44, 57, 83)}
-                text="Creating Positive"
+                text="With Engineering Excellence"
               />
-              <span className="hidden sm:inline-block">
+              <span className="hidden lg:block">
                 <TextAnimation
                   lineHeight={getValueFromScreenSize(44, 57, 83)}
-                  text="Lasting Impact"
+                  text="For Growth"
                 />
               </span>
               <img
@@ -94,26 +92,27 @@ const Hero = ({lenis}: {lenis: Lenis}) => {
                 className="w-[20px] h-[20px] md:w-[36px] md:h-[36px] absolute top-0 lg:top-[-36px] lg:left-0 -right-[20px] rotate-90 block sm:hidden"
               />
             </h1>
-            <h1 className="bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[62.4px] leading-[39px] md:leading-[52px] lg:leading-[75.5px] px-[14px] md:px-[24px] pt-[10px] pb-[10px] md:pb-[14px] lg:pt-[20px] lg:pb-[24px] top-[-1px] relative md:rounded-tr-[28px]  md:rounded-br-[28px] w-fit sm:hidden block">
-              Lasting Impact{" "}
+            <h1 className="bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] md:px-[24px] pt-[10px] pb-[10px] md:pb-[14px] lg:pt-[20px] lg:pb-[24px] top-[-1px] relative  w-fit block lg:hidden">
+              For Growth{" "}
               <img
                 src="/assets/images/curved-fill-tl.svg"
-                className="w-[20px] h-[20px] md:w-[36px] md:h-[36px] absolute rotate-90 md:rotate-0 top-0 md:top-[-36px] -right-[19px] md:left-0 "
+                className="w-[28px] h-[28px] absolute rotate-90  top-0  -right-[27px] "
               />
               <img
                 src="/assets/images/curved-fill-tl.svg"
-                className="w-[20px] h-[20px] md:w-[36px] md:h-[36px] absolute rotate-0 md:rotate-0 bottom-0 md:top-[-36px] -right-[19px] md:left-0 "
+                className="w-[28px] h-[28px] absolute rotate-0  bottom-0 -right-[27px]"
               />
             </h1>
-            <div className="bg-[#FEFEFE] px-[24px] pt-[8px] pb-[16px] relative  w-fit bottom-[2px] hidden md:block">
-              <p className="max-w-[400px] lg:max-w-[597px] text-[17.28px] leading-[26px] w-fit">
-                We’re a Lorem ipsum company with a purpose – to help you dolor
-                and amet carbon repis events with lasting positive impact, and
-                without compromise.
+            <div className="bg-[#FEFEFE] px-[24px] pt-[8px] pb-[16px] relative  w-fit bottom-[2px] rounded-tr-[36px] lg:rounded-tr-[0] hidden md:block">
+              <p className="max-w-[400px] md:max-w-[600px] lg:max-w-[700px] text-[17.28px] leading-[26px] w-fit ">
+                Step into the world of Kelani, where our mastery in industrials,
+                commitment to nurturing talent, and dedication to sustainable
+                energy converge. Embark on a transformative journey with us as
+                we shape an extraordinary future across the African continent.
               </p>
               <img
                 src="/assets/images/curved-fill-tl.svg"
-                className="w-[36px] h-[36px] absolute top-0 -right-[36px] rotate-90 "
+                className="w-[36px] h-[36px] absolute top-0 -right-[36px] rotate-90 hidden lg:block"
               />
               <img
                 src="/assets/images/curved-fill-tl.svg"
@@ -121,12 +120,25 @@ const Hero = ({lenis}: {lenis: Lenis}) => {
               />
             </div>
           </div>
+          <div className="md:hidden flex-col absolute -bottom-[3px] -left-[1px]">
+            <h1 className="bg-[#FEFEFE] text-[32px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[5px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative rounded-tr-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
+              Building Africa's
+              <img
+                src="/assets/images/curved-fill-tl.svg"
+                className="w-[20px] h-[20px] absolute bottom-0 -right-[20px] "
+              />
+            </h1>
+          </div>
         </div>
+        <h1 className="bg-[#FEFEFE] md:hidden text-[32px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[5px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
+          Future With Engineering Excellence For Growth
+        </h1>
         {/* <Container className="md:hidden"> */}
-        <p className=" pl-[14px] text-[17.28px] leading-[26px] w-full pt-[20px] md:hidden">
-          We’re a Lorem ipsum company with a purpose – to help you dolor and
-          amet carbon repis events with lasting positive impact, and without
-          compromise.
+        <p className=" pl-[14px] text-[17.28px] leading-[26px] w-full pt-[10px] md:hidden">
+          Step into the world of Kelani, where our mastery in industrials,
+          commitment to nurturing talent, and dedication to sustainable energy
+          converge. Embark on a transformative journey with us as we shape an
+          extraordinary future across the African continent.
         </p>
 
         {/* </Container> */}

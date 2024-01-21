@@ -1,5 +1,10 @@
 import Lenis from "@studio-freight/lenis";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 // import AboutCompany from './sections/AboutCompany'
 // import Footer from './sections/Footer'
@@ -7,6 +12,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import SubsidiaryPageOne from "./sections/subsidiaryPages/SubsidiaryPageOne";
 import ParallaxCards from "./sections/subsidiaryPages/subsidiaryComponents/ParallexCards";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const lenis = new Lenis();
@@ -17,22 +23,17 @@ function App() {
   }
 
   requestAnimationFrame(raf);
+  const location = useLocation();
 
   return (
     <>
-      {/* <NavBar /> */}
-      {/* <AboutCompany   /> */}
-      {/* <Footer /> */}
-      {/* <SubsidiaryShowcase /> */}
-
-      <Router>
-        <Routes>
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home lenis={lenis} />} />
-          {/* <ParallaxCards /> */}
           <Route path="/subsidiary-one" element={<SubsidiaryPageOne />} />
           <Route path="/parallax" element={<ParallaxCards />} />
         </Routes>
-      </Router>
+      </AnimatePresence>
     </>
   );
 }

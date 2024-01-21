@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from "react";
-// import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
-// import { motion } from 'framer-motion';
-import { Link } from "react-router-dom";
-import { IoIosArrowRoundForward } from "react-icons/io";
+import React, { useEffect, useRef, useState } from "react";
+
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger);
 
 interface Contents {
   img: string;
@@ -15,11 +15,7 @@ interface Contents {
 }
 
 const ParallaxCards: React.FC = () => {
-  //   const [stopAnimation, setStopAnimation] = useState(false);
-
-  //   const handleReveal = () => {
-  //     setStopAnimation(true);
-  //   };
+  const card1Ref = useRef();
 
   const contents: Contents[] = [
     {
@@ -45,78 +41,197 @@ const ParallaxCards: React.FC = () => {
     },
   ];
 
+  // useGSAP(
+  //   () => {
+  //     // create the smooth scroller FIRST!
+
+  //     ScrollTrigger.create({
+  //       trigger: '.box-c',
+  //       pin: true,
+  //       start: 'center center',
+  //       end: '+=300',
+  //       markers: true,
+  //     });
+  //   },
+  //   { scope: main }
+  // );
+
+  const animateCardsIn = () => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".card-animation-container",
+        scrub: true,
+        pin: true,
+        start: "top top",
+        end: "+=300vh",
+        markers: true,
+        // pinReparent: true,
+      },
+      // scrollTrigger: {
+      //   trigger: ".card-animation-container",
+      //   pin: true,
+      // },
+      defaults: { ease: "power3.inOut" },
+    });
+    timeline.to(".card-1", { x: "-100vw", duration: 3 });
+    timeline.to(".card-2", { x: "-100vw", duration: 3, delay: 1 });
+    timeline.to(".card-3", { x: "-100vw", duration: 3, delay: 1 });
+    timeline.to(
+      ".card-1 .title",
+      { scale: 0.35, x: -180, rotate: -90, duration: 2, y: 320 },
+      5
+    );
+    timeline.to(".card-1 .line-extend", { y: "-100%", duration: 1.3 }, 6);
+    timeline.to(
+      ".card-1 .top-left-image",
+      { y: -100, x: -100, opacity: 1, duration: 1.7 },
+      6
+    );
+    timeline.to(
+      ".card-2 .title",
+      { scale: 0.35, x: -180, rotate: -90, duration: 2, y: 320 },
+      9
+    );
+    timeline.to(".card-2 .line-extend", { y: "-100%", duration: 1.3 }, 10);
+    timeline.to(
+      ".card-2 .top-left-image",
+      { y: -100, x: -100, opacity: 1, duration: 1.7 },
+      10
+    );
+  };
+
+  useEffect(() => {
+    animateCardsIn();
+  }, []);
+
   return (
-    <div className=" h-[1500px] lg:h-dvh  pt-10 flex-col bg-black text-white w-full flex relative">
-      {/* <motion.div className="flex">
-        <ParallaxProvider>
-          <Parallax
-            translateX={[200, stopAnimation ? 0 : -200]} // Change translateX based on the stopAnimation state
-            onReveal={()=>handleReveal} // Call handleReveal when the element is revealed
-          >
-            <motion.div
-              className="bg-gray-200 h-[200px] w-[500px] rounded-md shadow-md m-4"
-            >
-              <h2 className="text-xl font-semibold">text 1 hello</h2>
-            </motion.div>
-          </Parallax>
-        </ParallaxProvider>
-      </motion.div> */}
-      <div className="flex flex-col  uppercase justify-center items-center relative">
-        <div className="lg:w-[28%] w-[90%] text-center ">
-          <h3 className=" opacity-80 tracking-wider lg:font-semibold mb-2 lg:mb-6  ">
-            why kelani
-          </h3>
-          <h1 className="lg:text-5xl text-4xl text-center font-semibold ">
-            Personalized Service for You
-          </h1>
-        </div>
-      </div>
-
-      <div className="flex h-full mt-10 w-full ">
-        <div className="lg:w-[15%] justify-center items-center hidden lg:flex flex-col ">
-          <div className="w-[50%] flex flex-col items-center justify-center text-center ">
-            <span className="text-xl opacity-70 font-semibold ">
-              Keep Scrolling{" "}
-            </span>
-            <img
-              className="my-3"
-              src="assets/images/subsidiaryPagesImages/props/SVG.png"
-              alt=""
-            />
-            <span className="opacity-80 ">To Discover</span>
+    <>
+      <div className="h-[300vh] card-animation-container">
+        <div className=" h-[1500px] lg:h-dvh pt-10 flex-col bg-black text-white w-full flex relative ">
+          <div className="flex flex-col  uppercase justify-center items-center relative">
+            <div className="lg:w-[28%] w-[90%] text-center ">
+              <h3 className=" opacity-80 tracking-wider lg:font-semibold mb-2 lg:mb-6  ">
+                why kelani
+              </h3>
+              <h1 className="lg:text-5xl text-4xl text-center font-semibold ">
+                Personalized Service for You
+              </h1>
+            </div>
           </div>
-        </div>
 
-        <div className="absolute bottom-[6px] left-[18%] h-[500px] w-full">
-          <div className="relative">
-            #E9B8FF, #F9ECFF
-            <div className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 px-[100px] py-[65px] bg-gradient-to-br from-[#E9B8FF] to-[#F9ECFF] overflow-hidden"></div>
-            <div className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 left-[100px] px-[100px] py-[65px] bg-gradient-to-br from-[#E9B8FF] to-[#F9ECFF] overflow-hidden"></div>
-            <div className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 left-[200px] px-[100px] py-[65px] bg-gradient-to-br from-[#E9B8FF] to-[#F9ECFF] overflow-hidden">
-              <div className="w-full h-full flex">
-                <div className="min-w-[262px]">
-                  <h2 className="text-[44px] text-white leading-[50.2px]">
-                    Expertise and Innovation
-                  </h2>
-                  <p className="mt-[16px]">
-                    Access to a team of experts who bring a blend of industry
-                    expertise and innovative thinking.
-                  </p>
-                  <button className="text-white flex gap-[13px] mt-[44px] items-center">
-                    Learn More
-                    <img src="/assets/images/right-arrow.svg" />
-                  </button>
-                </div>
+          <div className="flex h-full mt-10 w-full ">
+            <div className="lg:w-[15%] justify-center items-center hidden lg:flex flex-col ">
+              <div className="w-[50%] flex flex-col items-center justify-center text-center ">
+                <span className="text-xl opacity-70 font-semibold ">
+                  Keep Scrolling{" "}
+                </span>
                 <img
-                  className="w-full h-full object-cover"
-                  src="/assets/images/reason-for-use-image.svg"
+                  className="my-3"
+                  src="assets/images/subsidiaryPagesImages/props/SVG.png"
+                  alt=""
                 />
+                <span className="opacity-80 ">To Discover</span>
+              </div>
+            </div>
+
+            <div className="absolute bottom-[6px] left-[18%] h-[500px] w-full">
+              <div className="relative">
+                <div className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] bg-gradient-to-br from-[#E9B8FF] to-[#F9ECFF] overflow-hidden card-1 left-[100vw]">
+                  <div className="h-[100%] pt-[15px] left-0 w-[100px] absolute flex flex-col items-center">
+                    <div className="w-[90px] h-[90px] flex items-center justify-center">
+                      <img
+                        className="w-[60px] relative opacity-0 top-[100px] left-[100px] top-left-image"
+                        src="/assets/images/icon-consulting-top-left-1.svg"
+                      />
+                    </div>
+                    <div className="h-[280px]  w-full flex justify-center overflow-hidden">
+                      <div className="w-[1.5px] bg-[#F4F4F4] h-full relative top-[100%] line-extend"></div>
+                    </div>
+                  </div>
+                  <div className="w-full h-full flex py-[65px] ">
+                    <div className="max-w-[262px]">
+                      <h2 className="text-[44px] text-white leading-[50.2px] title">
+                        Expertise and Innovation
+                      </h2>
+                      <p className="mt-[16px]">
+                        Access to a team of experts who bring a blend of
+                        industry expertise and innovative thinking.
+                      </p>
+                      <button className="text-white flex gap-[13px] mt-[44px] items-center">
+                        Learn More
+                        <img src="/assets/images/right-arrow.svg" />
+                      </button>
+                    </div>
+                    <img
+                      className="w-[calc(100%-100px)]  object-cover"
+                      src="/assets/images/icon-talent-card-1.svg"
+                    />
+                  </div>
+                </div>
+                <div className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] bg-gradient-to-br from-[#E9B8FF] to-[#F9ECFF] overflow-hidden card-2 left-[calc(100vw+100px)]">
+                  <div className="h-[100%] pt-[15px] left-0 w-[100px] absolute flex flex-col items-center">
+                    <div className="w-[90px] h-[90px] flex items-center justify-center">
+                      <img
+                        className="w-[60px] relative opacity-0 top-[100px] left-[100px] top-left-image"
+                        src="/assets/images/icon-consulting-top-left-1.svg"
+                      />
+                    </div>
+                    <div className="h-[280px]  w-full flex justify-center overflow-hidden">
+                      <div className="w-[1.5px] bg-[#F4F4F4] h-full relative top-[100%] line-extend"></div>
+                    </div>
+                  </div>
+                  <div className="w-full h-full flex py-[65px]">
+                    <div className="max-w-[262px]">
+                      <h2 className="text-[44px] text-white leading-[50.2px] title">
+                        Expertise and Innovation
+                      </h2>
+                      <p className="mt-[16px]">
+                        Access to a team of experts who bring a blend of
+                        industry expertise and innovative thinking.
+                      </p>
+                      <button className="text-white flex gap-[13px] mt-[44px] items-center">
+                        Learn More
+                        <img src="/assets/images/right-arrow.svg" />
+                      </button>
+                    </div>
+                    <figure>
+                      <img
+                        className="w-[100%-100px]  object-cover"
+                        src="/assets/images/icon-talent-card-1.svg"
+                      />
+                    </figure>
+                  </div>
+                </div>
+                <div className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] py-[65px] bg-gradient-to-br from-[#E9B8FF] to-[#F9ECFF] overflow-hidden card-3 left-[calc(100vw+200px)]">
+                  <div className="w-full h-full flex">
+                    <div className="max-w-[262px]">
+                      <h2 className="text-[44px] text-white leading-[50.2px]">
+                        Expertise and Innovation
+                      </h2>
+                      <p className="mt-[16px]">
+                        Access to a team of experts who bring a blend of
+                        industry expertise and innovative thinking.
+                      </p>
+                      <button className="text-white flex gap-[13px] mt-[44px] items-center">
+                        Learn More
+                        <img src="/assets/images/right-arrow.svg" />
+                      </button>
+                    </div>
+                    <figure>
+                      <img
+                        className="w-[100%-100px]  object-cover"
+                        src="/assets/images/icon-talent-card-1.svg"
+                      />
+                    </figure>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className="h-[200vh]"></div>
+    </>
   );
 };
 

@@ -59,7 +59,7 @@ const FloatingNav = ({
         <div className="rounded-full bg-white h-[52px] w-[79px] flex items-center justify-center text-[17.28px] leading-[26px]">
           Home
         </div>
-        <div className="flex h-[52px] bg-white pl-[16px] rounded-full pr-[6px] items-center space-x-[10px]">
+        <div className="h-[52px] bg-white pl-[16px] rounded-full pr-[6px] items-center space-x-[10px] hidden md:flex">
           <span className="font-bold text-[15.28px] text-[#2222227f] mr-[5px]">
             Solutions
           </span>

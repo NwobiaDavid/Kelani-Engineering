@@ -12,7 +12,7 @@ const TextAnimation: React.FC<TextAnimationProps> = ({
 //   delay,
 }) => {
   return (
-    <div className="flex flex-wrap gap-x-[18px]">
+    <div className="flex flex-wrap space-x-[18px]">
       {text?.split(" ").map((word, index) => {
         return (
           <div key={index} className="overflow-hidden flex">
