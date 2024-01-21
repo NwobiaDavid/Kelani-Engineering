@@ -277,42 +277,49 @@ export const sub_three = {
     hero_section: {
       sub_text: 'Kelani Industrials',
       main_text: 'transforming industries, shaping the future.',
-      home_img: "/assets/images/subsidiaryPagesImages/Img_Layer (1).png",
+      home_img: "/assets/images/subsidiaryPagesImages/pageThree/Img_Layer (2).png",
       color: {
-        c700: "#c2410c",
-        c500: "#f97316",
-        c400: "#fb923c",
-        c300: "#fdba74"
+        c700: "#15803d",
+        c500: "#22c55e",
+        c400: "#4ade80",
+        c300: "#86efac"
       },
     },
       features_data: {
-        header: "Unlock potential: Building Excellence by striving for Industrial Transformation.",
+        header: "Powering the Future: Discovering Tomorrow's Sustainable Energy Solutions through Advanced Technologies and Cost-Effective Strategies.",
         contents: [
             {
-                img:  'assets/images/subsidiaryPagesImages/pageTwo/save-energy 1-2.png',
+                img:  'assets/images/subsidiaryPagesImages/pageThree/save-energy 1.png',
                 img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
-                head: "Machinery and Tools - Procurement ",
-                desc: " Experience the ultimate in reliability, quality, and cutting-edge equipment! Trust us to provide the market-leading solutions you need for success!",
-                colour: "text-orange-400"
+                head: "Power Funding",
+                desc: " Diverse credit and financing options to fuel your business toward the success and progress you crave!",
+                colour: "text-green-400"
             },
             {
-                img: 'assets/images/subsidiaryPagesImages/pageTwo/save-energy 1.png',
+                img: 'assets/images/subsidiaryPagesImages/pageThree/save-energy 1-1.png',
                 img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
-                head: "Advisory services",
-                desc: "Get ready for an exhilarating journey towards success with our unbeatable advisory guidance!  Our mission is to ensure that you achieve the industrial success you've always dreamed of. ",
-                colour: "text-orange-400"
+                head: "Large-scale Energy Deals",
+                desc: "Unlock your solar or renewable energy plant's potential! Join our large-scale energy trading platform, seamlessly linking users to top suppliers from private and public generation plants.",
+                colour: "text-green-400"
             },
             {
-                img: 'assets/images/subsidiaryPagesImages/pageTwo/save-energy 1-1.png',
+                img: 'assets/images/subsidiaryPagesImages/pageThree/save-energy 1-2.png',
                 img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
-                head: "Plastics - Recycling and Repurposing",
-                desc: "Our transformational and impactful plastics recycling service aims to revolutionize the industry and pave a sustainable future. Together, we can build a better future for all!   ",
-                colour: "text-orange-400"
+                head: "Collections risk management",
+                desc: "Solid Security and support from defaults or market shifts, we provide vital support, finance payment deficits, and facilitate the recovery of energy infrastructure.",
+                colour: "text-green-400"
+            },
+            {
+                img: 'assets/images/subsidiaryPagesImages/pageThree/save-energy 1-3.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                head: "Research",
+                desc: "Join us as we lead the charge together, exploring groundbreaking methods and advanced transmission technologies to bring you a cost-effective and sustainable energy supply. ",
+                colour: "text-green-400"
             }
         ]
       },
       slideshow_section: {
-        dash: "assets/images/subsidiaryPagesImages/pageTwo/orange_dash.svg",
+        dash: "assets/images/subsidiaryPagesImages/pageThree/green_dash.svg",
         content: [
             {
                 img: 'assets/images/subsidiaryPagesImages/Card.png',
@@ -358,24 +365,24 @@ export const sub_three = {
         ],
         header: [
             {
-                text: "Machine and tools procurement",
+                text: "power financing",
                 className: "pr-2"
             },
             {
-                text: "advisory services",
+                text: "bulk energy trading ",
                 className: ""
             },
             {
-                text: "PRODUCT AND FACTORY MANAGEMENT",
+                text: "collections risk management",
                 className: ""
             },
             {
-                text: "TURNKEY PROJECT SERVICES",
+                text: "RESEARCH",
                 className: ""
             }
         ]
       },
-      connect_text: "Got burning questions or eager to unlock the potential of our solutions? It's time to make contact! Our devoted team is primed to provide tailored support. Reach out for a personalized journey toward your triumph!"
+      connect_text: "Have questions or ready to explore how our solutions can benefit you? Reach out to us! Our dedicated team is here to assist. Contact us for personalized assistance and let's embark on a journey towards your success."
 
 
   };
