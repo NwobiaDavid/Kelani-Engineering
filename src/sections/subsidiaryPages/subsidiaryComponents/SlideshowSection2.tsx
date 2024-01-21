@@ -115,7 +115,6 @@ export default function SlideshowSection2() {
 
 
     const [display, setDisplay] = useState(0);
-    const [showCard, setShowCard] = useState(0);
 
     const [hover, setHover]= useState(false);
     const [hover2, setHover2]= useState(false);
@@ -124,29 +123,16 @@ export default function SlideshowSection2() {
 
     const handleHeaderClick = (index: number) => {
         setDisplay(index);
-        setShowCard(index);
     };
 
     const handleNext = () => {
         setDisplay((prevDisplay) => (prevDisplay + 1) % content.length);
-        // setShowCard((prevDisplay) => (prevDisplay + 1) % content.length)
     };
 
     const handlePrevious = () => {
         setDisplay((prevDisplay) => (prevDisplay - 1 + content.length) % content.length);
-        // setShowCard((prevDisplay) => (prevDisplay - 1 + content.length) % content.length)
     };
 
-    const buttonRightVariants = {
-        initial: { x: 0 },
-        hover: { x: [0, 40, 0, -20, 0], y: [0, 0, 0,30,0, 0, 0], opacity: [1, 0, 0, 0, 1] , transition: { duration: 0.4 } },
-    };
-
-    const buttonLeftVariants = {
-        initial: { x: 0 },
-        hover: { x: [ -40], opacity: [0], transition: { duration: 0.4 }  },
-        exit: { }
-    };
 
     const containerVariants = {
         initial: { opacity: 0, x: 50 },
