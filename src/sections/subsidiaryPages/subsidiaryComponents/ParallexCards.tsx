@@ -80,7 +80,7 @@ const ParallaxCards: React.FC = () => {
               Keep Scrolling{" "}
             </span>
             <img
-              className="my-3"
+              className="my-3 hover:animate-bounce "
               src="assets/images/subsidiaryPagesImages/props/SVG.png"
               alt=""
             />
