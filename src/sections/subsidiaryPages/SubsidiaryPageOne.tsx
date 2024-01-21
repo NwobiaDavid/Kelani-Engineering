@@ -82,7 +82,7 @@ const SubsidiaryPageOne = () => {
       top: `${lightPosition.top}%`,
       left: `${lightPosition.left}%`,
       transition: { ease: 'easeInOut' },
-      opacity: [0.5, 0.7],
+      // opacity: [0.5, 0.7],
     });
   }, [lightPosition, lightControls]);
 
@@ -95,7 +95,7 @@ const SubsidiaryPageOne = () => {
 
       <motion.div
         animate={lightControls}
-        className="light opacity-20 z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
+        className="light opacity-10 z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
       ></motion.div>
 
         <div className="griddy z-20 bg-transparent " > </div>
