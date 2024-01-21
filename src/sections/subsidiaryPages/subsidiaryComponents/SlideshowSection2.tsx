@@ -192,7 +192,7 @@ export default function SlideshowSection2() {
                 </div>
 
 
-                <div className='w-full mb-6 flex justify-center items-center ' >
+                <div className='w-full lg:mb-6 flex justify-center items-center ' >
                     <div className='w-[65%] flex justify-center lg:justify-between items-center'>
                         {header.map((item, index) => (
                             <div
@@ -211,7 +211,7 @@ export default function SlideshowSection2() {
                                     className={`${display === index ? 'w-full relative flex items-center justify-center ' : 'w-full hidden'}`}
                                 >
                                     <img
-                                        className=' w-full -left-8 absolute '
+                                        className=' lg:block hidden  w-full -left-8 absolute '
                                         src='assets/images/subsidiaryPagesImages/props/svgviewer-output.svg'
                                         alt=''
                                     />

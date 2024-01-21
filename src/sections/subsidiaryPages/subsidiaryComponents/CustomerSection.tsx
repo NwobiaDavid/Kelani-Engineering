@@ -31,14 +31,14 @@ const CustomerSection: React.FC = () => {
         ];
 
   return (
-    <div className="w-full  h-[500px] lg:h-fit ">
+    <div className="w-full h-[250px] lg:h-fit ">
         <div className="lg:h-[500px] z-50 relative h-[200px]">
           <h1 className='text-white opacity-60 mb-6 text-center font-semibold text-xs lg:text-base lg:mb-10 '>CUSTOMERS</h1>
 
           <div className='flex w-full relative justify-center items-center'>
           <img src="assets/images/subsidiaryPagesImages/props/marquee-line-left.png" alt=""  className=' invisible lg:visible left-[8.3rem] top-[14.2rem]' />
 
-            <div className=' w-[500px] 3xl:w-[55%] lg:w-[88%] flex-col relative flex justify-center items-center '>
+            <div className=' w-[500px]  lg:w-[86%] 3xl:w-[55%] flex-col relative flex justify-center items-center '>
                 <Marquee pauseOnHover={true} className='border  border-opacity-40 border-white rounded-xl ' >
                   {cards.map((item, index)=>(
 
