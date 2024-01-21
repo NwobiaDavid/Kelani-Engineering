@@ -143,7 +143,6 @@ export default function SlideshowSection2() {
     return (
 
         <div className="lg:h-[1100px] h-[1350px] w-full z-30 text-white " >
-             {/* <div className="w-full h-[100px] bg-gradient-to-t opacity-20 from-black via-purple-900 to-purple-800"> </div> */}
             <div className='w-full mb-6 flex flex-col lg:px-4 justify-center pt-10 items-center '>
 
                 <div className=' w-[65%] flex justify-center items-center ' >
