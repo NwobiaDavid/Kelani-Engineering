@@ -138,6 +138,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
 
   return (
 
+    <>
     <div >
       <div id="hex-grid" className=" relative w-[100vw] h-full overflow-x-hidden "  >
 
@@ -193,9 +194,9 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
 
           <ParallexCards />
 
-          <div className="bg-cover bg-no-repeat relative  bg-black " >
+          <div className=" bg-black relative z-50 " >
 
-            <div className="relative rounded-b-full ">
+            <div className="relative ">
               <ConnectSection text={sub.connect_text} />
 
               <motion.div
@@ -208,21 +209,23 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
             </div>
 
 
-            <div className="bg-cover bg-no-repeat relative z-30  " >
-              <Footer />
-            </div>
+            
 
           </div>
 
 
         </div>
       </div>
+      <div className="-z-40 " >
+              <Footer />
+            </div>
 
       <div className="bg-white hidden md:block z-50 fixed">
         <CustomScrollbar barColor="#333" ellipseColor={sub.hero_section.color.c700} ellipseColor2={sub.hero_section.color.c500} ellipseColor3={sub.hero_section.color.c400}   />
       </div>
 
     </div>
+    </>
   );
 };
 

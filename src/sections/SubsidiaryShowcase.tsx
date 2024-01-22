@@ -256,7 +256,7 @@ const SubsidiaryShowcase = ({
         reaching out for partnerships"
             />
             <TextGroup
-              title="Outsourcing"
+              title="Outsourcingg"
               description="The business is also expanding its plastics operation to go into
         recycling of plastics and repurposing projects like plastics to diesel
         and other petrochemical products. This should also link to a form

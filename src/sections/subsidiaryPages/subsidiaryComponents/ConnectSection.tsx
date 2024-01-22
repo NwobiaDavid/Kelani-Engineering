@@ -5,7 +5,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const ConnectSection: React.FC<{text: string}> = ({text}) => {
     return (
-        <div className=' rounded-b-3xl  w-full h-[650px] lg:h-screen relative flex justify-center items-center text-white '>
+        <div className='  w-full h-[650px] lg:h-screen relative flex justify-center items-center text-white '>
             <img className="absolute text-center  " src="/assets/images/subsidiaryPagesImages/props/Circles.png" alt="" />
             
             <div className='flex z-50 relative items-center justify-center flex-col h-full w-[90%] lg:w-[35%] text-center '>
