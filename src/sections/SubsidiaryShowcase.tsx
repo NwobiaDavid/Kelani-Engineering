@@ -1,11 +1,12 @@
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Dispatch,
-  RefObject,
   SetStateAction,
   useEffect,
   useRef,
-  useState,
+  useState
 } from "react";
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,9 +16,6 @@ import Container from "../components/Container";
 import SpotlightCard from "../components/SpotlightCard";
 import TextGroup from "../components/TextGroup";
 import useScreenSize from "../hooks/useScreenSize";
-import { easeIn, easeOut, useScroll, useTransform } from "framer-motion";
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 
 function SlideNextButton({ themeColor }: { themeColor: string }) {
   const swiper = useSwiper();
@@ -99,19 +97,19 @@ const SubsidiaryShowcase = ({
         case "industrials":
           setScrollTops((prev) => ({
             ...prev,
-            industrials: containerRef.current?.offsetTop - window.innerHeight,
+            industrials: (containerRef.current as any)?.offsetTop - window.innerHeight,
           }));
           break;
         case "power":
           setScrollTops((prev) => ({
             ...prev,
-            power: containerRef.current?.offsetTop - window.innerHeight,
+            power: (containerRef.current as any)?.offsetTop - window.innerHeight,
           }));
           break;
         case "consulting":
           setScrollTops((prev) => ({
             ...prev,
-            consulting: containerRef.current?.offsetTop - window.innerHeight,
+            consulting: (containerRef.current as any)?.offsetTop - window.innerHeight,
           }));
           break;
       }

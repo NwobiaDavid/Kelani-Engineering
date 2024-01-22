@@ -1,23 +1,22 @@
 import Lenis from "@studio-freight/lenis";
 import {
   Route,
-  BrowserRouter as Router,
   Routes,
-  useLocation,
+  useLocation
 } from "react-router-dom";
 import "./App.css";
 // import AboutCompany from './sections/AboutCompany'
 // import Footer from './sections/Footer'
 // import SubsidiaryShowcase from './sections/SubsidiaryShowcase'
+import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import SubsidiaryPageOne from "./sections/subsidiaryPages/SubsidiaryPageOne";
 import ParallaxCards from "./sections/subsidiaryPages/subsidiaryComponents/ParallexCards";
-import { AnimatePresence } from "framer-motion";
 
 function App() {
   const lenis = new Lenis();
 
-  function raf(time) {
+  function raf(time: number) {
     lenis.raf(time);
     requestAnimationFrame(raf);
   }

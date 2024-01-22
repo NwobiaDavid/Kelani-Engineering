@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 interface Contents {
@@ -15,31 +14,30 @@ interface Contents {
 }
 
 const ParallaxCards: React.FC = () => {
-  const card1Ref = useRef();
 
-  const contents: Contents[] = [
-    {
-      img: "assets/images/subsidiaryPagesImages/props/Frame 29.png",
-      text: "Expertise and Innovation",
-      desc: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-      link: "#",
-      class: "lg:right-[27%] top-0",
-    },
-    {
-      img: "assets/images/subsidiaryPagesImages/props/Frame 29.png",
-      text: "Expertise and Innovation",
-      desc: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-      link: "#",
-      class: "lg:right-[17%] top-[25%]",
-    },
-    {
-      img: "assets/images/subsidiaryPagesImages/props/Frame 29.png",
-      text: "Expertise and Innovation",
-      desc: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-      link: "#",
-      class: "lg:right-[7%] top-[50%]",
-    },
-  ];
+  // const contents: Contents[] = [
+  //   {
+  //     img: "assets/images/subsidiaryPagesImages/props/Frame 29.png",
+  //     text: "Expertise and Innovation",
+  //     desc: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
+  //     link: "#",
+  //     class: "lg:right-[27%] top-0",
+  //   },
+  //   {
+  //     img: "assets/images/subsidiaryPagesImages/props/Frame 29.png",
+  //     text: "Expertise and Innovation",
+  //     desc: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
+  //     link: "#",
+  //     class: "lg:right-[17%] top-[25%]",
+  //   },
+  //   {
+  //     img: "assets/images/subsidiaryPagesImages/props/Frame 29.png",
+  //     text: "Expertise and Innovation",
+  //     desc: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
+  //     link: "#",
+  //     class: "lg:right-[7%] top-[50%]",
+  //   },
+  // ];
 
   // useGSAP(
   //   () => {

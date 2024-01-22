@@ -17,7 +17,7 @@ const NavSubsidiarySection = ({
   hasRightBorder,
   index,
 }: NavSubsidiarySection) => {
-  const { width, height } = useScreenSize();
+  const { width } = useScreenSize();
   const [hoverShowing, setHoverShowing] = useState(false);
   return (
     <motion.a

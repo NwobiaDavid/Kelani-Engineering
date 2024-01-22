@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import { CartItem } from "./cart";
 
 export interface NavStore {
   navShowing: boolean;

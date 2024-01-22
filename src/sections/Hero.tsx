@@ -1,16 +1,16 @@
-import { useRef, useState } from "react";
-import InfiniteCarousel from "../components/InfiniteCarousel";
+import Lenis from "@studio-freight/lenis/types";
 import {
   AnimatePresence,
   motion,
   useScroll,
   useTransform,
 } from "framer-motion";
+import { useRef } from "react";
+import InfiniteCarousel from "../components/InfiniteCarousel";
 import NavBar from "../components/NavBar";
-import useNavStore from "../store/nav";
-import useScreenSize from "../hooks/useScreenSize";
 import TextAnimation from "../components/TextAnimation";
-import Lenis from "@studio-freight/lenis/types";
+import useScreenSize from "../hooks/useScreenSize";
+import useNavStore from "../store/nav";
 
 const Hero = ({ lenis }: { lenis: Lenis }) => {
   // const [navShowing, setNavShowing] = useState(false);

@@ -1,13 +1,9 @@
-import ContactUsInput from "../components/ContactUsInput";
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
-import useScreenSize from "../hooks/useScreenSize";
-import { useEffect, useRef } from "react";
-import { useScroll, useTransform } from "framer-motion";
-import useScrollPosition from "../hooks/useScrollPosition";
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import ContactUsInput from "../components/ContactUsInput";
 
 const schema = z.object({
   name: z.string().nonempty({ message: "Name is required" }),
@@ -38,11 +34,8 @@ const Footer = () => {
   const {
     register,
     // handleSubmit,
-    formState: { errors },
   } = useForm<FormSchema>({ resolver: zodResolver(schema) });
 
-  const { width } = useScreenSize();
-  const { y: scrollPosition } = useScrollPosition();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -129,14 +122,14 @@ const Footer = () => {
                   register={register}
                   name="name"
                   placeholder="Name"
-                  value=""
+                  // value=""
                   onChange={() => {}}
                 />
                 <ContactUsInput
                   register={register}
                   name="email"
                   placeholder="Email"
-                  value=""
+                  // value=""
                   type="email"
                   onChange={() => {}}
                 />
@@ -144,7 +137,7 @@ const Footer = () => {
                   register={register}
                   name="subject"
                   placeholder="Subject"
-                  value=""
+                  // value=""
                   onChange={() => {}}
                 />
                 <textarea

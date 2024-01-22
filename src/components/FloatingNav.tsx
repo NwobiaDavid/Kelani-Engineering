@@ -1,7 +1,6 @@
-import { easeIn, easeInOut, motion } from "framer-motion";
-import { useState } from "react";
-import useNavStore from "../store/nav";
 import Lenis from "@studio-freight/lenis/types";
+import { motion } from "framer-motion";
+import useNavStore from "../store/nav";
 
 const FloatingNavItem = ({
   text,
@@ -36,11 +35,10 @@ const FloatingNavItem = ({
 
 const FloatingNav = ({
   activeNav,
-  scrollTops,
   lenis,
 }: {
   activeNav: string;
-  scrollTops: Record<string, number>;
+  scrollTops?: Record<string, number>;
   lenis: Lenis;
 }) => {
   const { navShowing, setNavShowing } = useNavStore();

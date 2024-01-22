@@ -1,15 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import FloatingNav from "../components/FloatingNav";
+import useScreenSize from "../hooks/useScreenSize";
+import useScrollPosition from "../hooks/useScrollPosition";
 import AboutCompany from "../sections/AboutCompany";
 import Footer from "../sections/Footer";
 import Hero from "../sections/Hero";
 import SubsidiaryShowcase from "../sections/SubsidiaryShowcase";
-import useScrollPosition from "../hooks/useScrollPosition";
-import useScreenSize from "../hooks/useScreenSize";
-import { AnimatePresence } from "framer-motion";
-import ParallaxCards from "../sections/subsidiaryPages/subsidiaryComponents/ParallexCards";
-import { motion } from "framer-motion";
-const Home = ({ lenis }) => {
+import Lenis from "@studio-freight/lenis/types";
+const Home = ({ lenis }: { lenis: Lenis }) => {
   const { y: scrollY } = useScrollPosition();
   const { height } = useScreenSize();
   const [scrollTops, setScrollTops] = useState({

@@ -1,8 +1,7 @@
-import { useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import StatisticCard from "../components/StatisticCard";
 import "../styles/about-company.css";
-import { motion, useScroll, useTransform } from "framer-motion";
-import useScrollPosition from "../hooks/useScrollPosition";
 
 const AboutCompany = () => {
   const container = useRef(null);
