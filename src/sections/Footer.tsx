@@ -1,12 +1,9 @@
-import ContactUsInput from "../components/ContactUsInput";
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
-import useScreenSize from "../hooks/useScreenSize";
-import { useEffect, useRef } from "react";
-import { useScroll, useTransform } from "framer-motion";
-import useScrollPosition from "../hooks/useScrollPosition";
-import { motion } from "framer-motion";
+import ContactUsInput from "../components/ContactUsInput";
 
 const schema = z.object({
   name: z.string().nonempty({ message: "Name is required" }),
@@ -16,15 +13,29 @@ const schema = z.object({
 });
 type FormSchema = z.infer<typeof schema>;
 
+const FooterIcon = ({ link, icon }: { link: string; icon: string }) => {
+  return (
+    <motion.a
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      href={link}
+      target="_blank"
+      className="w-[57px] h-[57px] rounded-full border-[#D2DADF] border flex items-center justify-center"
+    >
+      <img
+        src={`/assets/images/icon-social-${icon}-black.svg`}
+        className="fill-[#222222]"
+      />
+    </motion.a>
+  );
+};
+
 const Footer = () => {
   const {
     register,
-    handleSubmit,
-    formState: { errors },
+    // handleSubmit,
   } = useForm<FormSchema>({ resolver: zodResolver(schema) });
 
-  const { width } = useScreenSize();
-  const { y: scrollPosition } = useScrollPosition();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -57,11 +68,19 @@ const Footer = () => {
             className="bg-[white] shadow-[0_0px_10px_2px_rgba(0,0,0,0.1)] w-full h-full rounded-[9.6px] flex flex-col overflow-y-scroll lg:overflow-hidden lg:grid grid-cols-2 lg:gap-[24px] lg:p-0 relative z-[2]"
           >
             <div className="h-full p-[24px] lg:p-[56px] flex flex-col justify-center items-center lg:relative">
-              <div className="h-[50px] w-[150px] bg-gray-400 mb-[84px]"></div>
-              <div className="flex flex-col text-center text-[20px]">
-                <p>SHUTTLEWORTHSTRASSE 31-33,</p>
-                <p>1210 VIENNA, AUSTRIA</p>
-                <p>SALES@6B47.COM</p>
+              <img
+                src="/assets/images/kelani-logo.png"
+                className="h-[50px] mb-[84px]"
+              />
+              <div className="flex flex-col text-center text-[18px]">
+                <p>Block 6, Plot 1, Asaba Industrial Estate,</p>
+                <p>Asaba-Ibusa Expressway,</p>
+                <p>Asaba, Delta State</p>
+              </div>
+              <div className="flex flex-col text-center text-[18px] mt-[30px]">
+                <p>Isheri North GRA, Opic Estates,</p>
+                <p>Lagos-Ibadan Expressway,</p>
+                <p>Lagos State.</p>
               </div>
 
               <div className="flex flex-col lg:flex-row left-[56px] absolute hidden lg:block lg:bottom-[46px]">
@@ -74,9 +93,23 @@ const Footer = () => {
                 </p>
               </div>
 
-              <div className="flex gap-[23px] mt-[40px]">
-                <p>linkedin</p>
-                <p>google</p>
+              <div className="flex gap-[23px] mt-[40px] items-center">
+                <FooterIcon
+                  link="https://web.facebook.com/kelaniengr/"
+                  icon="facebook"
+                />
+                <FooterIcon
+                  link="https://www.youtube.com/channel/UC5UQ-v-As3beWcqk4j97CrQ"
+                  icon="youtube"
+                />
+                <FooterIcon
+                  link="https://www.instagram.com/kelaniengineering/"
+                  icon="instagram"
+                />
+                <FooterIcon
+                  link="https://www.linkedin.com/company/kelaniengineering/"
+                  icon="linkedin"
+                />
               </div>
             </div>
             <div className="h-full p-[24px] lg:p-[56px] pb-[48px] lg:pb-[97px] flex flex-col gap-[30px] lg:justify-between border-t lg:border-t-0 border-t-[#D2DADF] lg:border-top-0">
@@ -89,14 +122,14 @@ const Footer = () => {
                   register={register}
                   name="name"
                   placeholder="Name"
-                  value=""
+                  // value=""
                   onChange={() => {}}
                 />
                 <ContactUsInput
                   register={register}
                   name="email"
                   placeholder="Email"
-                  value=""
+                  // value=""
                   type="email"
                   onChange={() => {}}
                 />
@@ -104,7 +137,7 @@ const Footer = () => {
                   register={register}
                   name="subject"
                   placeholder="Subject"
-                  value=""
+                  // value=""
                   onChange={() => {}}
                 />
                 <textarea

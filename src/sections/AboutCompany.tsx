@@ -1,8 +1,7 @@
-import { useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import StatisticCard from "../components/StatisticCard";
 import "../styles/about-company.css";
-import { motion, useScroll, useTransform } from "framer-motion";
-import useScrollPosition from "../hooks/useScrollPosition";
 
 const AboutCompany = () => {
   const container = useRef(null);
@@ -29,11 +28,11 @@ const AboutCompany = () => {
       <figure className="overflow-hidden rounded-[10px]">
         <motion.img
           style={{ scale }}
-          src="/assets/images/about-company.png"
+          src="/assets/images/about-us.jpeg"
           loading="lazy"
           id="w-node-_5d22fc73-eda1-0598-2d4b-c941630b3825-3378c76e"
           alt=""
-          className=" statistics-image lg:max-h-[609px] xl:max-h-[609px]"
+          className=" statistics-image object-cover"
         />
       </figure>
       <div
@@ -43,26 +42,43 @@ const AboutCompany = () => {
         <div className="statistics-text">
           <p
             id="w-node-_03c4cf8f-14b2-c4b7-c070-5ac51836c5fd-3378c76e"
-            className="paragraph-5 text-left mb-[23px] lg:mb-[32px]"
+            className="paragraph-5 text-left mb-[23px] lg:mb-[32px] leading-[50.544px]"
           >
-            WE PROVIDE SOLUTIONS
+            WE EMPOWER YOUR WORLD!
           </p>
           <p className="paragraph-6 text-left">
-            Empowering businesses with tailored{" "}
-            <span className="statistics-colored-text">solutions</span> that
-            drive <span className="statistics-colored-text">success</span>. Our
-            commitment is your{" "}
-            <span className="statistics-colored-text">
-              competitive advantage
-            </span>
-            , ensuring a future shaped by seamless solutions and{" "}
-            <span className="statistics-colored-text">sustained growth.</span>
+            Relentlessly pursuing{" "}
+            <span className="statistics-colored-text">excellence</span> for over
+            20 years, we strive to{" "}
+            <span className="statistics-colored-text">develop</span> and enhance
+            African well-being through the nurturing and growth of indigenous
+            production and the provision of cutting-edge technological
+            solutions.
           </p>
         </div>
         <div className="div-block-5">
-          <StatisticCard index={1} />
-          <StatisticCard index={2} />
-          <StatisticCard index={3} />
+          <StatisticCard
+            index={1}
+            icon="clock"
+            number="20"
+            text="YEARS OF INFALLIBLE 
+SERVICE DELIVERY"
+          />
+          <StatisticCard
+            index={2}
+            icon="cash"
+            number="$500+"
+            text="MILLION  DOLLARS IN 
+MACHINERY AND 
+PARTS"
+          />
+          <StatisticCard
+            index={3}
+            icon="people"
+            number="250+"
+            text="THRILED
+CLIENT BUSINESSES"
+          />
         </div>
       </div>
     </motion.section>
