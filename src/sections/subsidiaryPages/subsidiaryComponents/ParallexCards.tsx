@@ -5,13 +5,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-interface Contents {
-  img: string;
-  text: string;
-  desc: string;
-  link: string;
-  class: string;
-}
+// interface Contents {
+//   img: string;
+//   text: string;
+//   desc: string;
+//   link: string;
+//   class: string;
+// }
 
 const ParallaxCards: React.FC = () => {
 
