@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import SubsidiaryPageOne from "./sections/subsidiaryPages/SubsidiaryPageOne";
 import ParallaxCards from "./sections/subsidiaryPages/subsidiaryComponents/ParallexCards";
 
+
 function App() {
   const lenis = new Lenis();
 

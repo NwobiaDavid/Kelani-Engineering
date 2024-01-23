@@ -1,11 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import {
-  Dispatch,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState
-} from "react";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -97,19 +91,22 @@ const SubsidiaryShowcase = ({
         case "industrials":
           setScrollTops((prev) => ({
             ...prev,
-            industrials: (containerRef.current as any)?.offsetTop - window.innerHeight,
+            industrials:
+              (containerRef.current as any)?.offsetTop - window.innerHeight,
           }));
           break;
         case "power":
           setScrollTops((prev) => ({
             ...prev,
-            power: (containerRef.current as any)?.offsetTop - window.innerHeight,
+            power:
+              (containerRef.current as any)?.offsetTop - window.innerHeight,
           }));
           break;
         case "consulting":
           setScrollTops((prev) => ({
             ...prev,
-            consulting: (containerRef.current as any)?.offsetTop - window.innerHeight,
+            consulting:
+              (containerRef.current as any)?.offsetTop - window.innerHeight,
           }));
           break;
       }
@@ -162,6 +159,7 @@ const SubsidiaryShowcase = ({
             style={{ scale }}
             className="w-full object-cover h-full rounded-tr-[24px] rounded-bl-[28px]  lg:rounded-tr-[32px] lg:rounded-bl-[32px] "
             src={bgImage}
+            onLoad={() => console.log("This image just loaded")}
           />
           <motion.div className="bottom-0 -right-[1px] md:right-0 absolute z-20">
             <div className="relative w-[48px] h-[48px] rounded-tl-[32px] bg-[#FEFEFE] flex items-center justify-center p-[8px]">

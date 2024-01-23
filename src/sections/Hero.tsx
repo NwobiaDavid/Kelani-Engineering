@@ -43,6 +43,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
           <div className="w-full absolute top-0 p-[24px] flex justify-between z-20">
             <div className=" px-[20px] h-[35px] rounded-full flex items-center justify-center">
               <img
+                onLoad={() => console.log("this image just loaded")}
                 className=" h-[30px] "
                 src="/assets/images/kelani-logo.png"
               />
