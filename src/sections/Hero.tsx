@@ -9,7 +9,7 @@ import { useRef } from "react";
 import InfiniteCarousel from "../components/InfiniteCarousel";
 import NavBar from "../components/NavBar";
 // import TextAnimation from "../components/TextAnimation";
-import useScreenSize from "../hooks/useScreenSize";
+// import useScreenSize from "../hooks/useScreenSize";
 import useNavStore from "../store/nav";
 
 const Hero = ({ lenis }: { lenis: Lenis }) => {
