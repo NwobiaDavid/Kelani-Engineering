@@ -8,23 +8,23 @@ import {
 import { useRef } from "react";
 import InfiniteCarousel from "../components/InfiniteCarousel";
 import NavBar from "../components/NavBar";
-import TextAnimation from "../components/TextAnimation";
+// import TextAnimation from "../components/TextAnimation";
 import useScreenSize from "../hooks/useScreenSize";
 import useNavStore from "../store/nav";
 
 const Hero = ({ lenis }: { lenis: Lenis }) => {
   // const [navShowing, setNavShowing] = useState(false);
   const { navShowing, setNavShowing } = useNavStore();
-  const { width } = useScreenSize();
-  const getValueFromScreenSize = (mobile: any, tablet: any, desktop: any) => {
-    if (width < 768) {
-      return mobile;
-    } else if (width < 1024) {
-      return tablet;
-    } else {
-      return desktop;
-    }
-  };
+  // const { width } = useScreenSize();
+  // const getValueFromScreenSize = (mobile: any, tablet: any, desktop: any) => {
+  //   if (width < 768) {
+  //     return mobile;
+  //   } else if (width < 1024) {
+  //     return tablet;
+  //   } else {
+  //     return desktop;
+  //   }
+  // };
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,

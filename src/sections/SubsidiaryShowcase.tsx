@@ -222,6 +222,7 @@ const SubsidiaryShowcase = ({
                 />
               ))}
             </div>
+            {/* @ts-ignore */}
             {!spotlightLoading && spotlightData?.length > 0 && (
               <div className="border-t border-[#D2DADF] lg:pr-[56px] pt-[40px] font-semibold pb-[129px] relative">
                 <h3 className="text-[14px] mb-[14px] lg:mb-[20px] font-semibold">
@@ -232,7 +233,8 @@ const SubsidiaryShowcase = ({
                   slidesPerView={width > 768 ? 2 : 1}
                   spaceBetween={23}
                 >
-                  {spotlightData?.map((item, index) => (
+                  {/* @ts-ignore */}
+                  {spotlightData?.map((item: any, index: number) => (
                     <SwiperSlide>
                       <SpotlightCard
                         description={item["Spotlight Description"]}
