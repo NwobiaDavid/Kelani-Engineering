@@ -200,8 +200,9 @@ const SubsidiaryShowcase = ({
               </div>
             </div>
             <div className="lg:hidden pb-[20px]">
-              {services?.map((service) => (
+              {services?.map((service, index) => (
                 <TextGroup
+                key={index}
                   themeColor={themeColor}
                   title={service.title}
                   paragraphs={service.paragraphs}
