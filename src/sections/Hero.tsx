@@ -38,12 +38,15 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
           <NavBar lenis={lenis} closeNav={() => setNavShowing(false)} />
         )}
       </AnimatePresence>
-      <div className="pt-[30px] px-[12px] md:px-[24px] lg:px-[32px] max-w-[1440px] mx-auto ">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.8 } }}
+        className="pt-[30px] px-[12px] md:px-[24px] lg:px-[32px] max-w-[1440px] mx-auto "
+      >
         <div className="h-[50vh] md:h-[82vh] relative  rounded-[28px] overflow-hidden">
           <div className="w-full absolute top-0 p-[24px] flex justify-between z-20">
             <div className=" px-[20px] h-[35px] rounded-full flex items-center justify-center">
               <img
-                onLoad={() => console.log("this image just loaded")}
                 className=" h-[30px] "
                 src="/assets/images/kelani-logo.png"
               />
@@ -64,10 +67,11 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
           />
           <div className="flex-col absolute -bottom-[3px] -left-[1px] hidden md:flex">
             <h1 className="bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] md:px-[24px] pt-[10px] md:pt-[10px] pb-[10px] lg:pb-[4px] relative rounded-br-[20px] sm:rounded-br-none rounded-tr-[20px] md:rounded-br-none lg:rounded-tr-[28px] w-fit overflow">
-              <TextAnimation
+              {/* <TextAnimation
                 lineHeight={getValueFromScreenSize(44, 57, 83)}
                 text="Building Africa’s Future"
-              />
+              /> */}
+              Building Africa’s Future
               <img
                 src="/assets/images/curved-fill-tl.svg"
                 className="w-[20px] h-[20px] lg:w-[36px] lg:h-[36px] absolute lg:top-[-35px] top-[-19px] left-[1px]"
@@ -78,15 +82,17 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
               />
             </h1>
             <h1 className="bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
-              <TextAnimation
+              {/* <TextAnimation
                 lineHeight={getValueFromScreenSize(44, 57, 83)}
                 text="With Engineering Excellence"
-              />
-              <span className="hidden lg:block">
-                <TextAnimation
+              /> */}
+              With Engineering Excellence
+              <span className="hidden lg:block pl-[18px]">
+                {/* <TextAnimation
                   lineHeight={getValueFromScreenSize(44, 57, 83)}
                   text="For Growth"
-                />
+                /> */}
+                For Growth
               </span>
               <img
                 src="/assets/images/curved-fill-tl.svg"
@@ -144,7 +150,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
 
         {/* </Container> */}
         <InfiniteCarousel />
-      </div>
+      </motion.div>
     </div>
   );
 };

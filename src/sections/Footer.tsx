@@ -84,13 +84,11 @@ const Footer = () => {
               </div>
 
               <div className="flex flex-col lg:flex-row left-[56px] absolute hidden lg:block lg:bottom-[46px]">
-                <p className="lg:mr-[100px] text-[#888A8B]">
-                  © 2023 6B47 REAL ESTATE INVESTORS AG
-                </p>
-                <p className="flex text-[#888A8B] flex-row">
+                <p className="lg:mr-[100px] text-[#888A8B]">© 2024 Kelani</p>
+                {/* <p className="flex text-[#888A8B] flex-row">
                   <a className="mr-[23px] inline-block">Imprints</a>
                   <a className="">Legal</a>
-                </p>
+                </p> */}
               </div>
 
               <div className="flex gap-[23px] mt-[40px] items-center">
@@ -114,8 +112,10 @@ const Footer = () => {
             </div>
             <div className="h-full p-[24px] lg:p-[56px] pb-[48px] lg:pb-[97px] flex flex-col gap-[30px] lg:justify-between border-t lg:border-t-0 border-t-[#D2DADF] lg:border-top-0">
               <p className="lg:max-w-[80%] text-[17.25px]">
-                If you want to book an appointment or find solutions, fill out
-                the form below and our manager will contact you within a day
+                Excited to bring your ideas to life? Reach out and let's chat!
+                Our team is here to tailor solutions just for you. Don't
+                hesitate to drop us a line – we're ready to turn your vision
+                into reality!
               </p>
               <form className="flex flex-col gap-[50px]">
                 <ContactUsInput
@@ -157,10 +157,10 @@ const Footer = () => {
               <p className="lg:mr-[100px] text-[#888A8B]">
                 © 2023 6B47 REAL ESTATE INVESTORS AG
               </p>
-              <p className="flex text-[#888A8B] flex-row lg:flex-col justify-center text-center">
+              {/* <p className="flex text-[#888A8B] flex-row lg:flex-col justify-center text-center">
                 <a className="mr-[23px] inline-block">Imprints</a>
                 <a className="">Legal</a>
-              </p>
+              </p> */}
             </div>
           </motion.div>
         </div>

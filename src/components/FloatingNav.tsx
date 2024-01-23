@@ -7,14 +7,14 @@ const FloatingNavItem = ({
   active,
   setActiveNav,
 }: {
-  text: "Consulting" | "Industrials" | "Power";
+  text: "Consulting" | "Engineering" | "Power";
   active?: boolean;
   setActiveNav: () => void;
 }) => {
   const textToColorMapping = {
     Consulting: "#CAB6F4",
-    Industrials: "#89E2A7",
-    Power: "#FFBC8C",
+    Power: "#89E2A7",
+    Engineering: "#FFBC8C",
   };
   return (
     <motion.button
@@ -69,7 +69,7 @@ const FloatingNav = ({
               //   behavior: "smooth",
               // });
             }}
-            text="Industrials"
+            text="Engineering"
             active={activeNav == "industrials"}
           />
           <FloatingNavItem

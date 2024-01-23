@@ -34,7 +34,7 @@ const StatisticCard = ({
           ease: [0.43, 0.13, 0.23, 0.96],
         },
       }}
-      className="statistic-card py-[24px] md:py-[20px]"
+      className="statistic-card py-[24px] md:py-[20px] h-full"
     >
       <div className="div-block-6 flex justify-between items-center space-x-[10px] gap-[10px]">
         <div className="div-block-7 flex items-center justify-center">

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FloatingNav from "../components/FloatingNav";
 import useScreenSize from "../hooks/useScreenSize";
 import useScrollPosition from "../hooks/useScrollPosition";
@@ -8,6 +8,8 @@ import Footer from "../sections/Footer";
 import Hero from "../sections/Hero";
 import SubsidiaryShowcase from "../sections/SubsidiaryShowcase";
 import Lenis from "@studio-freight/lenis/types";
+import axios from "axios";
+
 const Home = ({ lenis }: { lenis: Lenis }) => {
   const { y: scrollY } = useScrollPosition();
   const { height } = useScreenSize();
@@ -16,6 +18,34 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
     power: 0,
     consulting: 0,
   });
+  const [engineeringLoading, setEngineeringLoading] = useState(false);
+  const [engineeringData, setEngineeringData] = useState([]);
+  const fetchEngineeringSpotlight = async () => {
+    const options = {
+      method: "GET",
+      url: "https://app.nocodb.com/api/v1/db/data/noco/p9n8mov63j4aa98/mbzvs5xvoj4qobo/views/vwehcatlb9l4lsid",
+      params: { offset: "0", limit: "25", where: "" },
+      headers: {
+        "xc-auth":
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtlbGFuaWVuZ2luZWVyaW5nc2VydmljZXNAZ21haWwuY29tIiwiZGlzcGxheV9uYW1lIjpudWxsLCJhdmF0YXIiOm51bGwsInVzZXJfbmFtZSI6bnVsbCwiaWQiOiJ1c3lwdG1lcWk5eHcwa2dhIiwicm9sZXMiOiJvcmctbGV2ZWwtdmlld2VyIiwidG9rZW5fdmVyc2lvbiI6Ijg5NjJhZDI0YWUwZTYzNmJiYjY1ZGE4NjhlNzZmOGVjZjI3M2VkNjhiY2MyMjFjOTY1NTFmNDkxMGM2ZGRmNjBiNzY2ZjIxODhhMmU5MmM5IiwiaWF0IjoxNzA1OTgzNTA4LCJleHAiOjE3MDYwMTk1MDh9.iqPy5ZHY0-E3PwMghX6wme-ZYfU3McMEW7xbGyPBpYo",
+      },
+    };
+
+    try {
+      setEngineeringLoading(true);
+      const response = await axios.request(options);
+      setEngineeringData(response.data.list);
+      console.log(response.data);
+      console.log(engineeringData);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setEngineeringLoading(false);
+    }
+  };
+  useEffect(() => {
+    fetchEngineeringSpotlight();
+  }, []);
   return (
     <>
       <motion.main
@@ -32,6 +62,8 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
           }
           setScrollTops={setScrollTops}
           type="industrials"
+          spotlightLoading={engineeringLoading}
+          spotlightData={engineeringData as unknown as Record<string, string>}
           services={[
             {
               title: "Cutting-Edge Machinery and Expert Advisory Services",
@@ -88,7 +120,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
               ],
             },
             {
-              title: "Research",
+              title: "Research Excellence in Renewable Energy Innovation",
               paragraphs: [
                 "At the forefront of renewable innovation, we're committed to exploring cutting-edge methods and advanced transmission technologies for a cost-effective, sustainable energy supply. Join us in pushing boundaries for a greener, more efficient energy landscape.",
               ],
@@ -102,15 +134,16 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
           With talent and experience, what cannot succeed?"
           services={[
             {
-              title: "HRMS and Talent management",
+              title:
+                "Tailored HRMS and Talent Management Solutions to Elevate Your Workforce",
               paragraphs: [
-                "We provide exceptional HR and talent management solutions tailored to industries, factories and engineering enterprises.",
+                "Unlock the full potential of your team with our comprehensive HR and talent management services, designed specifically for the unique needs of industries, factories, and engineering enterprises. Streamline your processes, enhance employee engagement, and foster growth with our specialized solutions",
               ],
             },
             {
-              title: "Outsourcing",
+              title: "Connecting Talent to Opportunity",
               paragraphs: [
-                "Here, we are the esteemed link between talent and opportunity We have a particular focus on the delegation of engineering design, industrial and technical research tasks.",
+                "We specialize in bridging the gap between talent and opportunity, with a dedicated focus on outsourcing engineering design, industrial, and technical research tasks. Elevate your projects with our strategic outsourcing solutions.",
               ],
             },
           ]}
