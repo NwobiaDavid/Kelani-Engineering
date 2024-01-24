@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 interface NavbarProps {
-  color: {
+  
     c700: string;
     c500: string;
     c400: string;
     c300: string;
-  }
+  
 }
 
 const Navbar: React.FC<{ color: NavbarProps }> = ({ color }) => {

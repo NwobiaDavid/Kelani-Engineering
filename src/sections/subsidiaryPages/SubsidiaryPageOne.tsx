@@ -38,6 +38,15 @@ interface Header {
   className: string
 }
 
+// interface ColourProps {
+//   color: {
+//     c700: string;
+//     c500: string;
+//     c400: string;
+//     c300: string;
+//   }
+// }
+
 interface SubProps {
   hero_section: {
     sub_text: string;
@@ -114,7 +123,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
 
   useEffect(() => {
     const handleScrollReset = () => {
-      setIsTopNear(scrollPosition > 4600);
+      setIsTopNear(scrollPosition > 5180);
     };
 
     window.addEventListener('scroll', handleScrollReset);
@@ -194,9 +203,9 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
 
           <ParallexCards />
 
-          <div className=" bg-black relative z-50 " >
+          {/* <div className="  relative z-50 " > */}
 
-            <div className="relative ">
+            <div className="relative z-30 bg-black  ">
               <ConnectSection text={sub.connect_text} />
 
               <motion.div
@@ -204,19 +213,19 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
                 animate={controls}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
               >
-                <div className=" bottom-0 h-[2rem] w-full z-50 absolute rounded-b-full  bg-black " ></div>
+                <div className=" bottom-0 h-[2rem] w-full  absolute rounded-b-full -z-40 bg-black " ></div>
               </motion.div>
             </div>
 
 
             
 
-          </div>
+          {/* </div> */}
 
 
         </div>
       </div>
-      <div className="-z-40 " >
+      <div className="-z-50 " >
               <Footer />
             </div>
 
