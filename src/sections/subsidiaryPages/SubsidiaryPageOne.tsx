@@ -111,7 +111,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY;
       setScrollPosition(currentScrollPosition);
-      console.log("The scroll num => " + currentScrollPosition);
+      // console.log("The scroll num => " + currentScrollPosition);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -140,7 +140,6 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
     lightControls.start({
       top: `${lightPosition.top}%`,
       left: `${lightPosition.left}%`,
-      transition: { ease: 'easeInOut' },
       opacity: [0.2],
     });
   }, [lightPosition, lightControls]);
@@ -201,11 +200,13 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
             <SlideshowSection2 colours={sub.hero_section.color} data={sub.slideshow_section} text={sub.slideshow_section.text} />
           </div>
 
-          <ParallexCards />
+          <div className="relative bg-black z-50 ">
+            <ParallexCards />
+          </div>
 
           {/* <div className="  relative z-50 " > */}
 
-            <div className="relative z-30 bg-black  ">
+            <div className="relative z-50 bg-black  ">
               <ConnectSection text={sub.connect_text} />
 
               <motion.div

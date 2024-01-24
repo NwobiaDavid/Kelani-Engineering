@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@gsap/react": "^2.0.2",
+    "@gsap/react": "^2.1.0",
     "@hookform/resolvers": "^3.3.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@studio-freight/lenis": "^1.0.33",
