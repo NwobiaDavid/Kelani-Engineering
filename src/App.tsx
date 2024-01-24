@@ -14,6 +14,7 @@ import SubsidiaryPageOne from "./sections/subsidiaryPages/SubsidiaryPageOne";
 import ParallaxCards from "./sections/subsidiaryPages/subsidiaryComponents/ParallexCards";
 import { sub_one, sub_three, sub_two } from "./sections/subsidiaryPages/subConstants";
 
+
 function App() {
   const lenis = new Lenis();
 

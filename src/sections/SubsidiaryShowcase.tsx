@@ -1,11 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import {
-  Dispatch,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState
-} from "react";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,6 +10,7 @@ import Container from "../components/Container";
 import SpotlightCard from "../components/SpotlightCard";
 import TextGroup from "../components/TextGroup";
 import useScreenSize from "../hooks/useScreenSize";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function SlideNextButton({ themeColor }: { themeColor: string }) {
   const swiper = useSwiper();
@@ -70,6 +65,8 @@ const SubsidiaryShowcase = ({
   description,
   services,
   bgImage,
+  spotlightLoading,
+  spotlightData,
 }: {
   type: string;
   setScrollTops: Dispatch<
@@ -79,6 +76,8 @@ const SubsidiaryShowcase = ({
   description: string;
   services: { title: string; paragraphs: string[] }[];
   bgImage: string;
+  spotlightLoading?: boolean;
+  spotlightData?: Record<string, string>;
 }) => {
   const { width } = useScreenSize();
   const containerRef = useRef(null);
@@ -90,26 +89,29 @@ const SubsidiaryShowcase = ({
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
   const themeColor =
     type == "industrials" ? "#FF9A53" : type == "power" ? "#4ED47B" : "#AF92EF";
-
+  console.log(spotlightData);
   useEffect(() => {
     if (containerRef.current) {
       switch (type) {
         case "industrials":
           setScrollTops((prev) => ({
             ...prev,
-            industrials: (containerRef.current as any)?.offsetTop - window.innerHeight,
+            industrials:
+              (containerRef.current as any)?.offsetTop - window.innerHeight,
           }));
           break;
         case "power":
           setScrollTops((prev) => ({
             ...prev,
-            power: (containerRef.current as any)?.offsetTop - window.innerHeight,
+            power:
+              (containerRef.current as any)?.offsetTop - window.innerHeight,
           }));
           break;
         case "consulting":
           setScrollTops((prev) => ({
             ...prev,
-            consulting: (containerRef.current as any)?.offsetTop - window.innerHeight,
+            consulting:
+              (containerRef.current as any)?.offsetTop - window.innerHeight,
           }));
           break;
       }
@@ -163,6 +165,15 @@ const SubsidiaryShowcase = ({
             className="w-full object-cover h-full rounded-tr-[24px] rounded-bl-[28px]  lg:rounded-tr-[32px] lg:rounded-bl-[32px] "
             src={bgImage}
           />
+          {/* <figure className="w-full object-cover h-full rounded-tr-[24px] rounded-bl-[28px]  lg:rounded-tr-[32px] lg:rounded-bl-[32px] overflow-hidden">
+            <LazyLoadImage
+              width={"100%"}
+              height={"100vh"}
+              effect="blur"
+              wrapperClassName="lazyLoadImageContainer"
+              src={bgImage}
+            />
+          </figure> */}
           <motion.div className="bottom-0 -right-[1px] md:right-0 absolute z-20">
             <div className="relative w-[48px] h-[48px] rounded-tl-[32px] bg-[#FEFEFE] flex items-center justify-center p-[8px]">
               <img
@@ -202,69 +213,53 @@ const SubsidiaryShowcase = ({
               </div>
             </div>
             <div className="lg:hidden pb-[20px]">
-              {services?.map((service) => (
+              {services?.map((service, index) => (
                 <TextGroup
+                  key={index}
                   themeColor={themeColor}
                   title={service.title}
                   paragraphs={service.paragraphs}
                 />
               ))}
             </div>
-            <div className="border-t border-[#D2DADF] lg:pr-[56px] pt-[40px] font-semibold pb-[129px] relative">
-              <h3 className="text-[14px] mb-[14px] lg:mb-[20px] font-semibold">
-                SPOTLIGHT
-              </h3>
-              <Swiper
-                className="static overflow-y-visible px-[2px]"
-                slidesPerView={width > 768 ? 2 : 1}
-                spaceBetween={23}
-              >
-                <SwiperSlide>
-                  <SpotlightCard
-                    image="/assets/images/spotlight-image.png"
-                    description="Credit & financing facilities for businesses to work with our agreed partners for "
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <SpotlightCard
-                    image="/assets/images/spotlight-image.png"
-                    description="Credit & financing facilities for businesses to work with our agreed partners for "
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <SpotlightCard
-                    image="/assets/images/spotlight-image.png"
-                    description="Credit & financing facilities for businesses to work with our agreed partners for "
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <SpotlightCard
-                    image="/assets/images/spotlight-image.png"
-                    description="Credit & financing facilities for businesses to work with our agreed partners for "
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <SpotlightCard
-                    image="/assets/images/spotlight-image.png"
-                    description="Credit & financing facilities for businesses to work with our agreed partners for "
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <SpotlightCard
-                    image="/assets/images/spotlight-image.png"
-                    description="Credit & financing facilities for businesses to work with our agreed partners for "
-                  />
-                </SwiperSlide>
-                <div className="absolute bottom-[23px] flex items-center gap-[40px] z-10 w-full lg:pr-[46px]">
-                  <p>01 - 05</p>
-                  <div className="flex-grow h-[1px] bg-[#D2DADF]"></div>
-                  <div className="gap-[9px] flex">
-                    <SlidePrevButton themeColor={themeColor} />
-                    <SlideNextButton themeColor={themeColor} />
+            {/* @ts-ignore */}
+            {!spotlightLoading && spotlightData?.length > 0 && (
+              <div className="border-t border-[#D2DADF] lg:pr-[56px] pt-[40px] font-semibold pb-[129px] relative">
+                <h3 className="text-[14px] mb-[14px] lg:mb-[20px] font-semibold">
+                  SPOTLIGHT
+                </h3>
+                <Swiper
+                  className="static overflow-y-visible px-[2px]"
+                  slidesPerView={width > 768 ? 2 : 1}
+                  spaceBetween={23}
+                >
+                  {/* @ts-ignore */}
+                  {spotlightData?.map((item: any, index: number) => (
+                    <SwiperSlide>
+                      <SpotlightCard
+                        description={item["Spotlight Description"]}
+                        link={item["Spotlight Link"]}
+                        image={item["Image Url / Video Thumbnail Url"]}
+                        key={index}
+                      />
+                    </SwiperSlide>
+                  ))}
+                  <div className="absolute bottom-[23px] flex items-center gap-[40px] z-10 w-full lg:pr-[46px]">
+                    <p>01 - 0{spotlightData?.length}</p>
+                    <div className="flex-grow h-[1px] bg-[#D2DADF]"></div>
+                    <div className="gap-[9px] flex">
+                      <SlidePrevButton themeColor={themeColor} />
+                      <SlideNextButton themeColor={themeColor} />
+                    </div>
                   </div>
-                </div>
-              </Swiper>
-            </div>
+                </Swiper>
+              </div>
+            )}
+            {spotlightLoading && (
+              <div className="border-t border-[#D2DADF] h-[250px] flex items-center justify-center lg:pr-[56px]">
+                <img src="/assets/images/loader.gif" className="w-[25px]" />
+              </div>
+            )}
           </div>
           <div className="hidden lg:block">
 

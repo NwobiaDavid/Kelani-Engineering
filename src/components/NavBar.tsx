@@ -22,7 +22,7 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
         }}
         exit={{ opacity: 0, transition: { duration: 0.4 } }}
         onClick={closeNav}
-        className="fixed top-0 right-0 bottom-0 left-0 bg-[rgba(25,25,24,.6)] z-20 cursor-pointer"
+        className="fixed top-0 right-0 bottom-0 left-0 bg-[rgba(25,25,24,.6)] z-30 cursor-pointer"
       ></motion.div>
       <motion.div
         initial={{ y: -50 }}
@@ -30,7 +30,7 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
           y: 0,
           transition: { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] },
         }}
-        className="flex flex-col w-full gap-[6.4px] fixed p-[10px] z-30 top-0 right-0  left-0"
+        className="flex flex-col w-full gap-[6.4px] fixed p-[10px] z-40 top-0 right-0  left-0"
       >
         <motion.div
           initial={{ height: 0 }}
@@ -59,7 +59,7 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
             <NavSubsidiarySection
               icon="/assets/images/icon-industrials.svg"
               hasRightBorder
-              text="Industrials"
+              text="Engineering"
               index={1}
             />
             <NavSubsidiarySection
