@@ -90,6 +90,7 @@ const SubsidiaryShowcase = ({
   const themeColor =
     type == "industrials" ? "#FF9A53" : type == "power" ? "#4ED47B" : "#AF92EF";
   console.log(spotlightData);
+  
   useEffect(() => {
     if (containerRef.current) {
       switch (type) {

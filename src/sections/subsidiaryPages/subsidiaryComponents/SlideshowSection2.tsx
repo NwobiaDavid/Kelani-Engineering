@@ -1,5 +1,5 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { CSSProperties, useState } from "react";
+import { motion, AnimatePresence, useTransform, useScroll } from "framer-motion";
+import { CSSProperties, useRef, useState } from "react";
 import { FaRegCircle } from "react-icons/fa6";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
@@ -51,6 +51,12 @@ function useHover(styleOnHover: CSSProperties, styleOnNotHover: CSSProperties = 
 
 const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color , text:Text  }> = ({ data, colours }) => {
  
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"],
+      });
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
 
     const hoverrs = useHover({backgroundColor: colours.c400})
     const hoverr = useHover({backgroundColor: colours.c400})
@@ -165,7 +171,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color , text:
             </div>
 
 
-            <div className=' flex pt-[1rem] px-3 lg:px-0 items-center justify-center w-full ' >
+            <div  ref={containerRef} className=' flex pt-[1rem] px-3 lg:px-0 items-center justify-center w-full ' >
 
                 <AnimatePresence mode="wait">
 
@@ -179,7 +185,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color , text:
                         transition={{ duration: 0.4 }}
                     >
                         <div>
-                            <img src={data.content[display].img} alt={`Slide ${display + 1}`} />
+                            <img style={{scale}} src={data.content[display].img} alt={`Slide ${display + 1}`} />
                         </div>
                         <motion.div
                             initial={{ opacity: 0, x: -10 }}

@@ -200,7 +200,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
             <SlideshowSection2 colours={sub.hero_section.color} data={sub.slideshow_section} text={sub.slideshow_section.text} />
           </div>
 
-          <div className="relative bg-black z-50 ">
+          <div className="relative h-[300vh] bg-black z-50 ">
             <ParallexCards />
           </div>
 
