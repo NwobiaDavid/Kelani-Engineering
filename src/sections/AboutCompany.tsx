@@ -23,7 +23,7 @@ const AboutCompany = () => {
         y: sectionDecimalScroll.get() > 0 ? 0 : 50,
         transition: { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] },
       }}
-      className="statistics pt-[40px] lg:pt-[96px] page-container"
+      className="statistics pt-[40px] lg:pt-[96px] page-container relative -z-10"
     >
       <figure className="overflow-hidden rounded-[10px]">
         <motion.img

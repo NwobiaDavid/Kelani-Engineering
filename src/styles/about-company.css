@@ -324,13 +324,13 @@
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   grid-auto-flow: row;
-  padding: 96px 32px 200px;
+  padding: 96px 32px 96px;
   display: grid;
 }
 
 @media screen and (max-width: 768px) {
   .statistics {
-    padding-bottom: 92px;
+    padding-bottom: 46px;
   }
 }
 

@@ -89,7 +89,6 @@ const SubsidiaryShowcase = ({
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
   const themeColor =
     type == "industrials" ? "#FF9A53" : type == "power" ? "#4ED47B" : "#AF92EF";
-  console.log(spotlightData);
   useEffect(() => {
     if (containerRef.current) {
       switch (type) {
@@ -128,12 +127,12 @@ const SubsidiaryShowcase = ({
           onMouseEnter={() => setSubsidiaryImageLinkHovered(true)}
           onMouseLeave={() => setSubsidiaryImageLinkHovered(false)}
           onClick={() => navigate(`/${type}`)}
-          animate={{
-            opacity: sectionDecimalScroll.get() > 0 ? 1 : 0,
-            scale: sectionDecimalScroll.get() > 0 ? 1 : 0.9,
-            y: sectionDecimalScroll.get() > 0 ? 0 : 50,
-            transition: { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] },
-          }}
+          // animate={{
+          //   opacity: sectionDecimalScroll.get() > 0 ? 1 : 0,
+          //   scale: sectionDecimalScroll.get() > 0 ? 1 : 0.9,
+          //   y: sectionDecimalScroll.get() > 0 ? 0 : 50,
+          //   transition: { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] },
+          // }}
           className="w-full h-[268px] relative overflow-hidden rounded-tr-[24px] rounded-bl-[28px]  lg:rounded-tr-[32px] lg:rounded-bl-[32px] lg:rounded-br-[32px] cursor-pointer"
         >
           <div className="top-0 left-0 absolute z-20">
