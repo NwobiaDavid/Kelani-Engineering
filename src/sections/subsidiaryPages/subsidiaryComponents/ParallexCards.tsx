@@ -90,7 +90,7 @@ const ParallaxCards: React.FC = () => {
         trigger: ".card-animation-container",
         scrub: 1,
         start: "center 40%",
-        end: "+=1000",
+        end: "+=1600",
         markers: true,
       },
     });
@@ -132,7 +132,7 @@ const ParallaxCards: React.FC = () => {
     
 {/* <div className="  bg-blue-500 z-50 relative "> */}
 
-<div className="bg-red-300 relative h-[300vh]  flex-col text-white w-full flex">
+<div className="bg-red-300 relative h-[400vh]  flex-col text-white w-full flex">
     {/* <div className="h-[600px]  bg-yellow-400" ></div> */}
     
     <div className="main sticky top-0 h-[100vh] z-40 items-center  py-10 flex-col bg-black text-white w-full flex">

@@ -26,17 +26,18 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
           borderRadius: "4px",
         }}
       >
-        <div className="h-[400px] w-[10px] text-center relative">
+        <div className="h-[400px]  w-[30px] text-center relative">
           <motion.div
-            className="flex flex-col justify-center items-center relative  -translate-x-1/2"
+            className="flex flex-col w-[20px] z-[99] justify-center items-center relative  -translate-x-1/2"
             style={{
               width: "100%",
               height: yRange,
+              // objectFit: "",
               borderRadius: "4px",
             }}
           >
             <svg
-              className="absolute w-auto h-[103.5%] origin-top js-svg-progress-bar"
+              className="absolute z-[70] w-full h-[103.5%] origin-top js-svg-progress-bar"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 23 347"
