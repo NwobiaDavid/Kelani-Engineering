@@ -42,21 +42,6 @@ const ParallaxCards: React.FC = () => {
   //   },
   // ];
 
-  // useGSAP(
-  //   () => {
-  //     // create the smooth scroller FIRST!
-
-  //     ScrollTrigger.create({
-  //       trigger: '.box-c',
-  //       pin: true,
-  //       start: 'center center',
-  //       end: '+=300',
-  //       markers: true,
-  //     });
-  //   },
-  //   { scope: main }
-  // );
-
 
 // useGSAP(()=>{
 //   const timeline = gsap.timeline({
@@ -104,22 +89,14 @@ const ParallaxCards: React.FC = () => {
       scrollTrigger: {
         trigger: ".card-animation-container",
         scrub: 1,
-        pin: ".one",
-        start: "60% center",
-        end: "+=90vh",
+        start: "center 40%",
+        end: "+=1000",
         markers: true,
-        // snap: {
-        //   snapTo: "labels", // snap to the closest label in the timeline
-        //   duration: { min: 6, max: 10 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-        //   delay: 5, // wait 0.2 seconds from the last scroll event before doing the snapping
-        //   ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
-        // },
-
       },
     });
-    // timeline.to(".card-1", { x: "-100vw", duration: 3 });
-    timeline.to(".card-2", { x: "-200vw", duration: 3, delay: 10 });
-    timeline.to(".card-3", { x: "-200vw", duration: 4, delay: 20 });
+    timeline.to(".card-1", { x: 0, duration: 3 });
+    timeline.to(".card-2", { x: "-200vw", duration: 100, delay: 130 });
+    timeline.to(".card-3", { x: "-200vw", duration: 100, delay: 130 });
 
     timeline.to(
       ".card-1 .title",
@@ -153,13 +130,16 @@ const ParallaxCards: React.FC = () => {
     <>
     {/* <div className="h-[500px] "></div> */}
     
-<div className="  h-[150vh] ">
-  <div className="  card-animation-container   h-[110vh] z-50  py-10 flex-col text-white w-full flex relative " >
+{/* <div className="  bg-blue-500 z-50 relative "> */}
+
+<div className="bg-red-300 relative h-[300vh]  flex-col text-white w-full flex">
+    {/* <div className="h-[600px]  bg-yellow-400" ></div> */}
     
-            <div className="  one h-[100vh] z-50  py-10 flex-col bg-black text-white w-full flex relative ">
+    <div className="main sticky top-0 h-[100vh] z-40 items-center  py-10 flex-col bg-black text-white w-full flex">
+
               <div >
                 <div className="flex flex-col  uppercase justify-center items-center">
-                  <div className="lg:w-[28%] w-[90%] text-center relative z-50 ">
+                  <div className=" w-[90%] text-center relative  ">
                     <h3 className=" opacity-80 tracking-wider lg:font-semibold mb-2 lg:mb-6  ">
                       why kelani
                     </h3>
@@ -170,7 +150,7 @@ const ParallaxCards: React.FC = () => {
                 </div>
               </div>
     
-              <div className="flex h-full relative z-50 w-full ">
+              <div className="flex h-full relative  w-full ">
     
                 <div className="lg:w-[15%] justify-center items-center hidden lg:flex flex-col ">
                   <div className="w-[50%] flex flex-col items-center justify-center text-center ">
@@ -287,7 +267,9 @@ const ParallaxCards: React.FC = () => {
                 </div>
               </div>
   </div>
-          </div>
+
+  {/* <div className="h-[600px] w-full bg-blue-300 "></div> */}
+          {/* </div> */}
 </div>
     </>
   );

@@ -123,6 +123,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
 
   useEffect(() => {
     const handleScrollReset = () => {
+      console.log(scrollPosition)
       setIsTopNear(scrollPosition > 5180);
     };
 
@@ -132,6 +133,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
       window.removeEventListener('scroll', handleScrollReset);
     };
   }, [scrollPosition]);
+
   useEffect(() => {
     controls.start({ backgroundColor: isTopNear ? 'black' : 'white' });
   }, [isTopNear, controls]);
@@ -200,11 +202,18 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
             <SlideshowSection2 colours={sub.hero_section.color} data={sub.slideshow_section} text={sub.slideshow_section.text} />
           </div>
 
-          <div className="relative h-[300vh] bg-black z-50 ">
-            <ParallexCards />
           </div>
+        
+        
+        </div>
+
+          <div className="relative bg-black z-50 ">
+          <ParallexCards />
+        </div>
+
 
           {/* <div className="  relative z-50 " > */}
+          <div id="hex-grid" className=" relative w-[100vw] h-full overflow-x-hidden "  >
 
             <div className="relative z-50 bg-black  ">
               <ConnectSection text={sub.connect_text} />
@@ -218,23 +227,23 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
               </motion.div>
             </div>
 
+          </div>
+
 
             
 
           {/* </div> */}
 
-
-        </div>
-      </div>
       <div className="-z-50 " >
-              <Footer />
-            </div>
+        <Footer />
+      </div>
 
       <div className="bg-white hidden md:block z-50 fixed">
         <CustomScrollbar barColor="#333" ellipseColor={sub.hero_section.color.c700} ellipseColor2={sub.hero_section.color.c500} ellipseColor3={sub.hero_section.color.c400}   />
       </div>
 
     </div>
+    
     </>
   );
 };
