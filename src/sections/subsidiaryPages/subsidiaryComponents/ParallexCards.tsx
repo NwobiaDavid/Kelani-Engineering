@@ -59,26 +59,29 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
 
     timeline.to(
       ".card-1 .title",
-      { scale: 0.35, x: -180, rotate: -90, duration: 2, y: 320 },
+      { scale: 0.35, x: -180, rotate: -90, duration: 100, y: 320 },
       5
     );
-    timeline.to(".card-1 .line-extend", { y: "-100%", duration: 1.3 }, 6);
+    timeline.to(".card-1 .line-extend", { y: "-100%", duration: 100 }, 6);
     timeline.to(
       ".card-1 .top-left-image",
-      { y: -100, x: -100, opacity: 1, duration: 1.7 },
+      { y: -100, x: -100, opacity: 1, duration: 170 },
       6
     );
+
+
     timeline.to(
       ".card-2 .title",
-      { scale: 0.35, x: -180, rotate: -90, duration: 2, y: 320 },
+      { scale: 0.35, x: -180, rotate: -90, duration: 100, y: 320, delay: 200 },
       9
     );
-    timeline.to(".card-2 .line-extend", { y: "-100%", duration: 1.3 }, 10);
+    timeline.to(".card-2 .line-extend", { y: "-100%", duration: 130, delay: 200 }, 10);
     timeline.to(
       ".card-2 .top-left-image",
-      { y: -100, x: -100, opacity: 1, duration: 1.7 },
+      { y: -100, x: -100, opacity: 1, duration: 370 },
       10
     );
+
   };
 
   useEffect(() => {
@@ -125,7 +128,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                   </div>
                 </div>
     
-                <div className="absolute  lg:bottom-[25%] left-[18%] h-[500px] w-full">
+                <div className="absolute  lg:bottom-[9%] left-[18%] h-[500px] w-full">
                   <div className="  ">
 
     
@@ -165,7 +168,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
     
     
                     <div  style={{ background: `linear-gradient(to bottom right, ${data.data[1].colors.one}, ${data.data[1].colors.two})` }}
-                     className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px]  overflow-hidden card-2 left-[calc(200vw+100px)]">
+                     className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] overflow-hidden card-2 left-[calc(200vw+100px)]">
                       <div className="h-[100%] pt-[15px] left-0 w-[100px] absolute flex flex-col items-center">
                         <div className="w-[90px] h-[90px] flex items-center justify-center">
                           <img
@@ -190,12 +193,10 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                             <img src="/assets/images/right-arrow.svg" />
                           </button>
                         </div>
-                        <figure>
                           <img
-                            className="w-[100%-100px]  object-cover"
+                            className="w-[calc(100%-100px)]  object-cover"
                             src="/assets/images/icon-talent-card-1.svg"
                           />
-                        </figure>
                       </div>
                     </div>
     
@@ -217,7 +218,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                         </div>
                         <figure>
                           <img
-                            className="w-[100%-100px]  object-cover"
+                            className="w-[calc(100%-100px)]  object-cover"
                             src={data.data[2].img}
                           />
                         </figure>

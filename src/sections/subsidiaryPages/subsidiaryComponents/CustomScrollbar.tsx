@@ -28,7 +28,7 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
       >
         <div className="h-[400px]  w-[30px] text-center relative">
           <motion.div
-            className="flex flex-col w-[20px] z-[99] justify-center items-center relative  -translate-x-1/2"
+            className="flex flex-col w-[2px]  justify-center items-center relative  -translate-x-1/2"
             style={{
               width: "100%",
               height: yRange,
