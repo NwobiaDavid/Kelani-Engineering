@@ -150,7 +150,7 @@ const ParallaxCards: React.FC = () => {
                 </div>
               </div>
     
-              <div className="flex h-full relative  w-full ">
+              <div className="flex h-full relative overflow-x-hidden   w-full ">
     
                 <div className="lg:w-[15%] justify-center items-center hidden lg:flex flex-col ">
                   <div className="w-[50%] flex flex-col items-center justify-center text-center ">
@@ -167,7 +167,7 @@ const ParallaxCards: React.FC = () => {
                 </div>
     
                 <div className="absolute  lg:bottom-[25%] left-[18%] h-[500px] w-full">
-                  <div className="relative ">
+                  <div className=" ">
     
     
                     <div className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] bg-gradient-to-br from-[#E9B8FF] to-[#F9ECFF] overflow-hidden card-1 ">
