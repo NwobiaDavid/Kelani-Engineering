@@ -155,8 +155,51 @@ export const sub_one = {
         },
 
       },
+      parallex_section:{
+        data: [
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
 
-      connect_text: "Ready to dive into the endless possibilities that our solutions offer? Don't hesitate to connect with our passionate team! We're here to provide tailored support and guide you towards a triumphant journey. Get in touch now and let's make your dreams a reality!"
+            },
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovationn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-talent-card-1.svg", 
+                content: {
+                    head: "Expertise and Innovationnn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            
+        ]
+      },
+
+      connect_text: "Ready to dive into the endless possibilities that our solutions offer? Don't hesitate to connect with our passionate team! We're here to provide tailored support and guide you towards a triumphant journey. Get in touch now and let's make your dreams a reality!",
+
+     
 
   };
   
@@ -269,6 +312,47 @@ export const sub_two = {
             head: "INSTANT INSIGHTS FOR INFORMED ACTIONS:\n User SOLUTIONS FOR REAL-TIME DECISIONS ",
             sub: "Roadmap for Industry Advancement"
         },
+      },
+      parallex_section:{
+        data: [
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "orange",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one:  "orange",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one:  "orange",
+                    two: "#F9ECFF"
+                }
+
+            },
+            
+        ]
       },
       connect_text: "Got burning questions or eager to unlock the potential of our solutions? It's time to make contact! Our devoted team is primed to provide tailored support. Reach out for a personalized journey toward your triumph!"
 
@@ -395,6 +479,47 @@ export const sub_three = {
             head: 'cost-effective power and energy investment stalwart energy research',
             sub: "Charting the Course for Power and Energy Sector Advancement"
         },
+      },
+      parallex_section:{
+        data: [
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "green",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "green",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "green",
+                    two: "#F9ECFF"
+                }
+
+            },
+            
+        ]
       },
       connect_text: "Have questions or ready to explore how our solutions can benefit you? Reach out to us! Our dedicated team is here to assist. Contact us for personalized assistance and let's embark on a journey towards your success."
 

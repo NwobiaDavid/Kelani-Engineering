@@ -14,75 +14,34 @@ gsap.registerPlugin(ScrollTrigger);
 //   class: string;
 // }
 
-const ParallaxCards: React.FC = () => {
+interface ContentParallex {
+  img: string;
+  content: {
+   head: string;
+   text: string;
+  }
+   
+ 
+ }
+
+interface ParallexProps {
+  data: {
+    img: string;
+    content: {
+      head: string;
+      text: string;
+    };
+    colors: {
+      one: string;
+      two: string;
+    };
+  }[];
+}
+
+
+const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
 
   const animated = useRef(null);
-
-  // const contents: Contents[] = [
-  //   {
-  //     img: "assets/images/subsidiaryPagesImages/props/Frame 29.png",
-  //     text: "Expertise and Innovation",
-  //     desc: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-  //     link: "#",
-  //     class: "lg:right-[27%] top-0",
-  //   },
-  //   {
-  //     img: "assets/images/subsidiaryPagesImages/props/Frame 29.png",
-  //     text: "Expertise and Innovation",
-  //     desc: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-  //     link: "#",
-  //     class: "lg:right-[17%] top-[25%]",
-  //   },
-  //   {
-  //     img: "assets/images/subsidiaryPagesImages/props/Frame 29.png",
-  //     text: "Expertise and Innovation",
-  //     desc: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-  //     link: "#",
-  //     class: "lg:right-[7%] top-[50%]",
-  //   },
-  // ];
-
-
-// useGSAP(()=>{
-//   const timeline = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".card-animation-container",
-//       scrub: true,
-//       pin: true,
-//       start: "center center",
-//       end: "+=300vh",
-//       markers: true,
-//     },
-//   });
-//   // console.log("pin=> "+timeline.pin); 
-//   timeline.to(".card-1", { x: "-100vw", duration: 3 });
-//   timeline.to(".card-2", { x: "-100vw", duration: 3, delay: 1 });
-//   timeline.to(".card-3", { x: "-100vw", duration: 3, delay: 2 });
-//   timeline.to(
-//     ".card-1 .title",
-//     { scale: 0.35, x: -180, rotate: -90, duration: 2, y: 320 },
-//     5
-//   );
-//   timeline.to(".card-1 .line-extend", { y: "-100%", duration: 1.3 }, 6);
-//   timeline.to(
-//     ".card-1 .top-left-image",
-//     { y: -100, x: -100, opacity: 1, duration: 1.7 },
-//     6
-//   );
-//   timeline.to(
-//     ".card-2 .title",
-//     { scale: 0.35, x: -180, rotate: -90, duration: 2, y: 320 },
-//     9
-//   );
-//   timeline.to(".card-2 .line-extend", { y: "-100%", duration: 1.3 }, 10);
-//   timeline.to(
-//     ".card-2 .top-left-image",
-//     { y: -100, x: -100, opacity: 1, duration: 1.7 },
-//     10
-//   );
-// }, {
-//   scope: animated
-// })
 
   const animateCardsIn = () => {
     const timeline = gsap.timeline({
@@ -132,14 +91,14 @@ const ParallaxCards: React.FC = () => {
     
 {/* <div className="  bg-blue-500 z-50 relative "> */}
 
-<div className="bg-red-300 relative h-[400vh]  flex-col text-white w-full flex">
+<div className="relative h-[400vh]  flex-col text-white w-full flex">
     {/* <div className="h-[600px]  bg-yellow-400" ></div> */}
     
-    <div className="main sticky top-0 h-[100vh] z-40 items-center  py-10 flex-col bg-black text-white w-full flex">
+    <div className="main sticky  top-0 h-[100vh]  items-center  py-10 flex-col text-white w-full flex">
 
               <div >
                 <div className="flex flex-col  uppercase justify-center items-center">
-                  <div className=" w-[90%] text-center relative  ">
+                  <div className="  w-[90%] text-center relative  ">
                     <h3 className=" opacity-80 tracking-wider lg:font-semibold mb-2 lg:mb-6  ">
                       why kelani
                     </h3>
@@ -167,15 +126,17 @@ const ParallaxCards: React.FC = () => {
                 </div>
     
                 <div className="absolute  lg:bottom-[25%] left-[18%] h-[500px] w-full">
-                  <div className=" ">
+                  <div className="  ">
+
     
     
-                    <div className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] bg-gradient-to-br from-[#E9B8FF] to-[#F9ECFF] overflow-hidden card-1 ">
+                    <div  style={{ background: `linear-gradient(to bottom right, ${data.data[0].colors.one}, ${data.data[0].colors.two})` }}
+                    className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] overflow-hidden card-1 ">
                       <div className="h-[100%] pt-[15px] left-0 w-[100px] absolute flex flex-col items-center">
                         <div className="w-[90px] h-[90px] flex items-center justify-center">
                           <img
                             className="w-[60px] relative opacity-0 top-[100px] left-[100px] top-left-image"
-                            src="/assets/images/icon-consulting-top-left-1.svg"
+                            src={data.data[0].img }
                           />
                         </div>
                         <div className="h-[280px]  w-full flex justify-center overflow-hidden">
@@ -185,11 +146,10 @@ const ParallaxCards: React.FC = () => {
                       <div className="w-full h-full flex py-[65px] ">
                         <div className="max-w-[262px]">
                           <h2 className="text-[44px] text-white leading-[50.2px] title">
-                            Expertise and Innovation
+                            {data.data[0].content.head }
                           </h2>
                           <p className="mt-[16px]">
-                            Access to a team of experts who bring a blend of
-                            industry expertise and innovative thinking.
+                          {data.data[0].content.text }
                           </p>
                           <button className="text-white flex gap-[13px] mt-[44px] items-center">
                             Learn More
@@ -204,12 +164,13 @@ const ParallaxCards: React.FC = () => {
                     </div>
     
     
-                    <div className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] bg-gradient-to-br from-[#E9B8FF] to-[#F9ECFF] overflow-hidden card-2 left-[calc(200vw+100px)]">
+                    <div  style={{ background: `linear-gradient(to bottom right, ${data.data[1].colors.one}, ${data.data[1].colors.two})` }}
+                     className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px]  overflow-hidden card-2 left-[calc(200vw+100px)]">
                       <div className="h-[100%] pt-[15px] left-0 w-[100px] absolute flex flex-col items-center">
                         <div className="w-[90px] h-[90px] flex items-center justify-center">
                           <img
                             className="w-[60px] relative opacity-0 top-[100px] left-[100px] top-left-image"
-                            src="/assets/images/icon-consulting-top-left-1.svg"
+                            src={data.data[1].img }
                           />
                         </div>
                         <div className="h-[280px]  w-full flex justify-center overflow-hidden">
@@ -219,11 +180,10 @@ const ParallaxCards: React.FC = () => {
                       <div className="w-full h-full flex py-[65px]">
                         <div className="max-w-[262px]">
                           <h2 className="text-[44px] text-white leading-[50.2px] title">
-                            Expertise and Innovation
+                          {data.data[1].content.head }
                           </h2>
                           <p className="mt-[16px]">
-                            Access to a team of experts who bring a blend of
-                            industry expertise and innovative thinking.
+                          {data.data[1].content.text }
                           </p>
                           <button className="text-white flex gap-[13px] mt-[44px] items-center">
                             Learn More
@@ -240,15 +200,15 @@ const ParallaxCards: React.FC = () => {
                     </div>
     
     
-                    <div className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] py-[65px] bg-gradient-to-br from-[#E9B8FF] to-[#F9ECFF] overflow-hidden card-3 left-[calc(200vw+200px)]">
+                    <div style={{ background: `linear-gradient(to bottom right, ${data.data[2].colors.one}, ${data.data[2].colors.two})` }}
+                     className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] py-[65px]  overflow-hidden card-3 left-[calc(200vw+200px)]">
                       <div className="w-full h-full flex">
                         <div className="max-w-[262px]">
                           <h2 className="text-[44px] text-white leading-[50.2px]">
-                            Expertise and Innovation
+                          {data.data[2].content.head }
                           </h2>
                           <p className="mt-[16px]">
-                            Access to a team of experts who bring a blend of
-                            industry expertise and innovative thinking.
+                          {data.data[2].content.text }
                           </p>
                           <button className="text-white flex gap-[13px] mt-[44px] items-center">
                             Learn More
@@ -258,7 +218,7 @@ const ParallaxCards: React.FC = () => {
                         <figure>
                           <img
                             className="w-[100%-100px]  object-cover"
-                            src="/assets/images/icon-talent-card-1.svg"
+                            src={data.data[2].img}
                           />
                         </figure>
                       </div>

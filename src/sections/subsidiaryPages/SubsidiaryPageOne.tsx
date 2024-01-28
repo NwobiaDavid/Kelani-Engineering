@@ -33,6 +33,16 @@ interface Contents_Slideshow {
   classname: string
 }
 
+interface Content_parallex {
+ img: string;
+ content: {
+  head: string;
+  text: string;
+ }
+  
+
+}
+
 interface Header {
   text: string
   className: string
@@ -73,7 +83,22 @@ interface SubProps {
       sub: string;
     }
   },
+  parallex_section: {
+    data: {
+    img: string;
+    content: {
+      head: string;
+      text: string;
+    };
+    colors: {
+      one: string;
+      two: string;
+    }
+  }[];
+  },
   connect_text: string;
+
+  
 }
 
 const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
@@ -207,8 +232,17 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
         
         </div>
 
-          <div className="relative bg-black z-50 ">
-          <ParallexCards />
+        <div className="relative -z-10 bg-black ">
+          <motion.div
+            animate={lightControls}
+            className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
+          ></motion.div>
+
+          <div className="griddy lg:block hidden z-20 bg-transparent"></div>
+
+          <div className="relative z-20 ">
+            <ParallexCards data={sub.parallex_section} />
+          </div>
         </div>
 
 
