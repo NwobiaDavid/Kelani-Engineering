@@ -104,7 +104,9 @@ interface SubProps {
 const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
 
   const [lightPosition, setLightPosition] = useState({ top: 0, left: 50 });
-
+  const [lightPositions, setLightPositions] = useState({ top: 0, left: 50 });
+  const [lightPositionx, setLightPositionx] = useState({ top: 0, left: 50 });
+  
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const rect = document.getElementById("hex-grid")?.getBoundingClientRect();
@@ -127,11 +129,59 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = document.getElementById("hex-gridd")?.getBoundingClientRect();
+
+      if (rect) {
+        const offsetX = e.clientX - rect.left;
+        const offsetY = e.clientY - rect.top;
+
+        setLightPosition({
+          top: (offsetY / rect.height) * 100,
+          left: (offsetX / rect.width) * 100,
+        });
+      }
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = document.getElementById("hex-gridx")?.getBoundingClientRect();
+
+      if (rect) {
+        const offsetX = e.clientX - rect.left;
+        const offsetY = e.clientY - rect.top;
+
+        setLightPosition({
+          top: (offsetY / rect.height) * 100,
+          left: (offsetX / rect.width) * 100,
+        });
+      }
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+  
+
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isTopNear, setIsTopNear] = useState(false);
   const controls = useAnimation();
   const lightControls = useAnimation();
-
+  const lightControlss = useAnimation();
+  const lightControlsx = useAnimation();
+  
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY;
@@ -170,6 +220,23 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
       opacity: [0.2],
     });
   }, [lightPosition, lightControls]);
+
+  useEffect(() => {
+    lightControlss.start({
+      top: `${lightPosition.top}%`,
+      left: `${lightPosition.left}%`,
+      opacity: [0.2],
+    });
+  }, [lightPosition, lightControlss]);
+
+
+  useEffect(() => {
+    lightControlsx.start({
+      top: `${lightPosition.top}%`,
+      left: `${lightPosition.left}%`,
+      opacity: [0.2],
+    });
+  }, [lightPosition, lightControlsx]);
 
   return (
 
@@ -228,11 +295,10 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
           </div>
 
           </div>
-        
-        
         </div>
 
-        <div className="relative -z-10 bg-black ">
+
+        <div id="hex-gridd" className=" relative bg-black"  >
           <motion.div
             animate={lightControls}
             className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
@@ -240,25 +306,43 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
 
           <div className="griddy lg:block hidden z-20 bg-transparent"></div>
 
-          <div className="relative z-20 ">
-            <ParallexCards data={sub.parallex_section} />
-          </div>
+          {/* <div className=" relative"> */}
+            <div className="relative z-40 ">
+              <ParallexCards data={sub.parallex_section} />
+            </div>
+
+            {/* <div className="z-50 relative ">
+              <ConnectSection text={sub.connect_text} />
+            </div> */}
+          {/* </div> */}
         </div>
 
 
           {/* <div className="  relative z-50 " > */}
-          <div id="hex-grid" className=" relative w-[100vw] h-full overflow-x-hidden "  >
+          <div id="hex-gridx" className=" relative bg-black h-full  "  >
 
-            <div className="relative z-50 bg-black  ">
-              <ConnectSection text={sub.connect_text} />
+          
+
+
+            <div className="bg-black z-10 relative ">
+
+          <div className="griddy lg:block hidden z-20 bg-transparent "></div>
 
               <motion.div
-                className="z-30 h-[2rem] relative"
-                animate={controls}
-                transition={{ duration: 0.5, ease: 'easeInOut' }}
-              >
-                <div className=" bottom-0 h-[2rem] w-full  absolute rounded-b-full -z-40 bg-black " ></div>
-              </motion.div>
+            animate={lightControlsx}
+            className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
+          ></motion.div>
+
+              <div className=" ">
+                <ConnectSection text={sub.connect_text} />
+                <motion.div
+                  className="z-30 h-[2rem] relative"
+                  animate={controls}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                  <div className=" bottom-0 h-[2rem] w-full  absolute rounded-b-full -z-40 bg-black " ></div>
+                </motion.div>
+              </div>
             </div>
 
           </div>
