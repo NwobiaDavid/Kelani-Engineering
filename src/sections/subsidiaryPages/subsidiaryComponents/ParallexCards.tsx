@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useEffect, useRef } from "react";
-
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
@@ -40,6 +40,9 @@ interface ParallexProps {
 
 
 const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
+
+
+  const [isHovered, setIsHovered] = useState(false);
 
   const animated = useRef(null);
 
@@ -115,11 +118,42 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                     <span className="text-xl opacity-70 font-semibold ">
                       Keep Scrolling{" "}
                     </span>
-                    <img
-                      className="my-3"
-                      src="assets/images/subsidiaryPagesImages/props/SVG.png"
-                      alt=""
-                    />
+
+                    {/* <motion.div 
+                    onHoverStart={() => setIsHovered(true)}
+                    onHoverEnd={() => setIsHovered(false)}
+                    whileHover={{ scale: 1.1 }}
+                    className="relative py-6 flex justify-center " >
+                      <motion.img
+                        className=" absolute  "
+                        src="assets/images/subsidiaryPagesImages/props/Vector.png"
+                        alt=""
+                        animate={{ y: isHovered ? [-10, 10] : 0, transition: { duration: 1, repeat: isHovered ? Infinity : 0  } }}
+                      />
+                      <motion.img
+                        className="my-3"
+                        src="assets/images/subsidiaryPagesImages/props/Vector (1).png"
+                        alt=""
+                        animate={{ scale: isHovered ? [1.2, 1] : 1, transition: { duration: 1 , repeat: isHovered ? Infinity : 0 } }}
+                      />
+                    </motion.div> */}
+
+                      <motion.div
+                    className="relative  py-6 flex justify-center " >
+                      <motion.img
+                        className=" absolute h-[70px] opacity-80 "
+                        src="assets/images/subsidiaryPagesImages/props/Vector.png"
+                        alt=""
+                        animate={{ y:[-10, 10, -10] , transition: { duration: 2, repeat:  Infinity } }}
+                      />
+                      <motion.img
+                        className="my-3 h-[100px] "
+                        src="assets/images/subsidiaryPagesImages/props/Vector (1).png"
+                        alt=""
+                        animate={{ scale:  [1.2, 1, 1.2] , transition: { duration: 3 , repeat:  Infinity } }}
+                      />
+                    </motion.div>
+
                     <span className="opacity-80 ">To Discover</span>
                   </div>
                 </div>
