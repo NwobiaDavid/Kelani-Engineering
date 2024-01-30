@@ -35,9 +35,7 @@ const Footer = () => {
   const {
     register,
     handleSubmit,
-    getValues,
-    formState: { errors, isValid },
-    reset,
+    formState: { errors },
   } = useForm<FormSchema>({
     resolver: zodResolver(schema),
     mode: "onBlur",

@@ -85,7 +85,7 @@ const SubsidiaryShowcase = ({
     target: containerRef,
     offset: ["start end", "end start"],
   });
-  const sectionDecimalScroll = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  // const sectionDecimalScroll = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
   const themeColor =
     type == "industrials" ? "#FF9A53" : type == "power" ? "#4ED47B" : "#AF92EF";

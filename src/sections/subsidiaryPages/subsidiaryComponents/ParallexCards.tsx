@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger);
 
 // interface Contents {
@@ -14,15 +13,15 @@ gsap.registerPlugin(ScrollTrigger);
 //   class: string;
 // }
 
-interface ContentParallex {
-  img: string;
-  content: {
-   head: string;
-   text: string;
-  }
+// interface ContentParallex {
+//   img: string;
+//   content: {
+//    head: string;
+//    text: string;
+//   }
    
  
- }
+//  }
 
 interface ParallexProps {
   data: {
@@ -42,7 +41,7 @@ interface ParallexProps {
 const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
 
 
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
   const animated = useRef(null);
 

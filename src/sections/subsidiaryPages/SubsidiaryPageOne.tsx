@@ -28,20 +28,20 @@ interface Contents_Slideshow {
   point2: string,
   point3: string,
   point4: string,
-  point5: string,
-  point6: string,
+  point5?: string,
+  point6?: string,
   classname: string
 }
 
-interface Content_parallex {
- img: string;
- content: {
-  head: string;
-  text: string;
- }
+// interface Content_parallex {
+//  img: string;
+//  content: {
+//   head: string;
+//   text: string;
+//  }
   
 
-}
+// }
 
 interface Header {
   text: string
@@ -104,8 +104,8 @@ interface SubProps {
 const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
 
   const [lightPosition, setLightPosition] = useState({ top: 0, left: 50 });
-  const [lightPositions, setLightPositions] = useState({ top: 0, left: 50 });
-  const [lightPositionx, setLightPositionx] = useState({ top: 0, left: 50 });
+  // const [lightPositions, setLightPositions] = useState({ top: 0, left: 50 });
+  // const [lightPositionx, setLightPositionx] = useState({ top: 0, left: 50 });
   
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -291,7 +291,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
           <div className="relative z-50 " >
             <Features data = {sub.features_data} />
             <div style={{backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)`}} className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] "> </div>
-            <SlideshowSection2 colours={sub.hero_section.color} data={sub.slideshow_section} text={sub.slideshow_section.text} />
+            <SlideshowSection2 colours={sub.hero_section.color} data={sub.slideshow_section} />
           </div>
 
           </div>
