@@ -198,7 +198,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
 
   useEffect(() => {
     const handleScrollReset = () => {
-      console.log(scrollPosition)
+      // console.log(scrollPosition)
       setIsTopNear(scrollPosition > 5180);
     };
 
