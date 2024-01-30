@@ -11,4 +11,3 @@ const ContactUsInput = ({ type = "text", placeholder, name, register} : ContactU
 };
 
 export default ContactUsInput;
-cc

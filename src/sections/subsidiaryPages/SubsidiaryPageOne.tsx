@@ -333,16 +333,10 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
             className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
           ></motion.div>
 
-              <div className=" ">
+              {/* <div className="mt-0  "> */}
                 <ConnectSection text={sub.connect_text} />
-                <motion.div
-                  className="z-30 h-[2rem] relative"
-                  animate={controls}
-                  transition={{ duration: 0.5, ease: 'easeInOut' }}
-                >
-                  <div className=" bottom-0 h-[2rem] w-full  absolute rounded-b-full -z-40 bg-black " ></div>
-                </motion.div>
-              </div>
+                  <img className="absolute z-50 -bottom-[0px] w-full  " src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" />
+              {/* </div> */}
             </div>
 
           </div>
@@ -352,7 +346,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
 
           {/* </div> */}
 
-      <div className="-z-50 " >
+      <div className="z-50  " >
         <Footer />
       </div>
 

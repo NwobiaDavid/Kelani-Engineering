@@ -11,9 +11,7 @@ import "./App.css";
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import SubsidiaryPageOne from "./sections/subsidiaryPages/SubsidiaryPageOne";
-import ParallaxCards from "./sections/subsidiaryPages/subsidiaryComponents/ParallexCards";
 import { sub_one, sub_three, sub_two } from "./sections/subsidiaryPages/subConstants";
-import { One } from "./sections/subsidiaryPages/subsidiaryComponents/one";
 
 
 function App() {
@@ -35,8 +33,7 @@ function App() {
           <Route path="/subsidiary-one" element={<SubsidiaryPageOne sub={sub_one} />} />
           <Route path="/subsidiary-two" element={<SubsidiaryPageOne sub={sub_two} />} />
           <Route path="/subsidiary-three" element={<SubsidiaryPageOne sub={sub_three} />} />
-          <Route path="/parallax" element={<ParallaxCards />} />
-          <Route path="/one" element={<One />} />
+          {/* <Route path="/parallax" element={<ParallaxCards />} /> */}
         </Routes>
       </AnimatePresence>
 
