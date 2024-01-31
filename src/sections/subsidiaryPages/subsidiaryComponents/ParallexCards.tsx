@@ -74,10 +74,10 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
 
     timeline.to(
       ".card-2 .title",
-      { scale: 0.35, x: -180, rotate: -90, duration: 100, y: 320, delay: 200 },
+      { scale: 0.35, x: -180, rotate: -90, duration: 100, y: 320, delay: 240 },
       9
     );
-    timeline.to(".card-2 .line-extend", { y: "-100%", duration: 130, delay: 200 }, 10);
+    timeline.to(".card-2 .line-extend", { y: "-100%", duration: 130, delay: 240 }, 10);
     timeline.to(
       ".card-2 .top-left-image",
       { y: -100, x: -100, opacity: 1, duration: 370 },

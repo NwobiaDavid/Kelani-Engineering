@@ -241,7 +241,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
   return (
 
     <>
-    <div className=" " >
+    <div className=" overflow-x-clip " >
       <div id="hex-grid" className=" relative w-[100vw] h-full overflow-x-hidden "  >
 
         <motion.div
