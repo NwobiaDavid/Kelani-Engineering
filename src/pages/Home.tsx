@@ -16,6 +16,7 @@ import Lenis from "@studio-freight/lenis/types";
 import axios from "axios";
 
 const Home = ({ lenis }: { lenis: Lenis }) => {
+  
   const { y: scrollY } = useScrollPosition();
   const { height } = useScreenSize();
   const [scrollTops, setScrollTops] = useState({
@@ -24,9 +25,10 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
     consulting: 0,
   });
 
-  const engineeringSpotlightRef = useRef(null);
-  const powerSpotlightRef = useRef(null);
-  const consultingSpotlightRef = useRef(null);
+  const engineeringSpotlightRef = useRef<HTMLDivElement>(null);
+  const powerSpotlightRef = useRef<HTMLDivElement>(null);
+  const consultingSpotlightRef = useRef<HTMLDivElement>(null);
+
   const [engineeringLoading, setEngineeringLoading] = useState(false);
   const [engineeringData, setEngineeringData] = useState([]);
   const fetchEngineeringSpotlight = async () => {
@@ -65,7 +67,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
   const aboutUsY = useTransform(
     engineeringScrollYProgress,
     [0, 1],
-    [0, engineeringSpotlightRef?.current?.offsetHeight]
+     [0, engineeringSpotlightRef?.current?.offsetHeight ?? 0]
   );
   const aboutUsOpacity = useTransform(
     engineeringScrollYProgress,
@@ -80,13 +82,13 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
   const engineeringY = useTransform(
     powerScrollYProgress,
     [0, 1],
-    [0, powerSpotlightRef?.current?.offsetHeight]
+    [0, powerSpotlightRef?.current?.offsetHeight ?? 0]
   );
   const engineeringOpacity = useTransform(powerScrollYProgress, [0, 1], [1, 0]);
   const powerY = useTransform(
     consultingScrollYProgress,
     [0, 1],
-    [0, consultingSpotlightRef?.current?.offsetHeight]
+    [0, consultingSpotlightRef?.current?.offsetHeight ?? 0]
   );
   const powerOpacity = useTransform(consultingScrollYProgress, [0, 1], [1, 0]);
   useEffect(() => {
