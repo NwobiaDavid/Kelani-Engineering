@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import ContactUsInput from "../components/ContactUsInput";
+// import ContactUsInput from "../components/ContactUsInput";
 import axios from "axios";
 
 const schema = z.object({
@@ -35,9 +35,7 @@ const Footer = () => {
   const {
     register,
     handleSubmit,
-    getValues,
-    formState: { errors, isValid },
-    reset,
+    formState: { errors },
   } = useForm<FormSchema>({
     resolver: zodResolver(schema),
     mode: "onBlur",
