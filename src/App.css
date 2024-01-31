@@ -1,3 +1,6 @@
+@import url("./fonts/css/space-grotesk.css");
+@import url("./fonts/css/museo-sans.css");
+
 body {
   background-color: #fefefe;
 }
@@ -17,4 +20,13 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.space-grotesk-medium {
+  font-weight: 500;
+  font-family: "SpaceGrotesk-Medium";
+}
+
+.museo-sans {
+  font-family: "MuseoSans";
 }

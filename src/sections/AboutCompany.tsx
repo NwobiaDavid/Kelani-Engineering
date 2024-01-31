@@ -42,11 +42,11 @@ const AboutCompany = () => {
         <div className="statistics-text">
           <p
             id="w-node-_03c4cf8f-14b2-c4b7-c070-5ac51836c5fd-3378c76e"
-            className="paragraph-5 text-left mb-[23px] lg:mb-[32px] leading-[50.544px]"
+            className="text-[14px] text-[#272928] leading-[1.3] text-left mb-[16px] lg:mb-[16px] museo-sans font-bold"
           >
             WE EMPOWER YOUR WORLD!
           </p>
-          <p className="paragraph-6 text-left">
+          <p className="paragraph-6 text-left space-grotesk-medium">
             Relentlessly pursuing{" "}
             <span className="statistics-colored-text">excellence</span> for over
             20 years, we strive to{" "}
@@ -56,28 +56,21 @@ const AboutCompany = () => {
             solutions.
           </p>
         </div>
-        <div className="div-block-5">
+        <div className="flex flex-col space-y-[23px]">
           <StatisticCard
             index={1}
             icon="clock"
-            number="20"
-            text="YEARS OF INFALLIBLE 
-SERVICE DELIVERY"
+            text="20+ Years of infallible service delivery"
           />
           <StatisticCard
             index={2}
             icon="cash"
-            number="$500+"
-            text="MILLION  DOLLARS IN 
-MACHINERY AND 
-PARTS"
+            text="$500+ Million dollars in machinery and parts"
           />
           <StatisticCard
             index={3}
             icon="people"
-            number="250+"
-            text="THRILED
-CLIENT BUSINESSES"
+            text="250+ Thrilled client businesses"
           />
         </div>
       </div>
