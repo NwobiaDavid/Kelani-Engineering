@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from 'react'
+import React, { ReactNode } from 'react'
 // import { Card, CardContent } from "@/components/ui/card"
 import { Card, CardContent } from "../../../../@/components/ui/card"
 import { FaRegCircle } from "react-icons/fa6";
@@ -209,7 +209,7 @@ const SlideshowSection: React.FC  = () => {
           <CarouselContent className=' '>
             {content.map((item, index) => (
               <InView key={index} >
-                {({ ref, inView }) => (
+                {({ ref, inView }) : ReactNode => (
                   <CarouselItem className=' ' key={index} ref={ref}>
                     <motion.div
                       initial={{ opacity: 0 }}

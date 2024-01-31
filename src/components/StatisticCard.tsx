@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const StatisticCard = ({
-  index,
   text,
   icon,
 }: // number,
