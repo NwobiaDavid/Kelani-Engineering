@@ -5,24 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-// interface Contents {
-//   img: string;
-//   text: string;
-//   desc: string;
-//   link: string;
-//   class: string;
-// }
-
-// interface ContentParallex {
-//   img: string;
-//   content: {
-//    head: string;
-//    text: string;
-//   }
-   
- 
-//  }
-
 interface ParallexProps {
   data: {
     img: string;
@@ -74,10 +56,10 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
 
     timeline.to(
       ".card-2 .title",
-      { scale: 0.35, x: -180, rotate: -90, duration: 100, y: 320, delay: 240 },
+      { scale: 0.35, x: -180, rotate: -90, duration: 100, y: 320, delay: 280 },
       9
     );
-    timeline.to(".card-2 .line-extend", { y: "-100%", duration: 130, delay: 240 }, 10);
+    timeline.to(".card-2 .line-extend", { y: "-100%", duration: 230, delay: 280 }, 10);
     timeline.to(
       ".card-2 .top-left-image",
       { y: -100, x: -100, opacity: 1, duration: 370 },
@@ -117,25 +99,6 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                     <span className="text-xl opacity-70 font-semibold ">
                       Keep Scrolling{" "}
                     </span>
-
-                    {/* <motion.div 
-                    onHoverStart={() => setIsHovered(true)}
-                    onHoverEnd={() => setIsHovered(false)}
-                    whileHover={{ scale: 1.1 }}
-                    className="relative py-6 flex justify-center " >
-                      <motion.img
-                        className=" absolute  "
-                        src="assets/images/subsidiaryPagesImages/props/Vector.png"
-                        alt=""
-                        animate={{ y: isHovered ? [-10, 10] : 0, transition: { duration: 1, repeat: isHovered ? Infinity : 0  } }}
-                      />
-                      <motion.img
-                        className="my-3"
-                        src="assets/images/subsidiaryPagesImages/props/Vector (1).png"
-                        alt=""
-                        animate={{ scale: isHovered ? [1.2, 1] : 1, transition: { duration: 1 , repeat: isHovered ? Infinity : 0 } }}
-                      />
-                    </motion.div> */}
 
                       <motion.div
                     className="relative  py-6 flex justify-center " >

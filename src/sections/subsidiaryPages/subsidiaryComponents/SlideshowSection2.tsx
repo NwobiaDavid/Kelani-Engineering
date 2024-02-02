@@ -59,8 +59,12 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
 
     // const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
 
-    const hoverrs = useHover({backgroundColor: colours.c400})
-    const hoverr = useHover({backgroundColor: colours.c400})
+    const gradientStyle = {
+        background: `linear-gradient(to top, black, ${colours.c400})`,
+      };
+      
+      const hoverrs = useHover({ ...gradientStyle });
+      const hoverr = useHover({ ...gradientStyle });
 
     const [display, setDisplay] = useState(0);
 
@@ -145,18 +149,20 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
                         {data.header.map((item, index) => (
                             <div
                                 className={`${display === index
-                                    ? "h-[60px] font-semibold lg:text-left text-center opacity-60 tracking-wide lg:w-[150px] w-[200px]"
-                                    : "h-[60px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-[150px]"
+                                    ? "h-[90px] font-semibold lg:text-left text-center opacity-60 tracking-wide lg:w-[170px] w-[200px]"
+                                    : "h-[90px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-[170px]"
                                     }`}
                                 key={index}
                                 onClick={() => handleHeaderClick(index)}
                             >
-                                <h1 className='p-2 lg:w-fit uppercase w-full '>{item.text}</h1>
+                                <div className=" h-[90%]  w-full ">
+                                    <h1 className='p-2 h-full flex justify-center items-center uppercase w-full '>{item.text}</h1>
+                                </div>
                                 <motion.div
                                     initial={{ x: '-100%' }}
                                     animate={{ x: display === index ? '0%' : '-100%' }}
                                     transition={{ duration: 0.5, ease: 'easeInOut' }}
-                                    className={`${display === index ? 'w-full relative flex items-center justify-center ' : 'w-full hidden'}`}
+                                    className={`${display === index ? 'w-full relative flex items-center justify-center h-[10%] ' : 'w-full h-[10%] hidden'}`}
                                 >
                                     <img
                                         className=' lg:block hidden  w-full -left-8 absolute '

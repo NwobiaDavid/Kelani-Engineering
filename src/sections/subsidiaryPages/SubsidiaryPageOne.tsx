@@ -12,6 +12,7 @@ import CustomScrollbar from "./subsidiaryComponents/CustomScrollbar";
 import { useEffect, useState } from "react";
 import Footer from "../Footer";
 import { motion, useAnimation } from "framer-motion";
+import ParallexCardsMobile from "./subsidiaryComponents/ParallexCardsMobile";
 
 
 interface Contents {
@@ -307,8 +308,11 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
           <div className="griddy lg:block hidden z-20 bg-transparent"></div>
 
           {/* <div className=" relative"> */}
-            <div className="relative z-40 ">
+            <div className="relative lg:flex hidden z-40 ">
               <ParallexCards data={sub.parallex_section} />
+            </div>
+            <div className="relative lg:hidden flex z-40 ">
+              <ParallexCardsMobile data={sub.parallex_section} />
             </div>
 
             {/* <div className="z-50 relative ">
