@@ -94,7 +94,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
 
     return (
 
-        <div className="lg:h-[1100px] h-[1350px] w-full z-30 text-white " >
+        <div className="lg:h-[1000px] h-[1150px] w-full z-30 text-white " >
             <div className='w-full mb-6 flex flex-col lg:px-4 justify-center pt-10 items-center '>
 
                 <div className=' w-[65%] flex justify-center items-center ' >
@@ -149,8 +149,8 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
                         {data.header.map((item, index) => (
                             <div
                                 className={`${display === index
-                                    ? "h-[90px] font-semibold lg:text-left text-center opacity-60 tracking-wide lg:w-[170px] w-[200px]"
-                                    : "h-[90px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-[170px]"
+                                    ? "h-[90px] font-semibold lg:text-left text-center opacity-60 tracking-wide lg:w-[200px] w-[210px]"
+                                    : "h-[90px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-[210px]"
                                     }`}
                                 key={index}
                                 onClick={() => handleHeaderClick(index)}

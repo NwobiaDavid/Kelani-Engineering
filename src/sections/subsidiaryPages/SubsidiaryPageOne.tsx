@@ -308,10 +308,11 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
           <div className="griddy lg:block hidden z-20 bg-transparent"></div>
 
           {/* <div className=" relative"> */}
-            <div className="relative lg:flex hidden z-40 ">
+            {/* <div className="relative lg:block hidden z-40 ">
               <ParallexCards data={sub.parallex_section} />
-            </div>
-            <div className="relative lg:hidden flex z-40 ">
+            </div> */}
+
+            <div className="relative lg:hidden block z-40 ">
               <ParallexCardsMobile data={sub.parallex_section} />
             </div>
 
