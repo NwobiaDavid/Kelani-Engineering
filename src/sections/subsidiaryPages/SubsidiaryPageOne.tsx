@@ -97,6 +97,19 @@ interface SubProps {
     }
   }[];
   },
+  parallex_section_mobile: {
+    data: {
+    img: string;
+    content: {
+      head: string;
+      text: string;
+    };
+    colors: {
+      one: string;
+      two: string;
+    }
+  }[];
+  },
   connect_text: string;
 
   
@@ -299,7 +312,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
         </div>
 
 
-        <div id="hex-gridd" className=" relative bg-black"  >
+        <div id="hex-gridd" className="md:block hidden relative bg-black"  >
           <motion.div
             animate={lightControls}
             className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
@@ -308,19 +321,40 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub })  => {
           <div className="griddy lg:block hidden z-20 bg-transparent"></div>
 
           {/* <div className=" relative"> */}
-            {/* <div className="relative lg:block hidden z-40 ">
+            <div className="relative md:block hidden z-40 ">
               <ParallexCards data={sub.parallex_section} />
-            </div> */}
-
-            <div className="relative lg:hidden block z-40 ">
-              <ParallexCardsMobile data={sub.parallex_section} />
             </div>
+
+            {/* <div className="relative block z-40 ">
+              <ParallexCardsMobile data={sub.parallex_section_mobile} />
+            </div> */}
 
             {/* <div className="z-50 relative ">
               <ConnectSection text={sub.connect_text} />
             </div> */}
           {/* </div> */}
         </div>
+
+
+
+        {/* <div id="hex-gridx" className="  md:hidden block relative bg-black"  >
+          <motion.div
+            animate={lightControls}
+            className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
+          ></motion.div>
+
+          <div className="griddy lg:block hidden z-20 bg-transparent"></div> */}
+
+          {/* <div className=" relative"> */}
+            {/* <div className="relative w-full md:block hidden z-40 ">
+              <ParallexCards data={sub.parallex_section} />
+            </div> */}
+
+            {/* <div className="relative md:hidden block  z-40 ">
+              <ParallexCardsMobile data={sub.parallex_section_mobile} />
+            </div>
+
+        </div> */}
 
 
           {/* <div className="  relative z-50 " > */}

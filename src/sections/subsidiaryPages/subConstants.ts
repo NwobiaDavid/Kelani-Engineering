@@ -196,6 +196,47 @@ export const sub_one = {
             
         ]
       },
+      parallex_section_mobile:{
+        data: [
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovationn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-talent-card-1.svg", 
+                content: {
+                    head: "Expertise and Innovationnn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            
+        ]
+      },
 
       connect_text: "Ready to dive into the endless possibilities that our solutions offer? Don't hesitate to connect with our passionate team! We're here to provide tailored support and guide you towards a triumphant journey. Get in touch now and let's make your dreams a reality!",
 
@@ -347,6 +388,47 @@ export const sub_two = {
                 },
                 colors: {
                     one:  "orange",
+                    two: "#F9ECFF"
+                }
+
+            },
+            
+        ]
+      },
+      parallex_section_mobile:{
+        data: [
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovationn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-talent-card-1.svg", 
+                content: {
+                    head: "Expertise and Innovationnn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
                     two: "#F9ECFF"
                 }
 
@@ -514,6 +596,47 @@ export const sub_three = {
                 },
                 colors: {
                     one: "green",
+                    two: "#F9ECFF"
+                }
+
+            },
+            
+        ]
+      },
+      parallex_section_mobile:{
+        data: [
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                content: {
+                    head: "Expertise and Innovationn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-talent-card-1.svg", 
+                content: {
+                    head: "Expertise and Innovationnn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
                     two: "#F9ECFF"
                 }
 
