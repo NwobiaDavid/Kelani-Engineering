@@ -81,93 +81,99 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
 
                     <div className="w-[90%] relative top-0 card-animation-container" >
                         
-                        <div style={{ background: `linear-gradient(to bottom right, ${data.data[0].colors.one}, ${data.data[0].colors.two})` }}
+                        <div style={{ background: `url("/assets/images/subsidiaryPagesImages/props/purp.png")`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
                             className="w-full z-20 left-[200vw] absolute top-[0]  h-[calc(100vh-150px)] border-white border rounded-[20px] card-1 ">
                            
-                            <div className="h-[15%] w-full relative flex justify-center items-center">
-                                <div className="w-[90px] p-2 h-full flex items-center justify-center">
-                                    <img className="h-full opacity-0 top-[100px] left-[100px] relative top-left-image"
-                                        src={data.data[0].img}
+                            <div style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
+                                <div className="h-[15%] w-full relative flex justify-center items-center">
+                                    <div className="w-[90px] p-2 h-full flex items-center justify-center">
+                                        <img className="h-full opacity-0 top-[100px] left-[100px] relative top-left-image"
+                                            src={data.data[0].img}
+                                        />
+                                    </div>
+                                    <div className="h-[2px] pr-3 w-[280px]  flex justify-center overflow-hidden ">
+                                        <div className="w-full bg-[#F4F4F4] h-full  relative -right-[100vw] line-extend"></div>
+                                    </div>
+                                </div>
+                                <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
+                                    <div className="flex relative mb-20 flex-col px-2 items-start">
+                                        <h2 className="text-4xl top-10 text-white title">
+                                            {data.data[0].content.head}
+                                        </h2>
+                                        <p className=" mt-[16px]">
+                                            {data.data[0].content.text}
+                                        </p>
+                                        <button className="text-white items-center flex gap-[13px] mt-[44px] " >
+                                            Learn More
+                                            <img src="/assets/images/right-arrow.svg" />
+                                        </button>
+                                    </div>
+                                    <img
+                                        className="w-[95%] mb-12 object-cover"
+                                        src="/assets/images/icon-talent-card-1.svg"
                                     />
                                 </div>
-                                <div className="h-[2px] pr-3 w-[280px]  flex justify-center overflow-hidden ">
-                                    <div className="w-full bg-[#F4F4F4] h-full  relative -right-[100vw] line-extend"></div>
-                                </div>
-                            </div>
-                            <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
-                                <div className="flex relative mb-20 flex-col px-2 items-start">
-                                    <h2 className="text-4xl top-10 text-white title">
-                                        {data.data[0].content.head}
-                                    </h2>
-                                    <p className=" mt-[16px]">
-                                        {data.data[0].content.text}
-                                    </p>
-                                    <button className="text-white items-center flex gap-[13px] mt-[44px] " >
-                                        Learn More
-                                        <img src="/assets/images/right-arrow.svg" />
-                                    </button>
-                                </div>
-                                <img
-                                    className="w-[95%] mb-12 object-cover"
-                                    src="/assets/images/icon-talent-card-1.svg"
-                                />
                             </div>
                         </div>
 
-                        <div style={{ background: `linear-gradient(to bottom right, ${data.data[1].colors.one}, ${data.data[1].colors.two})` }}
+                        <div style={{ background: `url("/assets/images/subsidiaryPagesImages/props/purp.png")`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
                             className="w-full z-30 absolute left-[200vw] top-[calc(200vh+300px)]  h-[calc(100vh-150px)] border-white border card-2 rounded-[20px]  ">
                             
-                            <div className="h-[15%] w-full flex justify-center items-center">
-                                <div className="w-[90px] p-2 h-full flex items-center justify-center">
-                                    <img className="h-full opacity-0 relative top-[100px] left-[100px] top-left-image "
-                                        src={data.data[1].img}
+                            <div style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
+                                <div className="h-[15%] w-full flex justify-center items-center">
+                                    <div className="w-[90px] p-2 h-full flex items-center justify-center">
+                                        <img className="h-full opacity-0 relative top-[100px] left-[100px] top-left-image "
+                                            src={data.data[1].img}
+                                        />
+                                    </div>
+                                    <div className="h-[2px] pr-3 w-[280px] flex justify-center overflow-hidden ">
+                                        <div className="w-full bg-[#F4F4F4] h-full relative -right-[100vw]  line-extend"></div>
+                                    </div>
+                                </div>
+                                <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
+                                    <div className="flex flex-col px-2 mb-20 items-start">
+                                        <h2 className="text-4xl text-white title">
+                                            {data.data[1].content.head}
+                                        </h2>
+                                        <p className="mt-[16px]">
+                                            {data.data[1].content.text}
+                                        </p>
+                                        <button className="text-white items-center flex gap-[13px] mt-[44px] " >
+                                            Learn More
+                                            <img src="/assets/images/right-arrow.svg" />
+                                        </button>
+                                    </div>
+                                    <img
+                                        className="w-[95%] mb-12 object-cover"
+                                        src="/assets/images/icon-talent-card-1.svg"
                                     />
                                 </div>
-                                <div className="h-[2px] pr-3 w-[280px] flex justify-center overflow-hidden ">
-                                    <div className="w-full bg-[#F4F4F4] h-full relative -right-[100vw]  line-extend"></div>
-                                </div>
-                            </div>
-                            <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
-                                <div className="flex flex-col px-2 mb-20 items-start">
-                                    <h2 className="text-4xl text-white title">
-                                        {data.data[1].content.head}
-                                    </h2>
-                                    <p className="mt-[16px]">
-                                        {data.data[1].content.text}
-                                    </p>
-                                    <button className="text-white items-center flex gap-[13px] mt-[44px] " >
-                                        Learn More
-                                        <img src="/assets/images/right-arrow.svg" />
-                                    </button>
-                                </div>
-                                <img
-                                    className="w-[95%] mb-12 object-cover"
-                                    src="/assets/images/icon-talent-card-1.svg"
-                                />
                             </div>
                         </div>
 
 
-                        <div style={{ background: `linear-gradient(to bottom right, ${data.data[1].colors.one}, ${data.data[1].colors.two})` }}
+                        <div style={{ background: `url("/assets/images/subsidiaryPagesImages/props/purp.png")`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
                             className="w-full z-40 absolute left-[200vw] top-[calc(200vh+600px)]  h-[calc(100vh-150px)] border-white border card-3 rounded-[20px]  ">
 
-                            <div className="text-left h-full pt-16 p-3 flex flex-col justify-between items-center ">
-                                <div className="flex flex-col mb-20 px-2 items-start">
-                                    <h2 className="text-4xl text-white title">
-                                        {data.data[1].content.head}
-                                    </h2>
-                                    <p className="mt-[16px]">
-                                        {data.data[1].content.text}
-                                    </p>
-                                    <button className="text-white items-center flex gap-[13px] mt-[44px] " >
-                                        Learn More
-                                        <img src="/assets/images/right-arrow.svg" />
-                                    </button>
+                            <div style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
+                                <div className="text-left h-full pt-16 p-3 flex flex-col justify-between items-center ">
+                                    <div className="flex flex-col mb-20 px-2 items-start">
+                                        <h2 className="text-4xl text-white title">
+                                            {data.data[1].content.head}
+                                        </h2>
+                                        <p className="mt-[16px]">
+                                            {data.data[1].content.text}
+                                        </p>
+                                        <button className="text-white items-center flex gap-[13px] mt-[44px] " >
+                                            Learn More
+                                            <img src="/assets/images/right-arrow.svg" />
+                                        </button>
+                                    </div>
+                                    <img
+                                        className="w-[95%] mb-12 object-cover"
+                                        src="/assets/images/icon-talent-card-1.svg"
+                                    />
                                 </div>
-                                <img
-                                    className="w-[95%] mb-12 object-cover"
-                                    src="/assets/images/icon-talent-card-1.svg"
-                                />
                             </div>
                         </div>
                         {/* <div  style={{ background: `linear-gradient(to bottom right, ${data.data[0].colors.one}, ${data.data[0].colors.two})` }}
