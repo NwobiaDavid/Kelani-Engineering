@@ -30,26 +30,26 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
             scrollTrigger: {
                 trigger: ".card-animation-container",
                 scrub: 1,
-                start: "20% 40%",
-                end: "+=1600",
+                start: "top 70%",
+                end: "+=1000",
                 markers: true,
             },
         });
-        timeline.to(".card-1", { y: 0, duration: 3 });
-        timeline.to(".card-2", { y: "-200vh", duration: 100, delay: 130 });
-        timeline.to(".card-3", { y: "-200vh", duration: 100, delay: 140 });
+        timeline.to(".card-1", { y: 0,x: "-200vw", duration: 15 });
+        timeline.to(".card-2", { y: "-200vh", x: "-200vw", duration: 15, delay: 30 });
+        timeline.to(".card-3", { y: "-200vh",x: "-200vw", duration: 15, delay: 30 });
 
         // timeline.to(
         //     ".card-1 .title",
         //     { scale: 0.35, y: -180, duration: 100, },
         //     5
         // );
-        // timeline.to(".card-1 .line-extend", { x: "-200%", duration: 100 }, 6);
-        // timeline.to(
-        //     ".card-1 .top-left-image",
-        //     { y: -100, x: -100, opacity: 1, duration: 170 },
-        //     6
-        // );
+        timeline.to(".card-1 .line-extend", { x: "100vw", duration: 3 }, 6);
+        timeline.to(
+            ".card-1 .top-left-image",
+            { y: -100, x: -100, opacity: 1, duration: 30 },
+            6
+        );
 
 
         // timeline.to(
@@ -57,12 +57,12 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
         //     { scale: 0.35, x: -180, rotate: -90, duration: 100, y: 320, delay: 240 },
         //     9
         // );
-        // timeline.to(".card-2 .line-extend", { y: "-100%", duration: 130, delay: 240 }, 10);
-        // timeline.to(
-        //     ".card-2 .top-left-image",
-        //     { y: -100, x: -100, opacity: 1, duration: 370 },
-        //     10
-        // );
+        timeline.to(".card-2 .line-extend", { x: "100vw", duration: 3, delay: 3 }, 15);
+        timeline.to(
+            ".card-2 .top-left-image",
+            { y: -100, x: -100, opacity: 1, duration: 30 },
+            15
+        );
 
     };
 
@@ -72,8 +72,8 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
 
     return (
         <>
-            <div className="relative h-[300vh] bg-black  ">
-                <div className="  h-[100vh] card-animation-container sticky top-0 items-center  pt-10 flex-col text-white w-full flex" >
+            <div className="relative h-[180vh] bg-black  ">
+                <div className="  h-[100vh] card-animation-container items-center  pt-10 flex-col text-white w-full flex" >
                     <div className=" w-[70%] text-center mb-16"  >
                         <h3 className=" opacity-80 tracking-widest  mb-2 " >why kelani</h3>
                         <h1 className=" text-2xl uppercase text-center font-semibold " >Personalized Service for You</h1>
@@ -82,19 +82,20 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                     <div className="w-[90%] relative top-0 card-animation-container" >
                         
                         <div style={{ background: `linear-gradient(to bottom right, ${data.data[0].colors.one}, ${data.data[0].colors.two})` }}
-                            className="w-full z-20  absolute top-[0]  h-[calc(100vh-300px)] border-white border rounded-[20px] card-1 ">
-                            {/* <div className="h-[10%] w-full relative flex justify-center items-center">
+                            className="w-full z-20 left-[200vw] absolute top-[0]  h-[calc(100vh-150px)] border-white border rounded-[20px] card-1 ">
+                           
+                            <div className="h-[15%] w-full relative flex justify-center items-center">
                                 <div className="w-[90px] p-2 h-full flex items-center justify-center">
-                                    <img className="h-full relative"
+                                    <img className="h-full opacity-0 top-[100px] left-[100px] relative top-left-image"
                                         src={data.data[0].img}
                                     />
                                 </div>
-                                <div className="h-[3px]  pr-3 relative w-full flex justify-center ">
-                                    <div className="w-full bg-[#F4F4F4] absolute -right-[200%] h-full  line-extend"></div>
+                                <div className="h-[2px] pr-3 w-[280px]  flex justify-center overflow-hidden ">
+                                    <div className="w-full bg-[#F4F4F4] h-full  relative -right-[100vw] line-extend"></div>
                                 </div>
-                            </div> */}
-                            <div className="text-left h-[90%] p-3 flex flex-col justify-between items-center ">
-                                <div className="flex relative flex-col px-2 items-start">
+                            </div>
+                            <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
+                                <div className="flex relative mb-20 flex-col px-2 items-start">
                                     <h2 className="text-4xl top-10 text-white title">
                                         {data.data[0].content.head}
                                     </h2>
@@ -114,20 +115,20 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                         </div>
 
                         <div style={{ background: `linear-gradient(to bottom right, ${data.data[1].colors.one}, ${data.data[1].colors.two})` }}
-                            className="w-full z-30 absolute top-[calc(200vh+100px)]  h-[calc(100vh-300px)] border-white border card-2 rounded-[20px]  ">
+                            className="w-full z-30 absolute left-[200vw] top-[calc(200vh+300px)]  h-[calc(100vh-150px)] border-white border card-2 rounded-[20px]  ">
                             
-                            <div className="h-[10%] w-full flex justify-center items-center">
+                            <div className="h-[15%] w-full flex justify-center items-center">
                                 <div className="w-[90px] p-2 h-full flex items-center justify-center">
-                                    <img className="h-full relative"
+                                    <img className="h-full opacity-0 relative top-[100px] left-[100px] top-left-image "
                                         src={data.data[1].img}
                                     />
                                 </div>
-                                <div className="h-[3px] pr-3  w-full flex justify-center ">
-                                    <div className="w-full bg-[#F4F4F4] h-full  line-extend"></div>
+                                <div className="h-[2px] pr-3 w-[280px] flex justify-center overflow-hidden ">
+                                    <div className="w-full bg-[#F4F4F4] h-full relative -right-[100vw]  line-extend"></div>
                                 </div>
                             </div>
-                            <div className="text-left h-[90%] p-3 flex flex-col justify-between items-center ">
-                                <div className="flex flex-col px-2 items-start">
+                            <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
+                                <div className="flex flex-col px-2 mb-20 items-start">
                                     <h2 className="text-4xl text-white title">
                                         {data.data[1].content.head}
                                     </h2>
@@ -148,10 +149,10 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
 
 
                         <div style={{ background: `linear-gradient(to bottom right, ${data.data[1].colors.one}, ${data.data[1].colors.two})` }}
-                            className="w-full z-40 absolute top-[calc(200vh+200px)]  h-[calc(100vh-300px)] border-white border card-3 rounded-[20px]  ">
+                            className="w-full z-40 absolute left-[200vw] top-[calc(200vh+600px)]  h-[calc(100vh-150px)] border-white border card-3 rounded-[20px]  ">
 
                             <div className="text-left h-full pt-16 p-3 flex flex-col justify-between items-center ">
-                                <div className="flex flex-col px-2 items-start">
+                                <div className="flex flex-col mb-20 px-2 items-start">
                                     <h2 className="text-4xl text-white title">
                                         {data.data[1].content.head}
                                     </h2>
