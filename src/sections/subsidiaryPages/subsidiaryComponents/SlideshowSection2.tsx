@@ -109,7 +109,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
 
                         <div className='flex mt-3 lg:mt-0 relative items-center justify-center lg:justify-between lg:w-[15%] md:w-[20%] w-full '>
 
-                            <motion.div className=' flex justify-center items-center h-[60px] w-[100px]  ' onClick={handlePrevious} >
+                            <motion.div className=' flex justify-center relative items-center h-[60px] w-[100px]  ' onClick={handlePrevious} >
                                 <motion.button onHoverStart={() => setHover((prev) => !prev)} onHoverEnd={() => setHover((prev) => !prev)} {...hoverrs}  className="pre  overflow-hidden text-2xl rounded-full   relative border flex duration-200  items-center w-[60px] h-full " >
                                     <motion.div whileHover={{ x: hover ? -50 : 0, opacity: hover ? 1 : 0 }} transition={{ duration: 0.2 }} className="flex justify-between items-center h-full w-[100px] absolute " style={{ pointerEvents: hover ? 'auto' : 'none' }} >
                                         <span className={hover ? " opacity-0 " : " w-full absolute -right-1  p-3 opacity-100 "}>
@@ -119,7 +119,11 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
                                             <BsArrowLeft />
                                         </span>
                                     </motion.div>
+                                    
                                 </motion.button>
+                                <div className="absolute h-full w-[60px] rounded-full bg-black top-[20px] ">
+
+                                    </div>
                             </motion.div>
 
                             <div className="lg:hidden px-3 flex" >

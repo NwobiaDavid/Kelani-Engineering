@@ -159,6 +159,7 @@ export const sub_one = {
         data: [
             {
                 img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -170,7 +171,7 @@ export const sub_one = {
 
             },
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/icon-consulting-top-left-1.svg",  
                 content: {
                     head: "Expertise and Innovationn",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -182,7 +183,8 @@ export const sub_one = {
 
             },
             {
-                img: "/assets/images/icon-talent-card-1.svg", 
+                img: "/assets/images/icon-talent-card-1.svg",  
+                img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 content: {
                     head: "Expertise and Innovationnn",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -200,6 +202,7 @@ export const sub_one = {
         data: [
             {
                 img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -212,6 +215,7 @@ export const sub_one = {
             },
             {
                 img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 content: {
                     head: "Expertise and Innovationn",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -224,6 +228,7 @@ export const sub_one = {
             },
             {
                 img: "/assets/images/icon-talent-card-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 content: {
                     head: "Expertise and Innovationnn",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -399,6 +404,7 @@ export const sub_two = {
         data: [
             {
                 img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -411,6 +417,7 @@ export const sub_two = {
             },
             {
                 img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
                 content: {
                     head: "Expertise and Innovationn",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -423,6 +430,7 @@ export const sub_two = {
             },
             {
                 img: "/assets/images/icon-talent-card-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
                 content: {
                     head: "Expertise and Innovationnn",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -565,7 +573,7 @@ export const sub_three = {
       parallex_section:{
         data: [
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/icon-consulting-top-left-1.svg",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -607,6 +615,7 @@ export const sub_three = {
         data: [
             {
                 img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -619,6 +628,7 @@ export const sub_three = {
             },
             {
                 img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
                 content: {
                     head: "Expertise and Innovationn",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -631,6 +641,7 @@ export const sub_three = {
             },
             {
                 img: "/assets/images/icon-talent-card-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
                 content: {
                     head: "Expertise and Innovationnn",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."

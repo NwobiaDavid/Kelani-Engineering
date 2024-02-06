@@ -87,6 +87,7 @@ interface SubProps {
   parallex_section: {
     data: {
       img: string;
+      img2: string;
       content: {
         head: string;
         text: string;
@@ -100,6 +101,7 @@ interface SubProps {
   parallex_section_mobile: {
     data: {
       img: string;
+      img2: string;
       content: {
         head: string;
         text: string;

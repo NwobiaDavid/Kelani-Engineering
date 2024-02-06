@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 interface ParallexProps {
     data: {
         img: string;
+        img2: string;
         content: {
             head: string;
             text: string;
@@ -35,16 +36,16 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                 markers: true,
             },
         });
-        timeline.to(".card-1", { y: 0,x: "-200vw", duration: 15 });
-        timeline.to(".card-2", { y: "-200vh", x: "-200vw", duration: 15, delay: 30 });
-        timeline.to(".card-3", { y: "-200vh",x: "-200vw", duration: 15, delay: 30 });
+        timeline.to(".card-1", { y: 0,x: "-200vw", duration: 150 });
+        timeline.to(".card-2", { y: "-200vh", x: "-200vw", duration: 150, delay: 30 });
+        timeline.to(".card-3", { y: "-200vh",x: "-200vw", duration: 150, delay: 30 });
 
         // timeline.to(
         //     ".card-1 .title",
         //     { scale: 0.35, y: -180, duration: 100, },
         //     5
         // );
-        timeline.to(".card-1 .line-extend", { x: "100vw", duration: 3 }, 6);
+        timeline.to(".card-1 .line-extend", { x: "-100px", duration: 3 }, 6);
         timeline.to(
             ".card-1 .top-left-image",
             { y: -100, x: -100, opacity: 1, duration: 30 },
@@ -81,7 +82,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
 
                     <div className="w-[90%] relative top-0 card-animation-container" >
                         
-                        <div style={{ background: `url("/assets/images/subsidiaryPagesImages/props/purp.png")`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
+                        <div style={{ background: `url(${data.data[0].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
                             className="w-full z-20 left-[200vw] absolute top-[0]  h-[calc(100vh-150px)] border-white border rounded-[20px] card-1 ">
                            
                             <div style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
@@ -116,7 +117,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                             </div>
                         </div>
 
-                        <div style={{ background: `url("/assets/images/subsidiaryPagesImages/props/purp.png")`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
+                        <div style={{background: `url(${data.data[1].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
                             className="w-full z-30 absolute left-[200vw] top-[calc(200vh+300px)]  h-[calc(100vh-150px)] border-white border card-2 rounded-[20px]  ">
                             
                             <div style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
@@ -127,7 +128,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                                         />
                                     </div>
                                     <div className="h-[2px] pr-3 w-[280px] flex justify-center overflow-hidden ">
-                                        <div className="w-full bg-[#F4F4F4] h-full relative -right-[100vw]  line-extend"></div>
+                                        <div className="w-full bg-[#F4F4F4] h-full relative right-[100px]  line-extend"></div>
                                     </div>
                                 </div>
                                 <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
@@ -152,7 +153,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                         </div>
 
 
-                        <div style={{ background: `url("/assets/images/subsidiaryPagesImages/props/purp.png")`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
+                        <div style={{ background: `url(${data.data[2].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
                             className="w-full z-40 absolute left-[200vw] top-[calc(200vh+600px)]  h-[calc(100vh-150px)] border-white border card-3 rounded-[20px]  ">
 
                             <div style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
