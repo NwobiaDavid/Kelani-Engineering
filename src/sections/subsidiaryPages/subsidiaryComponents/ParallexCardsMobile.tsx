@@ -10,6 +10,7 @@ interface ParallexProps {
     data: {
         img: string;
         img2: string;
+        img3: string;
         content: {
             head: string;
             text: string;
@@ -48,7 +49,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
         timeline.to(".card-1 .line-extend", { x: "-100px", duration: 3 }, 6);
         timeline.to(
             ".card-1 .top-left-image",
-            { y: -100, x: -100, opacity: 1, duration: 30 },
+            { y: -100, x: -100, opacity: 1, duration: 100 },
             6
         );
 
@@ -61,7 +62,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
         timeline.to(".card-2 .line-extend", { x: "100vw", duration: 3, delay: 3 }, 15);
         timeline.to(
             ".card-2 .top-left-image",
-            { y: -100, x: -100, opacity: 1, duration: 30 },
+            { y: -100, x: -100, opacity: 1,delay: 10, duration: 30 },
             15
         );
 
@@ -111,7 +112,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                                     </div>
                                     <img
                                         className="w-[95%] mb-12 object-cover"
-                                        src="/assets/images/icon-talent-card-1.svg"
+                                        src={data.data[0].img3}
                                     />
                                 </div>
                             </div>
@@ -146,7 +147,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                                     </div>
                                     <img
                                         className="w-[95%] mb-12 object-cover"
-                                        src="/assets/images/icon-talent-card-1.svg"
+                                        src={data.data[0].img3}
                                     />
                                 </div>
                             </div>
@@ -172,7 +173,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                                     </div>
                                     <img
                                         className="w-[95%] mb-12 object-cover"
-                                        src="/assets/images/icon-talent-card-1.svg"
+                                        src={data.data[0].img3}
                                     />
                                 </div>
                             </div>

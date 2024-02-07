@@ -60,7 +60,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
     // const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
 
     const gradientStyle = {
-        background: `linear-gradient(to top, black, ${colours.c400})`,
+        background: `linear-gradient(to top right, black, ${colours.c400})`,
       };
       
       const hoverrs = useHover({ ...gradientStyle });

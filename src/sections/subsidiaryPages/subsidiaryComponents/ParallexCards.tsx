@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 interface ParallexProps {
   data: {
     img: string;
+    img2: string;
     content: {
       head: string;
       text: string;
@@ -153,7 +154,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                         </div>
                         <img
                           className="w-[calc(100%-100px)]  object-cover"
-                          src="/assets/images/icon-talent-card-1.svg"
+                          src={data.data[0].img2}
                         />
                       </div>
                     </div>
@@ -187,7 +188,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                         </div>
                           <img
                             className="w-[calc(100%-100px)]  object-cover"
-                            src="/assets/images/icon-talent-card-1.svg"
+                            src={data.data[1].img2}
                           />
                       </div>
                     </div>
@@ -208,12 +209,12 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                             <img src="/assets/images/right-arrow.svg" />
                           </button>
                         </div>
-                        <figure>
+                        {/* <figure> */}
                           <img
                             className="w-[calc(100%-100px)]  object-cover"
-                            src={data.data[2].img}
+                            src={data.data[2].img2}
                           />
-                        </figure>
+                        {/* </figure> */}
                       </div>
                     </div>
                   </div>
