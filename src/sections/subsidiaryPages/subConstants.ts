@@ -274,21 +274,21 @@ export const sub_two = {
         contents: [
             {
                 img:  'assets/images/subsidiaryPagesImages/pageTwo/save-energy 1-2.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (2).png',
                 head: "Machinery and Tools - Procurement ",
                 desc: " Experience the ultimate in reliability, quality, and cutting-edge equipment! Trust us to provide the market-leading solutions you need for success!",
                 colour: "text-orange-400"
             },
             {
                 img: 'assets/images/subsidiaryPagesImages/pageTwo/save-energy 1.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (2).png',
                 head: "Advisory services",
                 desc: "Get ready for an exhilarating journey towards success with our unbeatable advisory guidance!  Our mission is to ensure that you achieve the industrial success you've always dreamed of. ",
                 colour: "text-orange-400"
             },
             {
                 img: 'assets/images/subsidiaryPagesImages/pageTwo/save-energy 1-1.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (2).png',
                 head: "Plastics - Recycling and Repurposing",
                 desc: "Our transformational and impactful plastics recycling service aims to revolutionize the industry and pave a sustainable future. Together, we can build a better future for all!   ",
                 colour: "text-orange-400"
@@ -484,21 +484,21 @@ export const sub_three = {
         contents: [
             {
                 img:  'assets/images/subsidiaryPagesImages/pageThree/save-energy 1.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (1).png',
                 head: "Power Funding",
                 desc: " Diverse credit and financing options to fuel your business toward the success and progress you crave!",
                 colour: "text-green-400"
             },
             {
                 img: 'assets/images/subsidiaryPagesImages/pageThree/save-energy 1-1.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (1).png',
                 head: "Large-scale Energy Deals",
                 desc: "Unlock your solar or renewable energy plant's potential! Join our large-scale energy trading platform, seamlessly linking users to top suppliers from private and public generation plants.",
                 colour: "text-green-400"
             },
             {
                 img: 'assets/images/subsidiaryPagesImages/pageThree/save-energy 1-2.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (1).png',
                 head: "Collections risk management",
                 desc: "Solid Security and support from defaults or market shifts, we provide vital support, finance payment deficits, and facilitate the recovery of energy infrastructure.",
                 colour: "text-green-400"
