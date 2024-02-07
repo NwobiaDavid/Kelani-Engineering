@@ -84,7 +84,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                     <div className="w-[90%] relative top-0 card-animation-container" >
                         
                         <div style={{ background: `url(${data.data[0].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
-                            className="w-full z-20 left-[200vw] absolute top-[0]  h-[calc(100vh-150px)] border-white border rounded-[20px] card-1 ">
+                            className="w-full z-20 left-[200vw] absolute top-[0]  h-[calc(100vh-130px)] border-white border rounded-[20px] card-1 ">
                            
                             <div style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
                                 <div className="h-[15%] w-full relative flex justify-center items-center">
@@ -119,7 +119,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                         </div>
 
                         <div style={{background: `url(${data.data[1].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
-                            className="w-full z-30 absolute left-[200vw] top-[calc(200vh+300px)]  h-[calc(100vh-150px)] border-white border card-2 rounded-[20px]  ">
+                            className="w-full z-30 absolute left-[200vw] top-[calc(200vh+300px)]  h-[calc(100vh-130px)] border-white border card-2 rounded-[20px]  ">
                             
                             <div style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
                                 <div className="h-[15%] w-full flex justify-center items-center">
@@ -155,7 +155,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
 
 
                         <div style={{ background: `url(${data.data[2].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
-                            className="w-full z-40 absolute left-[200vw] top-[calc(200vh+600px)]  h-[calc(100vh-150px)] border-white border card-3 rounded-[20px]  ">
+                            className="w-full z-40 absolute left-[200vw] top-[calc(200vh+600px)]  h-[calc(100vh-130px)] border-white border card-3 rounded-[20px]  ">
 
                             <div style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
                                 <div className="text-left h-full pt-16 p-3 flex flex-col justify-between items-center ">
