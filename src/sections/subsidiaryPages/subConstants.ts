@@ -202,7 +202,7 @@ export const sub_one = {
       parallex_section_mobile:{
         data: [
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (3).png", 
                 img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 img3: "/assets/images/icon-talent-card-1.svg",
                 content: {
@@ -216,7 +216,7 @@ export const sub_one = {
 
             },
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (4).png", 
                 img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 img3: "/assets/images/icon-talent-card-1.svg",
                 content: {
