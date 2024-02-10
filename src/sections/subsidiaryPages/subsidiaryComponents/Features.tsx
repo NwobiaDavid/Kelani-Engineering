@@ -53,7 +53,7 @@ const Features: React.FC<{ data: FeaturesProps }> = ({data}) => {
                 <h1 className='text-2_5xl font-semibold opacity-85 lg:text-4xl w-[90%] lg:w-[55%] '>{data.header}</h1>
             </div>
             
-            <div className='flex lg:p-4 w-full lg:w-[75%] flex-col lg:flex-row justify-between items-center'>
+            <div className='flex lg:p-4 w-full lg:w-[75%] flex-col lg:flex-row justify-between items-start'>
             {data.contents.map((item, index)=>(
 
                 <div key={index} className="w-full flex-col flex justify-center items-center ">

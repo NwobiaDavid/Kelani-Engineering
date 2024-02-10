@@ -34,7 +34,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexProps }> = ({ data }) => {
                 scrub: 1,
                 start: "top 70%",
                 end: "+=1000",
-                markers: true,
+                markers: false,
             },
         });
         timeline.to(".card-1", { y: 0,x: "-200vw", duration: 150 });

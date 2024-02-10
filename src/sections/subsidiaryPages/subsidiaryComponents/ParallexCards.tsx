@@ -35,7 +35,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
         scrub: 1,
         start: "center 40%",
         end: "+=1600",
-        markers: true,
+        markers: false,
       },
     });
     timeline.to(".card-1", { x: 0, duration: 3 });
