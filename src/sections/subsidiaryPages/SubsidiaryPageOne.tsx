@@ -88,6 +88,7 @@ interface SubProps {
     data: {
       img: string;
       img2: string;
+      img3: string;
       content: {
         head: string;
         text: string;
