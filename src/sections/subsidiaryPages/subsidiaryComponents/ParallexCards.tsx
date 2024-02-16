@@ -122,19 +122,19 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                   </div>
                 </div>
     
-                <div className="absolute z-50 lg:bottom-[9%] left-[18%] h-[500px] w-full">
-                  <div className=" z-50 relative ">
+                <div className=" z-50 h-full w-[85%] flex justify-center items-center ">
+                  <div className="absolute z-50 h-[500px] w-full ">
 
     
     
-                    <div   style={{ background: `url(${data.data[0].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
+                    <div style={{ background: `url(${data.data[0].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
                     className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] overflow-hidden card-1 ">
                       
                       <div style={{ transform: 'rotate(-180deg)'}} className="h-full flex justify-center items-center w-full" >
                         <div className="h-[100%] pt-[15px] left-0 w-[10%] absolute flex flex-col items-center">
                           <div className="w-full h-[20%] flex items-center justify-center">
                             <img
-                              className="w-[60px] relative opacity-0 top-[100px] left-[100px] top-left-image"
+                              className="w-[60px] relative rotate-90 opacity-0 top-[100px] left-[100px] top-left-image"
                               src={data.data[0].img }
                             />
                           </div>
