@@ -25,6 +25,8 @@ gsap.registerPlugin(ScrollTrigger);
 interface ParallexProps {
   data: {
     img: string;
+    img2: string;
+    img3: string;
     content: {
       head: string;
       text: string;
@@ -48,7 +50,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
         scrub: 1,
         start: "center 40%",
         end: "+=1600",
-        markers: true,
+        markers: false,
       },
     });
     timeline.to(".card-1", { x: 0, duration: 3 });
@@ -63,13 +65,13 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
     timeline.to(".card-1 .line-extend", { y: "-100%", duration: 100 }, 6);
     timeline.to(
       ".card-1 .top-left-image",
-      { y: -100, x: -100, opacity: 1, duration: 170 },
+      { y: -100, x: -100, opacity: 1, duration: 170, delay: 5 },
       6
     );
 
     timeline.to(
       ".card-2 .title",
-      { scale: 0.35, x: -180, rotate: -90, duration: 100, y: 320, delay: 200 },
+      { scale: 0.35, x: -180, rotate: -90, duration: 100, y: 320, delay: 280 },
       9
     );
     timeline.to(
