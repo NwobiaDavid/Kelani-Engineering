@@ -158,7 +158,9 @@ export const sub_one = {
       parallex_section:{
         data: [
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (3).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
+                img3: "/assets/images/icon-talent-card-1.svg",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -170,7 +172,56 @@ export const sub_one = {
 
             },
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (4).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
+                img3: "/assets/images/icon-talent-card-1.svg",
+                content: {
+                    head: "Expertise and Innovationn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (3).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
+                img3: "/assets/images/icon-talent-card-1.svg",
+               content: {
+                    head: "Expertise and Innovationnn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            
+        ]
+      },
+      parallex_section_mobile:{
+        data: [
+            {
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (3).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
+                img3: "/assets/images/icon-talent-card-1.svg",
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (4).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
+                img3: "/assets/images/icon-talent-card-1.svg",
                 content: {
                     head: "Expertise and Innovationn",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -183,6 +234,8 @@ export const sub_one = {
             },
             {
                 img: "/assets/images/icon-talent-card-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
+                img3: "/assets/images/icon-talent-card-1.svg",
                 content: {
                     head: "Expertise and Innovationnn",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -224,21 +277,21 @@ export const sub_two = {
         contents: [
             {
                 img:  'assets/images/subsidiaryPagesImages/pageTwo/save-energy 1-2.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (2).png',
                 head: "Machinery and Tools - Procurement ",
                 desc: " Experience the ultimate in reliability, quality, and cutting-edge equipment! Trust us to provide the market-leading solutions you need for success!",
                 colour: "text-orange-400"
             },
             {
                 img: 'assets/images/subsidiaryPagesImages/pageTwo/save-energy 1.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (2).png',
                 head: "Advisory services",
                 desc: "Get ready for an exhilarating journey towards success with our unbeatable advisory guidance!  Our mission is to ensure that you achieve the industrial success you've always dreamed of. ",
                 colour: "text-orange-400"
             },
             {
                 img: 'assets/images/subsidiaryPagesImages/pageTwo/save-energy 1-1.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (2).png',
                 head: "Plastics - Recycling and Repurposing",
                 desc: "Our transformational and impactful plastics recycling service aims to revolutionize the industry and pave a sustainable future. Together, we can build a better future for all!   ",
                 colour: "text-orange-400"
@@ -316,7 +369,9 @@ export const sub_two = {
       parallex_section:{
         data: [
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (7).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
+                img3:"/assets/images/subsidiaryPagesImages/props/Vector (8).png",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -328,7 +383,9 @@ export const sub_two = {
 
             },
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/subsidiaryPagesImages/props/Group.png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
+                img3:"/assets/images/subsidiaryPagesImages/props/Vector (8).png",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -340,13 +397,62 @@ export const sub_two = {
 
             },
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/subsidiaryPagesImages/props/Group.png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
+                img3:"/assets/images/subsidiaryPagesImages/props/Vector (8).png",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
                 },
                 colors: {
                     one:  "orange",
+                    two: "#F9ECFF"
+                }
+
+            },
+            
+        ]
+      },
+      parallex_section_mobile:{
+        data: [
+            {
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (7).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
+                img3:"/assets/images/subsidiaryPagesImages/props/Vector (8).png",
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/subsidiaryPagesImages/props/Group.png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
+                img3:"/assets/images/subsidiaryPagesImages/props/Vector (8).png",
+                content: {
+                    head: "Expertise and Innovationn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-talent-card-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
+                img3: "/assets/images/subsidiaryPagesImages/props/Vector (8).png",
+                content: {
+                    head: "Expertise and Innovationnn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
                     two: "#F9ECFF"
                 }
 
@@ -384,21 +490,21 @@ export const sub_three = {
         contents: [
             {
                 img:  'assets/images/subsidiaryPagesImages/pageThree/save-energy 1.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (1).png',
                 head: "Power Funding",
                 desc: " Diverse credit and financing options to fuel your business toward the success and progress you crave!",
                 colour: "text-green-400"
             },
             {
                 img: 'assets/images/subsidiaryPagesImages/pageThree/save-energy 1-1.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (1).png',
                 head: "Large-scale Energy Deals",
                 desc: "Unlock your solar or renewable energy plant's potential! Join our large-scale energy trading platform, seamlessly linking users to top suppliers from private and public generation plants.",
                 colour: "text-green-400"
             },
             {
                 img: 'assets/images/subsidiaryPagesImages/pageThree/save-energy 1-2.png',
-                img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
+                img2: 'assets/images/subsidiaryPagesImages/props/Gap (1).png',
                 head: "Collections risk management",
                 desc: "Solid Security and support from defaults or market shifts, we provide vital support, finance payment deficits, and facilitate the recovery of energy infrastructure.",
                 colour: "text-green-400"
@@ -483,7 +589,9 @@ export const sub_three = {
       parallex_section:{
         data: [
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (5).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+                img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -495,7 +603,9 @@ export const sub_three = {
 
             },
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+                img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
@@ -507,13 +617,62 @@ export const sub_three = {
 
             },
             {
-                img: "/assets/images/icon-consulting-top-left-1.svg", 
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+                img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
                 content: {
                     head: "Expertise and Innovation",
                     text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
                 },
                 colors: {
                     one: "green",
+                    two: "#F9ECFF"
+                }
+
+            },
+            
+        ]
+      },
+      parallex_section_mobile:{
+        data: [
+            {
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (5).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+                img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+                content: {
+                    head: "Expertise and Innovation",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png", 
+                img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+                img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+                content: {
+                    head: "Expertise and Innovationn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
+                    two: "#F9ECFF"
+                }
+
+            },
+            {
+                img: "/assets/images/icon-talent-card-1.svg", 
+                img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+                img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+                content: {
+                    head: "Expertise and Innovationnn",
+                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                },
+                colors: {
+                    one: "#E9B8FF",
                     two: "#F9ECFF"
                 }
 

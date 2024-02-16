@@ -53,11 +53,11 @@ const Features: React.FC<{ data: FeaturesProps }> = ({data}) => {
                 <h1 className='text-2_5xl font-semibold opacity-85 lg:text-4xl w-[90%] lg:w-[55%] '>{data.header}</h1>
             </div>
             
-            <div className='flex lg:p-4 w-full lg:w-[75%] flex-col lg:flex-row justify-between items-center'>
+            <div className='flex lg:p-4 w-full lg:w-[75%] flex-col lg:flex-row justify-between items-start'>
             {data.contents.map((item, index)=>(
 
-                <div className="w-full flex-col flex justify-center items-center ">
-                    <div key={index} className='flex py-4 w-full md:w-[270px] mb-10 flex-col justify-center items-center'>
+                <div key={index} className="w-full flex-col flex justify-center items-center ">
+                    <div  className='flex py-4 w-full md:w-[270px] mb-10 flex-col justify-center items-center'>
                         <img src={item.img} className='pb-4 md:p-0 w-[10rem] md:w-[120px] opacity-90 ' alt={item.head} />
                     <img src={item.img2} className='w-[100vw] lg:hidden' alt="" />
                         <h1 className={`${item.colour} px-4 text-xl_2 font-semibold opacity-90 md:text-2xl mt-3 mb-3 lg:mb-6`} >{item.head}</h1>
