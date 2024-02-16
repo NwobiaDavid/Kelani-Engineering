@@ -1,5 +1,6 @@
 @import url("./fonts/css/space-grotesk.css");
 @import url("./fonts/css/museo-sans.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 body {
   background-color: #fefefe;
@@ -26,7 +27,15 @@ body {
   font-weight: 500;
   font-family: "SpaceGrotesk-Medium";
 }
+.space-grotesk-semibold {
+  font-weight: 600;
+  font-family: "SpaceGrotesk-Medium";
+}
 
 .museo-sans {
   font-family: "MuseoSans";
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
 }
