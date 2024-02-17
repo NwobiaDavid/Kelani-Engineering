@@ -101,10 +101,10 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
                     <div className='flex  w-full lg:flex-row flex-col items-center mb-10 justify-center lg:justify-between '>
 
                         <div className='uppercase text-center lg:text-left '>
-                            <p className='font-semibold lg:text-base text-xs opacity-60 tracking-wide '>
+                            <p className='font-semibold lg:text-base text-xs opacity-60 tracking-wide museo-sans'>
                                 {data.text.head}
                             </p>
-                            <h1 className='text-3xl lg:text-5xl my-5 opacity-90 font-semibold '>{data.text.sub}</h1>
+                            <h1 className='text-3xl lg:text-5xl my-5 opacity-90 font-semibold space-grotesk-medium'>{data.text.sub}</h1>
                         </div>
 
                         <div className='flex mt-3 lg:mt-0 relative items-center justify-center lg:justify-between lg:w-[15%] md:w-[20%] w-full '>
@@ -159,9 +159,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
                                 key={index}
                                 onClick={() => handleHeaderClick(index)}
                             >
-                                <div className=" h-[90%]  w-full ">
-                                    <h1 className='p-2 h-full flex justify-center items-center uppercase w-full '>{item.text}</h1>
-                                </div>
+                                <h1 className='p-2 lg:w-fit uppercase w-full space-grotesk-medium '>{item.text}</h1>
                                 <motion.div
                                     initial={{ x: '-100%' }}
                                     animate={{ x: display === index ? '0%' : '-100%' }}
@@ -188,7 +186,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
 
                     <motion.div
                         key={display}
-                        className="w-full lg:w-[70%] z-50 h-full flex lg:flex-row flex-col"
+                        className="w-full lg:w-[70%] z-30 h-full flex lg:flex-row flex-col"
                         variants={containerVariants}
                         initial="initial"
                         animate="animate"
