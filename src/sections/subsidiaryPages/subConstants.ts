@@ -8,6 +8,7 @@
 
 
 export const sub_one = {
+    cta_form: "consulting",
     hero_section: {
       sub_text: 'Kelani Consulting and Talent Management',
       main_text: 'enhance organizational performancee',
@@ -261,6 +262,7 @@ export const sub_one = {
 //   page 2 -------------------------------------------------
 
 export const sub_two = {
+    cta_form: "engineering",
     hero_section: {
       sub_text: 'Kelani Industrials',
       main_text: 'transforming industries, shaping the future.',
@@ -474,6 +476,7 @@ export const sub_two = {
 //   page 3 ---------------------------------------------------------------
 
 export const sub_three = {
+    cta_form: "power",
     hero_section: {
       sub_text: 'Kelani POWER',
       main_text: 'enhance organizational performance ',

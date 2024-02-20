@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 // import ContactUsInput from "../components/ContactUsInput";
 import axios from "axios";
+import { Import } from "lucide-react";
 
 const schema = z.object({
   name: z.string().nonempty({ message: "Name is required" }),
@@ -61,7 +62,7 @@ const Footer = () => {
     const url = "https://app.nocodb.com/api/v2/tables/mjgtqh17rbqo28w/records";
     const options = {
       headers: {
-        "xc-token": "gbtt4j9PadEtKXdYLUJrtc1vvdJz7LptQqOE1z9T",
+        "xc-token": import.meta.env.VITE_APP_NOCODB_AUTH_TOKEN,
       },
     };
     const requestData = {

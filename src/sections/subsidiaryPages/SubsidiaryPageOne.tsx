@@ -57,6 +57,7 @@ interface Header {
 // }
 
 interface SubProps {
+  cta_form: string;
   hero_section: {
     sub_text: string;
     main_text: string;
@@ -297,7 +298,10 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
                   alt=""
                 />
 
-                <Navbar color={sub.hero_section.color} />
+                <Navbar
+                  color={sub.hero_section.color}
+                  cta_form={sub.cta_form}
+                />
 
                 <div className="flex h-full  flex-col justify-center items-center">
                   <div className="lg:w-[60%] z-50 w-[80%] text-center flex flex-col items-center justify-center uppercase ">

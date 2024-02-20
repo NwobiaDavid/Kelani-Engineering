@@ -39,3 +39,39 @@ body {
 .inter {
   font-family: "Inter", sans-serif;
 }
+
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Styles for the Phone number Input */
+input[type="tel"],
+.p-inputnumber-input {
+  @apply bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans;
+}
+
+.p-inputnumber {
+  @apply w-full;
+}
+
+.error input,
+.error select,
+.error textarea {
+  border-color: #fe3514;
+  transition: border-color 0.3s;
+}
