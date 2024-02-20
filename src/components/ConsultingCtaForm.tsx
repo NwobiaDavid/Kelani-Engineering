@@ -50,7 +50,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
   });
 
   const handleFormSubmit = async (data: FormSchema) => {
-    const url = "https://app.nocodb.com/api/v2/tables/m6oho0240o5tcx8/records";
+    const url = "https://app.nocodb.com/api/v2/tables/m1ecy3cl0ylezcx/records";
     const options = {
       headers: {
         "xc-token": import.meta.env.VITE_APP_NOCODB_AUTH_TOKEN,
