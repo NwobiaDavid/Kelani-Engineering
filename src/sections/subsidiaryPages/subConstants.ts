@@ -20,8 +20,10 @@ export const sub_one = {
         c300: "#d8b4fe"
       },
     },
-
-      features_data: {
+    home_section:{
+        mobile: "/assets/images/subsidiaryPagesImages/props/Img_Layer (3).png"
+    },
+    features_data: {
         header: "Elevate Excellence: Strategize, Implement, and Optimize Engineering Dynamics at Scale for Unparalleled Industry Advancement",
         contents: [
             {
@@ -274,6 +276,9 @@ export const sub_two = {
         c300: "#fdba74"
       },
     },
+    home_section:{
+        mobile: "/assets/images/subsidiaryPagesImages/props/Img_Layer (5).png"
+    },
       features_data: {
         header: "Unlock potential: Building Excellence by striving for Industrial Transformation.",
         contents: [
@@ -487,6 +492,9 @@ export const sub_three = {
         c400: "#4ade80",
         c300: "#86efac"
       },
+    },
+    home_section:{
+        mobile: "/assets/images/subsidiaryPagesImages/props/Img_Layer (4).png"
     },
       features_data: {
         header: "Powering the Future: Discovering Tomorrow's Sustainable Energy Solutions through Advanced Technologies and Cost-Effective Strategies.",

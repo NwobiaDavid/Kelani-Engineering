@@ -68,7 +68,10 @@ interface SubProps {
       c400: string;
       c300: string;
     };
-  };
+  },
+  home_section: {
+    mobile:string;
+  },
   features_data: {
     header: string;
     contents: Contents[];
@@ -283,9 +286,17 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
             <div className="  md:h-screen h-[600px] relative">
               <div className="absolute inset-0 bg-cover bg-center">
                 <div className=" absolute w-full  z-50">
-                  <img
+                  {/* <img
                     className="w-full h-full opacity-50 object-cover"
                     src={sub.hero_section.home_img}
+                    alt="background image"
+                  /> */}
+                  <img
+                  className="w-full h-full opacity-50 object-cover"
+                    // srcSet={`${sub.home_section.mobile} 768w, ${sub.hero_section.home_img} 1200w`}
+                    // sizes="(max-width: 767px) 100vw, 1200px"
+                    // src={sub.hero_section.home_img}
+                    src={isMobile ? sub.home_section.mobile : sub.hero_section.home_img}
                     alt="background image"
                   />
                 </div>
@@ -293,10 +304,9 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
 
               <div className="relative z-50 h-full flex flex-col">
                 <img
-                  className="absolute top-4 -right-10 lg:right-24 "
-                  src="/assets/images/subsidiaryPagesImages/props/image.png"
-                  alt=""
-                />
+                  className="absolute top-4 -right-10 lg:w-[20rem] w-[50%] lg:right-24 "
+                  src="/assets/images/subsidiaryPagesImages/props/image.png" alt="" />
+
 
                 <Navbar
                   color={sub.hero_section.color}
