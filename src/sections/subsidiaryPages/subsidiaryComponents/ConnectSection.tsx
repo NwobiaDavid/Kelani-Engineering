@@ -6,8 +6,8 @@ const ConnectSection: React.FC<{ text: string }> = ({ text }) => {
   return (
     <div className=" mt-0 w-full h-[650px] lg:h-screen relative flex justify-center items-center text-white ">
       <img
-        className="absolute text-center  "
-        src="/assets/images/subsidiaryPagesImages/props/Circles.png"
+        className="absolute text-center  z-[100] "
+        src="/assets/images/subsidiaryPagesImages/props/Circles2.svg"
         alt=""
       />
 
