@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import SubsidiaryCtaForm from "../../../components/PowerCtaForm";
+import PowerCtaForm from "../../../components/PowerCtaForm";
+import EngineeringCtaForm from "../../../components/EngineeringCtaForm";
+import ConsultingCtaForm from "../../../components/ConsultingCtaForm";
 
 interface NavbarProps {
   c700: string;
@@ -10,7 +13,10 @@ interface NavbarProps {
   c300: string;
 }
 
-const Navbar: React.FC<{ color: NavbarProps }> = ({ color }) => {
+const Navbar: React.FC<{ color: NavbarProps; cta_form: string }> = ({
+  color,
+  cta_form,
+}) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const [ctaFormShowing, setCtaFormShowing] = useState(false);
@@ -18,9 +24,19 @@ const Navbar: React.FC<{ color: NavbarProps }> = ({ color }) => {
   return (
     <>
       <AnimatePresence>
-      {ctaFormShowing && (
-        <SubsidiaryCtaForm close={() => setCtaFormShowing(false)} />
-      )}
+        {ctaFormShowing && (
+          <>
+            {cta_form == "power" && (
+              <PowerCtaForm close={() => setCtaFormShowing(false)} />
+            )}
+            {cta_form == "engineering" && (
+              <EngineeringCtaForm close={() => setCtaFormShowing(false)} />
+            )}
+            {cta_form == "consulting" && (
+              <ConsultingCtaForm close={() => setCtaFormShowing(false)} />
+            )}
+          </>
+        )}
       </AnimatePresence>
       <motion.div
         initial={{ opacity: 0, y: -10 }}
