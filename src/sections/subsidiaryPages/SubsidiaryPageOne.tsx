@@ -359,9 +359,9 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
                 alt=""
                           /> */}
 
-            <div className="border border-white rounded-full h-[1500px] w-[1500px] flex items-center justify-center">
-              <div className="border border-white rounded-full h-[1150px] w-[1150px] flex items-center justify-center">
-                <div className="border border-white rounded-full h-[800px] w-[800px] flex items-center justify-center">
+            <div className="border border-white rounded-full w-[900px] h-[900px] opacity-70 lg:opacity-100  lg:h-[1500px] lg:w-[1500px] flex items-center justify-center">
+              <div className="border border-white rounded-full w-[600px] h-[600px] opacity-70 lg:opacity-100  lg:h-[1150px] lg:w-[1150px] flex items-center justify-center">
+                <div className="border border-white rounded-full  w-[300px] h-[300px] opacity-70 lg:opacity-100 lg:h-[800px] lg:w-[800px] flex items-center justify-center">
 
 
                 </div>
