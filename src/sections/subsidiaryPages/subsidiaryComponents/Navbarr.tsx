@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
@@ -12,7 +13,7 @@ interface NavbarProps {
   c300: string;
 }
 
-const Navbar: React.FC<{ color: NavbarProps; cta_form: string }> = ({
+const Navbarr: React.FC<{ color: NavbarProps; cta_form: string }> = ({
   color,
   cta_form,
 }) => {
@@ -126,4 +127,4 @@ const Navbar: React.FC<{ color: NavbarProps; cta_form: string }> = ({
   );
 };
 
-export default Navbar;
+export default Navbarr;
