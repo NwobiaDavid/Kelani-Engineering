@@ -196,7 +196,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
                         transition={{ duration: 0.4 }}
                     >
                         <div>
-                            <img src={data.content[display].img} alt={`Slide ${display + 1}`} />
+                            <img src={data.content[display].img} className="rounded-3xl lg:h-[400px] object-cover lg:w-[650px] border" alt={`Slide ${display + 1}`} />
                         </div>
                         <motion.div
                             initial={{ opacity: 0, x: -10 }}

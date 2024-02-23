@@ -60,7 +60,7 @@ export const sub_one = {
         dash: "assets/images/subsidiaryPagesImages/props/svgviewer-output.svg",
         content: [
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageOne/slideshow/image 16.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -70,7 +70,7 @@ export const sub_one = {
                 classname: " "
             },
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageOne/slideshow/image 17.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -80,7 +80,7 @@ export const sub_one = {
                 classname: " "
             },
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageOne/slideshow/image 19.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -91,7 +91,7 @@ export const sub_one = {
             }
             ,
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageOne/slideshow/image 26.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -102,7 +102,7 @@ export const sub_one = {
             }
             ,
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageOne/slideshow/image 27.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -113,7 +113,7 @@ export const sub_one = {
             }
             ,
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageOne/slideshow/image 16.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -307,7 +307,7 @@ export const sub_two = {
         dash: "assets/images/subsidiaryPagesImages/pageTwo/orange_dash.svg",
         content: [
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 20.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -317,7 +317,7 @@ export const sub_two = {
                 classname: " "
             },
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 22.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -327,7 +327,7 @@ export const sub_two = {
                 classname: " "
             },
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 25.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -338,7 +338,7 @@ export const sub_two = {
             }
             ,
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 28.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -530,7 +530,7 @@ export const sub_three = {
         dash: "assets/images/subsidiaryPagesImages/pageThree/green_dash.svg",
         content: [
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageThree/slideshow/image 23.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -540,7 +540,7 @@ export const sub_three = {
                 classname: " "
             },
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageThree/slideshow/image 30.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -550,7 +550,7 @@ export const sub_three = {
                 classname: " "
             },
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageThree/slideshow/image 29.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -561,7 +561,7 @@ export const sub_three = {
             }
             ,
             {
-                img: 'assets/images/subsidiaryPagesImages/Card.png',
+                img: 'assets/images/subsidiaryPagesImages/pageThree/slideshow/image 24.png',
                 point1: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point2: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
                 point3: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
