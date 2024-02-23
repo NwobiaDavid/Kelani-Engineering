@@ -151,28 +151,30 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color  }> = (
                 <div className='w-full lg:mb-6 flex justify-center items-center ' >
                     <div className='w-[65%] flex justify-center lg:justify-between items-center'>
                         {data.header.map((item, index) => (
-                            <div
-                                className={`${display === index
-                                    ? "h-[90px] font-semibold lg:text-left text-center opacity-60 tracking-wide lg:w-[200px] w-[210px]"
-                                    : "h-[90px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-[210px]"
-                                    }`}
-                                key={index}
-                                onClick={() => handleHeaderClick(index)}
-                            >
-                                <h1 className='p-2 lg:w-fit uppercase w-full space-grotesk-medium '>{item.text}</h1>
-                                <motion.div
-                                    initial={{ x: '-100%' }}
-                                    animate={{ x: display === index ? '0%' : '-100%' }}
-                                    transition={{ duration: 0.5, ease: 'easeInOut' }}
-                                    className={`${display === index ? 'w-full relative flex items-center justify-center h-[10%] ' : 'w-full h-[10%] hidden'}`}
-                                >
-                                    <img
-                                        className=' lg:block hidden  w-full -left-8 absolute '
-                                        src={data.dash}
-                                        alt=''
-                                    />
-                                </motion.div>
-                            </div>
+                              <div
+                              className={`${display === index
+                                  ? "h-[90px] font-semibold lg:text-left text-center opacity-60 tracking-wide w-[210px]"
+                                  : "h-[90px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-[210px]"
+                                  }`}
+                              key={index}
+                              onClick={() => handleHeaderClick(index)}
+                          >
+                              <div className=" h-[90%]  w-full ">
+                                  <h1 className='p-2 h-full flex justify-center items-center uppercase w-full '>{item.text}</h1>
+                              </div>
+                              <motion.div
+                                  initial={{ x: '-100%' }}
+                                  animate={{ x: display === index ? '0%' : '-100%' }}
+                                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                                  className={`${display === index ? 'w-full relative flex items-center justify-center h-[10%] ' : 'w-full h-[10%] hidden'}`}
+                              >
+                                  <img
+                                      className=' lg:block hidden  w-full -left-8 absolute '
+                                      src={data.dash}
+                                      alt=''
+                                  />
+                              </motion.div>
+                          </div>
                         ))}
                     </div>
                 </div>
