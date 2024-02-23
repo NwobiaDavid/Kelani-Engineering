@@ -340,60 +340,50 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
           <div className="griddy lg:block hidden z-20 bg-transparent"></div>
 
           {isMobile ? (
-        <div className="relative md:hidden z-40">
-          <ParallexCardsMobile data={sub.parallex_section_mobile} />
-        </div>
-      ) : (
-        <div className="relative hidden md:block z-40">
-          <ParallexCards data={sub.parallex_section} />
-        </div>
-      )}
-
-        </div>
-
-
-
-        {/* <div id="hex-gridx" className="  md:hidden block relative bg-black"  >
-          <motion.div
-            animate={lightControls}
-            className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
-          ></motion.div>
-
-          <div className="griddy lg:block hidden z-20 bg-transparent"></div> */}
-
-        {/* <div className=" relative"> */}
-        {/* <div className="relative w-full md:block hidden z-40 ">
-              <ParallexCards data={sub.parallex_section} />
-            </div> */}
-
-        {/* <div className="relative md:hidden block  z-40 ">
+            <div className="relative md:hidden z-40">
               <ParallexCardsMobile data={sub.parallex_section_mobile} />
             </div>
+          ) : (
+            <div className="relative hidden md:block z-40">
+              <ParallexCards data={sub.parallex_section} />
+            </div>
+          )}
 
-        </div> */}
+        </div>
+
+        <div className="relative h-[100dvh] ">
+          <div className="z-[30]   absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
+            {/* <img
+                className="absolute text-center   z-[100] "
+                src="/assets/images/subsidiaryPagesImages/props/Circles2.svg"
+                alt=""
+                          /> */}
+
+            <div className="border border-white rounded-full h-[1500px] w-[1500px] flex items-center justify-center">
+              <div className="border border-white rounded-full h-[1150px] w-[1150px] flex items-center justify-center">
+                <div className="border border-white rounded-full h-[800px] w-[800px] flex items-center justify-center">
 
 
-        {/* <div className="  relative z-50 " > */}
-        <div id="hex-gridx" className=" relative bg-black h-full  "  >
-
-
-
-
-          <div className="bg-black z-10 relative ">
-
-            <div className="griddy lg:block hidden z-20 bg-transparent "></div>
-
-            <motion.div
-              animate={lightControlsx}
-              className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
-            ></motion.div>
-
-            {/* <div className="mt-0  "> */}
-            <ConnectSection text={sub.connect_text} />
-            <img className="absolute z-50 -bottom-[0px] w-full  " src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" />
-            {/* </div> */}
+                </div>
+              </div>
+            </div>
           </div>
 
+
+          <div id="hex-gridx" className=" relative bg-black h-full  "  >
+            <div className="bg-black z-10  relative ">
+              <div className="griddy lg:block hidden z-20 bg-transparent "></div>
+              <motion.div
+                animate={lightControlsx}
+                className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
+              ></motion.div>
+              {/* <div className="mt-0  "> */}
+
+              <ConnectSection text={sub.connect_text} />
+              <img className="absolute z-50 -bottom-[0px] w-full  " src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" />
+              {/* </div> */}
+            </div>
+          </div>
         </div>
 
 
