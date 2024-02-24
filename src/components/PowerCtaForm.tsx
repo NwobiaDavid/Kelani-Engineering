@@ -101,7 +101,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
         transition={{ duration: 0.35 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: "80dvw", transition: { duration: 0.2 } }}
-        className="lg:w-[80dvw] max-h-screen bg-white z-[90] fixed top-0 right-0 bottom-0 p-[10px] overflow-y-scroll"
+        className="w-[100dvw] lg:w-[80dvw] max-h-screen bg-white z-[90] fixed top-0 right-0 bottom-0 p-[10px] overflow-y-scroll"
       >
         <AnimatePresence>
           {thankYouMessageShowing && (
@@ -133,7 +133,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
               <header className="text-[32px] space-grotesk-semibold pb-[56px] border-b-zinc-500 border-b border-opacity-50">
                 Kelani Power CTA
               </header>
-              <div className="grid grid-cols-2 gap-[40px]  mt-[56px]">
+              <div className="lg:grid grid-cols-2 gap-[40px] flex flex-col  mt-[56px]">
                 <section className="space-y-[56px]">
                   <div>
                     <p className="text-[18px] space-grotesk-semibold mb-[32px]">

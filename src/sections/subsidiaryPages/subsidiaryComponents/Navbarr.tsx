@@ -57,9 +57,9 @@ const Navbarr: React.FC<{ color: NavbarProps; cta_form: string }> = ({
             <button
               onClick={() => setCtaFormShowing(true)}
               style={{ color: color.c500 }}
-              className={`text-${color}-500 border  font-semibold  border-color-400 rounded-full py-2 px-5 mx-2 block md:inline-block`}
+              className={`text-${color}-500 border border-[${color}] font-semibold  rounded-full py-2 px-5 mx-2 block md:inline-block bg-white`}
             >
-              CTA
+              GET CONNECTED
             </button>
             {/* <div className="border mx-2 h-10 opacity-50 "></div> */}
             {/* <motion.button
