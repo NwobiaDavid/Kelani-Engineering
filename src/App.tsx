@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import SubsidiaryPageOne from "./sections/subsidiaryPages/SubsidiaryPageOne";
 import { sub_one, sub_three, sub_two } from "./sections/subsidiaryPages/subConstants";
 import { One } from "./sections/subsidiaryPages/subsidiaryComponents/One";
+import Footer from "./sections/Footer";
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
           <Route path="/subsidiary-one" element={<SubsidiaryPageOne sub={sub_one} />} />
           <Route path="/subsidiary-two" element={<SubsidiaryPageOne sub={sub_two} />} />
           <Route path="/subsidiary-three" element={<SubsidiaryPageOne sub={sub_three} />} />
-          <Route path="/one" element={<One />} />
+          <Route path="/one" element={<Footer />} />
           {/* <Route path="/parallax" element={<ParallaxCards />} /> */}
         </Routes>
       </AnimatePresence>
