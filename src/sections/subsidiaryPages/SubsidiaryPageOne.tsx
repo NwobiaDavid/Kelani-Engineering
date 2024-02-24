@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Link } from "react-router-dom";
-import Navbar from "./subsidiaryComponents/Navbarr";
+import Navbarr from "./subsidiaryComponents/Navbarr";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import CustomerSection from "./subsidiaryComponents/CustomerSection";
 import Features from "./subsidiaryComponents/Features";
 import ParallexCards from "./subsidiaryComponents/ParallexCards";
 import ConnectSection from "./subsidiaryComponents/ConnectSection";
-import "./subsidiaryPages.css";
+import './subsidiaryPages.css'
 import SlideshowSection2 from "./subsidiaryComponents/SlideshowSection2";
 import CustomScrollbar from "./subsidiaryComponents/CustomScrollbar";
 import { useEffect, useState } from "react";
@@ -14,6 +14,7 @@ import Footer from "../Footer";
 import { motion, useAnimation } from "framer-motion";
 import ParallexCardsMobile from "./subsidiaryComponents/ParallexCardsMobile";
 import Lenis from "@studio-freight/lenis/types";
+
 
 interface Contents {
   img: string;
@@ -24,14 +25,14 @@ interface Contents {
 }
 
 interface Contents_Slideshow {
-  img: string;
-  point1: string;
-  point2: string;
-  point3: string;
-  point4: string;
-  point5?: string;
-  point6?: string;
-  classname: string;
+  img: string,
+  point1: string,
+  point2: string,
+  point3: string,
+  point4: string,
+  point5?: string,
+  point6?: string,
+  classname: string
 }
 
 // interface Content_parallex {
@@ -41,11 +42,12 @@ interface Contents_Slideshow {
 //   text: string;
 //  }
 
+
 // }
 
 interface Header {
-  text: string;
-  className: string;
+  text: string
+  className: string
 }
 
 // interface ColourProps {
@@ -77,7 +79,7 @@ interface SubProps {
   features_data: {
     header: string;
     contents: Contents[];
-  };
+  },
 
   slideshow_section: {
     dash: string;
@@ -86,8 +88,8 @@ interface SubProps {
     text: {
       head: string;
       sub: string;
-    };
-  };
+    }
+  },
   parallex_section: {
     data: {
       img: string;
@@ -100,9 +102,9 @@ interface SubProps {
       colors: {
         one: string;
         two: string;
-      };
+      }
     }[];
-  };
+  },
   parallex_section_mobile: {
     data: {
       img: string;
@@ -115,10 +117,12 @@ interface SubProps {
       colors: {
         one: string;
         two: string;
-      };
+      }
     }[];
-  };
+  },
   connect_text: string;
+
+
 }
 
 const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
@@ -132,11 +136,12 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
+
 
   const [lightPosition, setLightPosition] = useState({ top: 0, left: 50 });
   // const [lightPositions, setLightPositions] = useState({ top: 0, left: 50 });
@@ -166,9 +171,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const rect = document
-        .getElementById("hex-gridd")
-        ?.getBoundingClientRect();
+      const rect = document.getElementById("hex-gridd")?.getBoundingClientRect();
 
       if (rect) {
         const offsetX = e.clientX - rect.left;
@@ -187,12 +190,11 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const rect = document
-        .getElementById("hex-gridx")
-        ?.getBoundingClientRect();
+      const rect = document.getElementById("hex-gridx")?.getBoundingClientRect();
 
       if (rect) {
         const offsetX = e.clientX - rect.left;
@@ -211,6 +213,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isTopNear, setIsTopNear] = useState(false);
@@ -226,10 +229,10 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
       // console.log("The scroll num => " + currentScrollPosition);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -239,15 +242,15 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
       setIsTopNear(scrollPosition > 5180);
     };
 
-    window.addEventListener("scroll", handleScrollReset);
+    window.addEventListener('scroll', handleScrollReset);
 
     return () => {
-      window.removeEventListener("scroll", handleScrollReset);
+      window.removeEventListener('scroll', handleScrollReset);
     };
   }, [scrollPosition]);
 
   useEffect(() => {
-    controls.start({ backgroundColor: isTopNear ? "black" : "white" });
+    controls.start({ backgroundColor: isTopNear ? 'black' : 'white' });
   }, [isTopNear, controls]);
 
   useEffect(() => {
@@ -266,6 +269,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
     });
   }, [lightPosition, lightControlss]);
 
+
   useEffect(() => {
     lightControlsx.start({
       top: `${lightPosition.top}%`,
@@ -275,20 +279,21 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
   }, [lightPosition, lightControlsx]);
 
   return (
+
     <>
-      <div className=" overflow-x-clip ">
-        <div
-          id="hex-grid"
-          className=" relative w-[100vw] h-full overflow-x-hidden "
-        >
+      <div className=" overflow-x-clip " >
+        <div id="hex-grid" className=" relative w-[100vw] h-full overflow-x-hidden "  >
+
           <motion.div
             animate={lightControls}
             className="light  hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
           ></motion.div>
 
-          <div className="griddy lg:block hidden z-20 bg-transparent "> </div>
+          <div className="griddy lg:block hidden z-20 bg-transparent " > </div>
           <div className="relative overflow-x-hidden bg-black ">
-            <div className="  md:h-screen h-[600px] relative">
+
+            <div className="  md:h-screen h-[600px] relative" >
+
               <div className="absolute inset-0 bg-cover bg-center">
                 <div className=" absolute w-full  z-50">
                   <img
@@ -298,6 +303,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
                         ? sub.home_section.mobile
                         : sub.hero_section.home_img
                     }
+                    src={sub.hero_section.home_img}
                     alt="background image"
                   />
                 </div>
@@ -318,44 +324,31 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
 
                 <div className="flex h-full  flex-col justify-center items-center">
                   <div className="lg:w-[60%] z-50 w-[80%] text-center flex flex-col items-center justify-center uppercase ">
-                    <p className="text-white py-3 opacity-75 ">
-                      {sub.hero_section.sub_text}
-                    </p>
-                    <h1 className="text-white font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] ">
-                      {sub.hero_section.main_text}
-                    </h1>
+                    <p className="text-white py-3 opacity-75 ">{sub.hero_section.sub_text}</p>
+                    <h1 className="text-white font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] ">{sub.hero_section.main_text}</h1>
                     <div className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white ">
-                      <Link to={"#"} className="">
-                        GET CONNECTED{" "}
-                      </Link>
-                      <IoIosArrowRoundForward size={30} />
+                      <Link to={"#"} className="" >GET CONNECTED </Link><IoIosArrowRoundForward size={30} />
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
+
 
             <CustomerSection />
 
-            <div className="relative z-50 ">
+
+            <div className="relative z-50 " >
               <Features data={sub.features_data} />
-              <div
-                style={{
-                  backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)`,
-                }}
-                className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] "
-              >
-                {" "}
-              </div>
-              <SlideshowSection2
-                colours={sub.hero_section.color}
-                data={sub.slideshow_section}
-              />
+              <div style={{ backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)` }} className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] "> </div>
+              <SlideshowSection2 colours={sub.hero_section.color} data={sub.slideshow_section} />
             </div>
           </div>
         </div>
 
-        <div id="hex-gridd" className=" relative bg-black">
+
+        <div id="hex-gridd" className=" relative bg-black"  >
           <motion.div
             animate={lightControls}
             className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
@@ -372,6 +365,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
               <ParallexCards data={sub.parallex_section} />
             </div>
           )}
+
         </div>
 
         {/* <div id="hex-gridx" className="  md:hidden block relative bg-black"  >
@@ -380,7 +374,6 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
             className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
           ></motion.div>
 
-          <div className="griddy lg:block hidden z-20 bg-transparent"></div> */}
 
         {/* <div className=" relative"> */}
         {/* <div className="relative w-full md:block hidden z-40 ">
@@ -429,6 +422,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
           />
         </div>
       </div>
+
     </>
   );
 };

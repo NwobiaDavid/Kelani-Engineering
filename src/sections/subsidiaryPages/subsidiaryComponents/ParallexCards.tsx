@@ -45,7 +45,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
 
     timeline.to(
       ".card-1 .title",
-      { scale: 0.35, x: -180, rotate: -90, duration: 100, y: 320 },
+      { scale: 0.35, x: "-70%", rotate: -90, duration: 100, y: "20rem" },
       5
     );
     timeline.to(".card-1 .line-extend", { y: "-100%", duration: 100 }, 6);
@@ -58,7 +58,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
 
     timeline.to(
       ".card-2 .title",
-      { scale: 0.35, x: -180, rotate: -90, duration: 100, y: 320, delay: 280 },
+      { scale: 0.35, x: "-80%", rotate: -90, duration: 100, y: "20rem", delay: 280 },
       9
     );
     timeline.to(".card-2 .line-extend", { y: "-100%", duration: 230, delay: 280 }, 10);
@@ -122,19 +122,19 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                   </div>
                 </div>
     
-                <div className="absolute z-50 lg:bottom-[9%] left-[18%] h-[500px] w-full">
+                <div className="absolute z-50 lg:bottom-[9%] left-[18%] h-[300px] lg:h-[550px] w-full">
                   <div className=" z-50 relative ">
 
     
     
                     <div   style={{ background: `url(${data.data[0].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
-                    className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] overflow-hidden card-1 ">
+                    className="w-[65%] border-white border rounded-[20px] h-[300px] lg:h-[550px] absolute top-0 pl-[100px] overflow-hidden card-1 ">
                       
                       <div style={{ transform: 'rotate(-180deg)'}} className="h-full flex justify-center items-center w-full" >
-                        <div className="h-[100%] pt-[15px] left-0 w-[10%] absolute flex flex-col items-center">
+                        <div className="h-[100%] pt-[15px] left-0 w-[10%]  flex flex-col items-center">
                           <div className="w-full h-[20%] flex items-center justify-center">
                             <img
-                              className="w-[60px] relative opacity-0 top-[100px] left-[100px] top-left-image"
+                              className="w-[60px] rotate-90 relative opacity-0 top-[100px] left-[100px] top-left-image"
                               src={data.data[0].img }
                             />
                           </div>
@@ -142,21 +142,22 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                             <div className="w-[1.5px] bg-[#F4F4F4] h-full relative top-[100%] line-extend"></div>
                           </div>
                         </div>
+                        
                         <div className="w-[85%] h-full flex py-[65px] ">
                           <div className=" w-[30%] ">
-                            <h2 className="text-[44px] text-white leading-[50.2px] title">
+                            <h2 className="text-[44px]  pl-[5%] text-white leading-[50.2px] title">
                               {data.data[0].content.head }
                             </h2>
-                            <p className="mt-[16px]">
+                            <p className="mt-[16px]  pl-[5%] ">
                             {data.data[0].content.text }
                             </p>
-                            <button className="text-white flex gap-[13px] mt-[44px] items-center">
+                            <button className=" pl-[5%] text-white flex gap-[13px] mt-[44px] items-center">
                               Learn More
                               <img src="/assets/images/right-arrow.svg" />
                             </button>
                           </div>
                           <img
-                            className="w-[70%]  object-cover"
+                            className="w-[70%] ml-10 object-cover"
                             src={data.data[0].img3}
                           />
                         </div>
@@ -165,13 +166,13 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
     
     
                     <div   style={{ background: `url(${data.data[0].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
-                     className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] overflow-hidden card-2 left-[calc(200vw+100px)]">
+                     className="w-[65%] border-white border rounded-[20px] h-[300px] lg:h-[550px] absolute top-0 pl-[100px] overflow-hidden card-2 left-[calc(200vw+100px)]">
                       
                       <div  style={{ transform: 'rotate(-180deg)'}} className="h-full flex justify-around items-center w-full" >
-                        <div className="h-[100%] pt-[15px] left-0 w-[10%] absolute flex flex-col items-center">
+                        <div className="h-[100%] pt-[15px] left-0 w-[10%] flex flex-col items-center">
                           <div className="w-full h-[20%] flex items-center justify-center">
                             <img
-                              className="w-[60px] relative opacity-0 top-[100px] left-[100px] top-left-image"
+                              className="w-[60px] rotate-90 relative opacity-0 top-[100px] left-[100px] top-left-image"
                               src={data.data[1].img }
                             />
                           </div>
@@ -179,21 +180,22 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                             <div className="w-[1.5px] bg-[#F4F4F4] h-full relative top-[100%] line-extend"></div>
                           </div>
                         </div>
+
                         <div className="w-[85%] h-full flex py-[65px]">
                           <div className="w-[30%]">
-                            <h2 className="text-[44px] text-white leading-[50.2px] title">
+                            <h2 className="text-[44px] pl-[5%]  text-white leading-[50.2px] title">
                             {data.data[1].content.head }
                             </h2>
-                            <p className="mt-[16px]">
+                            <p className="mt-[16px] pl-[5%] ">
                             {data.data[1].content.text }
                             </p>
-                            <button className="text-white flex gap-[13px] mt-[44px] items-center">
+                            <button className="text-white pl-[5%] flex gap-[13px] mt-[44px] items-center">
                               Learn More
                               <img src="/assets/images/right-arrow.svg" />
                             </button>
                           </div>
                             <img
-                              className="w-[70%]  object-cover"
+                              className="w-[70%] ml-10 transform scale-x-[-1] object-cover"
                               src={data.data[1].img3}
                             />
                         </div>
@@ -202,10 +204,10 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
     
     
                     <div  style={{ background: `url(${data.data[2].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
-                     className="w-[calc(90%-500px)] border-white border rounded-[20px] h-[500px] absolute top-0 pl-[100px] py-[65px]  overflow-hidden card-3 left-[calc(200vw+200px)]">
+                     className="w-[65%] border-white border rounded-[20px] h-[550px] absolute top-0 pl-[100px] py-[65px]  overflow-hidden card-3 left-[calc(200vw+200px)]">
                       
                       <div style={{ transform: 'rotate(-180deg)'}} className="h-full flex justify-center pl-9 " >
-                        <div className="w-[30%] ">
+                        <div className="pl-[5%] w-[30%] ">
                           <h2 className="text-[44px] text-white leading-[50.2px]">
                           {data.data[2].content.head }
                           </h2>
@@ -219,7 +221,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps  }> = ({ data }) => {
                         </div>
                         {/* <figure> */}
                           <img
-                            className="w-[70%] object-cover"
+                            className="w-[65%] ml-14 object-cover"
                             src={data.data[2].img3}
                           />
                         {/* </figure> */}

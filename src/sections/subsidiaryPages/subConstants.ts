@@ -62,7 +62,7 @@ export const sub_one = {
     dash: "assets/images/subsidiaryPagesImages/props/svgviewer-output.svg",
     content: [
       {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
+        img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 16.png",
         point1:
           "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         point2:
@@ -76,7 +76,7 @@ export const sub_one = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
+        img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 17.png",
         point1:
           "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         point2:
@@ -92,7 +92,7 @@ export const sub_one = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
+        img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 19.png",
         point1:
           "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         point2:
@@ -106,7 +106,7 @@ export const sub_one = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
+        img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 26.png",
         point1:
           "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         point2:
@@ -120,7 +120,7 @@ export const sub_one = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
+        img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 27.png",
         point1:
           "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         point2:
@@ -134,7 +134,7 @@ export const sub_one = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
+        img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 16.png",
         point1:
           "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         point2:
@@ -322,7 +322,7 @@ export const sub_two = {
     dash: "assets/images/subsidiaryPagesImages/pageTwo/orange_dash.svg",
     content: [
       {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
+        img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 20.png",
         point1:
           "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         point2:
@@ -338,7 +338,7 @@ export const sub_two = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
+        img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 22.png",
         point1:
           "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         point2:
@@ -354,7 +354,7 @@ export const sub_two = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
+        img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 25.png",
         point1:
           "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         point2:
@@ -370,7 +370,7 @@ export const sub_two = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
+        img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 28.png",
         point1:
           "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         point2:
@@ -515,221 +515,221 @@ export const sub_three = {
       c400: "#4ade80",
       c300: "#86efac",
     },
-  },
-  home_section: {
-    mobile: "/assets/images/subsidiaryPagesImages/props/Img_Layer (4).png",
-  },
-  features_data: {
-    header:
-      "Powering the Future: Discovering Tomorrow's Sustainable Energy Solutions through Advanced Technologies and Cost-Effective Strategies.",
-    contents: [
-      {
-        img: "assets/images/subsidiaryPagesImages/pageThree/save-energy 1.png",
-        img2: "assets/images/subsidiaryPagesImages/props/Gap (1).png",
-        head: "Power Funding",
-        desc: " Diverse credit and financing options to fuel your business toward the success and progress you crave!",
-        colour: "text-green-400",
-      },
-      {
-        img: "assets/images/subsidiaryPagesImages/pageThree/save-energy 1-1.png",
-        img2: "assets/images/subsidiaryPagesImages/props/Gap (1).png",
-        head: "Large-scale Energy Deals",
-        desc: "Unlock your solar or renewable energy plant's potential! Join our large-scale energy trading platform, seamlessly linking users to top suppliers from private and public generation plants.",
-        colour: "text-green-400",
-      },
-      {
-        img: "assets/images/subsidiaryPagesImages/pageThree/save-energy 1-2.png",
-        img2: "assets/images/subsidiaryPagesImages/props/Gap (1).png",
-        head: "Collections risk management",
-        desc: "Solid Security and support from defaults or market shifts, we provide vital support, finance payment deficits, and facilitate the recovery of energy infrastructure.",
-        colour: "text-green-400",
-      },
-      {
-        img: "assets/images/subsidiaryPagesImages/pageThree/save-energy 1-3.png",
-        img2: "assets/images/subsidiaryPagesImages/props/Gap.png",
-        head: "Research",
-        desc: "Join us as we lead the charge together, exploring groundbreaking methods and advanced transmission technologies to bring you a cost-effective and sustainable energy supply. ",
-        colour: "text-green-400",
-      },
-    ],
-  },
-  slideshow_section: {
-    dash: "assets/images/subsidiaryPagesImages/pageThree/green_dash.svg",
-    content: [
-      {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
-        point1:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point2:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point3:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point4:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point5:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point6:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        classname: " ",
-      },
-      {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
-        point1:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point2:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point3:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point4:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point5:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point6:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        classname: " ",
-      },
-      {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
-        point1:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point2:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point3:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point4:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point5:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point6:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        classname: " ",
-      },
-      {
-        img: "assets/images/subsidiaryPagesImages/Card.png",
-        point1:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point2:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point3:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point4:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point5:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        point6:
-          "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        classname: " ",
-      },
-    ],
-    header: [
-      {
-        text: "power financing",
-        className: "pr-2",
-      },
-      {
-        text: "bulk energy trading ",
-        className: "",
-      },
-      {
-        text: "collections risk management",
-        className: "",
-      },
-      {
-        text: "RESEARCH",
-        className: "",
-      },
-    ],
-    text: {
-      head: "cost-effective power and energy investment stalwart energy research",
-      sub: "Charting the Course for Power and Energy Sector Advancement",
+    home_section: {
+      mobile: "/assets/images/subsidiaryPagesImages/props/Img_Layer (4).png",
     },
+    features_data: {
+      header:
+        "Powering the Future: Discovering Tomorrow's Sustainable Energy Solutions through Advanced Technologies and Cost-Effective Strategies.",
+      contents: [
+        {
+          img: "assets/images/subsidiaryPagesImages/pageThree/save-energy 1.png",
+          img2: "assets/images/subsidiaryPagesImages/props/Gap (1).png",
+          head: "Power Funding",
+          desc: " Diverse credit and financing options to fuel your business toward the success and progress you crave!",
+          colour: "text-green-400",
+        },
+        {
+          img: "assets/images/subsidiaryPagesImages/pageThree/save-energy 1-1.png",
+          img2: "assets/images/subsidiaryPagesImages/props/Gap (1).png",
+          head: "Large-scale Energy Deals",
+          desc: "Unlock your solar or renewable energy plant's potential! Join our large-scale energy trading platform, seamlessly linking users to top suppliers from private and public generation plants.",
+          colour: "text-green-400",
+        },
+        {
+          img: "assets/images/subsidiaryPagesImages/pageThree/save-energy 1-2.png",
+          img2: "assets/images/subsidiaryPagesImages/props/Gap (1).png",
+          head: "Collections risk management",
+          desc: "Solid Security and support from defaults or market shifts, we provide vital support, finance payment deficits, and facilitate the recovery of energy infrastructure.",
+          colour: "text-green-400",
+        },
+        {
+          img: "assets/images/subsidiaryPagesImages/pageThree/save-energy 1-3.png",
+          img2: "assets/images/subsidiaryPagesImages/props/Gap.png",
+          head: "Research",
+          desc: "Join us as we lead the charge together, exploring groundbreaking methods and advanced transmission technologies to bring you a cost-effective and sustainable energy supply. ",
+          colour: "text-green-400",
+        },
+      ],
+    },
+    slideshow_section: {
+      dash: "assets/images/subsidiaryPagesImages/pageThree/green_dash.svg",
+      content: [
+        {
+          img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/image 23.png",
+          point1:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point2:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point3:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point4:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point5:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point6:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          classname: " ",
+        },
+        {
+          img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/image 30.png",
+          point1:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point2:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point3:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point4:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point5:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point6:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          classname: " ",
+        },
+        {
+          img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/image 29.png",
+          point1:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point2:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point3:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point4:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point5:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point6:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          classname: " ",
+        },
+        {
+          img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/image 24.png",
+          point1:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point2:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point3:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point4:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point5:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          point6:
+            "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          classname: " ",
+        },
+      ],
+      header: [
+        {
+          text: "power financing",
+          className: "pr-2",
+        },
+        {
+          text: "bulk energy trading ",
+          className: "",
+        },
+        {
+          text: "collections risk management",
+          className: "",
+        },
+        {
+          text: "RESEARCH",
+          className: "",
+        },
+      ],
+      text: {
+        head: "cost-effective power and energy investment stalwart energy research",
+        sub: "Charting the Course for Power and Energy Sector Advancement",
+      },
+    },
+    parallex_section: {
+      data: [
+        {
+          img: "/assets/images/subsidiaryPagesImages/props/Vector (5).png",
+          img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+          img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+          content: {
+            head: "Expertise and Innovation",
+            text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
+          },
+          colors: {
+            one: "green",
+            two: "#F9ECFF",
+          },
+        },
+        {
+          img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png",
+          img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+          img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+          content: {
+            head: "Expertise and Innovation",
+            text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
+          },
+          colors: {
+            one: "green",
+            two: "#F9ECFF",
+          },
+        },
+        {
+          img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png",
+          img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+          img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+          content: {
+            head: "Expertise and Innovation",
+            text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
+          },
+          colors: {
+            one: "green",
+            two: "#F9ECFF",
+          },
+        },
+      ],
+    },
+    parallex_section_mobile: {
+      data: [
+        {
+          img: "/assets/images/subsidiaryPagesImages/props/Vector (5).png",
+          img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+          img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+          content: {
+            head: "Expertise and Innovation",
+            text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
+          },
+          colors: {
+            one: "#E9B8FF",
+            two: "#F9ECFF",
+          },
+        },
+        {
+          img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png",
+          img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+          img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+          content: {
+            head: "Expertise and Innovationn",
+            text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
+          },
+          colors: {
+            one: "#E9B8FF",
+            two: "#F9ECFF",
+          },
+        },
+        {
+          img: "/assets/images/icon-talent-card-1.svg",
+          img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
+          img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+          content: {
+            head: "Expertise and Innovationnn",
+            text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
+          },
+          colors: {
+            one: "#E9B8FF",
+            two: "#F9ECFF",
+          },
+        },
+      ],
+    },
+    connect_text:
+      "Have questions or ready to explore how our solutions can benefit you? Reach out to us! Our dedicated team is here to assist. Contact us for personalized assistance and let's embark on a journey towards your success.",
   },
-  parallex_section: {
-    data: [
-      {
-        img: "/assets/images/subsidiaryPagesImages/props/Vector (5).png",
-        img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
-        content: {
-          head: "Expertise and Innovation",
-          text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-        },
-        colors: {
-          one: "green",
-          two: "#F9ECFF",
-        },
-      },
-      {
-        img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png",
-        img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
-        content: {
-          head: "Expertise and Innovation",
-          text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-        },
-        colors: {
-          one: "green",
-          two: "#F9ECFF",
-        },
-      },
-      {
-        img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png",
-        img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
-        content: {
-          head: "Expertise and Innovation",
-          text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-        },
-        colors: {
-          one: "green",
-          two: "#F9ECFF",
-        },
-      },
-    ],
-  },
-  parallex_section_mobile: {
-    data: [
-      {
-        img: "/assets/images/subsidiaryPagesImages/props/Vector (5).png",
-        img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
-        content: {
-          head: "Expertise and Innovation",
-          text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-        },
-        colors: {
-          one: "#E9B8FF",
-          two: "#F9ECFF",
-        },
-      },
-      {
-        img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png",
-        img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
-        content: {
-          head: "Expertise and Innovationn",
-          text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-        },
-        colors: {
-          one: "#E9B8FF",
-          two: "#F9ECFF",
-        },
-      },
-      {
-        img: "/assets/images/icon-talent-card-1.svg",
-        img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
-        content: {
-          head: "Expertise and Innovationnn",
-          text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking.",
-        },
-        colors: {
-          one: "#E9B8FF",
-          two: "#F9ECFF",
-        },
-      },
-    ],
-  },
-  connect_text:
-    "Have questions or ready to explore how our solutions can benefit you? Reach out to us! Our dedicated team is here to assist. Contact us for personalized assistance and let's embark on a journey towards your success.",
 };
