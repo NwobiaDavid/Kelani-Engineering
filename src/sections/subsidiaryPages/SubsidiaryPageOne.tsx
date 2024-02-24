@@ -351,39 +351,35 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
 
         </div>
 
-        <div className="relative h-[100dvh] ">
-          <div className="z-[30]   absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
-            {/* <img
-                className="absolute text-center   z-[100] "
-                src="/assets/images/subsidiaryPagesImages/props/Circles2.svg"
-                alt=""
-                          /> */}
+        <div className=" relative ">
 
-            {/* <div className="border border-white rounded-full w-[900px] h-[900px] opacity-70 lg:opacity-100  lg:h-[1500px] lg:w-[1500px] flex items-center justify-center">
+          <div className="z-[30]   absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
+            <div className="border border-white rounded-full w-[900px] h-[900px] opacity-70 lg:opacity-100  lg:h-[1500px] lg:w-[1500px] flex items-center justify-center">
               <div className="border border-white rounded-full w-[600px] h-[600px] opacity-70 lg:opacity-100  lg:h-[1150px] lg:w-[1150px] flex items-center justify-center">
                 <div className="border border-white rounded-full  w-[300px] h-[300px] opacity-70 lg:opacity-100 lg:h-[800px] lg:w-[800px] flex items-center justify-center">
 
 
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
 
 
-          <div id="hex-gridx" className=" relative bg-black h-full  "  >
-            <div className="bg-black z-10  relative ">
+          <div id="hex-gridx" className=" relative h-full  "  >
+            <div className=" z-10 h-[100vh]  relative ">
               <div className="griddy lg:block hidden z-20 bg-transparent "></div>
               <motion.div
                 animate={lightControlsx}
                 className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
               ></motion.div>
-              {/* <div className="mt-0  "> */}
 
-              <ConnectSection text={sub.connect_text} />
-              <img className="absolute z-50 -bottom-[0px] w-full  " src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" />
+              {/* <div className="relative h-screen"> */}
+                <ConnectSection text={sub.connect_text} />
               {/* </div> */}
+              {/* <img className="absolute z-50 -bottom-[0px] w-full  " src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" /> */}
             </div>
           </div>
+
         </div>
 
 
@@ -391,7 +387,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
 
         {/* </div> */}
 
-        <div className=" relative z-50 " >
+        <div className=" " >
           <Footer />
         </div>
 
@@ -405,4 +401,4 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
   );
 };
 
-export default SubsidiaryPageOne;
+        export default SubsidiaryPageOne;

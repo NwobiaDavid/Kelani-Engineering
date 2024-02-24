@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 // import ContactUsInput from "../components/ContactUsInput";
 import axios from "axios";
-import { Import } from "lucide-react";
 
 const schema = z.object({
   name: z.string().nonempty({ message: "Name is required" }),
@@ -82,7 +81,7 @@ const Footer = () => {
     }
   };
   return (
-    <div className="-mt-[100dvh] ">
+    <div className="-mt-[100dvh]">
       <div ref={containerRef} className="h-[100dvh] w-full"></div>
       <div className="sticky top-0 bottom-0 footer">
         <div className="w-full h-screen relative p-[15px] md:p-[24px] bg-[#fefefe]">
