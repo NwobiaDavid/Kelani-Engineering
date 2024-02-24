@@ -42,7 +42,6 @@ body::-webkit-scrollbar-track {
   display: block; 
 } */
 
-
 .containerr {
   display: flex;
   background-color: red;
@@ -90,9 +89,11 @@ body::-webkit-scrollbar-track {
   /* z-index: 0; */
 }
 
+/* .scrollable::-webkit-scrollbar {
+  width: 8px;
+} */
 
-
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0px;
 }
 
@@ -103,19 +104,18 @@ body::-webkit-scrollbar-track {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg,#528b73,#1d2d25 99.78%);
+  background: linear-gradient(0deg, #528b73, #1d2d25 99.78%);
   z-index: 1;
   opacity: 0;
   border-radius: 9999rem;
-  transition: all .6s cubic-bezier(.785,.135,.15,.86);
+  transition: all 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-
 
 .btn-slider {
   tab-size: 4;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   --rem: 16;
   --mouse-x: 50%;
   --mouse-y: 50%;
@@ -153,7 +153,7 @@ body::-webkit-scrollbar-track {
   --tw-ring-inset: ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgba(59,130,246,.5);
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
@@ -190,7 +190,7 @@ body::-webkit-scrollbar-track {
   font-family: inherit;
   border-radius: 0;
   pointer-events: all;
-  outline: 1px solid #da8301!important;
+  outline: 1px solid #da8301 !important;
   -webkit-appearance: button;
   background-color: transparent;
   background-image: none;
@@ -210,34 +210,30 @@ body::-webkit-scrollbar-track {
   background: rgb(255 255 255 / 15%);
 } */
 
-
-
 /* Smartphones (portrait) */
 @media only screen and (max-width: 320px) {
-    /* Styles */
-  }
-  
-  /* iPads (portrait and landscape)  */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    /* Styles */
-  }
-  
-  /* Desktops and laptops  */
-  @media only screen and (min-width: 1440px) {
-    .h123{
-      font-size: 15px;
-    }
-  }
-
-/* features page */
-.text-2_5xl{
-    font-size: 1.65rem;
-    line-height: 2.15rem ;
-
-   
+  /* Styles */
 }
 
-.text-xl_2{
-        font-size: 1.35rem/* 20px */;
-        line-height: 1.90rem/* 28px */;
+/* iPads (portrait and landscape)  */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+
+/* Desktops and laptops  */
+@media only screen and (min-width: 1440px) {
+  .h123 {
+    font-size: 15px;
+  }
+}
+
+/* features page */
+.text-2_5xl {
+  font-size: 1.65rem;
+  line-height: 2.15rem;
+}
+
+.text-xl_2 {
+  font-size: 1.35rem /* 20px */;
+  line-height: 1.9rem /* 28px */;
 }

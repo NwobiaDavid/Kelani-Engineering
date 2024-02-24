@@ -13,9 +13,10 @@ interface NavbarProps {
   c300: string;
 }
 
-const Navbar: React.FC<{ color: NavbarProps; cta_form: string }> = ({
+const Navbar: React.FC<{ color: NavbarProps; cta_form: string; lenis: Lenis }> = ({
   color,
   cta_form,
+  lenis
 }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -27,13 +28,13 @@ const Navbar: React.FC<{ color: NavbarProps; cta_form: string }> = ({
         {ctaFormShowing && (
           <>
             {cta_form == "power" && (
-              <PowerCtaForm close={() => setCtaFormShowing(false)} />
+              <PowerCtaForm lenis={lenis} close={() => setCtaFormShowing(false)} />
             )}
             {cta_form == "engineering" && (
-              <EngineeringCtaForm close={() => setCtaFormShowing(false)} />
+              <EngineeringCtaForm lenis={lenis} close={() => setCtaFormShowing(false)} />
             )}
             {cta_form == "consulting" && (
-              <ConsultingCtaForm close={() => setCtaFormShowing(false)} />
+              <ConsultingCtaForm lenis={lenis} close={() => setCtaFormShowing(false)} />
             )}
           </>
         )}

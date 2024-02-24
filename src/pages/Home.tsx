@@ -16,7 +16,6 @@ import Lenis from "@studio-freight/lenis/types";
 import axios from "axios";
 
 const Home = ({ lenis }: { lenis: Lenis }) => {
-  
   const { y: scrollY } = useScrollPosition();
   const { height } = useScreenSize();
   const [scrollTops, setScrollTops] = useState({
@@ -67,7 +66,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
   const aboutUsY = useTransform(
     engineeringScrollYProgress,
     [0, 1],
-     [0, engineeringSpotlightRef?.current?.offsetHeight ?? 0]
+    [0, engineeringSpotlightRef?.current?.offsetHeight ?? 0]
   );
   const aboutUsOpacity = useTransform(
     engineeringScrollYProgress,
@@ -225,7 +224,9 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
           />
         </div>
       </motion.main>
-      <Footer />
+      <Footer
+        contactUsUrl={"https://app.nocodb.com/api/v2/tables/mjgtqh17rbqo28w/records"}
+      />
       <AnimatePresence>
         {scrollY > height * 0.5 &&
           scrollY < document.body.scrollHeight - window.innerHeight * 1.5 && (
