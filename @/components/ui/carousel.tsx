@@ -196,7 +196,7 @@ const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProp
 
     return (
       <motion.div
-      whileHover={{ x: [5, -5] }}
+      // whileHover={{ x: [5, -5] }}
         className="hover:cursor-pointer"
       >
         <Button

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import PowerCtaForm from "../../../components/PowerCtaForm";
 import EngineeringCtaForm from "../../../components/EngineeringCtaForm";
 import ConsultingCtaForm from "../../../components/ConsultingCtaForm";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 interface NavbarProps {
   c700: string;
@@ -13,13 +14,25 @@ interface NavbarProps {
   c300: string;
 }
 
-const Navbarr: React.FC<{ color: NavbarProps; cta_form: string }> = ({
-  color,
-  cta_form,
-}) => {
+const Navbarr: React.FC<{
+  color: NavbarProps;
+  cta_form: string;
+  ctaFormShowing: boolean;
+  setCtaFormShowing: (value: boolean) => void;
+}> = ({ color, cta_form, ctaFormShowing, setCtaFormShowing }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const [ctaFormShowing, setCtaFormShowing] = useState(false);
+  const ctaButtonVariant = {
+    whileHover: {
+      scale: 1.05,
+      transition: { duration: 0.3 },
+    },
+    whileTap: {
+      scale: 0.98,
+      transition: { duration: 0.15 },
+    },
+  };
+  const [buttonHovered, setButtonHovered] = useState(false);
 
   return (
     <>
@@ -54,13 +67,30 @@ const Navbarr: React.FC<{ color: NavbarProps; cta_form: string }> = ({
           </div>
 
           <div className="flex items-center">
-            <button
+            <motion.div
               onClick={() => setCtaFormShowing(true)}
-              style={{ color: color.c500 }}
-              className={`text-${color}-500 border border-[${color}] font-semibold  rounded-full py-2 px-5 mx-2 block md:inline-block bg-white`}
+              variants={ctaButtonVariant}
+              onMouseEnter={() => {
+                setButtonHovered(true);
+              }}
+              onMouseLeave={() => {
+                setButtonHovered(false);
+              }}
+              whileHover="whileHover"
+              whileTap={"whileTap"}
+              className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter"
             >
-              GET CONNECTED
-            </button>
+              <Link to={"#"} className="">
+                GET CONNECTED{" "}
+              </Link>
+              <motion.span
+                animate={
+                  buttonHovered ? { x: 10, transition: { duration: 0.3 } } : {}
+                }
+              >
+                <IoIosArrowRoundForward size={30} />
+              </motion.span>
+            </motion.div>
             {/* <div className="border mx-2 h-10 opacity-50 "></div> */}
             {/* <motion.button
             onClick={toggleNav}

@@ -117,7 +117,17 @@ interface SubProps {
 
 const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
-
+  const ctaButtonVariant = {
+    whileHover: {
+      scale: 1.05,
+      transition: { duration: 0.3 },
+    },
+    whileTap: {
+      scale: 0.98,
+      transition: { duration: 0.15 },
+    },
+  };
+  const [buttonHovered, setButtonHovered] = useState(false);
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 767);
   };
@@ -209,6 +219,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
   const lightControls = useAnimation();
   const lightControlss = useAnimation();
   const lightControlsx = useAnimation();
+  const [ctaFormShowing, setCtaFormShowing] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -297,7 +308,12 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
                   alt=""
                 />
 
-                <Navbarr cta_form="power" color={sub.hero_section.color} />
+                <Navbarr
+                  ctaFormShowing={ctaFormShowing}
+                  setCtaFormShowing={setCtaFormShowing}
+                  cta_form="power"
+                  color={sub.hero_section.color}
+                />
 
                 <div className="flex h-full  flex-col justify-center items-center">
                   <div className="lg:w-[60%] z-50 w-[80%] text-center flex flex-col items-center justify-center uppercase ">
@@ -307,12 +323,33 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
                     <h1 className="text-white font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] space-grotesk-semibold">
                       {sub.hero_section.main_text}
                     </h1>
-                    <div className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter">
+                    <motion.div
+                      onClick={() => setCtaFormShowing(true)}
+                      variants={ctaButtonVariant}
+                      onMouseEnter={() => {
+                        setButtonHovered(true);
+                      }}
+                      onMouseLeave={() => {
+                        setButtonHovered(false);
+                      }}
+                      whileHover="whileHover"
+                      whileTap={"whileTap"}
+                      className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter"
+                    >
                       <Link to={"#"} className="">
                         GET CONNECTED{" "}
                       </Link>
-                      <IoIosArrowRoundForward size={30} />
-                    </div>
+                      <motion.span
+                        animate={
+                          buttonHovered
+                            ? { x: 10, transition: { duration: 0.3 } }
+                            : {}
+                        }
+                        whileHover={"whileHover"}
+                      >
+                        <IoIosArrowRoundForward size={30} />
+                      </motion.span>
+                    </motion.div>
                   </div>
                 </div>
               </div>

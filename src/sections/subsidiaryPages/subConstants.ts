@@ -180,6 +180,8 @@ export const sub_one = {
     },
   },
   parallex_section: {
+    subHead: "Why Kelani Consulting And Talent Management?",
+    header: "Personalized Service For You",
     data: [
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (3).png",
@@ -406,6 +408,8 @@ export const sub_two = {
     },
   },
   parallex_section: {
+    subHead: "Why Kelani Engineering?",
+    header: "Personalized Service For You",
     data: [
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (7).png",
@@ -639,6 +643,8 @@ export const sub_three = {
     },
   },
   parallex_section: {
+    subHead: "Why Kelani Power?",
+    header: "Personalized Service For You",
     data: [
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (5).png",
