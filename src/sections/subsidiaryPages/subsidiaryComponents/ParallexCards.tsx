@@ -232,7 +232,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                     transform: "rotate(180deg)",
                     backgroundSize: "cover",
                   }}
-                  className="w-full lg:max-w-[calc(80vw-200px)] xl:max-w-[calc(72vw-200px)] border-white border rounded-[20px] h-full lg:max-h-[550px] absolute top-0 pl-[100px] overflow-hidden card-2 left-[calc(100vw+75px)] xl:left-[calc(100vw+100px)]"
+                  className="w-full lg:max-w-[calc(80vw-200px)] xl:max-w-[calc(72vw-200px)] border-white border-[2px] rounded-[20px] h-full lg:max-h-[550px] absolute top-0 pl-[100px] overflow-hidden card-2 left-[calc(100vw+75px)] xl:left-[calc(100vw+100px)]"
                 >
                   <div
                     style={{ transform: "rotate(-180deg)" }}
@@ -288,7 +288,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                     transform: "rotate(180deg)",
                     backgroundSize: "cover",
                   }}
-                  className="w-full lg:max-w-[calc(80vw-200px)] xl:max-w-[calc(72vw-200px)] border-white border rounded-[20px] h-full lg:max-h-[550px] absolute top-0 pl-[100px] py-[65px]  overflow-hidden card-3 left-[calc(100vw+150px)] xl:left-[calc(100vw+200px)]"
+                  className="w-full lg:max-w-[calc(80vw-200px)] border-[2px] xl:max-w-[calc(72vw-200px)] border-white rounded-[20px] h-full lg:max-h-[550px] absolute top-0 pl-[100px] py-[65px]  overflow-hidden card-3 left-[calc(100vw+150px)] xl:left-[calc(100vw+200px)]"
                 >
                   <div
                     style={{ transform: "rotate(-180deg)" }}
