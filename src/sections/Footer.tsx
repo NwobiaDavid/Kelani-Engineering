@@ -81,10 +81,10 @@ const Footer = () => {
     }
   };
   return (
-    <div className="-mt-[100dvh]">
+    <div className="-mt-[90dvh] ">
       <div ref={containerRef} className="h-[100dvh] w-full"></div>
       <div className="sticky top-0 bottom-0 footer">
-        <div className="w-full h-screen relative p-[15px] md:p-[24px] bg-[#fefefe]">
+        <div className="w-full z-[60] h-screen relative p-[15px] md:p-[24px] bg-[#fefefe]">
           <motion.img
             animate={{
               opacity: currentFooterScrollProgress.get() > 0 ? 1 : 0,

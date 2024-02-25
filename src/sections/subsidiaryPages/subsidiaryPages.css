@@ -57,6 +57,48 @@
 
 
 
+
+
+
+
+
+
+
+
+.btn-seconday .btn-seconday--text-1,
+.btn-seconday .btn-seconday--text-2 {
+  transition: transform 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.btn-seconday .btn-seconday--text-2 {
+  transform: translateY(100%);
+  transition-delay: 0s;
+}
+.btn-seconday .btn-seconday--arrow-1 {
+  transition: transform 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-delay: 0.1s;
+}
+.btn-seconday .btn-seconday--arrow-2 {
+  transition: transform 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transform: translateX(-100%);
+  transition-delay: 0s;
+}
+.btn-seconday:hover .btn-seconday--text-1 {
+  transform: translateY(-100%);
+}
+.btn-seconday:hover .btn-seconday--text-2 {
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+.btn-seconday:hover .btn-seconday--arrow-1 {
+  transform: translateX(100%);
+  transition-delay: 0s;
+}
+.btn-seconday:hover .btn-seconday--arrow-2 {
+  transform: translateX(0);
+  transition-delay: 0.1s;
+}
+
+
 /* body {
   height: 100vh;
   margin: 0;
