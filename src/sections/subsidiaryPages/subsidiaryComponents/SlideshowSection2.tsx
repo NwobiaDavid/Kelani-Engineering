@@ -133,39 +133,6 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color }> = ({
 
                         <div className='flex mt-3 lg:mt-0 relative items-center justify-center lg:justify-between lg:w-[15%] md:w-[20%] w-full '>
 
-                            {/* <motion.div  className=' flex justify-center relative items-center h-[60px] w-[100px]  ' onClick={handlePrevious} >
-                                <img className=" absolute rotate-90 transform  w-[61px] h-[61px] " src='assets/images/subsidiaryPagesImages/props/border.png' alt="" />
-                                <motion.button  onHoverStart={() => setHover((prev) => !prev)} onHoverEnd={() => setHover((prev) => !prev)} {...hoverrs}  className="pre  overflow-hidden text-2xl rounded-full   relative  flex duration-200  items-center w-[60px] h-full " >
-                                    <motion.div whileHover={{ x: hover ? -50 : 0, opacity: hover ? 1 : 0 }} transition={{ duration: 0.2 }} className="flex justify-between items-center h-full w-[100px] absolute " style={{ pointerEvents: hover ? 'auto' : 'none' }} >
-                                        <span className={hover ? " opacity-0 " : " w-full absolute -right-1  p-3 opacity-100 "}>
-                                            <BsArrowLeft />
-                                        </span>
-                                        <span className={hover ? "opacity-100 p-3 pl-6 " : " opacity-0 pr-6 "}>
-                                            <BsArrowLeft />
-                                        </span>
-                                    </motion.div>
-                                    
-                                </motion.button>
-                            </motion.div>
-
-                            <div className="lg:hidden px-3 flex" >
-                                <h1>{display + 1}/{data.content.length}</h1>
-                            </div>
-
-                            <motion.div className='  flex justify-center items-center h-[60px] w-[100px]  ' onClick={handleNext} >
-                            <img className=" absolute rotate-90 transform  w-[61px] h-[61px] " src='assets/images/subsidiaryPagesImages/props/border.png' alt="" />
-                                <motion.button onHoverStart={() => setHover2((prev) => !prev)} onHoverEnd={() => setHover2((prev) => !prev)} {...hoverr} className=" overflow-hidden text-2xl rounded-full justify-end   relative flex duration-200  items-center w-[60px] h-full " >
-                                    <motion.div whileHover={{ x: hover2 ? 50 : 0, opacity: hover2 ? 1 : 0 }} transition={{ duration: 0.2 }} className="flex justify-between items-center h-full w-[100px] absolute " style={{ pointerEvents: hover2 ? 'auto' : 'none' }} >
-                                        <span className={hover2 ? "opacity-100 p-3 pr-6   " : " opacity-0 pr-6 "}>
-                                            <BsArrowRight />
-                                        </span>
-                                        <span className={hover2 ? " opacity-0  " : " w-full  -left-1 p-3 opacity-100  "}>
-                                            <BsArrowRight />
-                                        </span>
-                                    </motion.div>
-                                </motion.button>
-                            </motion.div> */}
-
                             <div className="lg:col-start-1 col-start-9 lg:col-span-full col-span-2  flex  items-center lg:items-end lg:justify-center justify-end " style={{ opacity: 1, visibility: "inherit" }}>
                                 <button ref={prevRef} onClick={handlePrevious} className="prev btn-sliderr btn-sliderr-left mr-0 lg:mr-[30px] h-[70px] w-[70px] overflow-hidden" type="button" >
                                     

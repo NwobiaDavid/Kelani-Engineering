@@ -1,4 +1,5 @@
 import React from "react";
+import WavyText2 from "./WavyText2";
 
 interface Contents {
   img: string;
@@ -14,43 +15,16 @@ interface FeaturesProps {
 }
 
 const Features: React.FC<{ data: FeaturesProps }> = ({ data }) => {
-  // const contents: Contents[]=[
-  //     {
-  //         img: 'assets/images/subsidiaryPagesImages/props/save-energy 1.png',
-  //         img2:  'assets/images/subsidiaryPagesImages/props/Gap.png',
-  //         head: "Specialized Talent Acquisition & Development",
-  //         desc: "Timely and comprehensive data for better decision-making, reliability,resilience, and capacity management",
-  //         colour: "text-purple-400"
-  //     },
-  //     {
-  //         img: 'assets/images/subsidiaryPagesImages/props/save-energy 1-1.png',
-  //         img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
-  //         head: "Efficient HRMS  for Operations",
-  //         desc: "Timely and comprehensive data for better decision-making, reliability,resilience, and capacity management",
-  //         colour: "text-purple-400"
-  //     },
-  //     {
-  //         img: 'assets/images/subsidiaryPagesImages/props/save-energy 1-2.png',
-  //         img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
-  //         head: "Strategic Outsourcing for Engineering Tasks",
-  //         desc: "Timely and comprehensive data for better decision-making, reliability,resilience, and capacity management",
-  //         colour: "text-purple-400"
-  //     },
-  //     {
-  //         img: 'assets/images/subsidiaryPagesImages/props/save-energy 1-3.png',
-  //         img2: 'assets/images/subsidiaryPagesImages/props/Gap.png',
-  //         head: "Cost Savings and Flexibility through Outsourcing",
-  //         desc: "Timely and comprehensive data for better decision-making, reliability, resilience, and capacity management",
-  //         colour: "text-purple-400"
-  //     },
-  // ]
+
   return (
     <div className="z-10 lg:h-fit text-white">
       <div className="flex flex-col text-center justify-center items-center h-full ">
-        <div className="flex justify-center lg:mt-auto mt-20 items-center mb-10">
-          <h1 className="text-2_5xl font-semibold opacity-85 lg:text-4xl w-[90%] lg:w-[55%] space-grotesk-medium">
+        <div className="flex justify-center w-full lg:mt-auto mt-20 items-center mb-10">
+
+          {/* <h1 className="text-2_5xl font-semibold opacity-85 lg:text-4xl w-[90%] lg:w-[55%] space-grotesk-medium">
             {data.header}
-          </h1>
+          </h1> */}
+          <WavyText2 text={data.header}  />
         </div>
 
         <div className="flex lg:p-4 w-full lg:w-[75%] flex-col lg:flex-row justify-between items-center">

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FC } from "react";
 import { motion, Variants, HTMLMotionProps } from "framer-motion";
 
@@ -10,7 +11,7 @@ interface Props extends HTMLMotionProps<"div"> {
 const WavyText: FC<Props> = ({
   text,
   delay = 0,
-  duration = 0.05,
+  duration = 0.03,
   ...props
 }: Props) => {
   const letters = Array.from(text);
@@ -33,7 +34,7 @@ const WavyText: FC<Props> = ({
       y: 0,
       transition: {
         type: "spring",
-        damping: 30,
+        damping: 20,
         stiffness: 200,
       },
     },
@@ -42,7 +43,7 @@ const WavyText: FC<Props> = ({
       y: 40,
       transition: {
         type: "spring",
-        damping: 30,
+        damping: 20,
         stiffness: 200,
       },
     },
@@ -50,7 +51,7 @@ const WavyText: FC<Props> = ({
 
   return (
     <motion.h1
-    className="text-white w-full justify-center flex-wrap font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] "
+    className="text-white text-center w-full justify-center flex-wrap font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] "
       style={{ display: "flex", overflow: "hidden" }}
       variants={container}
       initial="hidden"
