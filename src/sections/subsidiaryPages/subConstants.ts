@@ -165,8 +165,8 @@ export const sub_one = {
                 img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 img3: "/assets/images/icon-talent-card-1.svg",
                 content: {
-                    head: "Expertise and Innovation",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Revolutionize Your Industry!",
+                    text: "Transform and personalize your business operations with specialized HR and talent solutions designed specifically for you to achieve industrial perfection."
                 },
                 colors: {
                     one: "#E9B8FF",
@@ -179,8 +179,8 @@ export const sub_one = {
                 img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 img3: "/assets/images/icon-talent-card-1.svg",
                 content: {
-                    head: "Expertise and Innovationn",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Ignite Success, Unleash Potential:",
+                    text: "Release the hidden potential of your enterprise and soar to new heights with our revolutionary Talent Acquisition service. Embark on a journey to unlock boundless expertise!"
                 },
                 colors: {
                     one: "#E9B8FF",
@@ -193,8 +193,8 @@ export const sub_one = {
                 img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 img3: "/assets/images/icon-talent-card-1.svg",
                content: {
-                    head: "Expertise and Innovationnn",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Expertise and Innovation",
+                    text: "Experience the pinnacle of expertise and professionalism at Kelani! Our experts deliver flawless responses, ensuring your success!"
                 },
                 colors: {
                     one: "#E9B8FF",
@@ -212,8 +212,8 @@ export const sub_one = {
                 img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 img3: "/assets/images/icon-talent-card-1.svg",
                 content: {
-                    head: "Expertise and Innovation",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Revolutionize Your Industry!",
+                    text: "Transform and personalize your business operations with specialized HR and talent solutions designed specifically for you to achieve industrial perfection."
                 },
                 colors: {
                     one: "#E9B8FF",
@@ -226,8 +226,8 @@ export const sub_one = {
                 img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 img3: "/assets/images/icon-talent-card-1.svg",
                 content: {
-                    head: "Expertise and Innovationn",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Ignite Success, Unleash Potential:",
+                    text: "Release the hidden potential of your enterprise and soar to new heights with our revolutionary Talent Acquisition service. Embark on a journey to unlock boundless expertise!"
                 },
                 colors: {
                     one: "#E9B8FF",
@@ -240,8 +240,8 @@ export const sub_one = {
                 img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
                 img3: "/assets/images/icon-talent-card-1.svg",
                 content: {
-                    head: "Expertise and Innovationnn",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Expertise and Innovation",
+                    text: "Experience the pinnacle of expertise and professionalism at Kelani! Our experts deliver flawless responses, ensuring your success!"
                 },
                 colors: {
                     one: "#E9B8FF",
@@ -380,8 +380,8 @@ export const sub_two = {
                 img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
                 img3:"/assets/images/subsidiaryPagesImages/props/Vector (8).png",
                 content: {
-                    head: "Expertise and Innovation",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Trust and Perfection",
+                    text: "Experience the ultimate in reliability, quality, and cutting-edge equipment! Trust us to provide the market-leading solutions you need for success!"
                 },
                 colors: {
                     one: "orange",
@@ -394,8 +394,8 @@ export const sub_two = {
                 img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
                 img3:"/assets/images/subsidiaryPagesImages/props/Vector (8).png",
                 content: {
-                    head: "Expertise and Innovation",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Achieve your best!",
+                    text: "Our Elite Team Unlocks Peak Performance, Guiding You to unleash your full potential and achieve optimal success. Maximize efficiency with us!"
                 },
                 colors: {
                     one:  "orange",
@@ -408,8 +408,8 @@ export const sub_two = {
                 img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
                 img3:"/assets/images/subsidiaryPagesImages/props/Vector (8).png",
                 content: {
-                    head: "Expertise and Innovation",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Efficiency and Reliability",
+                    text: "Unrestricted access to an unwavering team of seasoned specialists, committed to your needs around the clock."
                 },
                 colors: {
                     one:  "orange",
@@ -427,8 +427,8 @@ export const sub_two = {
                 img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
                 img3:"/assets/images/subsidiaryPagesImages/props/Vector (8).png",
                 content: {
-                    head: "Expertise and Innovation",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Trust and Perfection",
+                    text: "Experience the ultimate in reliability, quality, and cutting-edge equipment! Trust us to provide the market-leading solutions you need for success!"
                 },
                 colors: {
                     one: "#E9B8FF",
@@ -441,8 +441,8 @@ export const sub_two = {
                 img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
                 img3:"/assets/images/subsidiaryPagesImages/props/Vector (8).png",
                 content: {
-                    head: "Expertise and Innovationn",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Achieve your best!",
+                    text: "Our Elite Team Unlocks Peak Performance, Guiding You to unleash your full potential and achieve optimal success. Maximize efficiency with us!"
                 },
                 colors: {
                     one: "#E9B8FF",
@@ -455,8 +455,8 @@ export const sub_two = {
                 img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
                 img3: "/assets/images/subsidiaryPagesImages/props/Vector (8).png",
                 content: {
-                    head: "Expertise and Innovationnn",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Efficiency and Reliability",
+                    text: "Unrestricted access to an unwavering team of seasoned specialists, committed to your needs around the clock."
                 },
                 colors: {
                     one: "#E9B8FF",
@@ -604,8 +604,8 @@ export const sub_three = {
                 img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
                 img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
                 content: {
-                    head: "Expertise and Innovation",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Drive your progress!",
+                    text: "Diverse credit and financing options to fuel your business toward the success and progress you crave!"
                 },
                 colors: {
                     one: "green",
@@ -618,8 +618,8 @@ export const sub_three = {
                 img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
                 img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
                 content: {
-                    head: "Expertise and Innovation",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Be ahead!",
+                    text: "Outpace market uncertainties and financial challenges with our expert support!"
                 },
                 colors: {
                     one: "green",
@@ -632,8 +632,8 @@ export const sub_three = {
                 img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
                 img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
                 content: {
-                    head: "Expertise and Innovation",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Research",
+                    text: "Join us in pushing boundaries for a greener, more efficient energy landscape."
                 },
                 colors: {
                     one: "green",
@@ -651,8 +651,8 @@ export const sub_three = {
                 img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
                 img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
                 content: {
-                    head: "Expertise and Innovation",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Drive your progress!",
+                    text: "Diverse credit and financing options to fuel your business toward the success and progress you crave!"
                 },
                 colors: {
                     one: "#E9B8FF",
@@ -665,8 +665,8 @@ export const sub_three = {
                 img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
                 img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
                 content: {
-                    head: "Expertise and Innovationn",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Drive your progress!",
+                    text: "Diverse credit and financing options to fuel your business toward the success and progress you crave!"
                 },
                 colors: {
                     one: "#E9B8FF",
@@ -679,8 +679,8 @@ export const sub_three = {
                 img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
                 img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
                 content: {
-                    head: "Expertise and Innovationnn",
-                    text: "Access to a team of experts who bring a blend of industry expertise and innovative thinking."
+                    head: "Research",
+                    text: "Join us in pushing boundaries for a greener, more efficient energy landscape."
                 },
                 colors: {
                     one: "#E9B8FF",
