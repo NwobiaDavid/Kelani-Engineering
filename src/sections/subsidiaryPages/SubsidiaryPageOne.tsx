@@ -410,7 +410,6 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
                 animate={lightControlsx}
                 className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
               ></motion.div>
-              {/* <div className="mt-0  "> */}
 
               <ConnectSection text={sub.connect_text} />
               <img
@@ -419,6 +418,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
                 alt=""
               />
               {/* </div> */}
+              {/* <img className="absolute z-50 -bottom-[0px] w-full  " src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" /> */}
             </div>
           </div>
         </div>
