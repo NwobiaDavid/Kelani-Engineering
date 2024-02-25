@@ -77,6 +77,7 @@ interface SubProps {
 
   slideshow_section: {
     dash: string;
+    btnColour: string;
     content: Contents_Slideshow[];
     header: Header[];
     text: {

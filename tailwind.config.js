@@ -36,6 +36,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        'purple-rgba-90': 'rgba(115, 82, 139, 0.9)',
+        'purple-rgba-90-light': 'rgba(37, 29, 45, 0.9)',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
