@@ -11,8 +11,9 @@ import SlideshowSection2 from "./subsidiaryComponents/SlideshowSection2";
 import CustomScrollbar from "./subsidiaryComponents/CustomScrollbar";
 import { useEffect, useState } from "react";
 import Footer from "../Footer";
-import { motion, useAnimation } from "framer-motion";
+import { easeIn, motion, useAnimation } from "framer-motion";
 import ParallexCardsMobile from "./subsidiaryComponents/ParallexCardsMobile";
+import WavyText from "./subsidiaryComponents/WavyText";
 
 
 interface Contents {
@@ -307,8 +308,9 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
 
                 <div className="flex h-full  flex-col justify-center items-center">
                   <div className="lg:w-[60%] z-50 w-[80%] text-center flex flex-col items-center justify-center uppercase ">
-                    <p className="text-white py-3 opacity-75 ">{sub.hero_section.sub_text}</p>
-                    <h1 className="text-white font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] ">{sub.hero_section.main_text}</h1>
+                    <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 0.5, y: 0, transition: { duration: 1, ease: "easeOut" } }} className="text-white py-3 opacity-75 ">{sub.hero_section.sub_text}</motion.p>
+                    {/* <h1 className="text-white font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] ">{sub.hero_section.main_text}</h1> */}
+                    <WavyText text={sub.hero_section.main_text} />
                     <div className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white ">
                       <Link to={"#"} className="" >GET CONNECTED </Link><IoIosArrowRoundForward size={30} />
                     </div>
@@ -373,7 +375,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
                 animate={lightControlsx}
                 className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
               ></motion.div>
-                <ConnectSection text={sub.connect_text} />
+              <ConnectSection text={sub.connect_text} />
             </div>
           </div>
 
@@ -398,4 +400,4 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
   );
 };
 
-        export default SubsidiaryPageOne;
+export default SubsidiaryPageOne;
