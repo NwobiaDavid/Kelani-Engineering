@@ -23,12 +23,6 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({
   );
   const { y: scrollYPosition } = useScrollPosition();
 
-  useEffect(() => {
-    console.log(
-      document.body.scrollHeight - window.innerHeight,
-      scrollYPosition
-    );
-  }, [scrollYPosition]);
   return (
     <motion.div
       animate={{

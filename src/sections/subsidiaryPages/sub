@@ -7,36 +7,6 @@
 // page 1 ----------------------------------------
 
 export const sub_one = {
-  customerCards: [
-    {
-      img: "assets/images/subsidiaryPagesImages/props/image-1.png",
-      height: 50,
-    },
-    {
-      img: "assets/images/subsidiaryPagesImages/props/image-2.png",
-      height: 50,
-    },
-    {
-      img: "assets/images/subsidiaryPagesImages/props/image-3.png",
-      height: 50,
-    },
-    {
-      img: "assets/images/subsidiaryPagesImages/props/image-4.png",
-      height: 50,
-    },
-    {
-      img: "assets/images/subsidiaryPagesImages/props/image-5.png",
-      height: 50,
-    },
-    {
-      img: "assets/images/subsidiaryPagesImages/props/image-6.png",
-      height: 50,
-    },
-    {
-      img: "assets/images/subsidiaryPagesImages/props/imagee.png",
-      height: 50,
-    },
-  ],
   hero_section: {
     sub_text: "Kelani Consulting and Talent Management",
     main_text: "enhance organizational performance",
@@ -307,36 +277,6 @@ export const sub_one = {
 //   page 2 -------------------------------------------------
 
 export const sub_two = {
-  customerCards: [
-    {
-      img: "assets/images/engineering-clients/dingle-logo.png",
-      height: 155,
-    },
-    {
-      img: "assets/images/engineering-clients/dingye-logo.png",
-      height: 130,
-    },
-    {
-      img: "assets/images/engineering-clients/gelgoog-logo.png",
-      height: 105,
-    },
-    {
-      img: "assets/images/engineering-clients/lishg-logo.png",
-      height: 120,
-    },
-    {
-      img: "assets/images/engineering-clients/technoshell-logo.png",
-      height: 80,
-    },
-    {
-      img: "assets/images/engineering-clients/tentoo-logo.png",
-      height: 80,
-    },
-    {
-      img: "assets/images/engineering-clients/tongjila-logo.png",
-      height: 130,
-    },
-  ],
   hero_section: {
     sub_text: "Kelani Engineering",
     main_text: "transforming industries, shaping the future.",
@@ -566,36 +506,6 @@ export const sub_two = {
 //   page 3 ---------------------------------------------------------------
 
 export const sub_three = {
-  customerCards: [
-    {
-      img: "assets/images/power-clients/eedc-logo.png",
-      height: 70,
-    },
-    {
-      img: "assets/images/power-clients/ekedc-logo.png",
-      height: 100,
-    },
-    {
-      img: "assets/images/power-clients/estNigeria.png",
-      height: 130,
-    },
-    {
-      img: "assets/images/power-clients/ikedc-logo.png",
-      height: 95,
-    },
-    {
-      img: "assets/images/power-clients/eedc-logo.png",
-      height: 70,
-    },
-    {
-      img: "assets/images/power-clients/ekedc-logo.png",
-      height: 100,
-    },
-    {
-      img: "assets/images/power-clients/estNigeria.png",
-      height: 130,
-    },
-  ],
   hero_section: {
     sub_text: "Kelani POWER",
     main_text: "enhance organizational performance ",

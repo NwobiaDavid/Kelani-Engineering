@@ -11,8 +11,9 @@ import SlideshowSection2 from "./subsidiaryComponents/SlideshowSection2";
 import CustomScrollbar from "./subsidiaryComponents/CustomScrollbar";
 import { useEffect, useState } from "react";
 import Footer from "../Footer";
-import { motion, useAnimation } from "framer-motion";
+import { easeIn, motion, useAnimation } from "framer-motion";
 import ParallexCardsMobile from "./subsidiaryComponents/ParallexCardsMobile";
+import WavyText from "./subsidiaryComponents/WavyText";
 
 interface Contents {
   img: string;
@@ -57,6 +58,7 @@ interface Header {
 // }
 
 interface SubProps {
+  customerCards: { height: number; img: string }[];
   hero_section: {
     sub_text: string;
     main_text: string;
@@ -75,6 +77,7 @@ interface SubProps {
 
   slideshow_section: {
     dash: string;
+    btnColour: string;
     content: Contents_Slideshow[];
     header: Header[];
     text: {
@@ -278,7 +281,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
 
   return (
     <>
-      <div className=" overflow-x-clip ">
+      <div className=" overflow-x-clip overflow-y-clip ">
         <div
           id="hex-grid"
           className=" relative w-[100vw] h-full overflow-x-hidden "
@@ -316,13 +319,20 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
                 />
 
                 <div className="flex h-full  flex-col justify-center items-center">
-                  <div className="lg:w-[60%] z-50 w-[80%] text-center flex flex-col items-center justify-center uppercase ">
-                    <p className="text-white py-3 opacity-75 font-[700] museo-sans tracking-[2.4px]">
+                  <div className="lg:w-[60%] z-50 w-full px-[20px] md:px-0 text-center flex flex-col items-center justify-center uppercase ">
+                    <motion.p
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{
+                        opacity: 0.5,
+                        y: 0,
+                        transition: { duration: 1, ease: "easeOut" },
+                      }}
+                      className="text-white py-3 opacity-75 font-semibold"
+                    >
                       {sub.hero_section.sub_text}
-                    </p>
-                    <h1 className="text-white font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] space-grotesk-semibold">
-                      {sub.hero_section.main_text}
-                    </h1>
+                    </motion.p>
+                    {/* <h1 className="text-white font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] ">{sub.hero_section.main_text}</h1> */}
+                    <WavyText text={sub.hero_section.main_text} />
                     <motion.div
                       onClick={() => setCtaFormShowing(true)}
                       variants={ctaButtonVariant}
@@ -332,14 +342,20 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
                       onMouseLeave={() => {
                         setButtonHovered(false);
                       }}
+                      initial={{ opacity: 0 }}
+                      animate={{
+                        opacity: 1,
+                        transition: { duration: 0.7, delay: 1.4 },
+                      }}
                       whileHover="whileHover"
                       whileTap={"whileTap"}
-                      className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter"
+                      className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
                     >
                       <Link to={"#"} className="">
                         GET CONNECTED{" "}
                       </Link>
                       <motion.span
+                        className="sm:block hidden"
                         animate={
                           buttonHovered
                             ? { x: 10, transition: { duration: 0.3 } }
@@ -355,7 +371,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
               </div>
             </div>
 
-            <CustomerSection />
+            <CustomerSection cards={sub.customerCards} />
 
             <div className="relative z-50 ">
               <Features data={sub.features_data} />
@@ -394,29 +410,32 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
           )}
         </div>
 
-        <div className="relative h-[100dvh] rounded-b-[30px]">
-          <div className="z-[30]   absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
-            <div className="border border-white rounded-full min-w-[680px] w-[680px] min-h-[680px] h-[680px] border-opacity-20  lg:h-[750px] lg:w-[750px] flex items-center justify-center">
+        <div className="relative w-full h-[100dvh] rounded-b-[30px]">
+          <div className="z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
+            <div className="border absolute border-white rounded-full min-w-[680px] w-[680px] min-h-[680px] h-[680px] border-opacity-20  lg:h-[750px] lg:w-[750px] flex items-center justify-center">
               <div className="border border-white rounded-full min-w-[480px] w-[480px] min-h-[480px] h-[480px] border-opacity-20  lg:h-[520px] lg:w-[520px] flex items-center justify-center">
                 <div className="border border-white rounded-full min-w-[280px]  w-[280px] h-[280px] border-opacity-20 lg:h-[309px] lg:w-[309px] flex items-center justify-center"></div>
               </div>
             </div>
           </div>
 
-          <div id="hex-gridx" className=" relative bg-black h-full  ">
-            <div className="bg-black z-10  relative ">
+          <div id="hex-gridx z-50" className=" relative h-full  ">
+            <div className=" z-10 h-full  relative ">
               <div className="griddy lg:block hidden z-20 bg-transparent "></div>
               <motion.div
                 animate={lightControlsx}
                 className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
               ></motion.div>
 
-              <ConnectSection text={sub.connect_text} />
-              <img
+              <ConnectSection
+                setCtaFormShowing={setCtaFormShowing}
+                text={sub.connect_text}
+              />
+              {/* <img
                 className="absolute z-50 -bottom-[0px] w-full  "
                 src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg"
                 alt=""
-              />
+              /> */}
               {/* </div> */}
               {/* <img className="absolute z-50 -bottom-[0px] w-full  " src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" /> */}
             </div>

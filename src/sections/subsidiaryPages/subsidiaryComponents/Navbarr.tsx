@@ -76,14 +76,20 @@ const Navbarr: React.FC<{
               onMouseLeave={() => {
                 setButtonHovered(false);
               }}
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { duration: 0.7, delay: 1.4 },
+              }}
               whileHover="whileHover"
               whileTap={"whileTap"}
-              className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter"
+              className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
             >
               <Link to={"#"} className="">
                 GET CONNECTED{" "}
               </Link>
               <motion.span
+                className=""
                 animate={
                   buttonHovered ? { x: 10, transition: { duration: 0.3 } } : {}
                 }

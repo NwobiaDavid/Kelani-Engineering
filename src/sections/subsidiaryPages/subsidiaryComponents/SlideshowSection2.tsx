@@ -1,7 +1,8 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { CSSProperties, useRef, useState } from "react";
+import { motion, AnimatePresence, Variants } from "framer-motion";
+import { CSSProperties, useEffect, useRef, useState } from "react";
 import { FaRegCircle } from "react-icons/fa6";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { useInView } from "react-intersection-observer";
 
 interface Contents {
   img: string;
@@ -23,6 +24,7 @@ interface color {
 
 interface SlideshowProps {
   dash: string;
+  btnColour: string;
   content: Contents[];
   header: Header[];
   text: {
@@ -93,114 +95,253 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
     exit: { opacity: 0, x: -50 },
   };
 
+  // const prevRef = useRef(null);
+  const prevRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (prevRef.current) {
+      const prevElement = prevRef.current;
+      const afterStyle = document.createElement("style");
+      afterStyle.textContent = `
+        .prev:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: ${data.btnColour}
+        }
+      `;
+      prevElement.appendChild(afterStyle);
+    }
+  }, []);
+
+  const container: Variants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: (i: number = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.01, delayChildren: i * 0 },
+    }),
+  };
+
+  const child: Variants = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 30,
+        stiffness: 200,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      y: 40,
+      transition: {
+        type: "spring",
+        damping: 30,
+        stiffness: 200,
+      },
+    },
+  };
+  const text = data.text.sub;
+  const letters = Array.from(text);
+  const words = text.split(" ");
+  const splitText = text.split(" ");
+  const { ref, inView } = useInView({ triggerOnce: true });
+  const { ref: topTextRef, inView: topTextInView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <div className="lg:h-[1000px] h-[1150px] w-full z-30 text-white ">
       <div className="w-full mb-6 flex flex-col lg:px-4 justify-center pt-10 items-center ">
         <div className=" w-[65%] flex justify-center items-center ">
           <div className="flex  w-full lg:flex-row flex-col items-center mb-10 justify-center lg:justify-between ">
             <div className="uppercase text-center lg:text-left ">
-              <p className="font-semibold lg:text-base text-xs opacity-60 tracking-wide museo-sans">
+              <motion.p
+                ref={topTextRef}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{
+                  opacity: topTextInView ? 1 : 0,
+                  y: topTextInView ? 0 : 30,
+                  transition: { duration: 1, ease: "easeOut" },
+                }}
+                className="font-semibold lg:text-base text-xs opacity-60 tracking-wide museo-sans"
+              >
                 {data.text.head}
-              </p>
-              <h1 className="text-3xl lg:text-5xl my-5 opacity-90 space-grotesk-medium ">
-                {data.text.sub}
-              </h1>
+              </motion.p>
+              <motion.h1
+                style={{ display: "flex", overflow: "hidden" }}
+                variants={container}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                ref={containerRef}
+                className=" flex-wrap items-center justify-start text-3xl lg:text-5xl my-5 opacity-90 font-semibold space-grotesk-medium"
+              >
+                <div
+                  className="w-full flex flex-wrap justify-center lg:justify-start"
+                  ref={ref}
+                >
+                  {splitText.map((word, index) => (
+                    <motion.span
+                      className="flex"
+                      key={index}
+                      style={{ marginRight: "0.5rem" }}
+                    >
+                      {word.split("").map((letter, index) => (
+                        <motion.span className=" " key={index} variants={child}>
+                          {letter}
+                        </motion.span>
+                      ))}
+                      {index !== splitText.length - 1 && <span>&nbsp;</span>}
+                    </motion.span>
+                  ))}
+                </div>
+              </motion.h1>
             </div>
 
             <div className="flex mt-3 lg:mt-0 relative items-center justify-center lg:justify-between lg:w-[15%] md:w-[20%] w-full ">
               <motion.div
-                className=" flex justify-center relative items-center h-[60px] w-[100px]  "
-                onClick={handlePrevious}
+                animate={{
+                  opacity: topTextInView ? 1 : 0,
+                  transition: { duration: 1 },
+                }}
+                className="lg:col-start-1 col-start-9 lg:col-span-full col-span-2  flex  items-center lg:items-end lg:justify-center justify-end "
+                style={{ opacity: 1, visibility: "inherit" }}
               >
-                <img
-                  className=" absolute rotate-90 transform  w-[61px] h-[61px] "
-                  src="assets/images/subsidiaryPagesImages/props/border.png"
-                  alt=""
-                />
-                {/* <div className="absolute " style={{background: `url('assets/images/subsidiaryPagesImages/props/border.png')`}} > </div> */}
-                <motion.button
-                  onHoverStart={() => setHover((prev) => !prev)}
-                  onHoverEnd={() => setHover((prev) => !prev)}
-                  {...hoverrs}
-                  className="pre  overflow-hidden text-2xl rounded-full   relative  flex duration-200  items-center w-[60px] h-full "
+                <button
+                  ref={prevRef}
+                  onClick={handlePrevious}
+                  className="prev btn-sliderr btn-sliderr-left mr-0 lg:mr-[30px] h-[70px] w-[70px] overflow-hidden"
+                  type="button"
                 >
-                  <motion.div
-                    whileHover={{ x: hover ? -50 : 0, opacity: hover ? 1 : 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="flex justify-between items-center h-full w-[100px] absolute "
-                    style={{ pointerEvents: hover ? "auto" : "none" }}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-full h-full "
+                    fill="none"
+                    viewBox="0 0 55 55"
                   >
-                    <span
-                      className={
-                        hover
-                          ? " opacity-0 "
-                          : " w-full absolute -right-1  p-3 opacity-100 "
-                      }
-                    >
-                      <BsArrowLeft />
-                    </span>
-                    <span
-                      className={
-                        hover ? "opacity-100 p-3 pl-6 " : " opacity-0 pr-6 "
-                      }
-                    >
-                      <BsArrowLeft />
-                    </span>
-                  </motion.div>
-                </motion.button>
-              </motion.div>
+                    <circle
+                      cx="27.058"
+                      cy="27.059"
+                      r="26.809"
+                      stroke="url(#paint0_linear_1621_3648)"
+                      stroke-width="0.5"
+                      transform="rotate(90 27.058 27.059)"
+                    ></circle>
+                    <g className="btn-sliderr-left__arrow-1 relative">
+                      <path
+                        stroke="#F4F4F4"
+                        stroke-miterlimit="10"
+                        stroke-width="0.5"
+                        d="M37.117 27h-20M21.117 23l-4 4 4 4"
+                      ></path>
+                    </g>
+                    <g className="btn-sliderr-left__arrow-2 absolute top-0 left-0">
+                      <path
+                        stroke="#F4F4F4"
+                        stroke-miterlimit="10"
+                        stroke-width="0.5"
+                        d="M37.117 27h-20M21.117 23l-4 4 4 4"
+                      ></path>
+                    </g>
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1621_3648"
+                        x1="27.248"
+                        x2="27.248"
+                        y1="53.912"
+                        y2="0.15"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#fff"></stop>
+                        <stop
+                          offset="1"
+                          stop-color="#fff"
+                          stop-opacity="0"
+                        ></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </button>
 
-              <div className="lg:hidden px-3 flex">
-                <h1>
-                  {display + 1}/{data.content.length}
-                </h1>
-              </div>
+                <div className="lg:hidden px-3 flex">
+                  <h1>
+                    {display + 1}/{data.content.length}
+                  </h1>
+                </div>
 
-              <motion.div
-                className="  flex justify-center items-center h-[60px] w-[100px]  "
-                onClick={handleNext}
-              >
-                <img
-                  className=" absolute rotate-90 transform  w-[61px] h-[61px] "
-                  src="assets/images/subsidiaryPagesImages/props/border.png"
-                  alt=""
-                />
-                <motion.button
-                  onHoverStart={() => setHover2((prev) => !prev)}
-                  onHoverEnd={() => setHover2((prev) => !prev)}
-                  {...hoverr}
-                  className=" overflow-hidden text-2xl rounded-full justify-end   relative flex duration-200  items-center w-[60px] h-full "
+                <button
+                  ref={prevRef}
+                  type="button"
+                  onClick={handleNext}
+                  className="prev  h-[70px] w-[70px] btn-sliderr btn-sliderr-right overflow-hidden"
                 >
-                  <motion.div
-                    whileHover={{ x: hover2 ? 50 : 0, opacity: hover2 ? 1 : 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="flex justify-between items-center h-full w-[100px] absolute "
-                    style={{ pointerEvents: hover2 ? "auto" : "none" }}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-55 h-auto"
+                    fill="none"
+                    viewBox="0 0 55 55"
                   >
-                    <span
-                      className={
-                        hover2 ? "opacity-100 p-3 pr-6   " : " opacity-0 pr-6 "
-                      }
-                    >
-                      <BsArrowRight />
-                    </span>
-                    <span
-                      className={
-                        hover2
-                          ? " opacity-0  "
-                          : " w-full  -left-1 p-3 opacity-100  "
-                      }
-                    >
-                      <BsArrowRight />
-                    </span>
-                  </motion.div>
-                </motion.button>
+                    <circle
+                      cx="27.177"
+                      cy="27.059"
+                      r="26.809"
+                      stroke="url(#paint0_linear_1621_3653)"
+                      stroke-width="0.5"
+                      transform="rotate(90 27.177 27.059)"
+                    ></circle>
+                    <g className="btn-sliderr-right__arrow-1 relative">
+                      <path
+                        stroke="#F4F4F4"
+                        stroke-miterlimit="10"
+                        stroke-width="0.5"
+                        d="M17.118 27h20M33.118 23l4 4-4 4"
+                      ></path>
+                    </g>
+                    <g className="btn-sliderr-right__arrow-2 absolute top-0 left-0">
+                      <path
+                        stroke="#F4F4F4"
+                        stroke-miterlimit="10"
+                        stroke-width="0.5"
+                        d="M17.118 27h20M33.118 23l4 4-4 4"
+                      ></path>
+                    </g>
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1621_3653"
+                        x1="27.367"
+                        x2="27.367"
+                        y1="53.912"
+                        y2="0.15"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#fff"></stop>
+                        <stop
+                          offset="1"
+                          stop-color="#fff"
+                          stop-opacity="0"
+                        ></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </button>
               </motion.div>
             </div>
           </div>
         </div>
 
-        <div className="w-full lg:mb-6 flex justify-center items-center ">
+        <motion.div
+          animate={{
+            opacity: topTextInView ? 1 : 0,
+            transition: { duration: 1 },
+          }}
+          className="w-full lg:mb-6 flex justify-center items-center "
+        >
           <div className="w-[65%] flex justify-center lg:justify-between items-center">
             {data.header.map((item, index) => (
               <div
@@ -236,10 +377,14 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      <div
+      <motion.div
+        animate={{
+          opacity: topTextInView ? 1 : 0,
+          transition: { duration: 1 },
+        }}
         ref={containerRef}
         className=" flex pt-[1rem] px-3 lg:px-0 items-center justify-center w-full "
       >
@@ -294,7 +439,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
             </motion.div>
           </motion.div>
         </AnimatePresence>
-      </div>
+      </motion.div>
     </div>
   );
 };

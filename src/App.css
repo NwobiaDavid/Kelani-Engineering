@@ -75,3 +75,7 @@ input[type="tel"],
   border-color: #fe3514;
   transition: border-color 0.3s;
 }
+
+.greyed-out {
+  filter: grayscale(100%)
+}
