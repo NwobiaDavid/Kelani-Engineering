@@ -207,13 +207,13 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                         <p className="mt-[16px]  pl-[5%] museo-sans text-[12px] xl:text-[13px] mdxl:text-[16px] font-normal subtext">
                           {data.data[0].content.text}
                         </p>
-                        <div className="pl-[5%] ">
+                        <div className="pl-[5%] mt-[15px]">
                           <a
                             className="btn-seconday relative overflow-hidden"
                             href="#"
                           >
                             <span className="relative flex items-center  overflow-hidden">
-                              <span className="relative inline-flex">
+                              <span className="relative inline-flex museo-sans font-semibold">
                                 <span className="btn-seconday--text-1 relative">
                                   Learn More
                                 </span>
@@ -284,13 +284,13 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                         <p className="mt-[16px] pl-[5%] museo-sans text-[12px] xl:text-[13px] mdxl:text-[16px] font-normal subtext">
                           {data.data[1].content.text}
                         </p>
-                        <div className="pl-[5%] ">
+                        <div className="pl-[5%] mt-[15px]">
                           <a
                             className="btn-seconday relative overflow-hidden"
                             href="#"
                           >
                             <span className="relative flex items-center  overflow-hidden">
-                              <span className="relative inline-flex">
+                              <span className="relative inline-flex museo-sans font-semibold">
                                 <span className="btn-seconday--text-1 relative">
                                   Learn More
                                 </span>
@@ -342,16 +342,14 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                       <h2 className="text-[26px] xl:text-[32px] mdxlxl:text-[40px] 2xl text-white leading-[1.136]  font-medium">
                         {data.data[2].content.head}
                       </h2>
-                      <p className="mt-[16px] mb-[50px] ">
-                        {data.data[2].content.text}
-                      </p>
-                      <div className=" ">
+                      <p className="mt-[16px]">{data.data[2].content.text}</p>
+                      <div className=" mt-[15px]">
                         <a
-                          className="btn-seconday relative overflow-hidden"
+                          className="btn-seconday relative overflow-hidden mt-[15px]"
                           href="#"
                         >
                           <span className="relative flex items-center  overflow-hidden">
-                            <span className="relative inline-flex">
+                            <span className="relative inline-flex museo-sans font-semibold">
                               <span className="btn-seconday--text-1 relative">
                                 Learn More
                               </span>
