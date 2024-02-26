@@ -7,6 +7,8 @@
 // page 1 ----------------------------------------
 
 export const sub_one = {
+  contactUsUrl: "https://app.nocodb.com/api/v2/tables/m326gxgahjsammm/records",
+  cta_form: "consulting",
   customerCards: [
     {
       img: "assets/images/subsidiaryPagesImages/props/image-1.png",
@@ -288,6 +290,8 @@ export const sub_one = {
 //   page 2 -------------------------------------------------
 
 export const sub_two = {
+  cta_form: "engineering",
+  contactUsUrl: "https://app.nocodb.com/api/v2/tables/mw7p9i7yfblo7h7/records",
   customerCards: [
     {
       img: "assets/images/engineering-clients/dingle-logo.png",
@@ -519,6 +523,8 @@ export const sub_two = {
 //   page 3 ---------------------------------------------------------------
 
 export const sub_three = {
+  cta_form: "power",
+  contactUsUrl: "https://app.nocodb.com/api/v2/tables/mvtl37ho5p2m8cc/records",
   customerCards: [
     {
       img: "assets/images/power-clients/eedc-logo.png",
