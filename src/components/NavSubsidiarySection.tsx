@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import useScreenSize from "../hooks/useScreenSize";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface NavSubsidiarySection {
   icon: string;
@@ -18,11 +19,13 @@ const NavSubsidiarySection = ({
   index,
 }: NavSubsidiarySection) => {
   const { width } = useScreenSize();
+  const navigate = useNavigate();
   const [hoverShowing, setHoverShowing] = useState(false);
   return (
-    <motion.a
+    <motion.div
       onMouseEnter={() => setHoverShowing(true)}
       onMouseLeave={() => setHoverShowing(false)}
+      onClick={() => navigate(link)}
       initial={{ opacity: 1 }}
       animate={{
         opacity: 1,
@@ -40,7 +43,6 @@ const NavSubsidiarySection = ({
               : undefined,
         },
       }}
-      href={link}
       className={`h-full border-[#FEFEFE]  cursor-pointer backdrop-blur-[6px] border-t z-10 lg:border-t-0 ${
         hasRightBorder ? "lg:border-r" : ""
       }  flex-grow flex items-center justify-center relative`}
@@ -49,7 +51,10 @@ const NavSubsidiarySection = ({
         {hoverShowing && (
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 0.6, ease: [.37,.16,.12,1] } }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 0.6, ease: [0.37, 0.16, 0.12, 1] },
+            }}
             exit={{ opacity: 0 }}
             className="absolute top-0 right-0 bottom-0 left-0 z-0 bg-[rgb(255,154,83)]"
           ></motion.div>
@@ -90,7 +95,7 @@ const NavSubsidiarySection = ({
           src="/assets/images/icon-link.svg"
         />
       </motion.p>
-    </motion.a>
+    </motion.div>
   );
 };
 export default NavSubsidiarySection;

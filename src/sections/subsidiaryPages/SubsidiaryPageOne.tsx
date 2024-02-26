@@ -124,7 +124,7 @@ interface SubProps {
   connect_text: string;
 }
 
-const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
+const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
   sub,
   lenis,
 }) => {
@@ -290,7 +290,12 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
 
   return (
     <>
-      <div className=" overflow-x-clip overflow-y-clip ">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.5 } }}
+        exit={{ opacity: 0 }}
+        className=" overflow-x-clip overflow-y-clip "
+      >
         <div
           id="hex-grid"
           className=" relative w-[100vw] h-full overflow-x-hidden "
@@ -476,7 +481,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
             ellipseColor3={sub.hero_section.color.c400}
           />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
