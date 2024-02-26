@@ -306,7 +306,7 @@ export const sub_two = {
       },
       slideshow_section: {
         dash: "assets/images/subsidiaryPagesImages/pageTwo/orange_dash.svg",
-        btnColour: "linear-gradient(0deg, rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9) 99.78%);",
+        btnColour: "linear-gradient(0deg, rgba(81, 34, 34, 0.8), rgba(174, 71, 71, 0.8) 99.78%);",
         content: [
             {
                 img: 'assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 20.png',
@@ -530,7 +530,7 @@ export const sub_three = {
       },
       slideshow_section: {
         dash: "assets/images/subsidiaryPagesImages/pageThree/green_dash.svg",
-        btnColour: "linear-gradient(0deg, rgba(0, 128, 0, 0.9), rgba(0, 128, 0, 0.9) 99.78%);",
+        btnColour: "linear-gradient(0deg, rgba(47, 71, 43, 0.8), rgba(81, 153, 72, 0.8) 99.78%);",
         content: [
             {
                 img: 'assets/images/subsidiaryPagesImages/pageThree/slideshow/image 23.png',
