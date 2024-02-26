@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import React, { useRef } from "react";
 import useScreenSize from "../../../hooks/useScreenSize";
 interface ParallexProps {
   header: string;
@@ -41,7 +41,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
   const card1leftSide = useRef(null);
   const card2leftSide = useRef(null);
 
-  useGSAP((context) => {
+  useGSAP(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".card-animation-container",
@@ -64,8 +64,10 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
         duration: 600,
         opacity: 0.8,
         y: getValueFromScreenSize(
-          card1leftSide.current.offsetHeight - 150,
-          card1leftSide.current.offsetHeight - 200
+          // @ts-ignore
+          card1leftSide?.current?.offsetHeight - 150,
+          // @ts-ignore
+          card1leftSide?.current?.offsetHeight - 200
         ),
       },
       2800
@@ -93,8 +95,10 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
         rotate: -90,
         duration: 600,
         y: getValueFromScreenSize(
-          card2leftSide.current.offsetHeight - 150,
-          card2leftSide.current.offsetHeight - 200
+          // @ts-ignore
+          card2leftSide.current?.offsetHeight - 150,
+          // @ts-ignore
+          card2leftSide.current?.offsetHeight - 200
         ),
         opacity: 0.8,
         delay: 280,
@@ -116,8 +120,6 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
       5400
     );
   });
-
-  const [hovered, setHovered] = useState(false);
 
   return (
     <>
@@ -206,18 +208,33 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                           {data.data[0].content.text}
                         </p>
                         <div className="pl-[5%] ">
-                          <a className="btn-seconday relative overflow-hidden" href="#">
+                          <a
+                            className="btn-seconday relative overflow-hidden"
+                            href="#"
+                          >
                             <span className="relative flex items-center  overflow-hidden">
                               <span className="relative inline-flex">
-                                <span className="btn-seconday--text-1 relative">Learn More</span>
-                                <span className="btn-seconday--text-2 absolute top-0 left-0">Learn More</span>
+                                <span className="btn-seconday--text-1 relative">
+                                  Learn More
+                                </span>
+                                <span className="btn-seconday--text-2 absolute top-0 left-0">
+                                  Learn More
+                                </span>
                               </span>
                               <span className="relative inline-flex ml-2 items-center overflow-hidden">
                                 <span className="btn-seconday--arrow-1 relative">
-                                  <img className="ml-2" src="/assets/images/right-arrow.svg" alt="Right Arrow" />
+                                  <img
+                                    className="ml-2"
+                                    src="/assets/images/right-arrow.svg"
+                                    alt="Right Arrow"
+                                  />
                                 </span>
                                 <span className="btn-seconday--arrow-2 absolute top-0 left-0">
-                                  <img className="ml-2" src="/assets/images/right-arrow.svg" alt="Right Arrow" />
+                                  <img
+                                    className="ml-2"
+                                    src="/assets/images/right-arrow.svg"
+                                    alt="Right Arrow"
+                                  />
                                 </span>
                               </span>
                             </span>
@@ -268,18 +285,33 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                           {data.data[1].content.text}
                         </p>
                         <div className="pl-[5%] ">
-                          <a className="btn-seconday relative overflow-hidden" href="#">
+                          <a
+                            className="btn-seconday relative overflow-hidden"
+                            href="#"
+                          >
                             <span className="relative flex items-center  overflow-hidden">
                               <span className="relative inline-flex">
-                                <span className="btn-seconday--text-1 relative">Learn More</span>
-                                <span className="btn-seconday--text-2 absolute top-0 left-0">Learn More</span>
+                                <span className="btn-seconday--text-1 relative">
+                                  Learn More
+                                </span>
+                                <span className="btn-seconday--text-2 absolute top-0 left-0">
+                                  Learn More
+                                </span>
                               </span>
                               <span className="relative inline-flex ml-2 items-center overflow-hidden">
                                 <span className="btn-seconday--arrow-1 relative">
-                                  <img className="ml-2" src="/assets/images/right-arrow.svg" alt="Right Arrow" />
+                                  <img
+                                    className="ml-2"
+                                    src="/assets/images/right-arrow.svg"
+                                    alt="Right Arrow"
+                                  />
                                 </span>
                                 <span className="btn-seconday--arrow-2 absolute top-0 left-0">
-                                  <img className="ml-2" src="/assets/images/right-arrow.svg" alt="Right Arrow" />
+                                  <img
+                                    className="ml-2"
+                                    src="/assets/images/right-arrow.svg"
+                                    alt="Right Arrow"
+                                  />
                                 </span>
                               </span>
                             </span>
@@ -313,25 +345,39 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                       <p className="mt-[16px] mb-[50px] ">
                         {data.data[2].content.text}
                       </p>
-                        <div className=" ">
-                          <a className="btn-seconday relative overflow-hidden" href="#">
-                            <span className="relative flex items-center  overflow-hidden">
-                              <span className="relative inline-flex">
-                                <span className="btn-seconday--text-1 relative">Learn More</span>
-                                <span className="btn-seconday--text-2 absolute top-0 left-0">Learn More</span>
+                      <div className=" ">
+                        <a
+                          className="btn-seconday relative overflow-hidden"
+                          href="#"
+                        >
+                          <span className="relative flex items-center  overflow-hidden">
+                            <span className="relative inline-flex">
+                              <span className="btn-seconday--text-1 relative">
+                                Learn More
                               </span>
-                              <span className="relative inline-flex ml-2 items-center overflow-hidden">
-                                <span className="btn-seconday--arrow-1 relative">
-                                  <img className="ml-2" src="/assets/images/right-arrow.svg" alt="Right Arrow" />
-                                </span>
-                                <span className="btn-seconday--arrow-2 absolute top-0 left-0">
-                                  <img className="ml-2" src="/assets/images/right-arrow.svg" alt="Right Arrow" />
-                                </span>
+                              <span className="btn-seconday--text-2 absolute top-0 left-0">
+                                Learn More
                               </span>
                             </span>
-                          </a>
-                        </div>
-
+                            <span className="relative inline-flex ml-2 items-center overflow-hidden">
+                              <span className="btn-seconday--arrow-1 relative">
+                                <img
+                                  className="ml-2"
+                                  src="/assets/images/right-arrow.svg"
+                                  alt="Right Arrow"
+                                />
+                              </span>
+                              <span className="btn-seconday--arrow-2 absolute top-0 left-0">
+                                <img
+                                  className="ml-2"
+                                  src="/assets/images/right-arrow.svg"
+                                  alt="Right Arrow"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                        </a>
+                      </div>
                     </div>
 
                     <img

@@ -1,8 +1,7 @@
-import React from "react";
-import Marquee from "react-fast-marquee";
-import useScreenSize from "../../../hooks/useScreenSize";
 import { motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
 import { useInView } from "react-intersection-observer";
+import useScreenSize from "../../../hooks/useScreenSize";
 
 interface Card {
   img: string;

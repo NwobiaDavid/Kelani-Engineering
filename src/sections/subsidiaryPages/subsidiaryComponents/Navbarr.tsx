@@ -6,6 +6,7 @@ import PowerCtaForm from "../../../components/PowerCtaForm";
 import EngineeringCtaForm from "../../../components/EngineeringCtaForm";
 import ConsultingCtaForm from "../../../components/ConsultingCtaForm";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import Lenis from "@studio-freight/lenis/types";
 
 interface NavbarProps {
   c700: string;
@@ -21,7 +22,7 @@ const Navbar: React.FC<{
   setCtaFormShowing: (value: boolean) => void;
   lenis: Lenis;
 }> = ({ color, cta_form, ctaFormShowing, setCtaFormShowing, lenis }) => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen] = useState(false);
 
   const ctaButtonVariant = {
     whileHover: {
@@ -48,13 +49,11 @@ const Navbar: React.FC<{
             )}
             {cta_form == "engineering" && (
               <EngineeringCtaForm
-                lenis={lenis}
                 close={() => setCtaFormShowing(false)}
               />
             )}
             {cta_form == "consulting" && (
               <ConsultingCtaForm
-                lenis={lenis}
                 close={() => setCtaFormShowing(false)}
               />
             )}

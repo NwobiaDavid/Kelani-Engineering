@@ -1,20 +1,20 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Link } from "react-router-dom";
-import Navbarr from "./subsidiaryComponents/Navbarr";
+import Lenis from "@studio-freight/lenis/types";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { Link } from "react-router-dom";
+import Footer from "../Footer";
+import ConnectSection from "./subsidiaryComponents/ConnectSection";
+import CustomScrollbar from "./subsidiaryComponents/CustomScrollbar";
 import CustomerSection from "./subsidiaryComponents/CustomerSection";
 import Features from "./subsidiaryComponents/Features";
+import Navbarr from "./subsidiaryComponents/Navbarr";
 import ParallexCards from "./subsidiaryComponents/ParallexCards";
-import ConnectSection from "./subsidiaryComponents/ConnectSection";
-import "./subsidiaryPages.css";
-import SlideshowSection2 from "./subsidiaryComponents/SlideshowSection2";
-import CustomScrollbar from "./subsidiaryComponents/CustomScrollbar";
-import { useEffect, useState } from "react";
-import Footer from "../Footer";
-import { easeIn, motion, useAnimation } from "framer-motion";
 import ParallexCardsMobile from "./subsidiaryComponents/ParallexCardsMobile";
+import SlideshowSection2 from "./subsidiaryComponents/SlideshowSection2";
 import WavyText from "./subsidiaryComponents/WavyText";
-import Lenis from "@studio-freight/lenis/types";
+import "./subsidiaryPages.css";
 
 interface Contents {
   img: string;

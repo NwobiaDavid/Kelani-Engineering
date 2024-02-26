@@ -25,7 +25,7 @@ const schema = z.object({
 type FormSchema = z.infer<typeof schema>;
 
 const EngineeringCtaForm = ({ close }: { close: () => void }) => {
-  const ref = useRef();
+  const ref = useRef(null);
   useEffect(() => {}, [ref]);
 
   const [formLoading, setFormLoading] = useState(false);

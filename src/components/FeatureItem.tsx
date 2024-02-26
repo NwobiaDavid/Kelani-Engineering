@@ -1,7 +1,5 @@
-import { Variants } from "framer-motion";
-import { useRef } from "react";
+import { Variants, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
 
 interface Contents {
   img: string;
@@ -50,7 +48,7 @@ const FeatureItem = ({ index, item }: { index: number; item: Contents }) => {
     triggerOnce: true,
     threshold: 0.1,
   });
-  const { ref: headTextRef, inView: textInView } = useInView({
+  const { ref: headTextRef, } = useInView({
     triggerOnce: true,
   });
   return (

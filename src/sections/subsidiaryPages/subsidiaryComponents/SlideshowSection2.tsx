@@ -1,7 +1,6 @@
-import { motion, AnimatePresence, Variants } from "framer-motion";
-import { CSSProperties, useEffect, useRef, useState } from "react";
+import { AnimatePresence, Variants, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { FaRegCircle } from "react-icons/fa6";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { useInView } from "react-intersection-observer";
 
 interface Contents {
@@ -38,17 +37,17 @@ interface Header {
   className: string;
 }
 
-function useHover(
-  styleOnHover: CSSProperties,
-  styleOnNotHover: CSSProperties = {}
-) {
-  const [style, setStyle] = useState(styleOnNotHover);
+// function useHover(
+//   styleOnHover: CSSProperties,
+//   styleOnNotHover: CSSProperties = {}
+// ) {
+//   const [style, setStyle] = useState(styleOnNotHover);
 
-  const onMouseEnter = () => setStyle(styleOnHover);
-  const onMouseLeave = () => setStyle(styleOnNotHover);
+//   const onMouseEnter = () => setStyle(styleOnHover);
+//   const onMouseLeave = () => setStyle(styleOnNotHover);
 
-  return { style, onMouseEnter, onMouseLeave };
-}
+//   return { style, onMouseEnter, onMouseLeave };
+// }
 
 const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
   data,
@@ -62,17 +61,14 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
 
   // const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
 
-  const gradientStyle = {
-    background: `linear-gradient(45deg, black, ${colours.c400})`,
-  };
-
-  const hoverrs = useHover({ ...gradientStyle });
-  const hoverr = useHover({ ...gradientStyle });
+  // const gradientStyle = {
+  //   background: `linear-gradient(45deg, black, ${colours.c400})`,
+  // };
 
   const [display, setDisplay] = useState(0);
 
-  const [hover, setHover] = useState(false);
-  const [hover2, setHover2] = useState(false);
+  // const [hover, setHover] = useState(false);
+  // const [hover2, setHover2] = useState(false);
 
   const handleHeaderClick = (index: number) => {
     setDisplay(index);
@@ -96,7 +92,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
   };
 
   // const prevRef = useRef(null);
-  const prevRef = useRef<HTMLDivElement>(null);
+  const prevRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (prevRef.current) {
@@ -148,8 +144,6 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
     },
   };
   const text = data.text.sub;
-  const letters = Array.from(text);
-  const words = text.split(" ");
   const splitText = text.split(" ");
   const { ref, inView } = useInView({ triggerOnce: true });
   const { ref: topTextRef, inView: topTextInView } = useInView({
@@ -399,7 +393,6 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
             transition={{ duration: 0.4 }}
           >
             <div
-              v
               className="rounded-3xl "
               style={{
                 background: `linear-gradient(0deg, ${colours.c700}, transparent)`,

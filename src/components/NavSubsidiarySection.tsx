@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
-import useScreenSize from "../hooks/useScreenSize";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import useScreenSize from "../hooks/useScreenSize";
 
 interface NavSubsidiarySection {
   icon: string;
@@ -19,13 +18,11 @@ const NavSubsidiarySection = ({
   index,
 }: NavSubsidiarySection) => {
   const { width } = useScreenSize();
-  const navigate = useNavigate();
   const [hoverShowing, setHoverShowing] = useState(false);
   return (
-    <motion.div
+    <motion.a
       onMouseEnter={() => setHoverShowing(true)}
       onMouseLeave={() => setHoverShowing(false)}
-      onClick={() => navigate(link)}
       initial={{ opacity: 1 }}
       animate={{
         opacity: 1,
@@ -43,6 +40,7 @@ const NavSubsidiarySection = ({
               : undefined,
         },
       }}
+      href={link}
       className={`h-full border-[#FEFEFE]  cursor-pointer backdrop-blur-[6px] border-t z-10 lg:border-t-0 ${
         hasRightBorder ? "lg:border-r" : ""
       }  flex-grow flex items-center justify-center relative`}
@@ -95,7 +93,7 @@ const NavSubsidiarySection = ({
           src="/assets/images/icon-link.svg"
         />
       </motion.p>
-    </motion.div>
+    </motion.a>
   );
 };
 export default NavSubsidiarySection;

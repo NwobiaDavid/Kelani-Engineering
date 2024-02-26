@@ -50,7 +50,7 @@ const SubsidiaryCtaForm = ({
   close: () => void;
   lenis: Lenis;
 }) => {
-  const ref = useRef();
+  const ref = useRef(null);
   useEffect(() => {}, [ref]);
   useEffect(() => {
     console.log(lenis);
@@ -432,7 +432,10 @@ const SubsidiaryCtaForm = ({
                               trigger("lastMonthUtilityBillInNaira")
                             }
                             onValueChange={(e) =>
-                              setValue("lastMonthUtilityBillInNaira", e.value)
+                              setValue(
+                                "lastMonthUtilityBillInNaira",
+                                e.value as unknown as number
+                              )
                             }
                             minFractionDigits={2}
                             maxFractionDigits={5}
@@ -467,7 +470,7 @@ const SubsidiaryCtaForm = ({
                             onValueChange={(e) =>
                               setValue(
                                 "averageMonthlyConsumptionInKwh",
-                                e.value
+                                e.value as unknown as number
                               )
                             }
                             minFractionDigits={0}
@@ -497,7 +500,10 @@ const SubsidiaryCtaForm = ({
                             value={watch("hoursOfPowerRequired")}
                             onBlur={() => trigger("hoursOfPowerRequired")}
                             onValueChange={(e) =>
-                              setValue("hoursOfPowerRequired", e.value)
+                              setValue(
+                                "hoursOfPowerRequired",
+                                e.value as unknown as number
+                              )
                             }
                             minFractionDigits={0}
                             maxFractionDigits={5}

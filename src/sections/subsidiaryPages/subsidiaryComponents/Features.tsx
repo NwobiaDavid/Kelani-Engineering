@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
-import WavyText2 from "./WavyText2";
+import React from "react";
 import FeatureItem from "../../../components/FeatureItem";
+import WavyText2 from "./WavyText2";
 
 interface Contents {
   img: string;

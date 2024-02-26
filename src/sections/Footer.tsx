@@ -72,7 +72,7 @@ const Footer = ({ contactUsUrl }: { contactUsUrl: string }) => {
     const requestData = {
       Name: data.name,
       Email: data.email,
-      Subject: data.subject,
+      // Subject: data.subject,
       Message: data.message,
     };
     try {

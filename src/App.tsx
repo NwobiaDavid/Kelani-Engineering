@@ -6,7 +6,6 @@ import "./App.css";
 // import SubsidiaryShowcase from './sections/SubsidiaryShowcase'
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
-import Footer from "./sections/Footer";
 import SubsidiaryPageOne from "./sections/subsidiaryPages/SubsidiaryPageOne";
 import {
   sub_one,
@@ -40,7 +39,7 @@ function App() {
           />
           <Route
             path="/power"
-            element={<SubsidiaryPageOne sub={sub_three} />}
+            element={<SubsidiaryPageOne lenis={lenis} sub={sub_three} />}
           />
           {/* <Route path="/one" element={<Footer />} /> */}
           {/* <Route path="/parallax" element={<ParallaxCards />} /> */}

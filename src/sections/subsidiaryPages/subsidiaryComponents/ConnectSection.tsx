@@ -1,8 +1,11 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-const ConnectSection: React.FC<{ text: string }> = ({ text }) => {
+const ConnectSection: React.FC<{
+  text: string;
+  setCtaFormShowing: Dispatch<SetStateAction<boolean>>;
+}> = ({ text }) => {
   return (
     <div className="h-[700px]   w-full lg:h-screen relative flex flex-col justify-center items-center ">
       <div className=" mt-0 w-full z-50  bg-black h-full relative flex flex-col justify-center items-center text-white ">

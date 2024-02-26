@@ -1,5 +1,4 @@
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import useScrollPosition from "../../../hooks/useScrollPosition";
 
 interface CustomScrollbarProps {

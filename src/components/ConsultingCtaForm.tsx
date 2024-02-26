@@ -31,7 +31,7 @@ const schema = z.object({
 type FormSchema = z.infer<typeof schema>;
 
 const ConsultingCtaForm = ({ close }: { close: () => void }) => {
-  const ref = useRef();
+  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {}, [ref]);
 
   const [formLoading, setFormLoading] = useState(false);
@@ -76,6 +76,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
     <>
       <motion.div
         data-lenis-prevent
+        //@ts-ignore
         ref={ref}
         onClick={close}
         initial={{ opacity: 0 }}

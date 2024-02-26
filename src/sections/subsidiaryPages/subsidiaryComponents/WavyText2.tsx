@@ -17,8 +17,6 @@ const WavyText2: FC<Props> = ({
   const containerRef = useRef<HTMLHeadingElement>(null);
   const { ref, inView } = useInView({ triggerOnce: true });
 
-  const letters = Array.from(text);
-  const words = text.split(" ");
   const splitText = text.split(" ");
 
   const container: Variants = {

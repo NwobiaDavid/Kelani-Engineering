@@ -14,8 +14,6 @@ const WavyText: FC<Props> = ({
   duration = 0.02,
   ...props
 }: Props) => {
-  const letters = Array.from(text);
-  const words = text.split(" ");
   const splitText = text.split(" ");
 
   const container: Variants = {
