@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import PowerCtaForm from "../../../components/PowerCtaForm";
 import EngineeringCtaForm from "../../../components/EngineeringCtaForm";
 import ConsultingCtaForm from "../../../components/ConsultingCtaForm";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 interface NavbarProps {
   c700: string;
@@ -13,14 +14,26 @@ interface NavbarProps {
   c300: string;
 }
 
-const Navbar: React.FC<{ color: NavbarProps; cta_form: string; lenis: Lenis }> = ({
-  color,
-  cta_form,
-  lenis
-}) => {
+const Navbar: React.FC<{
+  color: NavbarProps;
+  cta_form: string;
+  ctaFormShowing: boolean;
+  setCtaFormShowing: (value: boolean) => void;
+  lenis: Lenis;
+}> = ({ color, cta_form, ctaFormShowing, setCtaFormShowing, lenis }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const [ctaFormShowing, setCtaFormShowing] = useState(false);
+  const ctaButtonVariant = {
+    whileHover: {
+      scale: 1.05,
+      transition: { duration: 0.3 },
+    },
+    whileTap: {
+      scale: 0.98,
+      transition: { duration: 0.15 },
+    },
+  };
+  const [buttonHovered, setButtonHovered] = useState(false);
 
   return (
     <>
@@ -28,13 +41,22 @@ const Navbar: React.FC<{ color: NavbarProps; cta_form: string; lenis: Lenis }> =
         {ctaFormShowing && (
           <>
             {cta_form == "power" && (
-              <PowerCtaForm lenis={lenis} close={() => setCtaFormShowing(false)} />
+              <PowerCtaForm
+                lenis={lenis}
+                close={() => setCtaFormShowing(false)}
+              />
             )}
             {cta_form == "engineering" && (
-              <EngineeringCtaForm lenis={lenis} close={() => setCtaFormShowing(false)} />
+              <EngineeringCtaForm
+                lenis={lenis}
+                close={() => setCtaFormShowing(false)}
+              />
             )}
             {cta_form == "consulting" && (
-              <ConsultingCtaForm lenis={lenis} close={() => setCtaFormShowing(false)} />
+              <ConsultingCtaForm
+                lenis={lenis}
+                close={() => setCtaFormShowing(false)}
+              />
             )}
           </>
         )}
@@ -55,13 +77,36 @@ const Navbar: React.FC<{ color: NavbarProps; cta_form: string; lenis: Lenis }> =
           </div>
 
           <div className="flex items-center">
-            <button
+            <motion.div
               onClick={() => setCtaFormShowing(true)}
-              style={{ color: color.c500 }}
-              className={`text-${color}-500 border  font-semibold  border-color-400 rounded-full py-2 px-5 mx-2 block md:inline-block`}
+              variants={ctaButtonVariant}
+              onMouseEnter={() => {
+                setButtonHovered(true);
+              }}
+              onMouseLeave={() => {
+                setButtonHovered(false);
+              }}
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { duration: 0.7, delay: 1.4 },
+              }}
+              whileHover="whileHover"
+              whileTap={"whileTap"}
+              className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
             >
-              CTA
-            </button>
+              <Link to={"#"} className="">
+                GET CONNECTED{" "}
+              </Link>
+              <motion.span
+                className=""
+                animate={
+                  buttonHovered ? { x: 10, transition: { duration: 0.3 } } : {}
+                }
+              >
+                <IoIosArrowRoundForward size={30} />
+              </motion.span>
+            </motion.div>
             {/* <div className="border mx-2 h-10 opacity-50 "></div> */}
             {/* <motion.button
             onClick={toggleNav}

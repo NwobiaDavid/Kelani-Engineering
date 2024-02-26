@@ -1,5 +1,6 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-
+import { useEffect } from "react";
+import useScrollPosition from "../../../hooks/useScrollPosition";
 
 interface CustomScrollbarProps {
   barColor?: string;
@@ -8,12 +9,28 @@ interface CustomScrollbarProps {
   ellipseColor3?: string;
 }
 
-const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", ellipseColor = "#8A2BE2", ellipseColor2= "#8A2BE2", ellipseColor3 = "#8A2BE2" }) => {
+const CustomScrollbar: React.FC<CustomScrollbarProps> = ({
+  barColor = "#333",
+  ellipseColor = "#8A2BE2",
+  ellipseColor2 = "#8A2BE2",
+  ellipseColor3 = "#8A2BE2",
+}) => {
   const { scrollY } = useScroll();
-  const yRange = useTransform(scrollY, [0, document.body.scrollHeight - window.innerHeight], [0, 400]);
+  const yRange = useTransform(
+    scrollY,
+    [0, document.body.scrollHeight - window.innerHeight],
+    [0, 400]
+  );
+  const { y: scrollYPosition } = useScrollPosition();
 
   return (
     <motion.div
+      animate={{
+        opacity:
+          scrollYPosition > document.body.scrollHeight - window.innerHeight * 2
+            ? 0
+            : 1,
+      }}
       className="h-full flex justify-center items-center px-8"
       style={{ position: "fixed", top: 0, right: 0 }}
     >
@@ -47,10 +64,7 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                 stroke-width="0.5"
                 d="M12.07 0.851L12.07 340.851"
               ></path>
-              <g
-                filter="url(#filter0_f_1881_22079)"
-                opacity="0.73"
-              >
+              <g filter="url(#filter0_f_1881_22079)" opacity="0.73">
                 <ellipse
                   cx="11.82"
                   cy="331.619"
@@ -60,9 +74,7 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   transform="rotate(-180 11.82 331.619)"
                 ></ellipse>
               </g>
-              <g
-                filter="url(#filter1_f_1881_22079)"
-              >
+              <g filter="url(#filter1_f_1881_22079)">
                 <ellipse
                   cx="11.82"
                   cy="338.484"
@@ -72,10 +84,7 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   transform="rotate(-180 11.82 338.484)"
                 ></ellipse>
               </g>
-              <g
-                filter="url(#filter2_f_1881_22079)"
-                opacity="0.21"
-              >
+              <g filter="url(#filter2_f_1881_22079)" opacity="0.21">
                 <ellipse
                   cx="11.82"
                   cy="337.537"
@@ -85,9 +94,7 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   transform="rotate(-180 11.82 337.537)"
                 ></ellipse>
               </g>
-              <g
-                filter="url(#filter3_f_1881_22079)"
-              >
+              <g filter="url(#filter3_f_1881_22079)">
                 <ellipse
                   cx="11.82"
                   cy="339.431"
@@ -112,8 +119,15 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   color-interpolation-filters="sRGB"
                   filterUnits="userSpaceOnUse"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                  <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
                   <feGaussianBlur
                     result="effect1_foregroundBlur_1881_22079"
                     stdDeviation="3"
@@ -128,8 +142,15 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   color-interpolation-filters="sRGB"
                   filterUnits="userSpaceOnUse"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                  <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
                   <feGaussianBlur
                     result="effect1_foregroundBlur_1881_22079"
                     stdDeviation="1"
@@ -144,8 +165,15 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   color-interpolation-filters="sRGB"
                   filterUnits="userSpaceOnUse"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                  <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
                   <feGaussianBlur
                     result="effect1_foregroundBlur_1881_22079"
                     stdDeviation="3"
@@ -160,8 +188,15 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   color-interpolation-filters="sRGB"
                   filterUnits="userSpaceOnUse"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                  <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
                   <feGaussianBlur
                     result="effect1_foregroundBlur_1881_22079"
                     stdDeviation="2"
@@ -176,8 +211,16 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop stop-color={ellipseColor}></stop>
-                  <stop offset="0.552" stop-color={ellipseColor2} stop-opacity="0.37"></stop>
-                  <stop offset="1" stop-color={ellipseColor3} stop-opacity="0"></stop>
+                  <stop
+                    offset="0.552"
+                    stop-color={ellipseColor2}
+                    stop-opacity="0.37"
+                  ></stop>
+                  <stop
+                    offset="1"
+                    stop-color={ellipseColor3}
+                    stop-opacity="0"
+                  ></stop>
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_1881_22079"
@@ -188,8 +231,16 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop stop-color={ellipseColor}></stop>
-                  <stop offset="0.552" stop-color={ellipseColor2} stop-opacity="0.37"></stop>
-                  <stop offset="1" stop-color={ellipseColor3} stop-opacity="0"></stop>
+                  <stop
+                    offset="0.552"
+                    stop-color={ellipseColor2}
+                    stop-opacity="0.37"
+                  ></stop>
+                  <stop
+                    offset="1"
+                    stop-color={ellipseColor3}
+                    stop-opacity="0"
+                  ></stop>
                 </linearGradient>
                 <linearGradient
                   id="paint2_linear_1881_22079"
@@ -200,7 +251,11 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop stop-color={ellipseColor}></stop>
-                  <stop offset="1" stop-color={ellipseColor} stop-opacity="0"></stop>
+                  <stop
+                    offset="1"
+                    stop-color={ellipseColor}
+                    stop-opacity="0"
+                  ></stop>
                 </linearGradient>
                 <linearGradient
                   id="paint3_linear_1881_22079"
@@ -211,7 +266,11 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop stop-color={ellipseColor}></stop>
-                  <stop offset="1" stop-color={ellipseColor} stop-opacity="0"></stop>
+                  <stop
+                    offset="1"
+                    stop-color={ellipseColor}
+                    stop-opacity="0"
+                  ></stop>
                 </linearGradient>
                 <linearGradient
                   id="paint4_linear_1881_22079"
@@ -222,19 +281,19 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ barColor = "#333", el
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop stop-color={ellipseColor}></stop>
-                  <stop offset="1" stop-color={ellipseColor} stop-opacity="0"></stop>
+                  <stop
+                    offset="1"
+                    stop-color={ellipseColor}
+                    stop-opacity="0"
+                  ></stop>
                 </linearGradient>
               </defs>
             </svg>
-
-
           </motion.div>
-
         </div>
       </motion.div>
     </motion.div>
   );
-}
-
+};
 
 export default CustomScrollbar;
