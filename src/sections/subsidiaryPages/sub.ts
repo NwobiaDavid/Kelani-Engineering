@@ -371,11 +371,11 @@ export const sub_two = {
       {
         img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 20.png",
         point1:
-          "We are dedicated to sourcing the perfect machines and tools that will elevate your projects to new heights. Our meticulous research and attention to detail ensure that every piece of equipment we procure meets your exact specifications and exceeds your expectations",
+          "We find top-notch machines and tools that elevate projects, ensuring they meet your specs and exceed expectations.",
         point2:
           "Our skilled negotiators work tirelessly to secure the best possible pricing and terms for your machinery needs. We believe in the power of collaboration and strive to build strong relationships with suppliers to guarantee you receive the most competitive rates without compromising on quality",
         point3:
-          "Let us be your trusted advisor in the world of machines and tools. Our team of experts will guide you through the selection process, offering valuable insights and recommendations to help you make informed decisions that align with your project goals and requirements",
+          "Trust our experts for machine and tool guidance. Receive valuable insights for informed decisions aligned with your project goals.",
         point4:
           "From start to finish, we handle every aspect of the logistics with precision and care. Whether it's coordinating transportation, managing customs procedures, or ensuring timely delivery, we take the stress out of the procurement process so you can focus on what truly matters - getting the job done.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -399,7 +399,12 @@ export const sub_two = {
       {
         img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/plastic-waste-11.jpg",
         point1:
-          "Plastic waste collection and recycling: Let's work together to keep our planet clean and beautiful by responsibly collecting and recycling plastic waste, turning it into valuable resources for a sustainable future.",
+          "Collaborate for a cleaner planet. Collect and recycle plastic waste responsibly for a sustainable future.
+
+
+
+
+",
         point2:
           "Customized plastic repurposing solutions: Transforming your plastic waste into innovative new products is not only good for the environment but also showcases your commitment to making a positive impact on the world.",
         point3:

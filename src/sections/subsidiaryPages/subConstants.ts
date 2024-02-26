@@ -371,13 +371,13 @@ export const sub_two = {
       {
         img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 20.png",
         point1:
-          "We are dedicated to sourcing the perfect machines and tools that will elevate your projects to new heights. Our meticulous research and attention to detail ensure that every piece of equipment we procure meets your exact specifications and exceeds your expectations",
+          "We find and provide high-quality machines and tools that excel in meeting your project needs",
         point2:
-          "Our skilled negotiators work tirelessly to secure the best possible pricing and terms for your machinery needs. We believe in the power of collaboration and strive to build strong relationships with suppliers to guarantee you receive the most competitive rates without compromising on quality",
+          "We secure top deals on machinery through strong supplier ties, ensuring competitive rates without sacrificing quality.",
         point3:
-          "Let us be your trusted advisor in the world of machines and tools. Our team of experts will guide you through the selection process, offering valuable insights and recommendations to help you make informed decisions that align with your project goals and requirements",
+          "Trust us as your machine and tool advisors. Our experts provide valuable insights for informed decision-making aligned with your project goals.",
         point4:
-          "From start to finish, we handle every aspect of the logistics with precision and care. Whether it's coordinating transportation, managing customs procedures, or ensuring timely delivery, we take the stress out of the procurement process so you can focus on what truly matters - getting the job done.",
+          "We handle logistics from start to finish, including transportation, customs, and timely delivery. Focus on getting the job done while we manage the details.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
@@ -385,13 +385,13 @@ export const sub_two = {
       {
         img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 25.png",
         point1:
-          "Financial advisory services: Empowering you to take control of your financial future, make smart investment decisions, and secure a comfortable retirement with confidence.",
+          "Financial Advisory Services: Empower your financial future with confident, smart investment decisions and secure retirement.",
         point2:
-          "Business advisory services: Partnering with you to unlock the full potential of your business, navigate challenges, and achieve sustainable growth and success.",
+          "Business Advisory: Partner to unlock your business potential, navigate challenges, and achieve sustainable growth.",
         point3:
-          "Legal advisory services: Providing expert legal guidance to protect your interests, ensure compliance, and navigate complex legal landscapes with ease.",
+          "Legal Advisory: Expert guidance to protect your interests, ensure compliance, and navigate legal landscapes effortlessly.",
         point4:
-          "Technology advisory services: Guiding you through the ever-evolving world of technology, helping you harness its power to drive innovation, efficiency, and security within your organization.",
+          "Tech advisory guides innovation, efficiency, and security in your organization through the ever-evolving tech landscape.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
@@ -399,13 +399,13 @@ export const sub_two = {
       {
         img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/plastic-waste-11.jpg",
         point1:
-          "Plastic waste collection and recycling: Let's work together to keep our planet clean and beautiful by responsibly collecting and recycling plastic waste, turning it into valuable resources for a sustainable future.",
+          "Collaborate for a cleaner planet. Collect and recycle plastic waste responsibly for a sustainable future.",
         point2:
-          "Customized plastic repurposing solutions: Transforming your plastic waste into innovative new products is not only good for the environment but also showcases your commitment to making a positive impact on the world.",
+          "Repurpose your plastic waste with innovative solutions, showcasing a commitment to the environment and positive impact.",
         point3:
-          "Sustainable packaging solutions: Say goodbye to harmful single-use plastics and embrace eco-friendly packaging options that not only protect your products but also protect our planet for generations to come.",
+          "Sustainable Packaging Solutions: Embrace eco-friendly options, replacing harmful single-use plastics to protect both products and the planet for future generations.",
         point4:
-          "Educational programs and workshops: Join us in spreading the message of environmental responsibility and empowering individuals and businesses to make a difference through informed choices and actions. Let's educate, inspire, and create a greener world together.",
+          "Educate for a greener world. Join our programs to spread environmental responsibility and empower change through informed choices.",
         classname: " ",
       },
     ],
