@@ -97,11 +97,11 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color }> = ({
     // const prevRef = useRef(null);
     const prevRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (prevRef.current) {
-      const prevElement = prevRef.current;
-      const afterStyle = document.createElement('style');
-      afterStyle.textContent = `
+    useEffect(() => {
+        if (prevRef.current) {
+            const prevElement = prevRef.current;
+            const afterStyle = document.createElement('style');
+            afterStyle.textContent = `
         .prev:after {
           content: '';
           position: absolute;
@@ -112,9 +112,9 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color }> = ({
           background: ${data.btnColour}
         }
       `;
-      prevElement.appendChild(afterStyle);
-    }
-  }, []);
+            prevElement.appendChild(afterStyle);
+        }
+    }, []);
 
     return (
 
@@ -135,7 +135,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color }> = ({
 
                             <div className="lg:col-start-1 col-start-9 lg:col-span-full col-span-2  flex  items-center lg:items-end lg:justify-center justify-end " style={{ opacity: 1, visibility: "inherit" }}>
                                 <button ref={prevRef} onClick={handlePrevious} className="prev btn-sliderr btn-sliderr-left mr-0 lg:mr-[30px] h-[70px] w-[70px] overflow-hidden" type="button" >
-                                    
+
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full " fill="none" viewBox="0 0 55 55">
                                         <circle cx="27.058" cy="27.059" r="26.809" stroke="url(#paint0_linear_1621_3648)" stroke-width="0.5" transform="rotate(90 27.058 27.059)"></circle>
                                         <g className="btn-sliderr-left__arrow-1 relative"><path stroke="#F4F4F4" stroke-miterlimit="10" stroke-width="0.5" d="M37.117 27h-20M21.117 23l-4 4 4 4"></path></g>
@@ -148,13 +148,13 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color }> = ({
                                     <h1>{display + 1}/{data.content.length}</h1>
                                 </div>
 
-                                <button  ref={prevRef} type="button" onClick={handleNext} className="prev  h-[70px] w-[70px] btn-sliderr btn-sliderr-right overflow-hidden">
-                                    
+                                <button ref={prevRef} type="button" onClick={handleNext} className="prev  h-[70px] w-[70px] btn-sliderr btn-sliderr-right overflow-hidden">
+
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-55 h-auto" fill="none" viewBox="0 0 55 55">
                                         <circle cx="27.177" cy="27.059" r="26.809" stroke="url(#paint0_linear_1621_3653)" stroke-width="0.5" transform="rotate(90 27.177 27.059)"></circle>
                                         <g className="btn-sliderr-right__arrow-1 relative"><path stroke="#F4F4F4" stroke-miterlimit="10" stroke-width="0.5" d="M17.118 27h20M33.118 23l4 4-4 4"></path></g>
                                         <g className="btn-sliderr-right__arrow-2 absolute top-0 left-0"><path stroke="#F4F4F4" stroke-miterlimit="10" stroke-width="0.5" d="M17.118 27h20M33.118 23l4 4-4 4"></path></g><defs><linearGradient id="paint0_linear_1621_3653" x1="27.367" x2="27.367" y1="53.912" y2="0.15" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"></stop>
-                                        <stop offset="1" stop-color="#fff" stop-opacity="0"></stop></linearGradient></defs>
+                                            <stop offset="1" stop-color="#fff" stop-opacity="0"></stop></linearGradient></defs>
                                     </svg>
                                 </button>
                             </div>
@@ -169,8 +169,8 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color }> = ({
                         {data.header.map((item, index) => (
                             <div
                                 className={`${display === index
-                                    ? "h-[90px] font-semibold lg:text-left text-center opacity-60 tracking-wide w-[210px]"
-                                    : "h-[90px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-[210px]"
+                                    ? "h-[90px] font-semibold lg:text-left text-center cursor-pointer opacity-60 tracking-wide w-full ml-3"
+                                    : "h-[90px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-full ml-3"
                                     }`}
                                 key={index}
                                 onClick={() => handleHeaderClick(index)}
