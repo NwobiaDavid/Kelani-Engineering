@@ -228,9 +228,11 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isTopNear, setIsTopNear] = useState(false);
   const controls = useAnimation();
+
   const lightControls = useAnimation();
   const lightControlss = useAnimation();
   const lightControlsx = useAnimation();
+
   const [ctaFormShowing, setCtaFormShowing] = useState(false);
 
   useEffect(() => {
@@ -291,10 +293,11 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
   return (
     <>
       <motion.div
+        style={{ overflowY: "clip" , overflowX: "clip"}}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.5 } }}
         exit={{ opacity: 0 }}
-        className=" overflow-x-clip overflow-y-clip "
+        className=" "
       >
         <div
           id="hex-grid"
@@ -435,36 +438,29 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
           )}
         </div>
 
-        <div className="relative w-full h-[100dvh] rounded-b-[30px]">
-          <div className="z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
-            <div className="border absolute border-white rounded-full min-w-[680px] w-[680px] min-h-[680px] h-[680px] border-opacity-20  lg:h-[750px] lg:w-[750px] flex items-center justify-center">
+        <div className="relative  ">
+
+          <div className="z-20 h-full  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
+            <div className="border border-white rounded-full min-w-[680px] w-[680px] min-h-[680px] h-[680px] border-opacity-20  lg:h-[750px] lg:w-[750px] flex items-center justify-center">
               <div className="border border-white rounded-full min-w-[480px] w-[480px] min-h-[480px] h-[480px] border-opacity-20  lg:h-[520px] lg:w-[520px] flex items-center justify-center">
-                <div className="border border-white rounded-full min-w-[280px]  w-[280px] h-[280px] border-opacity-20 lg:h-[309px] lg:w-[309px] flex items-center justify-center"></div>
+                <div className="border border-white rounded-full min-w-[280px]  w-[280px] h-[280px] border-opacity-20 lg:h-[309px] lg:w-[309px] flex items-center justify-center">
+
+                </div>
               </div>
             </div>
           </div>
 
-          <div id="hex-gridx z-50" className=" relative h-full  ">
+          <div id="hex-gridx" className=" relative h-full  "  >
             <div className=" z-10 h-full  relative ">
               <div className="griddy lg:block hidden z-20 bg-transparent "></div>
               <motion.div
                 animate={lightControlsx}
                 className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
               ></motion.div>
-
-              <ConnectSection
-                setCtaFormShowing={setCtaFormShowing}
-                text={sub.connect_text}
-              />
-              {/* <img
-                className="absolute z-50 -bottom-[0px] w-full  "
-                src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg"
-                alt=""
-              /> */}
-              {/* </div> */}
-              {/* <img className="absolute z-50 -bottom-[0px] w-full  " src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" /> */}
+              <ConnectSection text={sub.connect_text} />
             </div>
           </div>
+
         </div>
 
         {/* </div> */}

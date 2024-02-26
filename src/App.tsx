@@ -25,7 +25,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <>
+    <div className="overflow-y-clip">
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home lenis={lenis} />} />
@@ -45,7 +45,7 @@ function App() {
           {/* <Route path="/parallax" element={<ParallaxCards />} /> */}
         </Routes>
       </AnimatePresence>
-    </>
+    </div>
   );
 }
 
