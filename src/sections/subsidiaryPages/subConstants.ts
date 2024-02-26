@@ -323,7 +323,7 @@ export const sub_two = {
     },
   ],
   hero_section: {
-    sub_text: "Kelani Industrials",
+    sub_text: "Kelani Engineering",
     main_text: "transforming industries, shaping the future.",
     home_img: "/assets/images/subsidiaryPagesImages/Img_Layer (1).png",
     color: {
