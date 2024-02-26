@@ -334,13 +334,16 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
         </div>
 
 
-        <div id="hex-gridd" className=" relative bg-black"  >
+        <div id="hex-gridd" className=" relative bg-black  "  >
           <motion.div
             animate={lightControls}
             className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
           ></motion.div>
-
           <div className="griddy lg:block hidden z-20 bg-transparent"></div>
+
+          <div className="w-full relative z-40">
+          <div style={{ backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)` }} className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] "> </div>
+          </div>
 
           {isMobile ? (
             <div className="relative md:hidden z-40">

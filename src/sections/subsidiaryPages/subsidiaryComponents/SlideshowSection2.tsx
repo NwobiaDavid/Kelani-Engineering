@@ -148,7 +148,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color }> = ({
                                     <h1>{display + 1}/{data.content.length}</h1>
                                 </div>
 
-                                <button ref={prevRef} type="button" onClick={handleNext} className="prev  h-[70px] w-[70px] btn-sliderr btn-sliderr-right overflow-hidden">
+                                <button ref={prevRef} type="button" onClick={handleNext} className={`  prev  h-[70px] w-[70px] btn-sliderr btn-sliderr-right overflow-hidden`}>
 
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-55 h-auto" fill="none" viewBox="0 0 55 55">
                                         <circle cx="27.177" cy="27.059" r="26.809" stroke="url(#paint0_linear_1621_3653)" stroke-width="0.5" transform="rotate(90 27.177 27.059)"></circle>
@@ -211,8 +211,8 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps, colours: color }> = ({
                         exit="exit"
                         transition={{ duration: 0.4 }}
                     >
-                        <div>
-                            <img src={data.content[display].img} className="rounded-3xl xl:h-[400px] lg:h-[300px]  object-cover xl:w-[650px] lg:w-[550px] border" alt={`Slide ${display + 1}`} />
+                        <div className="rounded-3xl "  style={{ background: `linear-gradient(0deg, ${colours.c700}, transparent)` }} >
+                            <img src={data.content[display].img}  className="rounded-3xl opacity-75 xl:h-[400px] lg:h-[300px]  object-cover xl:w-[650px] lg:w-[550px] border" alt={`Slide ${display + 1}`} />
                         </div>
                         <motion.div
                             initial={{ opacity: 0, x: -10 }}
