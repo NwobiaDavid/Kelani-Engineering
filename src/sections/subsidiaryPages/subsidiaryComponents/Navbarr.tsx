@@ -14,12 +14,13 @@ interface NavbarProps {
   c300: string;
 }
 
-const Navbarr: React.FC<{
+const Navbar: React.FC<{
   color: NavbarProps;
   cta_form: string;
   ctaFormShowing: boolean;
   setCtaFormShowing: (value: boolean) => void;
-}> = ({ color, cta_form, ctaFormShowing, setCtaFormShowing }) => {
+  lenis: Lenis;
+}> = ({ color, cta_form, ctaFormShowing, setCtaFormShowing, lenis }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const ctaButtonVariant = {
@@ -40,13 +41,22 @@ const Navbarr: React.FC<{
         {ctaFormShowing && (
           <>
             {cta_form == "power" && (
-              <PowerCtaForm close={() => setCtaFormShowing(false)} />
+              <PowerCtaForm
+                lenis={lenis}
+                close={() => setCtaFormShowing(false)}
+              />
             )}
             {cta_form == "engineering" && (
-              <EngineeringCtaForm close={() => setCtaFormShowing(false)} />
+              <EngineeringCtaForm
+                lenis={lenis}
+                close={() => setCtaFormShowing(false)}
+              />
             )}
             {cta_form == "consulting" && (
-              <ConsultingCtaForm close={() => setCtaFormShowing(false)} />
+              <ConsultingCtaForm
+                lenis={lenis}
+                close={() => setCtaFormShowing(false)}
+              />
             )}
           </>
         )}
@@ -163,4 +173,4 @@ const Navbarr: React.FC<{
   );
 };
 
-export default Navbarr;
+export default Navbar;

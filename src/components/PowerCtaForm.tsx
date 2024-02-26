@@ -9,6 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import axios from "axios";
+import Lenis from "@studio-freight/lenis/types";
 
 const schema = z.object({
   name: z.string().nonempty({ message: "Name is required" }),
@@ -42,9 +43,19 @@ const schema = z.object({
 
 type FormSchema = z.infer<typeof schema>;
 
-const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
+const SubsidiaryCtaForm = ({
+  close,
+  lenis,
+}: {
+  close: () => void;
+  lenis: Lenis;
+}) => {
   const ref = useRef();
   useEffect(() => {}, [ref]);
+  useEffect(() => {
+    console.log(lenis);
+    lenis.stop();
+  }, []);
 
   const [formLoading, setFormLoading] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -164,7 +175,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <input
                             {...register("name")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full musio-sans"
+                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{ opacity: errors.name?.message ? 1 : 0 }}
@@ -178,7 +189,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
                         <label className="museo-sans text-[#888A8B]">
                           Phone Number
                         </label>
-                        {/* <input className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full musio-sans" /> */}
+                        {/* <input className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans" /> */}
                         <div
                           className={
                             errors.phoneNumber ? "error relative" : "relative "
@@ -213,7 +224,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <input
                             {...register("email")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full musio-sans"
+                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{ opacity: errors.email?.message ? 1 : 0 }}
@@ -234,7 +245,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <select
                             {...register("businessNeed")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full musio-sans"
+                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           >
                             <option disabled selected value="">
                               Choose Your Business' Need
@@ -271,7 +282,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <input
                             {...register("address")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full musio-sans"
+                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{
@@ -294,7 +305,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <input
                             {...register("city")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full musio-sans"
+                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{ opacity: errors.city?.message ? 1 : 0 }}
@@ -315,7 +326,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <input
                             {...register("state")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full musio-sans"
+                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{ opacity: errors.state?.message ? 1 : 0 }}
@@ -350,7 +361,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
                                 ? "#fe3514"
                                 : "#C3DECE",
                             }}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full musio-sans"
+                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{
@@ -374,7 +385,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
                           >
                             <select
                               {...register("loadType")}
-                              className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full musio-sans"
+                              className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                             >
                               <option disabled selected value="">
                                 Choose Type Of Load
@@ -409,7 +420,7 @@ const SubsidiaryCtaForm = ({ close }: { close: () => void }) => {
                         <label className="museo-sans text-[#888A8B]">
                           Last month's Utility Bill (₦)
                         </label>
-                        {/* <input className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full musio-sans" /> */}
+                        {/* <input className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans" /> */}
                         <div
                           className={
                             errors.lastMonthUtilityBillInNaira ? "error" : ""

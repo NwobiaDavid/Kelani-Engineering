@@ -25,7 +25,7 @@ const schema = z.object({
     .string()
     .nonempty({ message: "Type Of Hiring Needs is required" }),
   companyName: z.string().nonempty({ message: "Company name is required" }),
-  companySize: z.string(),
+  companySize: z.string().nonempty({ message: "Company Size is required" }),
 });
 
 type FormSchema = z.infer<typeof schema>;
@@ -221,6 +221,100 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                     </div>
                   </div>
                 </section>
+                <div>
+                  <p className="text-[18px] space-grotesk-semibold mb-[32px]">
+                    Hiring Needs
+                  </p>
+                  <div className="flex flex-col space-y-[20px]">
+                    <div className="flex flex-col">
+                      <label className="museo-sans text-[#888A8B]">
+                        Position(s) to Fill
+                      </label>
+                      <div
+                        className={
+                          errors.positionsToFill ? "error relative" : "relative"
+                        }
+                      >
+                        <input
+                          {...register("positionsToFill")}
+                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                        />
+                        <motion.p
+                          animate={{
+                            opacity: errors.positionsToFill?.message ? 1 : 0,
+                          }}
+                          className="text-right text-[12px] text-[#fe3514] museo-sans absolute -bottom-20px right-0"
+                        >
+                          {errors.positionsToFill?.message}
+                        </motion.p>
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <label className="museo-sans text-[#888A8B]">
+                        Type Of Hiring Needs
+                      </label>
+                      <div
+                        className={
+                          errors.typeOfHiringNeeds
+                            ? "error relative"
+                            : "relative"
+                        }
+                      >
+                        <select
+                          {...register("typeOfHiringNeeds")}
+                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                        >
+                          <option disabled selected value="">
+                            Select Type of Hiring Needs
+                          </option>
+                          <option value="Permanent">Permanent</option>
+                          <option value="Temporary">Temporary</option>
+                          <option value="Project-Based">Project-Based</option>
+                          <option value="Other">Other</option>
+                        </select>
+                        <motion.p
+                          animate={{
+                            opacity: errors.typeOfHiringNeeds?.message ? 1 : 0,
+                          }}
+                          className="text-right text-[12px] text-[#fe3514] museo-sans absolute -bottom-20px right-0"
+                        >
+                          {errors.typeOfHiringNeeds?.message}
+                        </motion.p>
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <label className="museo-sans text-[#888A8B]">
+                        Urgency Of Hiring
+                      </label>
+                      <div
+                        className={
+                          errors.urgencyOfHiring ? "error relative" : "relative"
+                        }
+                      >
+                        <select
+                          {...register("urgencyOfHiring")}
+                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                        >
+                          <option disabled selected value="">
+                            Select Hiring Needs
+                          </option>
+                          <option value="Immediate">Immediate</option>
+                          <option value="3 Months">3 Months</option>
+                          <option value="6 Months">6 Months</option>
+                          <option value="Other">Other</option>
+                        </select>
+                        <motion.p
+                          animate={{
+                            opacity: errors.urgencyOfHiring?.message ? 1 : 0,
+                          }}
+                          className="text-right text-[12px] text-[#fe3514] museo-sans absolute -bottom-20px right-0"
+                        >
+                          {errors.urgencyOfHiring?.message}
+                        </motion.p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <section>
                   <div>
                     <p className="text-[18px] space-grotesk-semibold mb-[32px]">
@@ -309,9 +403,9 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                             <option value="10 - 19 employees">
                               10 - 19 employees
                             </option>
-                            <option value="20 - 49">20 - 49</option>
-                            <option value="50 - 249">50 - 249</option>
-                            <option value="250+">250+</option>
+                            <option value="20 - 49 employees">20 - 49 employees</option>
+                            <option value="50 - 249 employees">50 - 249</option>
+                            <option value="250+ employees">250+</option>
                           </select>
                           <motion.p
                             animate={{
@@ -324,164 +418,9 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                           </motion.p>
                         </div>
                       </div>
-                      {[
-                        "Industrial Procurement",
-                        "Engineering Design and Fabrication",
-                        "Buying Machinery",
-                      ].includes(watch("need") as string) && (
-                        <div className="flex flex-col ">
-                          <label className="museo-sans text-[#888A8B]">
-                            Machine / Product Of Interest
-                          </label>
-                          <div
-                            className={errors.productOfInterest ? "error" : ""}
-                          >
-                            <select
-                              {...register("productOfInterest")}
-                              className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
-                            >
-                              <option disabled selected value="">
-                                Select machine/product of interest
-                              </option>
-                              <option value="Packaging machines">
-                                Packaging machines
-                              </option>
-                              <option value="Water Treatment and Processing Machines">
-                                Water Treatment and Processing Machines
-                              </option>
-                              <option value="Film Blowing Machines">
-                                Film Blowing Machines
-                              </option>
-                              <option value="Grinders and Juicer">
-                                Grinders and Juicer
-                              </option>
-                              <option value="Spare Parts">Spare Parts</option>
-                              <option value="Flexo and Gravure Printers">
-                                Flexo and Gravure Printers
-                              </option>
-                              <option value="Spare Parts">Spare Parts</option>
-                              <option value="Bag Making and Sealing Machines">
-                                Bag Making and Sealing Machines
-                              </option>
-                              <option value="Coding Machines">
-                                Coding Machines
-                              </option>
-                              <option value="BOPP">BOPP</option>
-                              <option value="Oil and Gas Valves and Machinery">
-                                Oil and Gas Valves and Machinery
-                              </option>
-                            </select>
-                            <motion.p
-                              animate={{
-                                transition: { duration: 0.3 },
-                                opacity: errors.productOfInterest?.message
-                                  ? 1
-                                  : 0,
-                              }}
-                              className="text-right text-[12px] text-[#fe3514] museo-sans absolute -bottom-20px right-0"
-                            >
-                              {errors.productOfInterest?.message}
-                            </motion.p>
-                          </div>
-                        </div>
-                      )}
                     </div>
                   </div>
                 </section>
-                <div>
-                  <p className="text-[18px] space-grotesk-semibold mb-[32px]">
-                    Hiring Needs
-                  </p>
-                  <div className="flex flex-col space-y-[20px]">
-                    <div className="flex flex-col">
-                      <label className="museo-sans text-[#888A8B]">
-                        Position(s) to Fill
-                      </label>
-                      <div
-                        className={
-                          errors.positionsToFill ? "error relative" : "relative"
-                        }
-                      >
-                        <input
-                          {...register("positionsToFill")}
-                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
-                        />
-                        <motion.p
-                          animate={{
-                            opacity: errors.positionsToFill?.message ? 1 : 0,
-                          }}
-                          className="text-right text-[12px] text-[#fe3514] museo-sans absolute -bottom-20px right-0"
-                        >
-                          {errors.positionsToFill?.message}
-                        </motion.p>
-                      </div>
-                    </div>
-                    <div className="flex flex-col">
-                      <label className="museo-sans text-[#888A8B]">
-                        Type Of Hiring Needs
-                      </label>
-                      <div
-                        className={
-                          errors.typeOfHiringNeeds
-                            ? "error relative"
-                            : "relative"
-                        }
-                      >
-                        <select
-                          {...register("typeOfHiringNeeds")}
-                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
-                        >
-                          <option disabled selected value="">
-                            Select Hiring Needs
-                          </option>
-                          <option value="Permanent">Permanent</option>
-                          <option value="Temporary">Temporary</option>
-                          <option value="Project-Based">Project-Based</option>
-                          <option value="Other">Other</option>
-                        </select>
-                        <motion.p
-                          animate={{
-                            opacity: errors.typeOfHiringNeeds?.message ? 1 : 0,
-                          }}
-                          className="text-right text-[12px] text-[#fe3514] museo-sans absolute -bottom-20px right-0"
-                        >
-                          {errors.typeOfHiringNeeds?.message}
-                        </motion.p>
-                      </div>
-                    </div>
-                    <div className="flex flex-col">
-                      <label className="museo-sans text-[#888A8B]">
-                        Urgency Of Hiring
-                      </label>
-                      <div
-                        className={
-                          errors.urgencyOfHiring ? "error relative" : "relative"
-                        }
-                      >
-                        <select
-                          {...register("urgencyOfHiring")}
-                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
-                        >
-                          <option disabled selected value="">
-                            Select Hiring Needs
-                          </option>
-                          <option value="Immediate">Immediate</option>
-                          <option value="3 Months">3 Months</option>
-                          <option value="6 Months">6 Months</option>
-                          <option value="Other">Other</option>
-                        </select>
-                        <motion.p
-                          animate={{
-                            opacity: errors.urgencyOfHiring?.message ? 1 : 0,
-                          }}
-                          className="text-right text-[12px] text-[#fe3514] museo-sans absolute -bottom-20px right-0"
-                        >
-                          {errors.urgencyOfHiring?.message}
-                        </motion.p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div>
                   <p className="text-[18px] space-grotesk-semibold mb-[32px]">
                     Additional Information

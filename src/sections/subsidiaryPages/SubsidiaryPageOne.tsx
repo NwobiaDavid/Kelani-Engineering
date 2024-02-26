@@ -14,6 +14,7 @@ import Footer from "../Footer";
 import { easeIn, motion, useAnimation } from "framer-motion";
 import ParallexCardsMobile from "./subsidiaryComponents/ParallexCardsMobile";
 import WavyText from "./subsidiaryComponents/WavyText";
+import Lenis from "@studio-freight/lenis/types";
 
 interface Contents {
   img: string;
@@ -59,6 +60,8 @@ interface Header {
 
 interface SubProps {
   customerCards: { height: number; img: string }[];
+  cta_form: string;
+  contactUsUrl: string;
   hero_section: {
     sub_text: string;
     main_text: string;
@@ -69,6 +72,9 @@ interface SubProps {
       c400: string;
       c300: string;
     };
+  };
+  home_section: {
+    mobile: string;
   };
   features_data: {
     header: string;
@@ -118,7 +124,10 @@ interface SubProps {
   connect_text: string;
 }
 
-const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
+const SubsidiaryPageOne: React.FC<{ sub: SubProps; lenis: Lenis }> = ({
+  sub,
+  lenis,
+}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
   const ctaButtonVariant = {
     whileHover: {
@@ -312,6 +321,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
                 />
 
                 <Navbarr
+                  lenis={lenis}
                   ctaFormShowing={ctaFormShowing}
                   setCtaFormShowing={setCtaFormShowing}
                   cta_form="power"
@@ -399,7 +409,14 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
           <div className="griddy lg:block hidden z-20 bg-transparent"></div>
 
           <div className="w-full relative z-40">
-          <div style={{ backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)` }} className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] "> </div>
+            <div
+              style={{
+                backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)`,
+              }}
+              className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] "
+            >
+              {" "}
+            </div>
           </div>
 
           {isMobile ? (
@@ -448,7 +465,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps }> = ({ sub }) => {
         {/* </div> */}
 
         <div className="z-50  ">
-          <Footer />
+          <Footer contactUsUrl={sub.contactUsUrl} />
         </div>
 
         <div className="bg-white hidden md:block z-50 fixed">
