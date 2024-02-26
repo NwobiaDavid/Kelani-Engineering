@@ -347,8 +347,8 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
               <div
                 className={`${
                   display === index
-                    ? "h-[90px] font-semibold lg:text-left text-center opacity-60 tracking-wide w-[210px]"
-                    : "h-[90px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-[210px]"
+                    ? "h-[90px] font-semibold lg:text-left text-center cursor-pointer opacity-60 tracking-wide w-full ml-3"
+                    : "h-[90px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-full ml-3"
                 }`}
                 key={index}
                 onClick={() => handleHeaderClick(index)}
@@ -391,7 +391,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
         <AnimatePresence mode="wait">
           <motion.div
             key={display}
-            className="w-full lg:w-[70%] z-30 h-full flex lg:flex-row flex-col"
+            className="w-full lg:w-[70%] items-center lg:items-start z-30 h-full flex lg:flex-row flex-col"
             variants={containerVariants}
             initial="initial"
             animate="animate"
@@ -401,7 +401,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
             <div>
               <img
                 src={data.content[display].img}
-                className="rounded-3xl lg:h-[400px] object-cover lg:w-[650px] border"
+                className="rounded-3xl xl:h-[400px] lg:h-[300px]  object-cover xl:w-[650px] lg:w-[550px] border"
                 alt={`Slide ${display + 1}`}
               />
             </div>
@@ -410,9 +410,9 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 10 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="lg:w-[42%] lg:ml-6"
+              className="xl:w-[42%] h-full lg:w-[60%] lg:ml-6 ml-0 "
             >
-              <ul className="grid h-full text-sm lg:text-sm w-full lg:gap-y-0 gap-y-5 gap-6 px-1 pt-10 lg:p-4 lg:grid-rows-3 md:grid-cols-2 grid-cols-1 lg:grid-cols-2">
+              <ul className="grid h-full text-sm lg:text-sm w-full xl:gap-y-5 lg:gap-y-0 gap-y-5 gap-6 px-1 xl:pt-10 lg:pt-[10px] pt-10 xl:p-4 lg:grid-rows-3 md:grid-cols-2 grid-cols-1 lg:grid-cols-2">
                 {[
                   data.content[display].point1,
                   data.content[display].point2,
