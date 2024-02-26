@@ -398,7 +398,13 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
             exit="exit"
             transition={{ duration: 0.4 }}
           >
-            <div>
+            <div
+              v
+              className="rounded-3xl "
+              style={{
+                background: `linear-gradient(0deg, ${colours.c700}, transparent)`,
+              }}
+            >
               <img
                 src={data.content[display].img}
                 className="rounded-3xl xl:h-[400px] lg:h-[300px]  object-cover xl:w-[650px] lg:w-[550px] border"
