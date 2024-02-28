@@ -7,7 +7,7 @@ const ConnectSection: React.FC<{
   setCtaFormShowing: Dispatch<SetStateAction<boolean>>;
 }> = ({ text }) => {
   return (
-    <div className="h-[700px]   w-full lg:h-screen relative flex flex-col justify-center items-center ">
+    <div className="h-screen bg-black  w-full lg:h-screen relative flex flex-col justify-center items-center ">
       
       <div className=" mt-0 w-full  h-full relative flex justify-center items-center text-white ">
 
@@ -25,9 +25,9 @@ const ConnectSection: React.FC<{
         </div>
       </div>
 
-      <div className=" relative w-full z-[60] h-[30px]  ">
+      {/* <div className=" relative w-full z-[60] h-[30px]  ">
         <img className="absolute w-full  object-cover" src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" />
-      </div>
+      </div> */}
 
     </div>
   );

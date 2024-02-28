@@ -421,7 +421,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
           </div>
         </div>
 
-        <div id="hex-gridd" className=" relative bg-black">
+        <div id="hex-gridd" className="  relative bg-black">
           <motion.div
             animate={lightControls}
             className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
@@ -452,9 +452,9 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
 
 
 
-        <div className="  ">         
+        <div className="  overflow-hidden relative ">         
 
-          <div id="hex-gridx" className=" relative h-full overflow-hidden bg-black "  >
+          <div id="hex-gridx" className=" flex flex-col relative h-full   "  >
 
               <div className=" bg-black relative z-[51] ">
 
@@ -466,6 +466,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
               <div className="griddy lg:block hidden z-20 bg-transparent "></div>
 
 
+              {/* </div> */}
                       <div className="z-20 h-full  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
                     <div className="border border-white rounded-full min-w-[680px] w-[680px] min-h-[680px] h-[680px] border-opacity-20  lg:h-[750px] lg:w-[750px] flex items-center justify-center">
                       <div className="border border-white rounded-full min-w-[480px] w-[480px] min-h-[480px] h-[480px] border-opacity-20  lg:h-[520px] lg:w-[520px] flex items-center justify-center">
@@ -477,15 +478,18 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
                   </div>
 
                 <ConnectSection text={sub.connect_text} />
-              {/* </div> */}
+                
             </div>
+            <div className=" relative w-full z-[60] h-[130px]  ">
+        <img className="absolute w-full  object-cover" src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" />
+      </div>
           </div>
 
         </div>
 
         {/* </div> */}
 
-        <div className=" z-50 relative ">
+        <div className=" z-50 bg-black relative ">
           <Footer contactUsUrl={sub.contactUsUrl} />
         </div>
 
