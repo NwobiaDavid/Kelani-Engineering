@@ -5,6 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useRef } from "react";
 import useScreenSize from "../../../hooks/useScreenSize";
+
+
 interface ParallexProps {
   header: string;
   subHead: string;

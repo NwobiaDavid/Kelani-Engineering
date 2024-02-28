@@ -2,6 +2,8 @@ import { AnimatePresence, Variants, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { FaRegCircle } from "react-icons/fa6";
 import { useInView } from "react-intersection-observer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface Contents {
   img: string;
@@ -151,7 +153,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
   });
 
   return (
-    <div className="lg:h-[1000px] h-[1150px] w-full z-30 text-white ">
+    <div className="lg:h-[1000px] h-fit w-full z-30 text-white ">
       <div className="w-full mb-6 flex flex-col lg:px-4 justify-center pt-10 items-center ">
         <div className=" w-[65%] flex justify-center items-center ">
           <div className="flex  w-full lg:flex-row flex-col items-center mb-10 justify-center lg:justify-between ">
@@ -339,16 +341,15 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
           <div className="w-[65%] flex justify-center lg:justify-between items-center">
             {data.header.map((item, index) => (
               <div
-                className={`${
-                  display === index
+                className={`${display === index
                     ? "h-[90px] font-semibold lg:text-left text-center cursor-pointer opacity-60 tracking-wide w-full ml-3"
                     : "h-[90px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-full ml-3"
-                }`}
+                  }`}
                 key={index}
                 onClick={() => handleHeaderClick(index)}
               >
                 <div className=" h-[90%]  w-full ">
-                  <h1 className="p-2 h-full flex justify-center items-center uppercase w-full ">
+                  <h1 className="p-2 h-full lg:text-xs xl:text-[16px] flex justify-center items-center uppercase w-full ">
                     {item.text}
                   </h1>
                 </div>
@@ -356,11 +357,10 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                   initial={{ x: "-100%" }}
                   animate={{ x: display === index ? "0%" : "-100%" }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className={`${
-                    display === index
+                  className={`${display === index
                       ? "w-full relative flex items-center justify-center h-[10%] "
                       : "w-full h-[10%] hidden"
-                  }`}
+                    }`}
                 >
                   <img
                     className=" lg:block hidden  w-full -left-8 absolute "
@@ -393,16 +393,23 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
             transition={{ duration: 0.4 }}
           >
             <div
-              className="rounded-3xl "
+              className="rounded-3xl flex  "
               style={{
                 background: `linear-gradient(0deg, ${colours.c700}, transparent)`,
               }}
             >
-              <img
+              <LazyLoadImage
                 src={data.content[display].img}
-                className="rounded-3xl xl:h-[400px] lg:h-[300px]  object-cover xl:w-[650px] lg:w-[550px] border"
                 alt={`Slide ${display + 1}`}
+                effect="blur"
+                style={{opacity: 0.8}}
+                className="rounded-3xl xl:h-[400px] lg:h-[300px]  object-cover xl:w-[650px] lg:w-[550px] border"
               />
+              {/* <img
+                src={data.content[display].img}
+                className="rounded-3xl xl:h-[400px] opacity-80 lg:h-[300px]  object-cover xl:w-[650px] lg:w-[550px] border"
+                alt={`Slide ${display + 1}`}
+              /> */}
             </div>
             <motion.div
               initial={{ opacity: 0, x: -10 }}
