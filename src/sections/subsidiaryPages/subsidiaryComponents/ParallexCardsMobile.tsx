@@ -91,7 +91,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({ data }) 
     return (
         <>
             <div className="relative h-[180vh] bg-black  ">
-                <div className="  h-[100vh] card-animation-container items-center  pt-10 flex-col text-white w-full flex" >
+                <div className=" pb-3 h-[100vh] card-animation-container items-center  pt-10 flex-col text-white w-full flex" >
                     <div className=" w-[70%] text-center mb-16"  >
                         <h3 className=" opacity-80 tracking-widest  mb-2 " >why kelani</h3>
                         <h1 className=" text-2xl uppercase text-center font-semibold " >Personalized Service for You</h1>
@@ -100,7 +100,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({ data }) 
                     <div className="w-[90%] relative top-0 card-animation-container" >
                         
                         <div style={{ background: `url(${data.data[0].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
-                            className="w-full z-20 left-[200vw] top-[200vh] absolute  h-[calc(100vh-130px)] border-white border rounded-[20px] card-1 ">
+                            className="w-full z-20 left-[200vw] top-[200vh] absolute  h-[calc(100vh-140px)] border-white border rounded-[20px] card-1 ">
                            
                             <div style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
                                 <div className="h-[15%] w-full relative flex  items-center">
@@ -127,7 +127,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({ data }) 
                                         </button>
                                     </div>
                                     <img
-                                        className="max-w-[85%] max-h-[85%] w-[80%] mb-12 object-cover"
+                                        className=" max-h-[85%] w-[85%] md:w-[65%]  mb-12 object-cover"
                                         src={data.data[0].img3}
                                     />
                                 </div>
@@ -135,7 +135,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({ data }) 
                         </div>
 
                         <div style={{background: `url(${data.data[1].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
-                            className="w-full z-30 absolute left-[200vw] top-[calc(200vh+300px)]  h-[calc(100vh-130px)] border-white border card-2 rounded-[20px]  ">
+                            className="w-full z-30 absolute left-[200vw] top-[calc(200vh+300px)]  h-[calc(100vh-140px)] border-white border card-2 rounded-[20px]  ">
                             
                             <div  ref={card2leftSide} style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
                                 <div className="h-[15%] w-full flex  items-center">
@@ -162,7 +162,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({ data }) 
                                         </button>
                                     </div>
                                     <img
-                                        className="max-w-[85%] max-h-[85%] w-[80%]  mb-12 object-cover"
+                                        className=" max-h-[85%] w-[85%] md:w-[65%]  mb-12 object-cover"
                                         src={data.data[0].img3}
                                     />
                                 </div>
@@ -171,7 +171,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({ data }) 
 
 
                         <div style={{ background: `url(${data.data[2].img2})`, transform: 'rotate(180deg)',backgroundSize: 'cover', }}
-                            className="w-full z-40 absolute left-[200vw] top-[calc(200vh+600px)]  h-[calc(100vh-130px)] border-white border card-3 rounded-[20px]  ">
+                            className="w-full z-40 absolute left-[200vw] top-[calc(200vh+600px)]  h-[calc(100vh-140px)] border-white border card-3 rounded-[20px]  ">
 
                             <div style={{ transform: 'rotate(-180deg)'}} className="h-full w-full" >
                                 <div className="text-left h-full pt-[75px] p-3 flex flex-col justify-between items-center ">
@@ -188,7 +188,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({ data }) 
                                         </button>
                                     </div>
                                     <img
-                                        className=" max-w-[85%] max-h-[85%] w-[80%] mb-12 object-cover"
+                                        className=" max-h-[85%] w-[85%] md:w-[65%] mb-12 object-cover"
                                         src={data.data[0].img3}
                                     />
                                 </div>
