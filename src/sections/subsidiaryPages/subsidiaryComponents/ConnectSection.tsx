@@ -7,9 +7,9 @@ const ConnectSection: React.FC<{
   setCtaFormShowing: Dispatch<SetStateAction<boolean>>;
 }> = ({ text }) => {
   return (
-    <div className="h-[700px]  w-full lg:h-screen relative flex flex-col justify-center items-center ">
+    <div className="h-[700px]   w-full lg:h-screen relative flex flex-col justify-center items-center ">
       
-      <div className=" mt-0 w-full  bg-black h-full relative flex justify-center items-center text-white ">
+      <div className=" mt-0 w-full  h-full relative flex justify-center items-center text-white ">
 
         <div className="flex relative z-50 items-center justify-center flex-col h-full w-[90%] lg:w-[35%] text-center ">
           <h1 className=" text-4xl lg:text-5xl uppercase  space-grotesk-medium">
