@@ -121,7 +121,7 @@ interface SubProps {
       };
     }[];
   };
-  connect_text: string;
+  // connect_text: string;
 }
 
 const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
@@ -141,7 +141,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
   };
   const [buttonHovered, setButtonHovered] = useState(false);
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 767);
+    setIsMobile(window.innerWidth <= 1024);
   };
 
   useEffect(() => {
@@ -428,11 +428,11 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
           </div>
 
           {isMobile ? (
-            <div className="relative md:hidden z-40">
+            <div className="relative z-40">
               <ParallexCardsMobile data={sub.parallex_section_mobile} />
             </div>
           ) : (
-            <div className="relative hidden md:block z-40">
+            <div className="relative z-40">
               <ParallexCards data={sub.parallex_section} />
             </div>
           )}
