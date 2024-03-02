@@ -66,12 +66,12 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
             src="/assets/images/home.jpg"
           />
           <div className="flex-col absolute -bottom-[3px] -left-[1px] hidden md:flex">
-            <h1 className="space-grotesk-medium bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] md:px-[24px] pt-[10px] md:pt-[10px] pb-[10px] lg:pb-[4px] relative rounded-br-[20px] sm:rounded-br-none rounded-tr-[20px] md:rounded-br-none lg:rounded-tr-[28px] w-fit overflow">
+            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] md:px-[24px] pt-[10px] md:pt-[10px] pb-[10px] lg:pb-[4px] relative rounded-br-[20px] sm:rounded-br-none rounded-tr-[20px] md:rounded-br-none lg:rounded-tr-[28px] w-fit overflow">
               {/* <TextAnimation
                 lineHeight={getValueFromScreenSize(44, 57, 83)}
                 text="Building Africa’s Future"
               /> */}
-              Building Africa’s Future
+              Building Africa’s Future With
               <img
                 src="/assets/images/curved-fill-tl.svg"
                 className="w-[20px] h-[20px] lg:w-[36px] lg:h-[36px] absolute lg:top-[-35px] top-[-19px] left-[1px]"
@@ -81,12 +81,12 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
                 className="w-[26px] h-[26px] md:w-[36px] md:h-[36px] hidden sm:block absolute right-[-26px] md:right-[-36px] -bottom-[1px]"
               />
             </h1>
-            <h1 className="space-grotesk-medium bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
+            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
               {/* <TextAnimation
                 lineHeight={getValueFromScreenSize(44, 57, 83)}
                 text="With Engineering Excellence"
               /> */}
-              With Engineering Excellence
+              Engineering Excellence
               <span className="hidden lg:block pl-[18px]">
                 {/* <TextAnimation
                   lineHeight={getValueFromScreenSize(44, 57, 83)}
@@ -99,7 +99,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
                 className="w-[20px] h-[20px] md:w-[36px] md:h-[36px] absolute top-0 lg:top-[-36px] lg:left-0 -right-[20px] rotate-90 block sm:hidden"
               />
             </h1>
-            <h1 className="space-grotesk-medium bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] md:px-[24px] pt-[10px] pb-[10px] md:pb-[14px] lg:pt-[20px] lg:pb-[24px] top-[-1px] relative  w-fit block lg:hidden">
+            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] md:px-[24px] pt-[10px] pb-[10px] md:pb-[14px] lg:pt-[20px] lg:pb-[24px] top-[-1px] relative  w-fit block lg:hidden">
               For Growth{" "}
               <img
                 src="/assets/images/curved-fill-tl.svg"
@@ -111,11 +111,11 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
               />
             </h1>
             <div className="bg-[#FEFEFE] px-[24px] pt-[8px] pb-[16px] relative  w-fit bottom-[2px] rounded-tr-[36px] lg:rounded-tr-[0] hidden md:block">
-              <p className="max-w-[400px] md:max-w-[600px] lg:max-w-[700px] text-[17.28px] leading-[26px] w-fit museo-sans font-medium">
-                Step into the world of Kelani, where our mastery in industrials,
-                commitment to nurturing talent, and dedication to sustainable
-                energy converge. Embark on a transformative journey with us as
-                we shape an extraordinary future across the African continent.
+              <p className="max-w-[400px] md:max-w-[600px] lg:max-w-[700px] text-[17.28px] leading-[26px] w-fit museo-sans font-light">
+                At Kelani, industrial expertise, talent development, and a
+                commitment to sustainable energy converge. Join us on a
+                transformative journey shaping an extraordinary future across
+                Africa.
               </p>
               <img
                 src="/assets/images/curved-fill-tl.svg"
@@ -128,7 +128,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
             </div>
           </div>
           <div className="md:hidden flex-col absolute -bottom-[3px] -left-[1px]">
-            <h1 className="space-grotesk-medium bg-[#FEFEFE] text-[32px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[5px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative rounded-tr-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
+            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[32px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[5px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative rounded-tr-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
               Building Africa's
               <img
                 src="/assets/images/curved-fill-tl.svg"
@@ -137,15 +137,14 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
             </h1>
           </div>
         </div>
-        <h1 className="space-grotesk-medium bg-[#FEFEFE] md:hidden text-[32px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[5px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
+        <h1 className="space-grotesk-semibold bg-[#FEFEFE] md:hidden text-[32px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[5px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
           Future With Engineering Excellence For Growth
         </h1>
         {/* <Container className="md:hidden"> */}
-        <p className=" pl-[14px] text-[17.28px] leading-[26px] w-full pt-[10px] md:hidden museo-sans font-medium">
-          Step into the world of Kelani, where our mastery in industrials,
-          commitment to nurturing talent, and dedication to sustainable energy
-          converge. Embark on a transformative journey with us as we shape an
-          extraordinary future across the African continent.
+        <p className=" pl-[14px] text-[17.28px] leading-[26px] w-full pt-[10px] md:hidden museo-sans font-light">
+          At Kelani, industrial expertise, talent development, and a commitment
+          to sustainable energy converge. Join us on a transformative journey
+          shaping an extraordinary future across Africa.
         </p>
 
         {/* </Container> */}

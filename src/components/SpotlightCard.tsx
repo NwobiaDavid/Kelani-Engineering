@@ -15,15 +15,25 @@ const SpotlightCard = ({ image, description, link }: SpotlightCardProps) => {
       onMouseLeave={() => setHovered(false)}
       href={link}
       target="_blank"
-      className="w-full rounded-[9.6px] overflow-hidden border border-[#D2DADF] flex flex-col cursor-pointer relative"
+      className="w-full rounded-[9.6px] overflow-hidden border-[#D2DADF] flex flex-col cursor-pointer relative lg:min-h-[600px]"
     >
-      <figure className="w-full h-[300px] lg:h-[238px]">
+      <figure className="w-full h-full absolute">
         <img src={image} className="w-full h-full object-cover" />
       </figure>
+      <div className="w-full h-full absolute top-0 right-0 left-0 bottom-0 bg-[#E36E1B] bg-opacity-[0.4] px-[48px] flex flex-col justify-end pb-[64px]">
+        <h4 className="space-grotesk-semibold text-[40px] text-white">
+          {description}
+        </h4>
+        {/* <h5 className=" leading-[1.1875] mt-[4px] text-white museo-sans font-medium">
+          Lorem ipsum dolor sit amet consectetur. Risus risus nisl sit malesuada
+          faucibus. Habitant risus tortor sem diam augue sit. Ut metus dictumst
+          bibendum.
+        </h5> */}
+      </div>
       <p className="px-[24px] py-[40px] text-[17.28px] leading-[25.9px] h-[140px]">
         {description}
       </p>
-      <motion.div
+      {/* <motion.div
         animate={{ opacity: hovered ? 1 : 0 }}
         className="w-full h-full absolute top-0 right-0 left-0 bottom-0 bg-opacity-70 bg-black flex text-white items-center justify-center"
       >
@@ -44,7 +54,7 @@ const SpotlightCard = ({ image, description, link }: SpotlightCardProps) => {
             </svg>
           </span>
         </p>
-      </motion.div>
+      </motion.div> */}
     </a>
   );
 };

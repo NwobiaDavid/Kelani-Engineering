@@ -17,15 +17,60 @@ const AboutCompany = () => {
     <motion.section
       ref={container}
       // initial={{ opacity: 0.5, scale: 0.8 }}
-      animate={{
-        opacity: sectionDecimalScroll.get() > 0 ? 1 : 0,
-        scale: sectionDecimalScroll.get() > 0 ? 1 : 0.9,
-        y: sectionDecimalScroll.get() > 0 ? 0 : 50,
-        transition: { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] },
-      }}
-      className="statistics pt-[40px] lg:pt-[96px] page-container relative -z-10"
+      // animate={{
+      //   opacity: sectionDecimalScroll.get() > 0 ? 1 : 0,
+      //   scale: sectionDecimalScroll.get() > 0 ? 1 : 0.9,
+      //   y: sectionDecimalScroll.get() > 0 ? 0 : 50,
+      //   transition: { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] },
+      // }}
+      className="relative -z-10 min-h-[100vh] py-[120px] md:py-[170px] flex items-center"
     >
-      <figure className="overflow-hidden rounded-[10px]">
+      <figure className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0">
+        <motion.img
+          style={{ scale }}
+          src="/assets/images/about-us.jpeg"
+          loading="lazy"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+      </figure>
+      <div className="w-full mx-[39px] md:mx-auto md:max-w-[565px] relative text-white">
+        <h1 className="text-[42px] md:text-[55px] leading-[1.1] md:leading-[1.254] space-grotesk-semibold">
+          We Empower Your World!
+        </h1>
+        <p className="museo-sans font-light mt-[24px] md:mt-[40px] md:text-[23px] leading-[1.1]">
+          Relentlessly pursuing excellence for over 20 years, we strive to
+          develop and enhance African well-being through nurturing and growing
+          indigenous production and providing cutting-edge technological
+          solutions.{" "}
+        </p>
+        <p className="mt-[48px] md:mt-[75px] py-[14px] md:py-[16px] space-grotesk-semibold text-[21px] border-t border-b border-[white]">
+          KELANI at a glance
+        </p>
+        <div>
+          <div className="flex flex-col space-y-[30px] md:space-y-0 md:flex-row  justify-between mt-[26px] w-full">
+            <div className="">
+              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">20+</p>
+              <p className=" museo-sans text-[14px] leading-[1.1]">
+                Years of flawless <br /> delivery
+              </p>
+            </div>
+            <div className="">
+              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">$500+</p>
+              <p className=" museo-sans text-[14px] leading-[1.1]">
+                Million dollars in <br /> machinery
+              </p>
+            </div>
+            <div className="">
+              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">250+</p>
+              <p className=" museo-sans text-[14px] leading-[1.1]">
+                Thrilled client <br /> businesses
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <figure className="overflow-hidden rounded-[10px]">
         <motion.img
           style={{ scale }}
           src="/assets/images/about-us.jpeg"
@@ -73,7 +118,7 @@ const AboutCompany = () => {
             text="250+ Thrilled client businesses"
           />
         </div>
-      </div>
+      </div> */}
     </motion.section>
   );
 };
