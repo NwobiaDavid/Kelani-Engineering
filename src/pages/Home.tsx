@@ -72,7 +72,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
   const engineeringImageScale = useTransform(
     engineeringScrollYProgress,
     [0, 1],
-    [1, 1.4]
+    [1, 1.5]
   );
   const aboutUsY = useTransform(
     engineeringScrollYProgress,
@@ -95,7 +95,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
     [0, powerSpotlightRef?.current?.offsetHeight ?? 0]
   );
   const engineeringOpacity = useTransform(powerScrollYProgress, [0, 1], [1, 0]);
-  const powerImageScale = useTransform(powerScrollYProgress, [0, 1], [1, 1.4]);
+  const powerImageScale = useTransform(powerScrollYProgress, [0, 1], [1, 1.5]);
   const powerY = useTransform(
     consultingScrollYProgress,
     [0, 1],
@@ -108,7 +108,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
   const talentImageScale = useTransform(
     consultingScrollYProgress,
     [0, 1],
-    [1, 1.4]
+    [1, 1.5]
   );
   const { width } = useScreenSize();
   const SlidePrevButton = ({ themeColor }: { themeColor: string }) => {
@@ -182,10 +182,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
         <motion.div style={{ y: aboutUsY }} className="">
           <AboutCompany />
         </motion.div>
-        <motion.div
-          ref={engineeringSpotlightRef}
-          style={{ y: engineeringY }}
-        >
+        <motion.div ref={engineeringSpotlightRef} style={{ y: engineeringY }}>
           <SubsidiaryShowcase
             type="engineering"
             spotlightData={engineeringData as unknown as Record<string, string>}
@@ -233,13 +230,12 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
             With talent and experience, what cannot succeed?"
             sectionImage="/assets/images/consulting-image.png"
             services={[
-              { title: "Inclusive Power Financing to Power Progress" },
-              { title: "Seamless Bulk Energy Trading for Sustainable Power" },
+              { title: "Tailored HRMS Solutions" },
+              { title: "Strategic Outsourcing Solutions" },
               {
-                title:
-                  "Proactive Collections Risk Management  for Seamless Growth",
+                title: "Talent Management Excellence",
               },
-              { title: "Research Excellence in Renewable Energy Innovation" },
+              { title: "Consulting Mastery" },
             ]}
           />
         </div>

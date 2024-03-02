@@ -11,6 +11,7 @@ import NavBar from "../components/NavBar";
 // import TextAnimation from "../components/TextAnimation";
 // import useScreenSize from "../hooks/useScreenSize";
 import useNavStore from "../store/nav";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Hero = ({ lenis }: { lenis: Lenis }) => {
   // const [navShowing, setNavShowing] = useState(false);
@@ -45,9 +46,9 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
       >
         <div className="h-[50vh] md:h-[82vh] relative  rounded-[28px] overflow-hidden">
           <div className="w-full absolute top-0 p-[24px] flex justify-between z-20">
-            <div className=" px-[20px] h-[35px] rounded-full flex items-center justify-center">
+            <div className=" lg:px-[20px] h-[35px] rounded-full flex items-center justify-center">
               <img
-                className=" h-[30px] "
+                className=" h-[50px] "
                 src="/assets/images/kelani-logo.png"
               />
             </div>
@@ -60,11 +61,17 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
               <img src="/assets/images/icon-nav.svg" />
             </motion.div>
           </div>
-          <motion.img
-            style={{ scale }}
-            className="w-full h-full object-cover absolute -top-[2px] right-0 left-0 bottom-0"
-            src="/assets/images/home.jpg"
-          />
+          <figure className="overflow-hidden absolute top-0 right-0 left-0 bottom-0">
+            <motion.div className="h-full w-full" style={{ scale }}>
+              <LazyLoadImage
+                width={"100%"}
+                height={"100%"}
+                effect="blur"
+                wrapperClassName="lazyLoadImageContainer "
+                src={"/assets/images/home.jpg"}
+              />
+            </motion.div>
+          </figure>
           <div className="flex-col absolute -bottom-[3px] -left-[1px] hidden md:flex">
             <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] md:px-[24px] pt-[10px] md:pt-[10px] pb-[10px] lg:pb-[4px] relative rounded-br-[20px] sm:rounded-br-none rounded-tr-[20px] md:rounded-br-none lg:rounded-tr-[28px] w-fit overflow">
               {/* <TextAnimation

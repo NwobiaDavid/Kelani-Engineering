@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import StatisticCard from "../components/StatisticCard";
 import "../styles/about-company.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const AboutCompany = () => {
   const container = useRef(null);
@@ -25,16 +26,19 @@ const AboutCompany = () => {
       // }}
       className="relative -z-10 min-h-[100vh] py-[120px] md:py-[170px] flex items-center"
     >
-      <figure className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0">
-        <motion.img
-          style={{ scale }}
-          src="/assets/images/about-us.jpeg"
-          loading="lazy"
-          alt=""
-          className="w-full h-full object-cover"
-        />
+      <figure className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-10">
+        <motion.div className="h-full w-full z-10" style={{ scale }}>
+          <LazyLoadImage
+            width={"100%"}
+            height={"100%"}
+            effect="blur"
+            wrapperClassName="lazyLoadImageContainer "
+            src={"/assets/images/about-us.jpeg"}
+          />
+        </motion.div>
       </figure>
-      <div className="w-full mx-[39px] md:mx-auto md:max-w-[565px] relative text-white">
+      <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 bg-gray-500"></div>
+      <div className="w-full mx-[39px] md:mx-auto md:max-w-[565px] relative text-white z-20">
         <h1 className="text-[42px] md:text-[55px] leading-[1.1] md:leading-[1.254] space-grotesk-semibold">
           We Empower Your World!
         </h1>
@@ -50,19 +54,25 @@ const AboutCompany = () => {
         <div>
           <div className="flex flex-col space-y-[30px] md:space-y-0 md:flex-row  justify-between mt-[26px] w-full">
             <div className="">
-              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">20+</p>
+              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">
+                20+
+              </p>
               <p className=" museo-sans text-[14px] leading-[1.1]">
                 Years of flawless <br /> delivery
               </p>
             </div>
             <div className="">
-              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">$500+</p>
+              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">
+                $500+
+              </p>
               <p className=" museo-sans text-[14px] leading-[1.1]">
                 Million dollars in <br /> machinery
               </p>
             </div>
             <div className="">
-              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">250+</p>
+              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">
+                250+
+              </p>
               <p className=" museo-sans text-[14px] leading-[1.1]">
                 Thrilled client <br /> businesses
               </p>
