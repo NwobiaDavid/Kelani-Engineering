@@ -121,7 +121,7 @@ interface SubProps {
       };
     }[];
   };
-  connect_text: string;
+  // connect_text: string;
 }
 
 const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
@@ -141,7 +141,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
   };
   const [buttonHovered, setButtonHovered] = useState(false);
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 767);
+    setIsMobile(window.innerWidth <= 1024);
   };
 
   useEffect(() => {
@@ -152,8 +152,8 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
   }, []);
 
   const [lightPosition, setLightPosition] = useState({ top: 0, left: 50 });
-  // const [lightPositions, setLightPositions] = useState({ top: 0, left: 50 });
-  // const [lightPositionx, setLightPositionx] = useState({ top: 0, left: 50 });
+  const [lightPositions, setLightPositions] = useState({ top: 0, left: 50 });
+  const [lightPositionx, setLightPositionx] = useState({ top: 0, left: 50 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -211,7 +211,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
         const offsetX = e.clientX - rect.left;
         const offsetY = e.clientY - rect.top;
 
-        setLightPosition({
+        setLightPositionx({
           top: (offsetY / rect.height) * 100,
           left: (offsetX / rect.width) * 100,
         });
@@ -228,9 +228,11 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isTopNear, setIsTopNear] = useState(false);
   const controls = useAnimation();
+
   const lightControls = useAnimation();
   const lightControlss = useAnimation();
   const lightControlsx = useAnimation();
+
   const [ctaFormShowing, setCtaFormShowing] = useState(false);
 
   useEffect(() => {
@@ -247,6 +249,8 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
     };
   }, []);
 
+
+
   useEffect(() => {
     const handleScrollReset = () => {
       // console.log(scrollPosition)
@@ -260,9 +264,13 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
     };
   }, [scrollPosition]);
 
+
+
+
   useEffect(() => {
     controls.start({ backgroundColor: isTopNear ? "black" : "white" });
   }, [isTopNear, controls]);
+
 
   useEffect(() => {
     lightControls.start({
@@ -272,6 +280,8 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
     });
   }, [lightPosition, lightControls]);
 
+
+
   useEffect(() => {
     lightControlss.start({
       top: `${lightPosition.top}%`,
@@ -280,21 +290,26 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
     });
   }, [lightPosition, lightControlss]);
 
+
+
   useEffect(() => {
     lightControlsx.start({
-      top: `${lightPosition.top}%`,
-      left: `${lightPosition.left}%`,
+      top: `${lightPositionx.top}%`,
+      left: `${lightPositionx.left}%`,
       opacity: [0.2],
     });
-  }, [lightPosition, lightControlsx]);
+  }, [lightPositionx, lightControlsx]);
+
+
 
   return (
     <>
       <motion.div
+        style={{ overflowY: "clip" , overflowX: "clip"}}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.5 } }}
         exit={{ opacity: 0 }}
-        className=" overflow-x-clip overflow-y-clip "
+        className=" "
       >
         <div
           id="hex-grid"
@@ -406,7 +421,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
           </div>
         </div>
 
-        <div id="hex-gridd" className=" relative bg-black">
+        <div id="hex-gridd" className="  relative bg-black">
           <motion.div
             animate={lightControls}
             className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
@@ -425,51 +440,56 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
           </div>
 
           {isMobile ? (
-            <div className="relative md:hidden z-40">
+            <div className="relative z-40">
               <ParallexCardsMobile data={sub.parallex_section_mobile} />
             </div>
           ) : (
-            <div className="relative hidden md:block z-40">
+            <div className="relative z-40">
               <ParallexCards data={sub.parallex_section} />
             </div>
           )}
         </div>
 
-        <div className="relative w-full h-[100dvh] rounded-b-[30px]">
-          <div className="z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
-            <div className="border absolute border-white rounded-full min-w-[680px] w-[680px] min-h-[680px] h-[680px] border-opacity-20  lg:h-[750px] lg:w-[750px] flex items-center justify-center">
-              <div className="border border-white rounded-full min-w-[480px] w-[480px] min-h-[480px] h-[480px] border-opacity-20  lg:h-[520px] lg:w-[520px] flex items-center justify-center">
-                <div className="border border-white rounded-full min-w-[280px]  w-[280px] h-[280px] border-opacity-20 lg:h-[309px] lg:w-[309px] flex items-center justify-center"></div>
-              </div>
-            </div>
-          </div>
 
-          <div id="hex-gridx z-50" className=" relative h-full  ">
-            <div className=" z-10 h-full  relative ">
-              <div className="griddy lg:block hidden z-20 bg-transparent "></div>
+
+        <div className="  overflow-hidden relative ">         
+
+          <div id="hex-gridx" className=" flex flex-col relative h-full   "  >
+
+              <div className=" bg-black relative z-[51] ">
+
+            {/* <div className=" z-10 h-full  relative "> */}
               <motion.div
                 animate={lightControlsx}
                 className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
               ></motion.div>
+              <div className="griddy lg:block hidden z-20 bg-transparent "></div>
 
-              <ConnectSection
-                setCtaFormShowing={setCtaFormShowing}
-                text={sub.connect_text}
-              />
-              {/* <img
-                className="absolute z-50 -bottom-[0px] w-full  "
-                src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg"
-                alt=""
-              /> */}
+
               {/* </div> */}
-              {/* <img className="absolute z-50 -bottom-[0px] w-full  " src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" /> */}
+                      <div className="z-20 h-full  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
+                    <div className="border border-white rounded-full min-w-[680px] w-[680px] min-h-[680px] h-[680px] border-opacity-20  lg:h-[750px] lg:w-[750px] flex items-center justify-center">
+                      <div className="border border-white rounded-full min-w-[480px] w-[480px] min-h-[480px] h-[480px] border-opacity-20  lg:h-[520px] lg:w-[520px] flex items-center justify-center">
+                        <div className="border border-white rounded-full min-w-[280px]  w-[280px] h-[280px] border-opacity-20 lg:h-[309px] lg:w-[309px] flex items-center justify-center">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <ConnectSection text={sub.connect_text} />
+                
             </div>
+            <div className=" relative w-full z-[60] h-[130px]  ">
+        <img className="absolute w-full  object-cover" src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg" alt="" />
+      </div>
           </div>
+
         </div>
 
         {/* </div> */}
 
-        <div className="z-50  ">
+        <div className=" z-50 bg-black relative ">
           <Footer contactUsUrl={sub.contactUsUrl} />
         </div>
 

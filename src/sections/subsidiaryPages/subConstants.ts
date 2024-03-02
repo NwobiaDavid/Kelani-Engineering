@@ -96,11 +96,11 @@ export const sub_one = {
       {
         img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 17.png",
         point1:
-          "Executive Search: Unleash the power of exceptional leadership with our executive search services. We are dedicated to finding the perfect match for your organization's top-level positions, ensuring a seamless and successful recruitment process every step of the way.",
+          "Unlock Exceptional Leadership: Let our executive search services find your organization's perfect match for top-level positions, ensuring a smooth and successful recruitment journey.",
         point2:
-          "Talent Pipeline Development: Fuel your organization's growth with a steady stream of top talent. Our talent pipeline development service is designed to identify and engage with high-potential candidates, creating a robust pool of future leaders ready to take your company to new heights.",
+          "Strengthen Your Talent Pool: Drive organizational growth with our talent pipeline development service. We identify and engage high-potential candidates, creating a robust pool of future leaders poised to elevate your company.",
         point3:
-          "3. Leadership Development Programs: Transform your organization's potential into performance with our bespoke leadership development programs. From personalized coaching to strategic succession planning, we are committed to nurturing and empowering your top talent to drive success and innovation.",
+          "Elevate Leadership Potential: Experience tailored leadership development programs that convert organizational potential into performance. With personalized coaching and strategic succession planning, we empower your top talent to lead with success and innovation.",
         // point4: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -127,9 +127,9 @@ export const sub_one = {
         point2:
           "CAD/CAM Services: Harnessing the power of cutting-edge technology, our CAD/CAM services revolutionize product development and manufacturing processes, empowering businesses to achieve unparalleled efficiency, accuracy, and speed.",
         point3:
-          "Prototyping and Testing Services: At the heart of every great design is rigorous prototyping and testing, where we passionately ensure that concepts come to life flawlessly, delivering products that exceed expectations and set new standards of excellence.",
+          "Innovative Prototyping and Testing: Our services prioritize rigorous prototyping and testing, ensuring flawless execution of concepts to deliver products that surpass expectations and establish new standards of excellence.",
         point4:
-          "Project Management Services: Guiding projects with unwavering dedication and expertise, our project management services are the driving force behind successful outcomes, orchestrating seamless collaboration, meticulous planning, and flawless execution to bring visions to fruition.",
+          "Empowering Project Success: Our project management services lead with unwavering dedication and expertise, driving successful outcomes through seamless collaboration, meticulous planning, and flawless execution to bring visions to life.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
@@ -141,9 +141,9 @@ export const sub_one = {
         point2:
           "Scalable Workforce Solutions: Embrace flexibility like never before with our scalable workforce solutions. Say goodbye to workforce constraints and hello to seamless scalability that adapts to your business needs, ensuring optimal resource utilization and cost efficiency.",
         point3:
-          "Access to Specialized Expertise: Elevate your business with unparalleled expertise and industry insights at your fingertips. Our team of seasoned professionals brings specialized knowledge and innovative solutions to the table, empowering you to achieve cost savings and drive success through strategic collaboration.",
+        "Unlock Specialized Expertise: Propel your business forward with unparalleled industry insights and expertise readily available. Our team of seasoned professionals offers innovative solutions and specialized knowledge, empowering you to drive success and achieve cost savings through strategic collaboration.",
         point4:
-          "Risk Mitigation and Compliance Management: Protect your business from potential pitfalls and compliance challenges with our robust risk mitigation and compliance management services. Entrust us with safeguarding your operations, so you can focus on growth and profitability with peace of mind.",
+          "Safeguard Your Business: Shield your business from risks and compliance hurdles with our comprehensive risk mitigation and compliance management services. Let us handle the complexities, allowing you to prioritize growth and profitability with confidence.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
@@ -626,13 +626,13 @@ export const sub_three = {
       {
         img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/one.png",
         point1:
-          "Energy Procurement Solutions: Empowering your business with tailored energy procurement strategies. Let us secure the best deals, optimize your energy purchasing, and drive cost savings for a brighter, more efficient tomorrow.",
+          "Customized Energy Procurement: Secure optimal deals and drive cost savings for a brighter, more efficient tomorrow.",
         point2:
-          "Renewable Energy Project Development: From vision to reality – we're your partners in crafting sustainable energy solutions. Join us on a journey to develop and manage large-scale renewable projects, paving the way for a greener future.",
+          "Sustainable Energy Solutions: Partner with us to turn vision into reality. Embark on a journey of large-scale renewable project development, shaping a greener future together.",
         point3:
-          "Risk Management and Hedging: Navigate market uncertainties with confidence. Our expert risk management team offers tailored strategies, shielding your energy investments from volatility and ensuring financial resilience.",
+          "Confident Risk Management: Navigate market uncertainties with tailored strategies, ensuring financial resilience for your energy investments.",
         point4:
-          "Energy Efficiency Consultation: Unlock energy savings and environmental impact reductions with our expert guidance. Let's boost your efficiency, cut costs, and drive sustainability through personalized energy efficiency consultations.",
+          "Optimize Energy Efficiency: Reduce costs and environmental impact with personalized energy consultations, enhancing efficiency and promoting sustainability.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
@@ -642,11 +642,11 @@ export const sub_three = {
         point1:
           "Discover hidden opportunities, mitigate risks, and unlock maximum value through strategic portfolio analysis tailored to your financial goals.",
         point2:
-          "Craft Tailored Risk Mitigation Strategies. Our tailored risk mitigation strategies shield your investments from potential losses, paving the way for proactive debt management and optimized financial outcomes.",
+          "Tailored Risk Mitigation: Shield your investments with customized strategies, optimizing financial outcomes through proactive debt management and mitigating potential losses.",
         point3:
-          "Harness Data Analytics and Modeling:  Harnessing advanced analytics and predictive modeling, we revolutionize decision-making processes, transforming raw data into actionable insights for strategic debt management. Unleash the power of data in debt collection!",
+          "Transform Decision-Making: Utilize advanced analytics to unlock actionable insights, revolutionizing debt collection with data-driven strategies.",
         point4:
-          ". Ensure Compliance and Regulatory Support: Stay ahead of the regulatory curve. Our compliance experts provide unwavering support, ensuring your collection practices adhere to legal standards and industry regulations for a sound and compliant debt management approach",
+          "Ensure Compliance: Rely on our experts for unwavering support, ensuring adherence to legal standards and industry regulations, fostering sound debt management.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
@@ -654,13 +654,13 @@ export const sub_three = {
       {
         img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/image 24.png",
         point1:
-          "Technical Feasibility Studies: Empowering informed decisions through meticulous feasibility studies. Explore the technological landscape, budget implications, and potential risks to lay a solid foundation for successful engineering projects.",
+          "Informed Decision-Making: Empower decisions with meticulous feasibility studies, exploring technology, budget, and risks for successful engineering projects.",
         point2:
-          "Product Development and Innovation: Igniting innovation and driving product development to new heights. Collaborate with us to transform ideas into tangible solutions, leveraging cutting-edge engineering methods to pioneer groundbreaking products.",
+          "Innovative Product Development: Collaborate with us to pioneer groundbreaking solutions, transforming ideas into tangible products with cutting-edge engineering methods.",
         point3:
-          "Simulation and Modeling Services: Navigating complexity with precision through advanced simulations. Harness the power of modeling to foresee performance outcomes, optimize systems, and engineer solutions with efficiency and accuracy.",
+          "Precise Simulation and Modeling: Navigate complexity with advanced simulations, optimizing systems and engineering solutions with efficiency and accuracy.",
         point4:
-          "Materials Research and Testing: Delving into the heart of materials for engineering excellence. From property analysis to durability testing, trust our expertise to guide material selection, performance evaluation, and testing processes for optimal engineering outcomes.",
+          "Engineering Excellence in Materials: From property analysis to durability testing, trust our expertise for optimal material selection and performance evaluation, ensuring engineering excellence.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",

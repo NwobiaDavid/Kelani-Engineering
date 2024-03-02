@@ -52,9 +52,9 @@ const FeatureItem = ({ index, item }: { index: number; item: Contents }) => {
     triggerOnce: true,
   });
   return (
-    <div className="w-full flex-col flex justify-center items-center ">
+    <div key={index} className="w-full flex-col flex justify-center items-center ">
       <div
-        key={index}
+        // key={index}
         className="flex py-4 w-full md:w-[270px] mb-10 flex-col justify-center items-center"
       >
         <motion.img
@@ -63,7 +63,7 @@ const FeatureItem = ({ index, item }: { index: number; item: Contents }) => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           src={item.img}
-          className="pb-4 md:p-0 w-[10rem] md:w-[120px] opacity-90 "
+          className="pb-4 md:p-0 w-[10rem] object-cover md:w-[120px] opacity-90 "
           alt={item.head}
         />
         <img src={item.img2} className="w-[100vw] lg:hidden" alt="" />
