@@ -42,7 +42,7 @@ export const sub_one = {
   hero_section: {
     sub_text: "Kelani Consulting and Talent Management",
     main_text: "enhance organizational performance",
-    home_img: "/assets/images/subsidiaryPagesImages/Frame 63.png",
+    home_img: "/assets/images/subsidiaryPagesImages/talent.png",
     color: {
       c700: "#7e22ce",
       c500: "#a855f7",
@@ -141,7 +141,7 @@ export const sub_one = {
         point2:
           "Scalable Workforce Solutions: Embrace flexibility like never before with our scalable workforce solutions. Say goodbye to workforce constraints and hello to seamless scalability that adapts to your business needs, ensuring optimal resource utilization and cost efficiency.",
         point3:
-        "Unlock Specialized Expertise: Propel your business forward with unparalleled industry insights and expertise readily available. Our team of seasoned professionals offers innovative solutions and specialized knowledge, empowering you to drive success and achieve cost savings through strategic collaboration.",
+          "Unlock Specialized Expertise: Propel your business forward with unparalleled industry insights and expertise readily available. Our team of seasoned professionals offers innovative solutions and specialized knowledge, empowering you to drive success and achieve cost savings through strategic collaboration.",
         point4:
           "Safeguard Your Business: Shield your business from risks and compliance hurdles with our comprehensive risk mitigation and compliance management services. Let us handle the complexities, allowing you to prioritize growth and profitability with confidence.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -325,7 +325,7 @@ export const sub_two = {
   hero_section: {
     sub_text: "Kelani Engineering",
     main_text: "transforming industries, shaping the future.",
-    home_img: "/assets/images/subsidiaryPagesImages/Img_Layer (1).png",
+    home_img: "/assets/images/subsidiaryPagesImages/engineering.png",
     color: {
       c700: "#c2410c",
       c500: "#f97316",
@@ -558,8 +558,7 @@ export const sub_three = {
   hero_section: {
     sub_text: "Kelani POWER",
     main_text: "enhance organizational performance ",
-    home_img:
-      "/assets/images/subsidiaryPagesImages/pageThree/Img_Layer (2).png",
+    home_img: "/assets/images/subsidiaryPagesImages/pageThree/power.png",
     color: {
       c700: "#15803d",
       c500: "#22c55e",

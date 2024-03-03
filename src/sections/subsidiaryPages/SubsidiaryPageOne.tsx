@@ -16,6 +16,7 @@ import SlideshowSection2 from "./subsidiaryComponents/SlideshowSection2";
 import WavyText from "./subsidiaryComponents/WavyText";
 import "./subsidiaryPages.css";
 import { Helmet } from "react-helmet";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface Contents {
   img: string;
@@ -317,10 +318,12 @@ const SubsidiaryPageOne: React.FC<{
             <div className="  md:h-screen h-[600px] relative">
               <div className="absolute inset-0 bg-cover bg-center">
                 <div className=" absolute w-full  z-50">
-                  <img
-                    className="w-full h-full opacity-50 object-cover"
+                  <LazyLoadImage
+                    width={"100%"}
+                    height={"100%"}
+                    effect="blur"
+                    wrapperClassName="lazyLoadImageContainer opacity-50"
                     src={sub.hero_section.home_img}
-                    alt="background image"
                   />
                 </div>
               </div>
