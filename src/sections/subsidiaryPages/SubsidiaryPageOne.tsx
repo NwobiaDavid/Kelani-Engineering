@@ -298,11 +298,11 @@ const SubsidiaryPageOne: React.FC<{
         <title>{title}</title>
       </Helmet>
       <motion.div
-        style={{ overflowY: "clip", overflowX: "hidden" }}
+        style={{ overflowY: "clip"}}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.5 } }}
         exit={{ opacity: 0 }}
-        className="  "
+        className=" md:overflow-x-clip overflow-hidden "
       >
         <div
           id="hex-grid"

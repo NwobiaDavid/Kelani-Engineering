@@ -114,7 +114,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                 transform: "rotate(180deg)",
                 backgroundSize: "cover",
               }}
-              className="w-full z-20 left-[200vw] top-[200vh] absolute  h-[calc(100vh-140px)] border-white border rounded-[20px] card-1 "
+              className="w-full overflow-hidden z-20 left-[200vw] top-[200vh] absolute  h-[calc(100vh-140px)] border-white border rounded-[20px] card-1 "
             >
               <div
                 ref={card1leftSide}
@@ -157,7 +157,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                 transform: "rotate(180deg)",
                 backgroundSize: "cover",
               }}
-              className="w-full z-30 absolute left-[200vw] top-[calc(200vh+300px)]  h-[calc(100vh-140px)] border-white border card-2 rounded-[20px]  "
+              className="w-full  overflow-hidden z-30 absolute left-[200vw] top-[calc(200vh+300px)]  h-[calc(100vh-140px)] border-white border card-2 rounded-[20px]  "
             >
               <div
                 ref={card2leftSide}
@@ -200,7 +200,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                 transform: "rotate(180deg)",
                 backgroundSize: "cover",
               }}
-              className="w-full z-40 absolute left-[200vw] top-[calc(200vh+600px)]  h-[calc(100vh-140px)] border-white border card-3 rounded-[20px]  "
+              className="w-full overflow-hidden z-40 absolute left-[200vw] top-[calc(200vh+600px)]  h-[calc(100vh-140px)] border-white border card-3 rounded-[20px]  "
             >
               <div
                 style={{ transform: "rotate(-180deg)" }}
