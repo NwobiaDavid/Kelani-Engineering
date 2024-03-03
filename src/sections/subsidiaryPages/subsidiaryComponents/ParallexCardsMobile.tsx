@@ -101,7 +101,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
       <div className="relative h-[180vh] bg-black  ">
         <div className=" pb-3 h-[100vh] card-animation-container items-center  pt-10 flex-col text-white w-full flex">
           <div className=" w-[70%] text-center mb-16">
-            <h3 className=" opacity-80 tracking-widest  mb-2 ">why kelani</h3>
+            <h3 className=" opacity-80 tracking-widest  mb-2 uppercase">why kelani</h3>
             <h1 className=" text-2xl uppercase text-center font-semibold ">
               Personalized Service for You
             </h1>

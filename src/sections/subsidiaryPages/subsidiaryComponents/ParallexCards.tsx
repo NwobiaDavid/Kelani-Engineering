@@ -50,7 +50,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
         scrub: 1,
         start: "center 270%",
         end: `+=${window.innerHeight * 4}`,
-        markers: true,
+        markers: false,
       },
     });
     timeline.to(".card-1", { x: "-100vw", duration: 800, delay: 1000 });
