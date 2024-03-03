@@ -98,7 +98,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
 
   return (
     <>
-      <div className="relative h-[200vh] bg-black  ">
+      <div className="relative h-[210vh] bg-black  ">
         <div className=" pb-3 h-[100vh] card-animation-container items-center  pt-10 flex-col text-white w-full flex">
           <div className=" w-[70%] text-center mb-16">
             <h3 className=" opacity-80 tracking-widest  mb-2 uppercase">why kelani</h3>
@@ -144,7 +144,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                     </button>
                   </div>
                   <img
-                    className=" max-h-[85%] w-[85%] md:w-[65%]  mb-12 object-cover"
+                    className=" max-h-[85%] w-[85%] md:w-[60%]  mb-12 object-cover"
                     src={data.data[0].img3}
                   />
                 </div>
@@ -187,7 +187,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                     </button>
                   </div>
                   <img
-                    className=" max-h-[85%] w-[85%] md:w-[65%]  mb-12 object-cover"
+                    className=" max-h-[85%] w-[85%] md:w-[60%]  mb-12 object-cover"
                     src={data.data[0].img3}
                   />
                 </div>
