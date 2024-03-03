@@ -44,7 +44,7 @@ const ConnectSection: React.FC<{
             whileTap={"whileTap"}
             className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
           >
-            <Link to={"#"} className="">
+            <Link to={"#"} className="text-black">
               GET CONNECTED{" "}
             </Link>
             <motion.span
