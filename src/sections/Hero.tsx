@@ -61,7 +61,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
               <img src="/assets/images/icon-nav.svg" />
             </motion.div>
           </div>
-          <figure className="overflow-hidden absolute top-0 right-0 left-0 bottom-0">
+          <figure className="overflow-hidden absolute top-0 right-0 left-0 bottom-0 rounded-[20px]">
             <motion.div className="h-full w-full" style={{ scale }}>
               <LazyLoadImage
                 width={"100%"}
