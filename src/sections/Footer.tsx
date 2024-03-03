@@ -93,6 +93,15 @@ const Footer = ({ contactUsUrl }: { contactUsUrl: string }) => {
       <div ref={containerRef} className="h-[100dvh] w-full"></div>
       <div className="sticky top-0 bottom-0 footer">
         <div className="w-full z-[60] h-screen relative p-[15px] md:p-[24px] lg:p-[32px] bg-[#fefefe]">
+          <motion.div
+            animate={{
+              opacity: currentFooterScrollProgress.get() > 0.9 ? 1 : 0,
+              transition: { duration: 0.5 },
+            }}
+            style={{ scale, y }}
+            className="absolute bottom-[15px] md:bottom-[24px] lg:bottom-[32px] h-[40px] bg-gradient-to-b from-[rgba(255,255,255,0)] to-[rgba(255,255,255,1)] z-10 left-[16px] md:left-[24px] lg:left-[32px] rounded-b-[9.6px] right-[16px] md:right-[24px] lg:right-[32px] lg:hidden"
+          ></motion.div>
+
           <motion.img
             animate={{
               opacity: currentFooterScrollProgress.get() > 0 ? 1 : 0,
@@ -255,7 +264,7 @@ const Footer = ({ contactUsUrl }: { contactUsUrl: string }) => {
                     transition: { duration: 0.4 },
                   }}
                   onAnimationComplete={() => setTimeout(() => close(), 2000)}
-                  className="w-full h-full flex items-center justify-center museo-sans flex-col max-w-[60%] text-center mx-auto"
+                  className="w-full h-full min-h-[500px] flex items-center justify-center museo-sans flex-col max-w-[60%] text-center mx-auto"
                 >
                   <p className="text-[26px] font-medium">Thank You!</p>
                   <p className="text-[20px]">

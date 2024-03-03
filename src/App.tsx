@@ -31,15 +31,33 @@ function App() {
           <Route path="/" element={<Home lenis={lenis} />} />
           <Route
             path="/talent"
-            element={<SubsidiaryPageOne lenis={lenis} sub={sub_one} />}
+            element={
+              <SubsidiaryPageOne
+                title="Kelani Talent"
+                lenis={lenis}
+                sub={sub_one}
+              />
+            }
           />
           <Route
             path="/engineering"
-            element={<SubsidiaryPageOne lenis={lenis} sub={sub_two} />}
+            element={
+              <SubsidiaryPageOne
+                title="Kelani Engineering"
+                lenis={lenis}
+                sub={sub_two}
+              />
+            }
           />
           <Route
             path="/power"
-            element={<SubsidiaryPageOne lenis={lenis} sub={sub_three} />}
+            element={
+              <SubsidiaryPageOne
+                title="Kelani Power"
+                lenis={lenis}
+                sub={sub_three}
+              />
+            }
           />
           {/* <Route path="/one" element={<Footer />} /> */}
           {/* <Route path="/parallax" element={<ParallaxCards />} /> */}

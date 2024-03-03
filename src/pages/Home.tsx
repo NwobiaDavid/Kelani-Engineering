@@ -18,6 +18,7 @@ import AboutCompany from "../sections/AboutCompany";
 import Footer from "../sections/Footer";
 import Hero from "../sections/Hero";
 import SubsidiaryShowcase from "../sections/SubsidiaryShowcase";
+import { Helmet } from "react-helmet";
 
 const Home = ({ lenis }: { lenis: Lenis }) => {
   const { y: scrollY } = useScrollPosition();
@@ -101,6 +102,9 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
 
   return (
     <>
+      <Helmet>
+        <title>Kelani</title>
+      </Helmet>
       <motion.main
         exit={{ opacity: 0 }}
         className="bg-[#FEFEFE] shadow-lg z-[2] relative"

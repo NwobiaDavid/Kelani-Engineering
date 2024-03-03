@@ -8,20 +8,20 @@ interface SpotlightCardProps {
 
 const SpotlightCard = ({ image, description, link }: SpotlightCardProps) => {
   const [hovered, setHovered] = useState(false);
-  console.log(hovered)
+  console.log(hovered);
   return (
     <a
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       href={link}
       target="_blank"
-      className="w-full rounded-[9.6px] overflow-hidden border-[#D2DADF] flex flex-col cursor-pointer relative lg:min-h-[600px]"
+      className="w-full rounded-[9.6px] overflow-hidden border-[#D2DADF] flex flex-col cursor-pointer relative h-[60dvh] min-h-[300px] max-h-[600px] lg:min-h-[600px]"
     >
       <figure className="w-full h-full absolute">
         <img src={image} className="w-full h-full object-cover" />
       </figure>
-      <div className="w-full h-full absolute top-0 right-0 left-0 bottom-0 bg-[#E36E1B] bg-opacity-[0.4] px-[48px] flex flex-col justify-end pb-[64px]">
-        <h4 className="space-grotesk-semibold text-[40px] text-white">
+      <div className="w-full h-full absolute top-0 right-0 left-0 bottom-0 bg-[#E36E1B] bg-opacity-[0.4] px-[26px] lg:px-[48px] flex flex-col justify-end pb-[64px]">
+        <h4 className="space-grotesk-semibold text-[26px] md:text-[28px] lg:text-[40px] text-white">
           {description}
         </h4>
         {/* <h5 className=" leading-[1.1875] mt-[4px] text-white museo-sans font-medium">

@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import SpotlightCard from "../components/SpotlightCard";
+import useScreenSize from "../hooks/useScreenSize";
 
 const SlidePrevButton = ({ themeColor }: { themeColor: string }) => {
   const swiper = useSwiper();
@@ -19,13 +20,14 @@ const SlidePrevButton = ({ themeColor }: { themeColor: string }) => {
         scale: 1.1,
         transition: { duration: 0.3 },
       }}
-      whileTap={{ scale: 0.98 }}
+      whileTap={{ scale: 0.96 }}
       style={{ backgroundColor: themeColor }}
-      className="bg-[#E98B49] w-[40px] h-[40px] rounded-full flex items-center justify-center cursor-pointer"
+      className="bg-[#E98B49] w-[30px] h-[30px] md:w-[40px] md:h-[40px] rounded-full flex items-center justify-center cursor-pointer"
     >
       <svg
-        width="24"
-        height="20"
+        // width="24"
+        // height="20"
+        className="md:w-[24px] md:h-[20px] w-[18px] h-[14.4px]"
         viewBox="0 0 24 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -52,11 +54,10 @@ const SlideNextButton = ({ themeColor }: { themeColor: string }) => {
       initial={{ rotateZ: 180 }}
       whileTap={{ scale: 0.98 }}
       style={{ backgroundColor: themeColor }}
-      className=" w-[40px] h-[40px] rounded-full flex items-center justify-center cursor-pointer"
+      className=" w-[30px] h-[30px] md:w-[40px] md:h-[40px] rounded-full flex items-center justify-center cursor-pointer"
     >
       <svg
-        width="24"
-        height="20"
+        className="md:w-[24px] md:h-[20px] w-[18px] h-[14.4px]"
         viewBox="0 0 24 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +128,7 @@ const SubsidiaryShowcase = ({
       }
     }
   }, [containerRef.current]);
-
+  const { width } = useScreenSize();
   const [sectionReadMoreHovered, setSectionReadMoreHovered] = useState(false);
   return (
     <div style={{ backgroundColor: themeColor }}>
@@ -265,7 +266,7 @@ const SubsidiaryShowcase = ({
               </p>
             </div>
           </div> */}
-        <div className="lg:grid lg:grid-cols-1 flex flex-col lg:grid-rows-4 lg:h-[100dvh] text-white text-[28px] lg:text-[36px] space-grotesk-medium leading-[1.25]">
+        <div className="lg:grid lg:grid-cols-1 flex flex-col lg:grid-rows-4 lg:h-[100dvh] text-white text-[24px] lg:text-[36px] space-grotesk-medium leading-[1.25]">
           {services?.map((service, index) => (
             <div
               key={index}
@@ -283,19 +284,19 @@ const SubsidiaryShowcase = ({
           className="relative py-[70px]"
         >
           <Swiper
-            className="static overflow-y-visible px-[2px] flex flex-col-reverse px-[48px]"
-            slidesPerView={window.innerWidth / 600}
+            className="static overflow-y-visible flex flex-col-reverse px-[20px] lg:px-[48px]"
+            slidesPerView={width > 1024 ? 2.5 : 1}
             spaceBetween={23}
           >
             {/* @ts-ignore */}
             <div className="flex justify-between mb-[52px] pt-[12px]">
-              <div className="text-[32px] space-grotesk-medium text-white space-x-[32px] flex">
-                <div>Spotlight</div>
-                <div className="py-[6px] px-[20px]  text-[20px] font-normal bg-[#E98B49] rounded-[12px] leading-[1] flex items-center justify-center">
+              <div className=" space-grotesk-medium text-white space-x-[16px] md:space-x-[32px] flex">
+                <div className="text-[26px] lg:text-[32px]">Spotlight</div>
+                <div className="text-[14px] py-[3px] md:py-[6px] px-[10px] md:px-[20px]  lg:text-[20px] font-normal bg-[#E98B49] rounded-[12px] leading-[0.8] md:leading-[1] flex items-center justify-center">
                   Drag
                 </div>
               </div>
-              <div className="flex space-x-[16px]">
+              <div className="flex space-x-[12px] md:space-x-[16px]">
                 <SlidePrevButton themeColor="#E98B49" />
                 <SlideNextButton themeColor="#E98B49" />
               </div>
