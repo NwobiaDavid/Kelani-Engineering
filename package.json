@@ -37,6 +37,7 @@
     "react-phone-number-input": "^3.3.9",
     "react-router-dom": "^6.21.1",
     "react-scroll-parallax": "^3.4.5",
+    "react-scrollbars-custom": "^4.1.1",
     "scrollmagic": "^2.0.8",
     "swiper": "^11.0.5",
     "tailwind-merge": "^2.2.0",

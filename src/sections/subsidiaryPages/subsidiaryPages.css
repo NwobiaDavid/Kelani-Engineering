@@ -315,9 +315,16 @@ body::-webkit-scrollbar-track {
   width: 8px;
 } */
 
-::-webkit-scrollbar {
-  width: 0px;
+#main::-webkit-scrollbar {
+  display: none;
 }
+/* #modal::-webkit-scrollbar {
+  width: 20px;
+}
+.power::-webkit-scrollbar {
+  width: 20px;
+} */
+
 
 .btn-slider::after {
   content: "";
