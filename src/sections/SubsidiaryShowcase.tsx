@@ -159,10 +159,11 @@ const SubsidiaryShowcase = ({
                 <p className="mt-[36px] lg:mt-[72px] text-[18px] lg:text-[24px] museo-sans font-medium">
                   {description}
                 </p>
-                <div
+                <a
+                  href={`/${type}`}
                   onMouseEnter={() => setSectionReadMoreHovered(true)}
                   onMouseLeave={() => setSectionReadMoreHovered(false)}
-                  className="relative w-fit overflow-hidden mt-[32px] cursor-pointer px-[5px]"
+                  className="relative block w-fit overflow-hidden mt-[32px] cursor-pointer px-[5px]"
                 >
                   <button className="flex py-[8px] pr-[12px] items-center space-x-[10px] border-white relative z-10">
                     <motion.svg
@@ -209,7 +210,7 @@ const SubsidiaryShowcase = ({
                     }}
                     className=" h-full bg-white absolute right-0 -bottom-[calc(100%-1px)] left-0"
                   ></motion.div>
-                </div>
+                </a>
               </div>
             </div>
           </div>

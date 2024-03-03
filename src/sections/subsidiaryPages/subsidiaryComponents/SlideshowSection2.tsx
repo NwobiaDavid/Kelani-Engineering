@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaRegCircle } from "react-icons/fa6";
 import { useInView } from "react-intersection-observer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 interface Contents {
   img: string;
@@ -341,10 +341,11 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
           <div className="w-[65%] flex justify-center lg:justify-between items-center">
             {data.header.map((item, index) => (
               <div
-                className={`${display === index
+                className={`${
+                  display === index
                     ? "h-[90px] font-semibold lg:text-left text-center cursor-pointer opacity-60 tracking-wide w-full ml-3"
                     : "h-[90px] cursor-pointer hidden lg:flex font-semibold opacity-60 tracking-wide w-full ml-3"
-                  }`}
+                }`}
                 key={index}
                 onClick={() => handleHeaderClick(index)}
               >
@@ -357,10 +358,11 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                   initial={{ x: "-100%" }}
                   animate={{ x: display === index ? "0%" : "-100%" }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className={`${display === index
+                  className={`${
+                    display === index
                       ? "w-full relative flex items-center justify-center h-[10%] "
                       : "w-full h-[10%] hidden"
-                    }`}
+                  }`}
                 >
                   <img
                     className=" lg:block hidden  w-full -left-8 absolute "
@@ -402,7 +404,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                 src={data.content[display].img}
                 alt={`Slide ${display + 1}`}
                 effect="blur"
-                style={{opacity: 0.8}}
+                style={{ opacity: 0.8 }}
                 className="rounded-3xl xl:h-[400px] lg:h-[300px]  object-cover xl:w-[650px] lg:w-[550px] border"
               />
               {/* <img
@@ -431,7 +433,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                   .map((point, index) => (
                     <motion.li
                       key={index}
-                      className="w-full flex"
+                      className="w-full flex museo-sans font-normal"
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 10 }}
