@@ -558,7 +558,7 @@ export const sub_three = {
   hero_section: {
     sub_text: "Kelani POWER",
     main_text: "enhance organizational performance ",
-    home_img: "/assets/images/subsidiaryPagesImages/pageThree/power.png",
+    home_img: "/assets/images/subsidiaryPagesImages/power.png",
     color: {
       c700: "#15803d",
       c500: "#22c55e",
