@@ -152,7 +152,6 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
   }, []);
 
   const [lightPosition, setLightPosition] = useState({ top: 0, left: 50 });
-  const [lightPositions, setLightPositions] = useState({ top: 0, left: 50 });
   const [lightPositionx, setLightPositionx] = useState({ top: 0, left: 50 });
 
   useEffect(() => {
@@ -477,7 +476,7 @@ const SubsidiaryPageOne: React.FC<{ sub: SubProps | any; lenis: Lenis }> = ({
                     </div>
                   </div>
 
-                <ConnectSection text={sub.connect_text} />
+                <ConnectSection setCtaFormShowing={setCtaFormShowing} text={sub.connect_text} />
                 
             </div>
             <div className=" relative w-full z-[60] h-[130px]  ">

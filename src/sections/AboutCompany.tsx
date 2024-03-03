@@ -1,8 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import StatisticCard from "../components/StatisticCard";
-import "../styles/about-company.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import "../styles/about-company.css";
 
 const AboutCompany = () => {
   const container = useRef(null);
@@ -11,7 +10,6 @@ const AboutCompany = () => {
     offset: ["start end", "end start"],
   });
 
-  const sectionDecimalScroll = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
 
   return (

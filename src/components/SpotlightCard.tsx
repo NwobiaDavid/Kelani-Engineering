@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
 
 interface SpotlightCardProps {
@@ -9,6 +8,7 @@ interface SpotlightCardProps {
 
 const SpotlightCard = ({ image, description, link }: SpotlightCardProps) => {
   const [hovered, setHovered] = useState(false);
+  console.log(hovered)
   return (
     <a
       onMouseEnter={() => setHovered(true)}

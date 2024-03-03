@@ -1,16 +1,12 @@
-import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
+import { MotionValue, motion } from "framer-motion";
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import Container from "../components/Container";
 import SpotlightCard from "../components/SpotlightCard";
-import TextGroup from "../components/TextGroup";
-import useScreenSize from "../hooks/useScreenSize";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const SlidePrevButton = ({ themeColor }: { themeColor: string }) => {
   const swiper = useSwiper();
@@ -80,37 +76,32 @@ const SubsidiaryShowcase = ({
   title,
   description,
   services,
-  bgImage,
   sectionImage,
   spotlightLoading,
   spotlightData,
 }: {
   type: string;
-  setScrollTops: Dispatch<
+  setScrollTops?: Dispatch<
     SetStateAction<{ industrials: number; power: number; consulting: number }>
   >;
   title: string;
   leftImageScale: MotionValue<number>;
   description: string;
   services: { title: string; paragraphs?: string[] }[];
-  bgImage: string;
   spotlightLoading?: boolean;
   sectionImage: string;
   spotlightData?: Record<string, string>;
 }) => {
-  const { width } = useScreenSize();
   const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-  // const sectionDecimalScroll = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
+  // const { scrollYProgress } = useScroll({
+  //   target: containerRef,
+  //   offset: ["start end", "end start"],
+  // });
   const themeColor =
     type == "engineering" ? "#E36E1B" : type == "power" ? "#069E7D" : "#9446A3";
 
   useEffect(() => {
-    if (containerRef.current) {
+    if (containerRef.current && setScrollTops) {
       switch (type) {
         case "industrials":
           setScrollTops((prev) => ({
@@ -137,9 +128,6 @@ const SubsidiaryShowcase = ({
     }
   }, [containerRef.current]);
 
-  const [subsidiaryImageLinkHovered, setSubsidiaryImageLinkHovered] =
-    useState(false);
-  const navigate = useNavigate();
   const [sectionReadMoreHovered, setSectionReadMoreHovered] = useState(false);
   return (
     <div style={{ backgroundColor: themeColor }}>
@@ -209,13 +197,15 @@ const SubsidiaryShowcase = ({
                   <motion.div
                     animate={{
                       y: sectionReadMoreHovered ? "-99%" : 0,
-                      transition: sectionReadMoreHovered ? {
-                        duration: 0.3,
-                        ease: [0.43, 0.13, 0.23, 0.96],
-                      } : {
-                        duration: 0.1,
-                        ease: [0.43, 0.13, 0.23, 0.96],
-                      },
+                      transition: sectionReadMoreHovered
+                        ? {
+                            duration: 0.3,
+                            ease: [0.43, 0.13, 0.23, 0.96],
+                          }
+                        : {
+                            duration: 0.1,
+                            ease: [0.43, 0.13, 0.23, 0.96],
+                          },
                     }}
                     className=" h-full bg-white absolute right-0 -bottom-[calc(100%-1px)] left-0"
                   ></motion.div>
@@ -285,7 +275,8 @@ const SubsidiaryShowcase = ({
           ))}
         </div>
       </div>
-      {spotlightData?.length > 0 && (
+      {/* @ts-expect-error */}
+      {!spotlightLoading && (spotlightData?.length as number) > 0 && (
         <div
           style={{ backgroundColor: themeColor }}
           className="relative py-[70px]"
@@ -309,6 +300,7 @@ const SubsidiaryShowcase = ({
               </div>
             </div>
             <div className="cursor-grabbing">
+              {/* @ts-expect-error */}
               {spotlightData?.map((item: any, index: number) => (
                 <SwiperSlide>
                   <SpotlightCard
@@ -329,6 +321,11 @@ const SubsidiaryShowcase = ({
                     </div>
                   </div> */}
           </Swiper>
+        </div>
+      )}
+      {spotlightLoading && (
+        <div className="border-t border-[#D2DADF] h-[250px] flex items-center justify-center lg:pr-[56px]">
+          <img src="/assets/images/loader.gif" className="w-[25px]" />
         </div>
       )}
     </div>
