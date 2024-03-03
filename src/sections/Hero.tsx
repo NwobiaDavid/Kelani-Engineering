@@ -135,16 +135,20 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
             </div>
           </div>
           <div className="md:hidden flex-col absolute -bottom-[3px] -left-[1px]">
-            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[32px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[5px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative rounded-tr-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
+            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[29px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[5px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative rounded-tr-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
               Building Africa's
               <img
                 src="/assets/images/curved-fill-tl.svg"
                 className="w-[20px] h-[20px] absolute bottom-0 -right-[20px] "
               />
+              <img
+                src="/assets/images/curved-fill-tl.svg"
+                className="w-[20px] h-[20px] absolute -top-[20px] -left-[0px] "
+              />
             </h1>
           </div>
         </div>
-        <h1 className="space-grotesk-semibold bg-[#FEFEFE] md:hidden text-[32px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[5px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
+        <h1 className="space-grotesk-semibold bg-[#FEFEFE] md:hidden text-[29px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[5px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
           Future With Engineering Excellence For Growth
         </h1>
         {/* <Container className="md:hidden"> */}
