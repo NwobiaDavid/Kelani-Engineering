@@ -134,11 +134,11 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                 </div>
                 <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
                   <div className=" max-h-[15%] flex relative mb-20 flex-col px-2 items-start">
-                    <h2 className="text-4xl top-10 text-white title">
+                    <h2 className=" text-2xl md:text-4xl top-10 text-white title">
                       {data.data[0].content.head}
                     </h2>
                     <p className=" mt-[16px]">{data.data[0].content.text}</p>
-                    <button className="text-white items-center flex gap-[13px] mt-[44px] ">
+                    <button className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px] ">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
                     </button>
@@ -176,18 +176,18 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                   </div>
                 </div>
                 <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
-                  <div className="max-h-[15%] flex flex-col px-2 mb-20 items-start">
-                    <h2 className="text-4xl text-white title">
+                  <div className="  max-h-[15%] flex flex-col px-2 mb-20 items-start">
+                    <h2 className=" text-2xl  md:text-4xl text-white title">
                       {data.data[1].content.head}
                     </h2>
                     <p className="mt-[16px]">{data.data[1].content.text}</p>
-                    <button className="text-white items-center flex gap-[13px] mt-[44px] ">
+                    <button className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px] ">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
                     </button>
                   </div>
                   <img
-                    className=" max-h-[85%] w-[85%] md:w-[60%]  mb-12 object-cover"
+                    className=" max-h-[85%]  w-[85%] md:w-[60%]  mb-12 object-cover"
                     src={data.data[0].img3}
                   />
                 </div>
@@ -208,11 +208,11 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
               >
                 <div className="text-left h-full pt-[75px] p-3 flex flex-col justify-between items-center ">
                   <div className=" max-h-[15%] flex flex-col mb-20 px-2 items-start">
-                    <h2 className="text-4xl text-white title">
+                    <h2 className=" text-2xl md:text-4xl text-white title">
                       {data.data[1].content.head}
                     </h2>
-                    <p className="mt-[16px]">{data.data[1].content.text}</p>
-                    <button className="text-white items-center flex gap-[13px] mt-[44px] ">
+                    <p className="mt-[16px]  ">{data.data[1].content.text}</p>
+                    <button className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px]  ">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
                     </button>
