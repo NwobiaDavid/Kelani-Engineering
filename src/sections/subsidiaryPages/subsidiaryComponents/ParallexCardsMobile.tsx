@@ -144,7 +144,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                     </button>
                   </div>
                   <img
-                    className=" max-h-[85%] w-[85%] md:w-[60%]  mb-12 object-cover"
+                    className=" max-h-[85%] w-[80%] md:w-[60%]   object-cover"
                     src={data.data[0].img3}
                   />
                 </div>
@@ -187,7 +187,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                     </button>
                   </div>
                   <img
-                    className=" max-h-[85%]  w-[85%] md:w-[60%]  mb-12 object-cover"
+                    className=" max-h-[85%]  w-[80%] md:w-[60%]   object-cover"
                     src={data.data[0].img3}
                   />
                 </div>
@@ -218,7 +218,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                     </button>
                   </div>
                   <img
-                    className=" max-h-[85%] w-[85%] md:w-[65%] mb-12 object-cover"
+                    className=" max-h-[85%] w-[85%] md:w-[65%] mb-5 object-cover"
                     src={data.data[0].img3}
                   />
                 </div>
