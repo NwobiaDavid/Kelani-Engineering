@@ -44,7 +44,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
         animate={{ opacity: 1, transition: { duration: 0.8 } }}
         className="pt-[30px] px-[12px] md:px-[24px] lg:px-[32px] max-w-[1440px] mx-auto "
       >
-        <div className="h-[50vh] md:h-[82vh] relative  rounded-[28px] overflow-hidden">
+        <div style={{borderRadius: 28}} className="h-[50vh] md:h-[82vh] relative  rounded-[28px] overflow-hidden">
           <div className="w-full absolute top-0 p-[24px] flex justify-between z-20">
             <div className=" lg:px-[20px] h-[35px] rounded-full flex items-center justify-center">
               <img
@@ -61,8 +61,11 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
               <img src="/assets/images/icon-nav.svg" />
             </motion.div>
           </div>
-          <figure className="overflow-hidden absolute top-0 right-0 left-0 bottom-0 rounded-[20px]">
-            <motion.div className="h-full w-full" style={{ scale }}>
+          <figure style={{borderRadius: 28}} className="overflow-hidden absolute top-0 right-0 left-0 bottom-0 rounded-[20px]">
+            <motion.div
+              className="h-full w-full rounded-[20px] overflow-hidden"
+              style={{ scale }}
+            >
               <LazyLoadImage
                 width={"100%"}
                 height={"100%"}
@@ -73,7 +76,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
             </motion.div>
           </figure>
           <div className="flex-col absolute -bottom-[3px] -left-[1px] hidden md:flex">
-            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] md:px-[24px] pt-[10px] md:pt-[10px] pb-[10px] lg:pb-[4px] relative rounded-br-[20px] sm:rounded-br-none rounded-tr-[20px] md:rounded-br-none lg:rounded-tr-[28px] w-fit overflow">
+            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] md:px-[24px] pt-[10px] md:pt-[10px] pb-[10px] lg:pb-[4px] relative rounded-br-[20px] sm:rounded-br-none rounded-tr-[20px] md:rounded-br-[20px] lg:rounded-br-none lg:rounded-tr-[28px] w-fit overflow">
               {/* <TextAnimation
                 lineHeight={getValueFromScreenSize(44, 57, 83)}
                 text="Building Africa’s Future"
@@ -85,15 +88,19 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
               />
               <img
                 src="/assets/images/curved-fill-tl.svg"
-                className="w-[26px] h-[26px] md:w-[36px] md:h-[36px] hidden sm:block absolute right-[-26px] md:right-[-36px] -bottom-[1px]"
+                className="w-[26px] h-[26px] md:w-[36px] md:h-[36px] absolute right-[-26px] md:right-[-36px] -bottom-[1px] hidden lg:block"
               />
             </h1>
-            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
+            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative lg:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
               {/* <TextAnimation
                 lineHeight={getValueFromScreenSize(44, 57, 83)}
                 text="With Engineering Excellence"
               /> */}
               Engineering Excellence
+              <img
+                src="/assets/images/curved-fill-tl.svg"
+                className="w-[26px] h-[26px] md:w-[36px] md:h-[36px] hidden sm:block absolute right-[-26px] md:right-[-36px] -top-[1px] rotate-90 lg:hidden"
+              />
               <span className="hidden lg:block pl-[18px]">
                 {/* <TextAnimation
                   lineHeight={getValueFromScreenSize(44, 57, 83)}
