@@ -158,8 +158,8 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
             type="talent"
             leftImageScale={talentImageScale}
             title="Kelani Talent"
-            description="Kelani Consulting and Talent Management is a premier engineering and industrial HR and training firm specializing in the manufacturing and engineering sectors. Our mastery entails the entire value chain from raw material extraction to manufacturing and distribution.
-            With talent and experience, what cannot succeed?"
+            description="
+            Kelani Consulting excels in manufacturing and engineering HR, spanning the entire value chain from raw material to distribution, near and far. With our guidance, success knows no limits!"
             sectionImage="/assets/images/consulting-image.png"
             services={[
               { title: "Tailored HRMS Solutions" },
