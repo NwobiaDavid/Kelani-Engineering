@@ -48,14 +48,10 @@ const Navbar: React.FC<{
               />
             )}
             {cta_form == "engineering" && (
-              <EngineeringCtaForm
-                close={() => setCtaFormShowing(false)}
-              />
+              <EngineeringCtaForm close={() => setCtaFormShowing(false)} />
             )}
             {cta_form == "consulting" && (
-              <ConsultingCtaForm
-                close={() => setCtaFormShowing(false)}
-              />
+              <ConsultingCtaForm close={() => setCtaFormShowing(false)} />
             )}
           </>
         )}
@@ -68,12 +64,19 @@ const Navbar: React.FC<{
         className="bg-transparent pt-5 lg:pt-10 p-4 z-30"
       >
         <div className="lg:container z-[60] opacity-100 relative lg:mx-auto flex justify-between items-center">
-          <div
-            style={{ backgroundColor: color.c400 }}
-            className={`bg-${color}-400  py-1 px-2 rounded-full`}
+          <motion.a
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 0.7, delay: 1.4 },
+            }}
+            href="/"
           >
-            <h1 className="text-xl text-transparent font-bold">Logo</h1>
-          </div>
+            <img
+              src="/assets/images/kelani-logo-white.png"
+              className="h-[35px] lg:h-[55px]"
+            />
+          </motion.a>
 
           <div className="flex items-center">
             <motion.div
@@ -98,7 +101,7 @@ const Navbar: React.FC<{
                 GET CONNECTED{" "}
               </Link>
               <motion.span
-                className=""
+                className="sm:block hidden"
                 animate={
                   buttonHovered ? { x: 10, transition: { duration: 0.3 } } : {}
                 }
