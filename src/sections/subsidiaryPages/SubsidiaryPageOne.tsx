@@ -469,12 +469,18 @@ const SubsidiaryPageOne: React.FC<{
                 text={sub.connect_text}
               />
             </div>
-            <div className=" relative w-full z-[60] h-[130px]  ">
+
+            <div className=" relative flex flex-col w-full z-[60] h-[130px]  ">
+              <div className="h-[70%] bg-black "> </div>
+
+              <div className="h-[30%] relative ">
+
               <img
-                className="absolute w-full  object-cover"
+                className=" object-cover absolute w-full h-[22%]  z-[90000] "
                 src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg"
                 alt=""
               />
+              </div>
             </div>
           </div>
         </div>
