@@ -298,7 +298,7 @@ const SubsidiaryPageOne: React.FC<{
         <title>{title}</title>
       </Helmet>
       <motion.div
-        style={{ overflowY: "clip"}}
+        style={{ overflowY: "clip" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.5 } }}
         exit={{ opacity: 0 }}
@@ -447,7 +447,7 @@ const SubsidiaryPageOne: React.FC<{
 
         <div className="  overflow-hidden relative ">
           <div id="hex-gridx" className=" flex flex-col relative h-full   ">
-            <div className=" bg-black relative z-[51] ">
+            <div className=" bg-black relative z-[50] ">
               {/* <div className=" z-10 h-full  relative "> */}
               <motion.div
                 animate={lightControlsx}
@@ -470,24 +470,32 @@ const SubsidiaryPageOne: React.FC<{
               />
             </div>
 
-            <div className=" relative flex flex-col w-full z-[60] h-[130px]  ">
+            {/* <div className=" relative flex flex-col w-full z-[60] min-h-[130px] h-[130px]  ">
               <div className="h-[70%] bg-black "> </div>
 
               <div className="h-[30%] relative ">
+                <img
+                  className=" object-cover absolute w-full h-[22%]  z-[90000] "
+                  src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg"
+                  alt=""
+                />
+              </div>
+            </div> */}
 
+            <div className=" h-[100px] relative ">
               <img
-                className=" object-cover absolute w-full h-[22%]  z-[90000] "
+                className=" object-cover absolute w-full  z-[90000] "
                 src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg"
                 alt=""
               />
-              </div>
             </div>
+
           </div>
         </div>
 
         {/* </div> */}
 
-        <div className=" z-50 bg-black relative ">
+        <div className=" z-[49]   relative ">
           <Footer contactUsUrl={sub.contactUsUrl} />
         </div>
 

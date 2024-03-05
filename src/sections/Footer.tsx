@@ -46,6 +46,7 @@ const Footer = ({ contactUsUrl }: { contactUsUrl: string }) => {
   });
 
   const containerRef = useRef(null);
+  
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
@@ -89,9 +90,11 @@ const Footer = ({ contactUsUrl }: { contactUsUrl: string }) => {
     }
   };
   return (
-    <div className="-mt-[90dvh]">
-      <div ref={containerRef} className=" h-[100dvh] w-full"></div>
-      <div className="sticky top-0 bottom-0 footer">
+    <div className=" -mt-[90dvh]">
+
+      <div ref={containerRef} className=" h-[79.2dvh] md:h-[100dvh] w-full"></div>
+
+      <div className="sticky  top-0 bottom-0 footer">
         <div className="w-full z-[60] h-screen relative p-[15px] md:p-[24px] lg:p-[32px] bg-[#fefefe]">
           <motion.div
             animate={{

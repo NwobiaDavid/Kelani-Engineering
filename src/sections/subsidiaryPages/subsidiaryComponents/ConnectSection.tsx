@@ -54,7 +54,7 @@ const ConnectSection: React.FC<{
               }
               whileHover={"whileHover"}
             >
-              <IoIosArrowRoundForward size={30} />
+              <IoIosArrowRoundForward className={"text-black"} size={30} />
             </motion.span>
           </motion.div>
         </div>
