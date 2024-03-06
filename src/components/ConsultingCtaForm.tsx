@@ -120,7 +120,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
               className=" px-[20px] py-[20px] md:px-[36px] md:py-[36px] lg:p-[56px] "
             >
               <header className="text-[32px] space-grotesk-semibold pb-[56px] border-b-zinc-500 border-b border-opacity-50 flex justify-between items-center">
-                Kelani Consulting CTA
+              Empower Your Team with Kelani Talent
                 <motion.svg
                   className={"cursor-pointer focus:outline-none"}
                   whileHover={{ scale: 1.07 }}
@@ -138,7 +138,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
               <div className="grid grid-cols-2 gap-[40px]  mt-[56px]">
                 <section className="space-y-[56px]">
                   <div>
-                    <p className="lg:grid grid-cols-2 gap-[40px] flex flex-col  mt-[56px]">
+                    <p className="text-[18px] space-grotesk-semibold mb-[32px]">
                       Personal Information
                     </p>
                     <div className="flex flex-col space-y-[20px]">
@@ -404,7 +404,9 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                             <option value="10 - 19 employees">
                               10 - 19 employees
                             </option>
-                            <option value="20 - 49 employees">20 - 49 employees</option>
+                            <option value="20 - 49 employees">
+                              20 - 49 employees
+                            </option>
                             <option value="50 - 249 employees">50 - 249</option>
                             <option value="250+ employees">250+</option>
                           </select>

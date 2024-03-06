@@ -41,7 +41,7 @@ export const sub_one = {
   ],
   hero_section: {
     sub_text: "Kelani Consulting and Talent Management",
-    main_text: "enhance organizational performance",
+    main_text: "DRIVING SUCCESS with talent and experience",
     home_img: "/assets/images/subsidiaryPagesImages/talent.png",
     color: {
       c700: "#7e22ce",

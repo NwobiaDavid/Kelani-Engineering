@@ -33,6 +33,7 @@ function App() {
             path="/talent"
             element={
               <SubsidiaryPageOne
+                cta_form="consulting"
                 title="Kelani Talent"
                 lenis={lenis}
                 sub={sub_one}
@@ -43,6 +44,7 @@ function App() {
             path="/engineering"
             element={
               <SubsidiaryPageOne
+                cta_form="engineering"
                 title="Kelani Engineering"
                 lenis={lenis}
                 sub={sub_two}
@@ -53,6 +55,7 @@ function App() {
             path="/power"
             element={
               <SubsidiaryPageOne
+                cta_form="power"
                 title="Kelani Power"
                 lenis={lenis}
                 sub={sub_three}

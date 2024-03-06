@@ -130,7 +130,8 @@ const SubsidiaryPageOne: React.FC<{
   sub: SubProps | any;
   lenis: Lenis;
   title: string;
-}> = ({ sub, lenis, title }) => {
+  cta_form: string;
+}> = ({ sub, lenis, title, cta_form }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
   const ctaButtonVariant = {
     whileHover: {
@@ -339,7 +340,7 @@ const SubsidiaryPageOne: React.FC<{
                   lenis={lenis}
                   ctaFormShowing={ctaFormShowing}
                   setCtaFormShowing={setCtaFormShowing}
-                  cta_form="power"
+                  cta_form={cta_form}
                   color={sub.hero_section.color}
                 />
 

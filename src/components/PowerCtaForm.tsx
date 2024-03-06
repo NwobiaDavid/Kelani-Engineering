@@ -142,7 +142,7 @@ const SubsidiaryCtaForm = ({
               className=" px-[20px] py-[20px] md:px-[36px] md:py-[36px] lg:p-[56px] "
             >
               <header className="text-[32px] space-grotesk-semibold pb-[56px] border-b-zinc-500 border-b border-opacity-50 flex justify-between items-center">
-                Kelani Power CTA
+              Power Your Success With Kelani Power
                 <motion.svg
                   className={"cursor-pointer focus:outline-none"}
                   whileHover={{ scale: 1.07 }}

@@ -113,7 +113,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
               className=" p-[56px] "
             >
               <header className="text-[32px] space-grotesk-semibold pb-[56px] border-b-zinc-500 border-b border-opacity-50">
-                Kelani Engineering CTA
+                Transform Your Industrial Vision With Kelani Engineering
               </header>
               <div className="grid grid-cols-2 gap-[40px]  mt-[56px]">
                 <section className="space-y-[56px]">
