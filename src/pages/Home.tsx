@@ -113,6 +113,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
         <motion.div style={{ y: aboutUsY }} className="">
           <AboutCompany />
         </motion.div>
+        
         <motion.div ref={engineeringSpotlightRef} style={{ y: engineeringY }}>
           <SubsidiaryShowcase
             spotlightLoading={engineeringLoading}

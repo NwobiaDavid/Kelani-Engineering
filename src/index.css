@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
  
+
+/* ::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+} */
+
+/* #modal::-webkit-scrollbar{
+  display: block !important;
+  width: 30px;
+} */
+
+/* ::-webkit-scrollbar-thumb {
+  background: #242424;
+} */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -74,3 +89,5 @@
     @apply bg-background text-foreground;
   }
 }
+
+

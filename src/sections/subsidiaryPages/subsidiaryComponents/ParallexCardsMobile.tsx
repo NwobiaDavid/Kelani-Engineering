@@ -62,7 +62,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
       scrollTrigger: {
         trigger: ".card-animation-container",
         scrub: 1,
-        start: "top 65%",
+        start: "top 50%",
         end: "+=1000",
         // markers: true,
       },
@@ -98,7 +98,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
 
   return (
     <>
-      <div className="relative h-[180vh] bg-black  ">
+      <div className="relative h-[210vh] bg-black  ">
         <div className=" pb-3 h-[100vh] card-animation-container items-center  pt-10 flex-col text-white w-full flex">
           <div className=" w-[70%] text-center mb-16">
             <h3 className=" opacity-80 tracking-widest  mb-2 uppercase">why kelani</h3>
@@ -114,7 +114,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                 transform: "rotate(180deg)",
                 backgroundSize: "cover",
               }}
-              className="w-full z-20 left-[200vw] top-[200vh] absolute  h-[calc(100vh-140px)] border-white border rounded-[20px] card-1 "
+              className="w-full overflow-hidden z-20 left-[200vw] top-[200vh] absolute  h-[calc(100vh-140px)] border-white border rounded-[20px] card-1 "
             >
               <div
                 ref={card1leftSide}
@@ -134,17 +134,17 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                 </div>
                 <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
                   <div className=" max-h-[15%] flex relative mb-20 flex-col px-2 items-start">
-                    <h2 className="text-4xl top-10 text-white title">
+                    <h2 className=" text-2xl md:text-4xl top-10 text-white title">
                       {data.data[0].content.head}
                     </h2>
                     <p className=" mt-[16px]">{data.data[0].content.text}</p>
-                    <button className="text-white items-center flex gap-[13px] mt-[44px] ">
+                    <button className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px] ">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
                     </button>
                   </div>
                   <img
-                    className=" max-h-[85%] w-[85%] md:w-[65%]  mb-12 object-cover"
+                    className=" w-[80%] md:w-[60%]   object-cover"
                     src={data.data[0].img3}
                   />
                 </div>
@@ -157,7 +157,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                 transform: "rotate(180deg)",
                 backgroundSize: "cover",
               }}
-              className="w-full z-30 absolute left-[200vw] top-[calc(200vh+300px)]  h-[calc(100vh-140px)] border-white border card-2 rounded-[20px]  "
+              className="w-full  overflow-hidden z-30 absolute left-[200vw] top-[calc(200vh+300px)]  h-[calc(100vh-140px)] border-white border card-2 rounded-[20px]  "
             >
               <div
                 ref={card2leftSide}
@@ -176,18 +176,18 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                   </div>
                 </div>
                 <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
-                  <div className="max-h-[15%] flex flex-col px-2 mb-20 items-start">
-                    <h2 className="text-4xl text-white title">
+                  <div className="  max-h-[15%] flex flex-col px-2 mb-20 items-start">
+                    <h2 className=" text-2xl  md:text-4xl text-white title">
                       {data.data[1].content.head}
                     </h2>
                     <p className="mt-[16px]">{data.data[1].content.text}</p>
-                    <button className="text-white items-center flex gap-[13px] mt-[44px] ">
+                    <button className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px] ">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
                     </button>
                   </div>
                   <img
-                    className=" max-h-[85%] w-[85%] md:w-[65%]  mb-12 object-cover"
+                    className="  w-[80%] md:w-[60%]   object-cover"
                     src={data.data[0].img3}
                   />
                 </div>
@@ -200,7 +200,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                 transform: "rotate(180deg)",
                 backgroundSize: "cover",
               }}
-              className="w-full z-40 absolute left-[200vw] top-[calc(200vh+600px)]  h-[calc(100vh-140px)] border-white border card-3 rounded-[20px]  "
+              className="w-full overflow-hidden z-40 absolute left-[200vw] top-[calc(200vh+600px)]  h-[calc(100vh-140px)] border-white border card-3 rounded-[20px]  "
             >
               <div
                 style={{ transform: "rotate(-180deg)" }}
@@ -208,17 +208,17 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
               >
                 <div className="text-left h-full pt-[75px] p-3 flex flex-col justify-between items-center ">
                   <div className=" max-h-[15%] flex flex-col mb-20 px-2 items-start">
-                    <h2 className="text-4xl text-white title">
+                    <h2 className=" text-2xl md:text-4xl text-white title">
                       {data.data[1].content.head}
                     </h2>
-                    <p className="mt-[16px]">{data.data[1].content.text}</p>
-                    <button className="text-white items-center flex gap-[13px] mt-[44px] ">
+                    <p className="mt-[16px]  ">{data.data[1].content.text}</p>
+                    <button className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px]  ">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
                     </button>
                   </div>
                   <img
-                    className=" max-h-[85%] w-[85%] md:w-[65%] mb-12 object-cover"
+                    className="  w-[85%] md:w-[65%] mb-5 object-cover"
                     src={data.data[0].img3}
                   />
                 </div>

@@ -226,22 +226,21 @@
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: #333333 #ffffff;
-}
+} */
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
-  height: 600px;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: #333333;
   border-radius: 10px;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background-color: #ffffff;
   border-radius: 10px;
-} */
+}
 
 /* .hover-grid {
   position: absolute;
@@ -315,9 +314,16 @@ body::-webkit-scrollbar-track {
   width: 8px;
 } */
 
-::-webkit-scrollbar {
-  width: 0px;
+#main::-webkit-scrollbar {
+  display: none;
 }
+/* #modal::-webkit-scrollbar {
+  width: 20px;
+}
+.power::-webkit-scrollbar {
+  width: 20px;
+} */
+
 
 .btn-slider::after {
   content: "";
