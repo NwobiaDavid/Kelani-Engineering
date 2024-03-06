@@ -46,7 +46,7 @@ const Footer = ({ contactUsUrl }: { contactUsUrl: string }) => {
   });
 
   const containerRef = useRef(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
@@ -91,8 +91,10 @@ const Footer = ({ contactUsUrl }: { contactUsUrl: string }) => {
   };
   return (
     <div className=" -mt-[90dvh]">
-
-      <div ref={containerRef} className=" h-[79.2dvh] md:h-[100dvh] w-full"></div>
+      <div
+        ref={containerRef}
+        className=" h-[79.2dvh] md:h-[100dvh] w-full"
+      ></div>
 
       <div className="sticky  top-0 bottom-0 footer">
         <div className="w-full z-[60] h-screen relative p-[15px] md:p-[24px] lg:p-[32px] bg-[#fefefe]">
@@ -130,7 +132,8 @@ const Footer = ({ contactUsUrl }: { contactUsUrl: string }) => {
                 <p>Asaba, Delta State</p>
               </div>
               <div className="p-[24px] bg-[#F7F7F7] w-full rounded-[8px] text-center text-[18.12px] space-grotesk-medium text-[#525251] leading-[1.5]">
-                <p>Isheri North GRA, Opic Estates,</p>
+                <p>Suite A8, 9 Sarah’s Place,</p>
+                <p> Channels TV Avenue, Opic Isheri,</p>
                 <p>Lagos-Ibadan Expressway,</p>
                 <p>Lagos State.</p>
               </div>

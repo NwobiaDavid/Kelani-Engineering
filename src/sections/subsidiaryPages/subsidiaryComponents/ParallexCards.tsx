@@ -209,7 +209,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                         <p className="mt-[16px]  pl-[5%] museo-sans text-[12px] xl:text-[13px] mdxl:text-[16px] font-normal subtext">
                           {data.data[0].content.text}
                         </p>
-                        <div className="pl-[5%] mt-[15px]">
+                        <div className="pl-[5%] mt-[15px] subtext">
                           <a
                             className="btn-seconday relative overflow-hidden"
                             href="#"
@@ -286,7 +286,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                         <p className="mt-[16px] pl-[5%] museo-sans text-[12px] xl:text-[13px] mdxl:text-[16px] font-normal subtext">
                           {data.data[1].content.text}
                         </p>
-                        <div className="pl-[5%] mt-[15px]">
+                        <div className="pl-[5%] mt-[15px] subtext">
                           <a
                             className="btn-seconday relative overflow-hidden"
                             href="#"

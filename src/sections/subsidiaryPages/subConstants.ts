@@ -217,7 +217,7 @@ export const sub_one = {
         img3: "/assets/images/icon-talent-card-1.svg",
         content: {
           head: "Ignite Success, Unleash Potential:",
-          text: "Release the hidden potential of your enterprise and soar to new heights with our revolutionary Talent Acquisition service. Embark on a journey to unlock boundless expertise!",
+          text: "Unlock your enterprise potential with our Talent Acquisition service. Soar to new heights!",
         },
         colors: {
           one: "#E9B8FF",
@@ -260,7 +260,7 @@ export const sub_one = {
         img3: "/assets/images/icon-talent-card-1.svg",
         content: {
           head: "Ignite Success, Unleash Potential:",
-          text: "Release the hidden potential of your enterprise and soar to new heights with our revolutionary Talent Acquisition service. Embark on a journey to unlock boundless expertise!",
+          text: "Unlock your enterprise potential with our Talent Acquisition service. Soar to new heights!",
         },
         colors: {
           one: "#E9B8FF",
