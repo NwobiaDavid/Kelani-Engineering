@@ -10,8 +10,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import axios from "axios";
 import Lenis from "@studio-freight/lenis/types";
-// import { Scrollbar } from 'react-scrollbars-custom';
-
 
 const schema = z.object({
   name: z.string().nonempty({ message: "Name is required" }),
@@ -55,7 +53,7 @@ const SubsidiaryCtaForm = ({
   const ref = useRef(null);
   useEffect(() => {}, [ref]);
   useEffect(() => {
-    console.log(lenis);
+    // console.log(lenis);
     lenis.stop();
   }, []);
 
@@ -107,14 +105,14 @@ const SubsidiaryCtaForm = ({
         animate={{ opacity: 0.7 }}
         exit={{ opacity: 0, transition: { duration: 0.2 } }}
         transition={{ duration: 0.35 }}
-        className="fixed top-0 right-0 left-0 bottom-0 bg-black z-[80] cursor-pointer"
+        className="fixed w-full h-full top-0 right-0 left-0 bottom-0 bg-black z-[80]  cursor-pointer"
       ></motion.div>
       <motion.div
         initial={{ opacity: 0.7, x: "80dvw" }}
         transition={{ duration: 0.35 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: "80dvw", transition: { duration: 0.2 } }}
-        className="power w-[100dvw] lg:w-[80dvw] max-h-screen bg-white z-[90] fixed top-0 right-0 bottom-0 p-[10px] overflow-y-scroll"
+        className="power w-[100dvw] lg:w-[80dvw] h-[100dvh] fixed overflow-y-auto bg-white z-[90]  top-0 right-0 bottom-0 p-[10px]  "
       >
         <AnimatePresence>
           {thankYouMessageShowing && (

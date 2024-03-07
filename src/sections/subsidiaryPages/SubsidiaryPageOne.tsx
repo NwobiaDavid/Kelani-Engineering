@@ -485,7 +485,7 @@ const SubsidiaryPageOne: React.FC<{
 
             <div className=" h-[100px] relative ">
               <img
-                className=" object-cover absolute w-full  z-[90000] "
+                className=" object-cover absolute w-full  z-[60] "
                 src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg"
                 alt=""
               />

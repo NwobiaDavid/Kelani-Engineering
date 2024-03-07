@@ -1,45 +1,73 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-// import React, { useEffect, useRef } from "react";
-// import { motion } from "framer-motion";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { Link } from "react-router-dom";
-// gsap.registerPlugin(ScrollTrigger);
+import { IoIosArrowRoundForward } from "react-icons/io";
+import {AnimatePresence, motion} from "framer-motion"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import PowerCtaForm from "../../../components/PowerCtaForm";
+import Lenis from "@studio-freight/lenis";
+
 
 
 export const One: React.FC  = () => {
 
-  // const animated = useRef(null);
+  const [buttonHovered, setButtonHovered] = useState(false);
+  const [ctaFormShowing, setCtaFormShowing] = useState(false);
 
-  // const animateCardsIn = () => {
-  //   const timeline = gsap.timeline({
-  //       scrollTrigger: {
-  //           trigger: ".card-animation-container",
-  //           scrub: 1,
-  //           start: "20% 40%",
-  //           end: "+=1600",
-  //           markers: true,
-  //       },
-  //   });
-  //   timeline.to(".card-1", { y: 0, duration: 3 });
-  //   timeline.to(".card-2", { y: "-100vh", duration: 100, delay: 130  });
-  //   timeline.to(".card-3", { y: "-100vh", duration: 100, delay: 130  });
-  // };
+  const ctaButtonVariant = {
+    whileHover: {
+      scale: 1.05,
+      transition: { duration: 0.3 },
+    },
+    whileTap: {
+      scale: 0.98,
+      transition: { duration: 0.15 },
+    },
+  };
 
-  // useEffect(() => {
-  //     animateCardsIn();
-  // }, [animated]);
-
+  const lenis = new Lenis();
+  
   return (
 
-    <> 
-    {/* <div ref={animated} className="relative h-[400vh] ">
-      <div className="card-animation-container bg-black sticky h-[200vh] top-[10%] " >
-          <div className="card-1 absolute top-[0] bg-orange-100 h-[400px] w-[400px]  " > </div>
-          <div className="card-2 absolute top-[calc(100vh+150px)]  bg-green-400 h-[400px] w-[400px] " > </div>
-          <div className="card-3 absolute top-[calc(100vh+300px)] bg-red-400 h-[400px] w-[400px] " > </div>
-      </div>
-    </div> */}
+    <>
+    <AnimatePresence>
+        {ctaFormShowing && (
+           <PowerCtaForm
+           lenis={lenis}
+           close={() => setCtaFormShowing(false)}
+         />
+        )}
+      </AnimatePresence>
+
+   <motion.div
+            onClick={() => setCtaFormShowing(true)}
+            variants={ctaButtonVariant}
+            onMouseEnter={() => {
+              setButtonHovered(true);
+            }}
+            onMouseLeave={() => {
+              setButtonHovered(false);
+            }}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 0.7, delay: 1.4 },
+            }}
+            whileHover="whileHover"
+            whileTap={"whileTap"}
+            className=" cursor-pointer py-2 w-fit border flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
+          >
+            <Link to={"#"} className="text-black">
+              GET CONNECTED{" "}
+            </Link>
+            <motion.span
+              className="sm:block hidden"
+              animate={
+                buttonHovered ? { x: 10, transition: { duration: 0.3 } } : {}
+              }
+              whileHover={"whileHover"}
+            >
+              <IoIosArrowRoundForward className={"text-black"} size={30} />
+            </motion.span>
+          </motion.div>
     </>
 
   )
