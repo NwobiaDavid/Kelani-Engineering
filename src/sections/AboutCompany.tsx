@@ -40,14 +40,14 @@ const AboutCompany = () => {
         <h1 className="text-[42px] md:text-[55px] leading-[1.1] md:leading-[1.254] space-grotesk-semibold">
           We Empower Your World!
         </h1>
-        <p className="museo-sans font-light mt-[24px] md:mt-[40px] md:text-[23px] leading-[1.1]">
+        <p className="museo-sans  mt-[24px] md:mt-[40px] md:text-[23px] leading-[1.1]">
           Relentlessly pursuing excellence for over 20 years, we strive to
           develop and enhance African well-being through nurturing and growing
           indigenous production and providing cutting-edge technological
           solutions.{" "}
         </p>
         <p className="mt-[48px] md:mt-[75px] py-[14px] md:py-[16px] space-grotesk-semibold text-[21px] border-t border-b border-[white]">
-          KELANI at a glance
+          Kelani at a glance
         </p>
         <div>
           <div className="flex flex-col space-y-[30px] md:space-y-0 md:flex-row  justify-between mt-[26px] w-full">

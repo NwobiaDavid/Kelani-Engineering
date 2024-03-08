@@ -71,7 +71,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
   const engineeringImageScale = useTransform(
     engineeringScrollYProgress,
     [0, 1],
-    [1, 1.5]
+    [1, 1.7]
   );
   const aboutUsY = useTransform(
     engineeringScrollYProgress,
@@ -84,7 +84,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
     [0, 1],
     [0, powerSpotlightRef?.current?.offsetHeight ?? 0]
   );
-  const powerImageScale = useTransform(powerScrollYProgress, [0, 1], [1, 1.5]);
+  const powerImageScale = useTransform(powerScrollYProgress, [0, 1], [1, 1.7]);
   const powerY = useTransform(
     consultingScrollYProgress,
     [0, 1],
@@ -96,7 +96,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
   const talentImageScale = useTransform(
     consultingScrollYProgress,
     [0, 1],
-    [1, 1.5]
+    [1, 1.7]
   );
   // const { width } = useScreenSize();
 
@@ -113,26 +113,44 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
         <motion.div style={{ y: aboutUsY }} className="">
           <AboutCompany />
         </motion.div>
-        
+
         <motion.div ref={engineeringSpotlightRef} style={{ y: engineeringY }}>
           <SubsidiaryShowcase
             spotlightLoading={engineeringLoading}
             type="engineering"
             spotlightData={engineeringData as unknown as Record<string, string>}
             leftImageScale={engineeringImageScale}
-            title="Kelani Engineering"
+            title="Engineering"
             description="Kelani Engineering procures, facilitates and installs
             state-of-the-art machinery solutions for optimal
             performance to propel your productivity to new heights.
             Let’s engineer your path to success."
             sectionImage="/assets/images/engineering-section-image.png"
             services={[
-              { title: "Sustainable Plastic Transformation" },
-              { title: "Machinery & Expert Advisory Service" },
+              {
+                title: "Cutting-Edge Machinery & Expert Advisory Services",
+                paragraphs: [
+                  "Specializing in high-end machinery and tools procurement, we deliver not just products but an unparalleled advisory experience. Our accessibility matches our efficiency, and your orders are merely a click away, bringing innovation to your fingertips.",
+                ],
+              },
+              {
+                title: "Innovative Plastic Recycling",
+                paragraphs: [
+                  "With exceptional expertise, we unveil transformative plastic recycling and repurposing projects, crafting plastics into diesel and other petrochemical marvels. In doing so, we ignite a progressive revolution, reshaping the very fabric of the industry.",
+                ],
+              },
               {
                 title: "Turnkey Projects Mastery",
+                paragraphs: [
+                  "Embark on your manufacturing journey with us. Our turnkey projects, from paper recycling to PET crushing, showcase our commitment. With a 2-year guarantee and expert consulting, we build factories, empowering your path to excellence.",
+                ],
               },
-              { title: "Production and Factory Management Operations" },
+              {
+                title: "Exceptional Operations Management",
+                paragraphs: [
+                  "With cutting-edge facility consulting and production management services, we empower new and existing companies to soar to the highest levels of efficiency. Join us on the path to transformative success.",
+                ],
+              },
             ]}
           />
         </motion.div>
@@ -140,17 +158,34 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
           <SubsidiaryShowcase
             type="power"
             leftImageScale={powerImageScale}
-            title="Kelani Power"
+            title="Power"
             description="Kelani Power enables industries and businesses with access to efficient energy solutions, cutting-edge financing options, advanced technology, and groundbreaking research"
             sectionImage="/assets/images/power-image.png"
             services={[
-              { title: "Inclusive Power Financing to Power Progress" },
-              { title: "Seamless Bulk Energy Trading for Sustainable Power" },
               {
-                title:
-                  "Proactive Collections Risk Management  for Seamless Growth",
+                title: "Inclusive Financing to Power Progress",
+                paragraphs: [
+                  "Fuel your business growth with our comprehensive credit and financing options. Collaborate seamlessly with approved partners in energy generation utilities, while we expertly manage foreign exchange flows for uninterrupted operations.",
+                ],
               },
-              { title: "Research Excellence in Renewable Energy Innovation" },
+              {
+                title: "Seamless Bulk Energy Trading",
+                paragraphs: [
+                  "Specializing in large-scale energy trading, we connect users with top suppliers. Ready to elevate your energy game? Reach out, let's discuss maximizing your green energy impact. Your power, our passion!",
+                ],
+              },
+              {
+                title: "Proactive Collections Risk Management",
+                paragraphs: [
+                  "In the face of defaults or market shifts, we provide vital support, financing payment deficits, and facilitating the recovery of energy infrastructure. Partner with us to safeguard your operations and navigate challenges effectively.",
+                ],
+              },
+              {
+                title: "Innovative Research",
+                paragraphs: [
+                  "At the forefront of renewable innovation, we're committed to exploring cutting-edge methods and advanced transmission technologies for a cost-effective, sustainable energy supply. Join us in pushing boundaries for a greener, more efficient energy landscape.",
+                ],
+              },
             ]}
           />
         </motion.div>
@@ -158,17 +193,35 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
           <SubsidiaryShowcase
             type="talent"
             leftImageScale={talentImageScale}
-            title="Kelani Talent"
+            title="Consulting"
             description="
             Kelani Consulting excels in manufacturing and engineering HR, spanning the entire value chain from raw material to distribution, near and far. With our guidance, success knows no limits!"
             sectionImage="/assets/images/consulting-image.png"
             services={[
-              { title: "Tailored HRMS Solutions" },
-              { title: "Strategic Outsourcing Solutions" },
+              {
+                title: "Tailored HRMS Solutions",
+                paragraphs: [
+                  "Streamline workforce management with our customized HRMS solutions, covering payroll and ensuring compliance for optimal efficiency.",
+                ],
+              },
+              {
+                title: "Strategic Outsourcing Solutions",
+                paragraphs: [
+                  "Elevate business strategy with our outsourcing solutions. We optimize processes, cut costs, and enhance efficiency, allowing a sharper focus on core business activities.",
+                ],
+              },
               {
                 title: "Talent Management Excellence",
+                paragraphs: [
+                  "Unlock workforce potential with our holistic talent management. From strategic recruitment to ongoing development, we attract, retain, and nurture top-tier talent for unparalleled organizational success.",
+                ],
               },
-              { title: "Consulting Mastery" },
+              {
+                title: "Consulting Mastery",
+                paragraphs: [
+                  "Immerse in consulting mastery with our expert team. Navigate challenges, explore opportunities, and receive tailored solutions for transformative success in a rapidly evolving business landscape.",
+                ],
+              },
             ]}
           />
         </div>
@@ -297,7 +350,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
       />
       <AnimatePresence>
         {scrollY > height * 0.5 &&
-          scrollY < document.body.scrollHeight - window.innerHeight * 1.5 && (
+          scrollY < document.body.scrollHeight - window.innerHeight * 1.7 && (
             <FloatingNav
               lenis={lenis}
               scrollTops={scrollTops}
