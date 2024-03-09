@@ -71,7 +71,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
                 height={"100%"}
                 effect="blur"
                 wrapperClassName="lazyLoadImageContainer "
-                src={"/assets/images/home.jpg"}
+                src={"/assets/images/home-image.png"}
               />
             </motion.div>
           </figure>

@@ -31,10 +31,11 @@ const AboutCompany = () => {
             height={"100%"}
             effect="blur"
             wrapperClassName="lazyLoadImageContainer "
-            src={"/assets/images/about-us.jpeg"}
+            src={"/assets/images/home.jpg"}
           />
         </motion.div>
       </figure>
+      <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-10 bg-black opacity-60"></div>
       <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 bg-gray-500"></div>
       <div className="w-full mx-[39px] md:mx-auto md:max-w-[565px] relative text-white z-20">
         <h1 className="text-[42px] md:text-[55px] leading-[1.1] md:leading-[1.254] space-grotesk-semibold">
