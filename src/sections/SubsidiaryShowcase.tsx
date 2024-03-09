@@ -248,7 +248,7 @@ const SubsidiaryShowcase = ({
                 {service?.title}
               </h3>
               <p className="museo-sans mt-[8px] lg:mt-[10px] lg:max-w-[85%] leading-[1.5] text-[14px] lg:text-[15px]">
-                {service?.paragraphs[0]}
+                {service?.paragraphs && service?.paragraphs[0]}
               </p>
             </div>
           ))}
