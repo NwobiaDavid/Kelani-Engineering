@@ -10,7 +10,7 @@ const AboutCompany = () => {
     offset: ["start end", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.6]);
 
   return (
     <motion.section
