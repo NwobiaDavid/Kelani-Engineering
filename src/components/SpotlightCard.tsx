@@ -1,12 +1,14 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 interface SpotlightCardProps {
   image: string;
   description: string;
   link?: string;
+  themeColor: string;
 }
 
-const SpotlightCard = ({ image, description, link }: SpotlightCardProps) => {
+const SpotlightCard = ({ image, description, link, themeColor }: SpotlightCardProps) => {
   //@ts-expect-error
   const [hovered, setHovered] = useState(false);
   return (
@@ -20,8 +22,12 @@ const SpotlightCard = ({ image, description, link }: SpotlightCardProps) => {
       <figure className="w-full h-full absolute">
         <img src={image} className="w-full h-full object-cover" />
       </figure>
-      <div className="w-full h-full absolute top-0 right-0 left-0 bottom-0 bg-[#E36E1B] bg-opacity-[0.4] px-[26px] lg:px-[48px] flex flex-col justify-end pb-[64px]">
-        <h4 className="space-grotesk-semibold text-[26px] md:text-[28px] lg:text-[40px] text-white">
+      <div
+        style={{ backgroundColor: themeColor, opacity: 0.4 }}
+        className="w-full h-full top-0 bottom-0 left-0 z-[1] absolute"
+      ></div>
+      <div className="w-full h-full absolute top-0 right-0 left-0 bottom-0  bg-opacity-[0.4] px-[26px] lg:px-[48px] flex flex-col justify-end pb-[64px] ">
+        <h4 className="space-grotesk-semibold text-[26px] md:text-[28px] lg:text-[40px] text-white z-10">
           {description}
         </h4>
         {/* <h5 className=" leading-[1.1875] mt-[4px] text-white museo-sans font-medium">
@@ -30,12 +36,12 @@ const SpotlightCard = ({ image, description, link }: SpotlightCardProps) => {
           bibendum.
         </h5> */}
       </div>
-      <p className="px-[24px] py-[40px] text-[17.28px] leading-[25.9px] h-[140px]">
+      {/* <p className="px-[24px] py-[40px] text-[17.28px] leading-[25.9px] h-[140px] z-10">
         {description}
-      </p>
-      {/* <motion.div
+      </p> */}
+      <motion.div
         animate={{ opacity: hovered ? 1 : 0 }}
-        className="w-full h-full absolute top-0 right-0 left-0 bottom-0 bg-opacity-70 bg-black flex text-white items-center justify-center"
+        className="w-full h-full absolute top-0 right-0 left-0 bottom-0 bg-opacity-70 bg-black flex text-white items-center justify-center z-20"
       >
         <p className="flex space-x-[8px] items-center">
           <span className="inline-block">Read More </span>
@@ -54,7 +60,7 @@ const SpotlightCard = ({ image, description, link }: SpotlightCardProps) => {
             </svg>
           </span>
         </p>
-      </motion.div> */}
+      </motion.div>
     </a>
   );
 };

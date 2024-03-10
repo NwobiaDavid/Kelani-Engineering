@@ -96,7 +96,9 @@ const SubsidiaryShowcase = ({
   const containerRef = useRef(null);
   const [titleHovered, setTitleHovered] = useState(false);
   const themeColor =
-    type == "engineering" ? "#E36E1B" : type == "power" ? "#069E7D" : "#9446A3";
+    type == "engineering" ? "#E36E1B" : type == "power" ? "#069E7D" : "#79188C";
+  const accentColor =
+    type == "engineering" ? "#E98B49" : type == "power" ? "#38B197" : "#9446A3";
 
   useEffect(() => {
     if (containerRef.current && setScrollTops) {
@@ -155,7 +157,7 @@ const SubsidiaryShowcase = ({
                   <h2
                     onMouseEnter={() => setTitleHovered(true)}
                     onMouseLeave={() => setTitleHovered(false)}
-                    className="text-[40px] lg:text-[55px] space-grotesk-medium relative w-fit"
+                    className="text-[40px] lg:text-[55px] space-grotesk-semibold relative w-fit"
                   >
                     <span>{title}</span>
                     <motion.svg
@@ -244,7 +246,7 @@ const SubsidiaryShowcase = ({
         <div className=" text-white">
           {services?.map((service, index) => (
             <div key={index}  className="w-full relative px-[20px] pt-[55px] xl:px-[40px] h-[350px]  lg:h-[420px] border-b border-white">
-              <h3 className="text-[32px] lg:text-[40px] leading-[1.1] space-grotesk-medium lg:max-w-[85%]">
+              <h3 className="text-[32px] lg:text-[40px] leading-[1.1] space-grotesk-semibold lg:max-w-[85%]">
                 {service?.title}
               </h3>
               <p className="museo-sans mt-[8px] lg:mt-[10px] lg:max-w-[85%] leading-[1.5] text-[14px] lg:text-[15px]">
@@ -279,13 +281,13 @@ const SubsidiaryShowcase = ({
             <div className="flex justify-between mb-[52px] pt-[12px]">
               <div className=" space-grotesk-medium text-white space-x-[16px] md:space-x-[32px] flex">
                 <div className="text-[26px] lg:text-[32px]">Spotlight</div>
-                <div className="text-[14px] py-[3px] md:py-[6px] px-[10px] md:px-[20px]  lg:text-[20px] font-normal bg-[#E98B49] rounded-[12px] leading-[0.8] md:leading-[1] flex items-center justify-center">
+                <div style={{backgroundColor: accentColor}} className="text-[14px] py-[3px] md:py-[6px] px-[10px] md:px-[20px]  lg:text-[20px] font-normal rounded-[12px] leading-[0.8] md:leading-[1] flex items-center justify-center">
                   Drag
                 </div>
               </div>
               <div className="flex space-x-[12px] md:space-x-[16px]">
-                <SlidePrevButton themeColor="#E98B49" />
-                <SlideNextButton themeColor="#E98B49" />
+                <SlidePrevButton themeColor={accentColor} />
+                <SlideNextButton themeColor={accentColor} />
               </div>
             </div>
             <div className="cursor-grabbing">
@@ -297,6 +299,7 @@ const SubsidiaryShowcase = ({
                     link={item["Spotlight Link"]}
                     image={item["Image Url / Video Thumbnail Url"]}
                     key={index}
+                    themeColor={themeColor}
                   />
                 </SwiperSlide>
               ))}

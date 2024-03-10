@@ -31,7 +31,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
 
   useEffect(() => {
     console.log(scrollTops);
-  }, [scrollTops])
+  }, [scrollTops]);
 
   const engineeringSpotlightRef = useRef<HTMLDivElement>(null);
   const powerSpotlightRef = useRef<HTMLDivElement>(null);
@@ -39,6 +39,11 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
 
   const [engineeringLoading, setEngineeringLoading] = useState(false);
   const [engineeringData, setEngineeringData] = useState([]);
+  const [powerLoading, setPowerLoading] = useState(false);
+  const [powerData, setPowerData] = useState([]);
+  const [consultingLoading, setConsultingLoading] = useState(false);
+  const [consultingData, setConsultingData] = useState([]);
+
   const fetchEngineeringSpotlight = async () => {
     const options = {
       method: "GET",
@@ -57,6 +62,46 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
       console.log(err);
     } finally {
       setEngineeringLoading(false);
+    }
+  };
+  const fetchPowerSpotlight = async () => {
+    const options = {
+      method: "GET",
+      url: "https://app.nocodb.com/api/v2/tables/mv9ppgghnkn9gzl/records",
+      params: { offset: "0", limit: "25", where: "" },
+      headers: {
+        "xc-token": "gbtt4j9PadEtKXdYLUJrtc1vvdJz7LptQqOE1z9T",
+      },
+    };
+
+    try {
+      setPowerLoading(true);
+      const response = await axios.request(options);
+      setPowerData(response.data.list);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setPowerLoading(false);
+    }
+  };
+  const fetchConsultingSpotlight = async () => {
+    const options = {
+      method: "GET",
+      url: "https://app.nocodb.com/api/v2/tables/mkrhguss1gvum5r/records",
+      params: { offset: "0", limit: "25", where: "" },
+      headers: {
+        "xc-token": "gbtt4j9PadEtKXdYLUJrtc1vvdJz7LptQqOE1z9T",
+      },
+    };
+
+    try {
+      setConsultingLoading(true);
+      const response = await axios.request(options);
+      setConsultingData(response.data.list);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setConsultingLoading(false);
     }
   };
   const { scrollYProgress: engineeringScrollYProgress } = useScroll({
@@ -96,6 +141,8 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
   );
   useEffect(() => {
     fetchEngineeringSpotlight();
+    fetchPowerSpotlight();
+    fetchConsultingSpotlight();
   }, []);
   const talentImageScale = useTransform(
     consultingScrollYProgress,
@@ -160,6 +207,8 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
         </motion.div>
         <motion.div style={{ y: powerY }} ref={powerSpotlightRef}>
           <SubsidiaryShowcase
+            spotlightLoading={powerLoading}
+            spotlightData={powerData as unknown as Record<string, string>}
             type="power"
             leftImageScale={powerImageScale}
             title="Power"
@@ -195,6 +244,8 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
         </motion.div>
         <div ref={consultingSpotlightRef}>
           <SubsidiaryShowcase
+            spotlightLoading={consultingLoading}
+            spotlightData={consultingData as unknown as Record<string, string>}
             type="talent"
             leftImageScale={talentImageScale}
             title="Consulting"
