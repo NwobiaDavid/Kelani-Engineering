@@ -79,6 +79,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
         className="fixed top-0 right-0 left-0 bottom-0 bg-black z-[80] cursor-pointer"
       ></motion.div>
       <motion.div
+      data-lenis-prevent
         initial={{ opacity: 0.7, x: "80dvw" }}
         transition={{ duration: 0.35 }}
         animate={{ opacity: 1, x: 0 }}
