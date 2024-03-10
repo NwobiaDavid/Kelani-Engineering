@@ -117,7 +117,7 @@ const Footer = ({ contactUsUrl }: { contactUsUrl: string }) => {
           />
           <motion.div
             style={{ scale, y }}
-            className="bg-[white] shadow-[0_0px_10px_2px_rgba(0,0,0,0.1)] w-full h-full rounded-[9.6px] flex flex-col overflow-y-scroll lg:overflow-hidden lg:grid grid-cols-2 lg:gap-[24px] lg:p-0 relative z-[2]"
+            className="bg-[white] shadow-[0_0px_10px_2px_rgba(0,0,0,0.1)] w-full h-full rounded-[9.6px] flex flex-col overflow-y-scroll  lg:grid grid-cols-2 lg:gap-[24px] lg:p-0 relative z-[2]"
           >
             <div className="h-full p-[24px] lg:p-[56px] flex flex-col justify-center items-center lg:relative space-y-[4px] max-h-full">
               <div className="p-[24px] bg-[#F7F7F7] w-full rounded-[8px] flex justify-center items-center">
@@ -165,102 +165,106 @@ const Footer = ({ contactUsUrl }: { contactUsUrl: string }) => {
             </div>
             <AnimatePresence>
               {!formSubmitted && (
-                <motion.div
-                  exit={{
-                    opacity: 0,
-                    transition: { duration: 0.4 },
-                  }}
-                  className="h-full p-[24px] lg:p-[56px] flex flex-col gap-[30px]  border-t lg:border-t-0 border-t-[#D2DADF] lg:border-top-0"
-                >
-                  <p className="lg:max-w-[80%] text-[17.25px] space-grotesk-medium text-[#888A8B] leading-[1.25]">
-                    Have questions, suggestions, or just want to say hello? We'd
-                    love to hear from you! Fill out the form below, and our team
-                    will get back to you as soon as possible.
-                  </p>
-                  <form
-                    onSubmit={handleSubmit(handleFormSubmit)}
-                    className="flex flex-col space-y-[20px] h-full"
+                <div className="flex flex-col justify-center ">
+                  <motion.div
+                    exit={{
+                      opacity: 0,
+                      transition: { duration: 0.4 },
+                    }}
+                    className="h-full p-[24px] lg:p-[56px] flex flex-col gap-[30px]  border-t lg:border-t-0 border-t-[#D2DADF] lg:border-top-0 lg:max-h-[700px]"
                   >
-                    <div className="flex flex-col">
-                      <label className="museo-sans text-[#888A8B] text-[17.25px]">
-                        Name
-                      </label>
-                      <div
-                        className={errors.name ? "error relative" : "relative "}
-                      >
-                        <input
-                          {...register("name")}
-                          className="bg-[#F7F7F7] border-[#DEDEDE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans text-[17.25px]"
-                        />
-                        <motion.p
-                          animate={{
-                            opacity: errors.name?.message ? 1 : 0,
-                          }}
-                          className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
-                        >
-                          {errors.name?.message}
-                        </motion.p>
-                      </div>
-                    </div>
-                    <div className="flex flex-col">
-                      <label className="museo-sans text-[#888A8B] text-[17.25px]">
-                        Email
-                      </label>
-                      <div
-                        className={
-                          errors.email ? "error relative" : "relative "
-                        }
-                      >
-                        <input
-                          {...register("email")}
-                          className="bg-[#F7F7F7] border-[#DEDEDE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans text-[17.25px]"
-                        />
-                        <motion.p
-                          animate={{
-                            opacity: errors.email?.message ? 1 : 0,
-                          }}
-                          className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
-                        >
-                          {errors.email?.message}
-                        </motion.p>
-                      </div>
-                    </div>
-                    <div className="flex flex-col flex-1 max-h-[calc(100%-20px)]">
-                      <label className="museo-sans text-[#888A8B] text-[17.25px]">
-                        Message
-                      </label>
-                      <div
-                        className={
-                          errors.message
-                            ? "error relative flex-1"
-                            : "relative flex-1"
-                        }
-                      >
-                        <textarea
-                          {...register("message")}
-                          className="bg-[#F7F7F7] border-[#DEDEDE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans text-[17.25px] h-full resize-none can-scroll"
-                        />
-                        <motion.p
-                          animate={{
-                            opacity: errors.message?.message ? 1 : 0,
-                          }}
-                          className="text-right text-[12px] text-[#fe3514] absolute -bottom-[25px] right-0"
-                        >
-                          {errors.message?.message}
-                        </motion.p>
-                      </div>
-                    </div>
-                    <motion.button
-                      onClick={() => console.log(errors)}
-                      disabled={formLoading}
-                      whileTap={{ scale: 0.95 }}
-                      className="py-[12px] px-[32px] w-fit text-[#222] border border-[#222] rounded-[8px] lg:px-[74px] lg:py-[14px] disabled:opacity-50 space-grotesk-medium"
-                      type="submit"
+                    <p className="lg:max-w-[80%] text-[17.25px] space-grotesk-medium text-[#888A8B] leading-[1.25]">
+                      Have questions, suggestions, or just want to say hello?
+                      We'd love to hear from you! Fill out the form below, and
+                      our team will get back to you as soon as possible.
+                    </p>
+                    <form
+                      onSubmit={handleSubmit(handleFormSubmit)}
+                      className="flex flex-col space-y-[20px] h-full"
                     >
-                      {formLoading ? "Please Wait..." : "Send"}
-                    </motion.button>
-                  </form>
-                </motion.div>
+                      <div className="flex flex-col">
+                        <label className="museo-sans text-[#888A8B] text-[17.25px]">
+                          Name
+                        </label>
+                        <div
+                          className={
+                            errors.name ? "error relative" : "relative "
+                          }
+                        >
+                          <input
+                            {...register("name")}
+                            className="bg-[#F7F7F7] border-[#DEDEDE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans text-[17.25px]"
+                          />
+                          <motion.p
+                            animate={{
+                              opacity: errors.name?.message ? 1 : 0,
+                            }}
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
+                          >
+                            {errors.name?.message}
+                          </motion.p>
+                        </div>
+                      </div>
+                      <div className="flex flex-col">
+                        <label className="museo-sans text-[#888A8B] text-[17.25px]">
+                          Email
+                        </label>
+                        <div
+                          className={
+                            errors.email ? "error relative" : "relative "
+                          }
+                        >
+                          <input
+                            {...register("email")}
+                            className="bg-[#F7F7F7] border-[#DEDEDE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans text-[17.25px]"
+                          />
+                          <motion.p
+                            animate={{
+                              opacity: errors.email?.message ? 1 : 0,
+                            }}
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
+                          >
+                            {errors.email?.message}
+                          </motion.p>
+                        </div>
+                      </div>
+                      <div className="flex flex-col flex-1 max-h-[calc(100%-20px)]">
+                        <label className="museo-sans text-[#888A8B] text-[17.25px]">
+                          Message
+                        </label>
+                        <div
+                          className={
+                            errors.message
+                              ? "error relative flex-1"
+                              : "relative flex-1"
+                          }
+                        >
+                          <textarea
+                            {...register("message")}
+                            className="bg-[#F7F7F7] border-[#DEDEDE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans text-[17.25px] h-full resize-none can-scroll"
+                          />
+                          <motion.p
+                            animate={{
+                              opacity: errors.message?.message ? 1 : 0,
+                            }}
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[25px] right-0"
+                          >
+                            {errors.message?.message}
+                          </motion.p>
+                        </div>
+                      </div>
+                      <motion.button
+                        onClick={() => console.log(errors)}
+                        disabled={formLoading}
+                        whileTap={{ scale: 0.95 }}
+                        className="py-[12px] px-[32px] w-fit text-[#222] border border-[#222] rounded-[8px] lg:px-[74px] lg:py-[14px] disabled:opacity-50 space-grotesk-medium"
+                        type="submit"
+                      >
+                        {formLoading ? "Please Wait..." : "Send"}
+                      </motion.button>
+                    </form>
+                  </motion.div>
+                </div>
               )}{" "}
               {thankYouMessageShowing && (
                 <motion.div

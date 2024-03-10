@@ -242,8 +242,8 @@ const SubsidiaryShowcase = ({
           </div>
         </div>
         <div className=" text-white">
-          {services?.map((service) => (
-            <div className="w-full relative px-[20px] pt-[55px] xl:px-[40px] h-[350px]  lg:h-[420px] border-b border-white">
+          {services?.map((service, index) => (
+            <div key={index}  className="w-full relative px-[20px] pt-[55px] xl:px-[40px] h-[350px]  lg:h-[420px] border-b border-white">
               <h3 className="text-[32px] lg:text-[40px] leading-[1.1] space-grotesk-medium lg:max-w-[85%]">
                 {service?.title}
               </h3>
@@ -291,7 +291,7 @@ const SubsidiaryShowcase = ({
             <div className="cursor-grabbing">
               {/* @ts-expect-error */}
               {spotlightData?.map((item: any, index: number) => (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                   <SpotlightCard
                     description={item["Spotlight Description"]}
                     link={item["Spotlight Link"]}

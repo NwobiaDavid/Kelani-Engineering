@@ -7,8 +7,8 @@ interface SpotlightCardProps {
 }
 
 const SpotlightCard = ({ image, description, link }: SpotlightCardProps) => {
+  //@ts-expect-error
   const [hovered, setHovered] = useState(false);
-  console.log(hovered);
   return (
     <a
       onMouseEnter={() => setHovered(true)}

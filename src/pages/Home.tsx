@@ -29,6 +29,10 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
     consulting: 0,
   });
 
+  useEffect(() => {
+    console.log(scrollTops);
+  }, [scrollTops])
+
   const engineeringSpotlightRef = useRef<HTMLDivElement>(null);
   const powerSpotlightRef = useRef<HTMLDivElement>(null);
   const consultingSpotlightRef = useRef<HTMLDivElement>(null);
@@ -38,7 +42,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
   const fetchEngineeringSpotlight = async () => {
     const options = {
       method: "GET",
-      url: "https://app.nocodb.com/api/v1/db/data/noco/p9n8mov63j4aa98/mbzvs5xvoj4qobo/views/vwehcatlb9l4lsid",
+      url: "https://app.nocodb.com/api/v2/tables/m9jiu7o232gnc51/records",
       params: { offset: "0", limit: "25", where: "" },
       headers: {
         "xc-token": "gbtt4j9PadEtKXdYLUJrtc1vvdJz7LptQqOE1z9T",
