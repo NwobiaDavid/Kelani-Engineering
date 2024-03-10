@@ -9,7 +9,6 @@ interface SpotlightCardProps {
 }
 
 const SpotlightCard = ({ image, description, link, themeColor }: SpotlightCardProps) => {
-  //@ts-expect-error
   const [hovered, setHovered] = useState(false);
   return (
     <a
