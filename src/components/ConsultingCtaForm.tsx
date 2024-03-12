@@ -75,7 +75,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
   return createPortal(
     <>
       <motion.div
-        data-lenis-prevent
+        // data-lenis-prevent
         //@ts-ignore
         ref={ref}
         onClick={close}
