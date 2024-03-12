@@ -69,7 +69,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
   return createPortal(
     <>
       <motion.div
-        data-lenis-prevent
+        // data-lenis-prevent
         ref={ref}
         onClick={close}
         initial={{ opacity: 0 }}
