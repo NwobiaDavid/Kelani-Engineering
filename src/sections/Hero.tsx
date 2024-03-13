@@ -161,11 +161,11 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
             </h1>
           </div> */}
         </div>
-        <h1 className="space-grotesk-semibold bg-[#FEFEFE] md:hidden text-[28px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[5px] md:px-[24px] pt-[5px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
+        <h1 className="space-grotesk-semibold bg-[#FEFEFE] md:hidden text-[28px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[0px] pb-[5px] md:px-[24px] pt-[15px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
           Building Africa's Future With Engineering Excellence For Growth
         </h1>
         {/* <Container className="md:hidden"> */}
-        <p className=" pl-[14px] text-[16px] leading-[20px] w-full pt-[5px] md:hidden museo-sans font-normalR">
+        <p className=" md:pl-[14px] text-[16px] leading-[20px] w-full pt-[5px] md:hidden museo-sans font-normal">
           At Kelani, industrial expertise, talent development, and a commitment
           to sustainable energy converge. Join us on a transformative journey
           shaping an extraordinary future across Africa.
