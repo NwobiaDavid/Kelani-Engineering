@@ -67,7 +67,7 @@ const FloatingNav = ({
           <FloatingNavItem
             setActiveNav={() => {
                 lenis.scrollTo("#engineering", {
-                  offset: scrollY > scrollTops.consulting ? -window.innerHeight -500 : 0,
+                  offset: scrollY > scrollTops?.consulting! ? -window.innerHeight -500 : 0,
                   lerp: 0.1,
                   duration: 1,
                 });
@@ -81,7 +81,7 @@ const FloatingNav = ({
           />
           <FloatingNavItem
             setActiveNav={() => {
-              lenis.scrollTo("#power", { offset: scrollY > scrollTops.consulting + window.innerHeight * 1.5 ? -window.innerHeight -500 : 0, lerp: 0.1, duration: 1.4 });
+              lenis.scrollTo("#power", { offset: scrollY > scrollTops?.consulting! + window.innerHeight * 1.5 ? -window.innerHeight -500 : 0, lerp: 0.1, duration: 1.4 });
               // window.scrollTo({
               //   top: scrollTops["power"] + window.innerHeight - 40,
               //   behavior: "smooth",
