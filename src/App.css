@@ -84,3 +84,9 @@ input[type="tel"],
   height: 100%;
   object-fit: cover;
 }
+.lazyLoadImageContainer.home-section-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+}

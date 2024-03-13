@@ -12,6 +12,7 @@ import NavBar from "../components/NavBar";
 // import useScreenSize from "../hooks/useScreenSize";
 import useNavStore from "../store/nav";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import useScreenSize from "../hooks/useScreenSize";
 
 const Hero = ({ lenis }: { lenis: Lenis }) => {
   // const [navShowing, setNavShowing] = useState(false);
@@ -32,6 +33,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
     offset: ["start end", "end start"],
   });
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
+  const { width } = useScreenSize();
   return (
     <div className="bg-[#FEFEFE] z-30" ref={containerRef}>
       <AnimatePresence>
@@ -45,7 +47,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
         className="pt-[30px] px-[12px] md:px-[24px] lg:px-[32px] max-w-[1672px] mx-auto "
       >
         <div
-          style={{ borderRadius: 28 }}
+          style={{ borderRadius: 28, zIndex: 10, transform: "translateZ(0)" }}
           className="h-[50vh] md:h-[82vh] relative  rounded-[28px] overflow-hidden"
         >
           <div className="w-full absolute top-0 p-[24px] flex justify-between z-20">
@@ -65,18 +67,18 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
             </motion.div>
           </div>
           <figure
-            style={{ borderRadius: 28 }}
+            style={{ borderRadius: 28, zIndex: 10, transform: "translateZ(0)" }}
             className="overflow-hidden absolute top-0 right-0 left-0 bottom-0 rounded-[20px]"
           >
             <motion.div
               className="h-full w-full rounded-[20px] overflow-hidden"
-              style={{ scale }}
+              style={width < 500 ? {} : { scale }}
             >
               <LazyLoadImage
                 width={"100%"}
                 height={"100%"}
                 effect="blur"
-                wrapperClassName="lazyLoadImageContainer "
+                wrapperClassName="lazyLoadImageContainer home-section-image"
                 src={"/assets/images/home-image.png"}
               />
             </motion.div>
@@ -161,7 +163,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
             </h1>
           </div> */}
         </div>
-        <h1 className="space-grotesk-semibold bg-[#FEFEFE] md:hidden text-[28px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[0px] pb-[5px] md:px-[24px] pt-[15px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
+        <h1 className="space-grotesk-semibold font-semibold bg-[#FEFEFE] md:hidden text-[26px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[0px] pb-[5px] md:px-[24px] pt-[15px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
           Building Africa's Future With Engineering Excellence For Growth
         </h1>
         {/* <Container className="md:hidden"> */}
