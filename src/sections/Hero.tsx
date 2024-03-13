@@ -44,7 +44,10 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
         animate={{ opacity: 1, transition: { duration: 0.8 } }}
         className="pt-[30px] px-[12px] md:px-[24px] lg:px-[32px] max-w-[1672px] mx-auto "
       >
-        <div style={{borderRadius: 28}} className="h-[50vh] md:h-[82vh] relative  rounded-[28px] overflow-hidden">
+        <div
+          style={{ borderRadius: 28 }}
+          className="h-[50vh] md:h-[82vh] relative  rounded-[28px] overflow-hidden"
+        >
           <div className="w-full absolute top-0 p-[24px] flex justify-between z-20">
             <div className=" lg:px-[20px] h-[35px] rounded-full flex items-center justify-center">
               <img
@@ -61,7 +64,10 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
               <img src="/assets/images/icon-nav.svg" />
             </motion.div>
           </div>
-          <figure style={{borderRadius: 28}} className="overflow-hidden absolute top-0 right-0 left-0 bottom-0 rounded-[20px]">
+          <figure
+            style={{ borderRadius: 28 }}
+            className="overflow-hidden absolute top-0 right-0 left-0 bottom-0 rounded-[20px]"
+          >
             <motion.div
               className="h-full w-full rounded-[20px] overflow-hidden"
               style={{ scale }}
@@ -141,7 +147,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
               />
             </div>
           </div>
-          <div className="md:hidden flex-col absolute -bottom-[3px] -left-[1px]">
+          {/* <div className="md:hidden flex-col absolute -bottom-[3px] -left-[1px]">
             <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[26px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[1.125] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[5px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative rounded-tr-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
               Building Africa's
               <img
@@ -153,13 +159,13 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
                 className="w-[20px] h-[20px] absolute -top-[20px] -left-[0px] "
               />
             </h1>
-          </div>
+          </div> */}
         </div>
-        <h1 className="space-grotesk-semibold bg-[#FEFEFE] md:hidden text-[26px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[5px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
-          Future With Engineering Excellence For Growth
+        <h1 className="space-grotesk-semibold bg-[#FEFEFE] md:hidden text-[28px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[5px] md:px-[24px] pt-[5px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
+          Building Africa's Future With Engineering Excellence For Growth
         </h1>
         {/* <Container className="md:hidden"> */}
-        <p className=" pl-[14px] text-[17.28px] leading-[26px] w-full pt-[10px] md:hidden museo-sans font-light">
+        <p className=" pl-[14px] text-[16px] leading-[20px] w-full pt-[5px] md:hidden museo-sans font-normalR">
           At Kelani, industrial expertise, talent development, and a commitment
           to sustainable energy converge. Join us on a transformative journey
           shaping an extraordinary future across Africa.
@@ -170,6 +176,6 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
       </motion.div>
     </div>
   );
-};
+emove };
 
 export default Hero;
