@@ -32,7 +32,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home lenis={lenis} />} />
           <Route
-            path="/talent"
+            path="/consulting"
             element={
               <SubsidiaryPageOne
                 cta_form="consulting"

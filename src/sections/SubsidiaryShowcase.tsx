@@ -135,7 +135,7 @@ const SubsidiaryShowcase = ({
         style={{ backgroundColor: themeColor }}
         className="w-full grid grid-cols-1 lg:grid-cols-2 relative"
       >
-        <div>
+        <div id={type}>
           <div className="sticky top-0 overflow-hidden">
             <div className="relative w-full min-h-[60dvh] lg:h-[100dvh]">
               <figure className="overflow-hidden absolute top-0 right-0 left-0 bottom-0">
@@ -245,7 +245,10 @@ const SubsidiaryShowcase = ({
         </div>
         <div className=" text-white">
           {services?.map((service, index) => (
-            <div key={index}  className="w-full relative px-[20px] pt-[55px] xl:px-[40px] h-[350px]  lg:h-[420px] border-b border-white">
+            <div
+              key={index}
+              className="w-full relative px-[20px] pt-[55px] xl:px-[40px] h-[350px]  lg:h-[420px] border-b border-white"
+            >
               <h3 className="text-[32px] lg:text-[40px] leading-[1.1] space-grotesk-semibold lg:max-w-[85%]">
                 {service?.title}
               </h3>
@@ -281,7 +284,10 @@ const SubsidiaryShowcase = ({
             <div className="flex justify-between mb-[52px] pt-[12px]">
               <div className=" space-grotesk-medium text-white space-x-[16px] md:space-x-[32px] flex">
                 <div className="text-[26px] lg:text-[32px]">Spotlight</div>
-                <div style={{backgroundColor: accentColor}} className="text-[14px] py-[3px] md:py-[6px] px-[10px] md:px-[20px]  lg:text-[20px] font-normal rounded-[12px] leading-[0.8] md:leading-[1] flex items-center justify-center">
+                <div
+                  style={{ backgroundColor: accentColor }}
+                  className="text-[14px] py-[3px] md:py-[6px] px-[10px] md:px-[20px]  lg:text-[20px] font-normal rounded-[12px] leading-[0.8] md:leading-[1] flex items-center justify-center"
+                >
                   Drag
                 </div>
               </div>

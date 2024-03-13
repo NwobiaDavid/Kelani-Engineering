@@ -54,16 +54,19 @@ const FloatingNav = ({
       className="z-40 px-[8px] py-[6px] rounded-full bg-[#22222218] transition fixed bottom-[40px] left-[50%] -translate-x-[50%] backdrop-blur-[18px]"
     >
       <div className="flex space-x-[6px]">
-        <div className="rounded-full bg-white h-[52px] w-[52px] flex items-center justify-center text-[17.28px] leading-[26px]">
+        <div
+          onClick={() => lenis.scrollTo("#home")}
+          className="rounded-full bg-white h-[52px] w-[52px] flex items-center justify-center text-[17.28px] leading-[26px] cursor-pointer"
+        >
           <img src="/assets/images/kelani-icon.png" className="w-[30px]" />
         </div>
         <div className="h-[52px] bg-white px-[16px] rounded-full items-center space-x-[10px] hidden md:flex">
           <FloatingNavItem
             setActiveNav={() => {
-              lenis.scrollTo(".industrials", {
-                offset: -40,
-                lerp: 0.1,
-                duration: 1,
+              lenis.scrollTo("#engineering", {
+                offset: 0,
+                // lerp: 0.1,
+                // duration: 1,
               });
               // window.scrollTo({
               //   top: scrollTops["industrials"] + window.innerHeight - 40,
@@ -75,7 +78,7 @@ const FloatingNav = ({
           />
           <FloatingNavItem
             setActiveNav={() => {
-              lenis.scrollTo(".power", { offset: -40, lerp: 0.1, duration: 1 });
+              lenis.scrollTo("#power", { offset: 0, lerp: 0.1, duration: 1.4 });
               // window.scrollTo({
               //   top: scrollTops["power"] + window.innerHeight - 40,
               //   behavior: "smooth",
@@ -86,8 +89,8 @@ const FloatingNav = ({
           />
           <FloatingNavItem
             setActiveNav={() => {
-              lenis.scrollTo(".consulting", {
-                offset: -40,
+              lenis.scrollTo("#consulting", {
+                offset: 0,
                 lerp: 0.1,
                 duration: 1,
               });

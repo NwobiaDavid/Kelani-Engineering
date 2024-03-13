@@ -158,6 +158,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
       </Helmet>
       <motion.main
         exit={{ opacity: 0 }}
+        id="home"
         className="bg-[#FEFEFE] shadow-lg z-[2] relative"
       >
         <Hero lenis={lenis} />
@@ -165,7 +166,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
           <AboutCompany />
         </motion.div>
 
-        <motion.div ref={engineeringSpotlightRef} style={{ y: engineeringY }}>
+        <motion.div className="engineering" ref={engineeringSpotlightRef} style={{ y: engineeringY }}>
           <SubsidiaryShowcase
             spotlightLoading={engineeringLoading}
             type="engineering"
@@ -205,7 +206,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
             ]}
           />
         </motion.div>
-        <motion.div style={{ y: powerY }} ref={powerSpotlightRef}>
+        <motion.div className="power" style={{ y: powerY }} ref={powerSpotlightRef}>
           <SubsidiaryShowcase
             spotlightLoading={powerLoading}
             spotlightData={powerData as unknown as Record<string, string>}
@@ -242,11 +243,11 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
             ]}
           />
         </motion.div>
-        <div ref={consultingSpotlightRef}>
+        <div className="consulting" ref={consultingSpotlightRef}>
           <SubsidiaryShowcase
             spotlightLoading={consultingLoading}
             spotlightData={consultingData as unknown as Record<string, string>}
-            type="talent"
+            type="consulting"
             leftImageScale={talentImageScale}
             title="Consulting"
             description="

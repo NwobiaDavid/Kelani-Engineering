@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useRef } from "react";
 import useScreenSize from "../../../hooks/useScreenSize";
 
-
 interface ParallexProps {
   header: string;
   subHead: string;
@@ -127,7 +126,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
     <>
       <div className="relative h-[400vh] z-30  flex-col text-white w-full flex ">
         <div className="main sticky  top-0 h-[100vh]  items-center  pt-10 pb-[15px] flex-col text-white w-full flex lg:space-y-[60px] xl:space-y-[75px]">
-          <div>
+          <div className="flex-1 flex flex-col justify-center">
             <div className="flex flex-col  uppercase justify-center items-center">
               <div className="  w-[90%] text-center relative  ">
                 <h3 className=" opacity-80 tracking-[2.4px] museo-sans lg:font-semibold mb-2 lg:mb-6  ">
@@ -140,7 +139,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
             </div>
           </div>
 
-          <div className="flex h-full relative overflow-x-hidden   w-full museo-sans">
+          <div className="flex h-full max-h-[600px] relative overflow-x-hidden   w-full museo-sans">
             <div className="lg:w-[11%] xl:w-[15%] justify-center items-center hidden lg:flex flex-col ">
               <div className="w-[50%]  flex flex-col items-center justify-center text-center ">
                 <span className="text-[18px] xl:text-xl opacity-70 font-semibold ">

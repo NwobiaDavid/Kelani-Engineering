@@ -42,7 +42,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.8 } }}
-        className="pt-[30px] px-[12px] md:px-[24px] lg:px-[32px] max-w-[1440px] mx-auto "
+        className="pt-[30px] px-[12px] md:px-[24px] lg:px-[32px] max-w-[1672px] mx-auto "
       >
         <div style={{borderRadius: 28}} className="h-[50vh] md:h-[82vh] relative  rounded-[28px] overflow-hidden">
           <div className="w-full absolute top-0 p-[24px] flex justify-between z-20">

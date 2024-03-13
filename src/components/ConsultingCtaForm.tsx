@@ -86,7 +86,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
         className="fixed top-0 right-0 left-0 bottom-0 bg-black z-[80] cursor-pointer"
       ></motion.div>
       <motion.div
-      data-lenis-prevent
+        data-lenis-prevent
         initial={{ opacity: 0.7, x: "80dvw" }}
         transition={{ duration: 0.35 }}
         animate={{ opacity: 1, x: 0 }}
@@ -121,7 +121,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
               className=" px-[20px] py-[20px] md:px-[36px] md:py-[36px] lg:p-[56px] "
             >
               <header className="text-[32px] space-grotesk-semibold pb-[56px] border-b-zinc-500 border-b border-opacity-50 flex justify-between items-center">
-              Empower Your Team with Kelani Talent
+                Empower Your Team with Kelani Consulting
                 <motion.svg
                   className={"cursor-pointer focus:outline-none"}
                   whileHover={{ scale: 1.07 }}
