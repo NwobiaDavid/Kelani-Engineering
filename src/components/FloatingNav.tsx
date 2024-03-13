@@ -1,6 +1,7 @@
 import Lenis from "@studio-freight/lenis/types";
 import { motion } from "framer-motion";
 import useNavStore from "../store/nav";
+import useScrollPosition from "../hooks/useScrollPosition";
 
 const FloatingNavItem = ({
   text,
@@ -36,12 +37,14 @@ const FloatingNavItem = ({
 const FloatingNav = ({
   activeNav,
   lenis,
+  scrollTops,
 }: {
   activeNav: string;
   scrollTops?: Record<string, number>;
   lenis: Lenis;
 }) => {
   const { navShowing, setNavShowing } = useNavStore();
+  const { y: scrollY } = useScrollPosition();
   return (
     <motion.nav
       initial={{ opacity: 0, x: "-50%" }}
@@ -63,22 +66,22 @@ const FloatingNav = ({
         <div className="h-[52px] bg-white px-[16px] rounded-full items-center space-x-[10px] hidden md:flex">
           <FloatingNavItem
             setActiveNav={() => {
-              lenis.scrollTo("#engineering", {
-                offset: 0,
-                // lerp: 0.1,
-                // duration: 1,
-              });
+                lenis.scrollTo("#engineering", {
+                  offset: scrollY > scrollTops.consulting ? -window.innerHeight -500 : 0,
+                  lerp: 0.1,
+                  duration: 1,
+                });
               // window.scrollTo({
               //   top: scrollTops["industrials"] + window.innerHeight - 40,
               //   behavior: "smooth",
               // });
             }}
             text="Engineering"
-            active={activeNav == "industrials"}
+            active={activeNav == "engineering"}
           />
           <FloatingNavItem
             setActiveNav={() => {
-              lenis.scrollTo("#power", { offset: 0, lerp: 0.1, duration: 1.4 });
+              lenis.scrollTo("#power", { offset: scrollY > scrollTops.consulting + window.innerHeight * 1.5 ? -window.innerHeight -500 : 0, lerp: 0.1, duration: 1.4 });
               // window.scrollTo({
               //   top: scrollTops["power"] + window.innerHeight - 40,
               //   behavior: "smooth",

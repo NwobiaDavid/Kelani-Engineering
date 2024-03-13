@@ -8,6 +8,7 @@ import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import SpotlightCard from "../components/SpotlightCard";
 import useScreenSize from "../hooks/useScreenSize";
+import useScrollPosition from "../hooks/useScrollPosition";
 
 const SlidePrevButton = ({ themeColor }: { themeColor: string }) => {
   const swiper = useSwiper();
@@ -83,7 +84,7 @@ const SubsidiaryShowcase = ({
 }: {
   type: string;
   setScrollTops?: Dispatch<
-    SetStateAction<{ industrials: number; power: number; consulting: number }>
+    SetStateAction<{ engineering: number; power: number; consulting: number }>
   >;
   title: string;
   leftImageScale: MotionValue<number>;
@@ -99,14 +100,15 @@ const SubsidiaryShowcase = ({
     type == "engineering" ? "#E36E1B" : type == "power" ? "#069E7D" : "#79188C";
   const accentColor =
     type == "engineering" ? "#E98B49" : type == "power" ? "#38B197" : "#9446A3";
+  const { y } = useScrollPosition()
 
   useEffect(() => {
     if (containerRef.current && setScrollTops) {
       switch (type) {
-        case "industrials":
+        case "engineering":
           setScrollTops((prev) => ({
             ...prev,
-            industrials:
+            engineering:
               (containerRef.current as any)?.offsetTop - window.innerHeight,
           }));
           break;
@@ -126,11 +128,11 @@ const SubsidiaryShowcase = ({
           break;
       }
     }
-  }, [containerRef.current]);
+  }, [containerRef.current, y]);
   const { width } = useScreenSize();
   const [sectionReadMoreHovered, setSectionReadMoreHovered] = useState(false);
   return (
-    <div style={{ backgroundColor: themeColor }}>
+    <div ref={containerRef} style={{ backgroundColor: themeColor }}>
       <div
         style={{ backgroundColor: themeColor }}
         className="w-full grid grid-cols-1 lg:grid-cols-2 relative"

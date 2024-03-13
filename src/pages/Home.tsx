@@ -23,15 +23,11 @@ import { Helmet } from "react-helmet";
 const Home = ({ lenis }: { lenis: Lenis }) => {
   const { y: scrollY } = useScrollPosition();
   const { height } = useScreenSize();
-  const [scrollTops] = useState({
-    industrials: 0,
+  const [scrollTops, setScrollTops] = useState({
+    engineering: 0,
     power: 0,
     consulting: 0,
   });
-
-  useEffect(() => {
-    console.log(scrollTops);
-  }, [scrollTops]);
 
   const engineeringSpotlightRef = useRef<HTMLDivElement>(null);
   const powerSpotlightRef = useRef<HTMLDivElement>(null);
@@ -166,8 +162,13 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
           <AboutCompany />
         </motion.div>
 
-        <motion.div className="engineering" ref={engineeringSpotlightRef} style={{ y: engineeringY }}>
+        <motion.div
+          className="engineering"
+          ref={engineeringSpotlightRef}
+          style={{ y: engineeringY }}
+        >
           <SubsidiaryShowcase
+            setScrollTops={setScrollTops}
             spotlightLoading={engineeringLoading}
             type="engineering"
             spotlightData={engineeringData as unknown as Record<string, string>}
@@ -206,8 +207,13 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
             ]}
           />
         </motion.div>
-        <motion.div className="power" style={{ y: powerY }} ref={powerSpotlightRef}>
+        <motion.div
+          className="power"
+          style={{ y: powerY }}
+          ref={powerSpotlightRef}
+        >
           <SubsidiaryShowcase
+            setScrollTops={setScrollTops}
             spotlightLoading={powerLoading}
             spotlightData={powerData as unknown as Record<string, string>}
             type="power"
@@ -245,6 +251,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
         </motion.div>
         <div className="consulting" ref={consultingSpotlightRef}>
           <SubsidiaryShowcase
+            setScrollTops={setScrollTops}
             spotlightLoading={consultingLoading}
             spotlightData={consultingData as unknown as Record<string, string>}
             type="consulting"
@@ -417,8 +424,8 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
                   ? "consulting"
                   : scrollY > scrollTops.power
                   ? "power"
-                  : scrollY > scrollTops.industrials
-                  ? "industrials"
+                  : scrollY > scrollTops.engineering
+                  ? "engineering"
                   : ""
               }
             />
