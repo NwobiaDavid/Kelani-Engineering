@@ -176,6 +176,6 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
       </motion.div>
     </div>
   );
-emove };
+};
 
 export default Hero;
