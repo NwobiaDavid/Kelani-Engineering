@@ -69,7 +69,7 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
               icon="/assets/images/icon-consulting.svg"
               hasRightBorder
               text="Consulting and Talent"
-              link="/talent"
+              link="/consulting"
               index={2}
             />
             <NavSubsidiarySection
