@@ -124,7 +124,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
 
   return (
     <>
-      <div className="relative h-[400vh] z-30  flex-col text-white w-full flex ">
+      <div className="relative h-[400vh] z-30  flex-col text-white w-full flex lg:pt-[100px]">
         <div className="main sticky  top-0 h-[100vh]  items-center  pt-10 pb-[15px] flex-col text-white w-full flex lg:space-y-[60px] xl:space-y-[75px]">
           <div className="flex-1 flex flex-col justify-center">
             <div className="flex flex-col  uppercase justify-center items-center">

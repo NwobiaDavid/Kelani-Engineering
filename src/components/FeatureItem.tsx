@@ -48,11 +48,14 @@ const FeatureItem = ({ index, item }: { index: number; item: Contents }) => {
     triggerOnce: true,
     threshold: 0.1,
   });
-  const { ref: headTextRef, } = useInView({
+  const { ref: headTextRef } = useInView({
     triggerOnce: true,
   });
   return (
-    <div key={index} className="w-full flex-col flex justify-center items-center ">
+    <div
+      key={index}
+      className="w-full xl:w-fit flex-col flex justify-center items-center "
+    >
       <div
         // key={index}
         className="flex py-4 w-full md:w-[270px] mb-10 flex-col justify-center items-center"

@@ -441,7 +441,7 @@ const SubsidiaryPageOne: React.FC<{
             </div>
           ) : (
             <div className="relative z-40">
-              <ParallexCards data={sub.parallex_section} />
+              <ParallexCards data={sub.parallex_section}  />
             </div>
           )}
         </div>

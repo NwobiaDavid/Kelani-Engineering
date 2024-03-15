@@ -67,7 +67,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
             </motion.div>
           </div>
           <figure
-            style={{ borderRadius: 28, zIndex: 10, transform: "translateZ(0)" }}
+            style={{ borderRadius: 28, transform: "translateZ(0)" }}
             className="overflow-hidden absolute top-0 right-0 left-0 bottom-0 rounded-[20px]"
           >
             <motion.div

@@ -155,7 +155,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
   return (
     <div className="lg:h-[1000px] h-fit w-full z-30 text-white ">
       <div className="w-full mb-6 flex flex-col lg:px-4 justify-center pt-10 items-center ">
-        <div className=" w-[65%] flex justify-center items-center ">
+        <div className="w-[86%] flex justify-center items-center lg:mt-[150px]">
           <div className="flex  w-full lg:flex-row flex-col items-center mb-10 justify-center lg:justify-between ">
             <div className="uppercase text-center lg:text-left ">
               <motion.p
@@ -166,7 +166,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                   y: topTextInView ? 0 : 30,
                   transition: { duration: 1, ease: "easeOut" },
                 }}
-                className="font-semibold lg:text-base text-xs opacity-60 tracking-wide museo-sans"
+                className="font-semibold lg:text-base text-xs opacity-60 tracking-wide museo-sans lg:max-w-[540px]"
               >
                 {data.text.head}
               </motion.p>
@@ -212,7 +212,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                 <button
                   ref={prevRef}
                   onClick={handlePrevious}
-                  className="prev btn-sliderr btn-sliderr-left mr-0 lg:mr-[30px] h-[70px] w-[70px] overflow-hidden"
+                  className="prev btn-sliderr btn-sliderr-left mr-0 lg:mr-[30px] h-[56px] w-[56px] overflow-hidden"
                   type="button"
                 >
                   <svg
@@ -275,7 +275,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                   ref={prevRef}
                   type="button"
                   onClick={handleNext}
-                  className="prev  h-[70px] w-[70px] btn-sliderr btn-sliderr-right overflow-hidden"
+                  className="prev  h-[56px] w-[56px] btn-sliderr btn-sliderr-right overflow-hidden"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -338,7 +338,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
           }}
           className="w-full lg:mb-6 flex justify-center items-center "
         >
-          <div className="w-[65%] flex justify-center lg:justify-between items-center">
+          <div className="w-[86%] flex justify-center lg:justify-between items-center">
             {data.header.map((item, index) => (
               <div
                 className={`${
@@ -350,7 +350,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                 onClick={() => handleHeaderClick(index)}
               >
                 <div className=" h-[90%]  w-full ">
-                  <h1 className="p-2 h-full lg:text-xs xl:text-[16px] flex justify-center items-center uppercase w-full ">
+                  <h1 className="p-2 h-full lg:text-xs xl:text-[16px] flex justify-center items-center uppercase lg:w-full ">
                     {item.text}
                   </h1>
                 </div>
@@ -387,7 +387,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
         <AnimatePresence mode="wait">
           <motion.div
             key={display}
-            className="w-full lg:w-[70%] items-center lg:items-start z-30 h-full flex lg:flex-row flex-col"
+            className="w-full lg:w-[86%] items-center lg:items-start z-30 h-full flex lg:flex-row flex-col"
             variants={containerVariants}
             initial="initial"
             animate="animate"
@@ -395,7 +395,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
             transition={{ duration: 0.4 }}
           >
             <div
-              className="rounded-3xl flex  "
+              className="rounded-3xl flex  overflow-hidden"
               style={{
                 background: `linear-gradient(0deg, ${colours.c700}, transparent)`,
               }}
@@ -405,7 +405,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                 alt={`Slide ${display + 1}`}
                 effect="blur"
                 style={{ opacity: 0.8 }}
-                className="rounded-3xl xl:h-[400px] lg:h-[300px]  object-cover xl:w-[650px] lg:w-[550px] border"
+                className="rounded-3xl xl:h-[400px] 2xl:h-full 2xl:rounded-3xl 2xl:w-[900px] lg:h-[300px]  object-cover xl:w-[650px] lg:w-[550px] border"
               />
               {/* <img
                 src={data.content[display].img}

@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useRef } from "react";
 
 interface ParallexMobileProps {
+  header: string;
+  subHead: string;
   data: {
     img: string;
     img2: string;
@@ -101,9 +103,11 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
       <div className="relative h-[210vh] bg-black  ">
         <div className=" pb-3 h-[100vh] card-animation-container items-center  pt-10 flex-col text-white w-full flex">
           <div className=" w-[70%] text-center mb-16">
-            <h3 className=" opacity-80 tracking-widest  mb-2 uppercase">why kelani</h3>
+            <h3 className=" opacity-80 tracking-widest  mb-2 uppercase">
+              {data.subHead}
+            </h3>
             <h1 className=" text-2xl uppercase text-center font-semibold ">
-              Personalized Service for You
+              {data.header}
             </h1>
           </div>
 

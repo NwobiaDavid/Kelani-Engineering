@@ -22,7 +22,7 @@ const CustomerSection = ({ cards }: { cards: Card[] }) => {
       ref={ref}
       className="w-full h-[250px] lg:h-fit "
     >
-      <div className="lg:h-[500px] z-50 relative h-[200px]">
+      <div className="lg:h-[600px] z-50 relative h-[200px]">
         <h1 className="text-white opacity-60 mb-6 text-center font-semibold text-xs lg:text-base lg:mb-10 tracking-[2.4px]">
           CUSTOMERS
         </h1>
