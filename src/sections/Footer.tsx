@@ -93,10 +93,10 @@ const Footer = ({ contactUsUrl }: { contactUsUrl: string }) => {
     <div className=" -mt-[90dvh]">
       <div
         ref={containerRef}
-        className=" h-[79.2dvh] md:h-[100dvh] w-full"
+        className=" relative h-[90dvh] w-full"
       ></div>
 
-      <div className="sticky  top-0 bottom-0 footer">
+      <div className="sticky  md:top-0 bottom-0 footer">
         <div className="w-full z-[60] h-screen relative p-[15px] md:p-[24px] lg:p-[32px] bg-[#fefefe]">
           <motion.div
             animate={{
