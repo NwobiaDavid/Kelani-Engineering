@@ -345,7 +345,7 @@ const SubsidiaryPageOne: React.FC<{
                 />
 
                 <div className="flex h-full  flex-col justify-center items-center">
-                  <div className="lg:w-[60%] z-50 w-full px-[20px] md:px-0 text-center flex flex-col items-center justify-center uppercase ">
+                  <div className="lg:w-[60%] z-50 w-full md:px-0 px-[0px]  text-center flex flex-col items-center justify-center uppercase ">
                     <motion.p
                       initial={{ opacity: 0, y: 30 }}
                       animate={{
@@ -446,7 +446,7 @@ const SubsidiaryPageOne: React.FC<{
           )}
         </div>
 
-        <div className="  overflow-hidden relative ">
+        <div className="  overflow-hidden relative mb-0 ">
           <div id="hex-gridx" className=" flex flex-col relative h-full   ">
             <div className=" bg-black relative z-[50] ">
               {/* <div className=" z-10 h-full  relative "> */}
@@ -471,19 +471,7 @@ const SubsidiaryPageOne: React.FC<{
               />
             </div>
 
-            {/* <div className=" relative flex flex-col w-full z-[60] min-h-[130px] h-[130px]  ">
-              <div className="h-[70%] bg-black "> </div>
-
-              <div className="h-[30%] relative ">
-                <img
-                  className=" object-cover absolute w-full h-[22%]  z-[90000] "
-                  src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg"
-                  alt=""
-                />
-              </div>
-            </div> */}
-
-            <div className=" h-[100px] relative ">
+            <div className=" h-[14px] md:h-[100px] relative ">
               <img
                 className=" object-cover absolute w-full  z-[60] "
                 src="/assets/images/subsidiaryPagesImages/Rectangle 1.svg"
