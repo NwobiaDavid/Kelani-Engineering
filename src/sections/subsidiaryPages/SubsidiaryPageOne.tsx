@@ -345,7 +345,7 @@ const SubsidiaryPageOne: React.FC<{
                 />
 
                 <div className="flex h-full  flex-col justify-center items-center">
-                  <div className="lg:w-[60%] z-50 w-full px-[20px] md:px-0 text-center flex flex-col items-center justify-center uppercase ">
+                  <div className="lg:w-[60%] z-50 w-full md:px-0 px-[0px]  text-center flex flex-col items-center justify-center uppercase ">
                     <motion.p
                       initial={{ opacity: 0, y: 30 }}
                       animate={{
