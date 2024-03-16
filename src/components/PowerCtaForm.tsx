@@ -53,7 +53,7 @@ const SubsidiaryCtaForm = ({
   lenis: Lenis;
 }) => {
   const ref = useRef(null);
-  useEffect(() => {}, [ref]);
+  useEffect(() => { }, [ref]);
   useEffect(() => {
     console.log(lenis);
     lenis.stop();
@@ -111,7 +111,7 @@ const SubsidiaryCtaForm = ({
       ></motion.div>
 
       <motion.div
-      data-lenis-prevent
+        data-lenis-prevent
         initial={{ opacity: 0.7, x: "80dvw" }}
         transition={{ duration: 0.35 }}
         animate={{ opacity: 1, x: 0 }}
@@ -143,12 +143,12 @@ const SubsidiaryCtaForm = ({
                 opacity: 0,
                 transition: { duration: 0.4 },
               }}
-              className=" px-[20px] py-[20px] md:px-[36px] md:py-[36px] lg:p-[56px] "
+              className=" p-[20px] pt-[56px]  md:p-[56px] relative "
             >
-              <header className="text-[32px] space-grotesk-semibold pb-[56px] border-b-zinc-500 border-b border-opacity-50 flex justify-between items-center">
-              Power Your Success With Kelani Power
+              <header className="text-[24px] lg:text-[32px] space-grotesk-semibold pb-[56px] border-b-zinc-500 border-b border-opacity-50 flex justify-between items-center">
+                Power Your Success With Kelani Power
                 <motion.svg
-                  className={"cursor-pointer focus:outline-none"}
+                  className={"cursor-pointer focus:outline-none absolute sm:relative sm:top-0 sm:right-0 top-[20px] right-[10px]"}
                   whileHover={{ scale: 1.07 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => close()}
@@ -178,7 +178,7 @@ const SubsidiaryCtaForm = ({
                           }
                         >
                           <input
-                          // autoFocus={true}
+                            // autoFocus={true}
                             {...register("name")}
                             className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
@@ -530,7 +530,7 @@ const SubsidiaryCtaForm = ({
                           Does the property own any of the following? (select
                           all that apply)
                         </label>
-                        <div className="grid grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-[5px] museo-sans mt-[5px]">
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[5px] museo-sans mt-[5px]">
                           <div className="flex space-x-[8px] items-center">
                             <input
                               type="checkbox"
