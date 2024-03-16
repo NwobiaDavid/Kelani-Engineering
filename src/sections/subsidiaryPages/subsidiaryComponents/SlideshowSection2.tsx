@@ -154,7 +154,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
 
   return (
     <div className="lg:h-[1000px] h-fit w-full z-30 text-white ">
-      <div className="w-full mb-6 flex flex-col lg:px-4 justify-center pt-10 items-center ">
+      <div className="w-full mb-6 flex flex-col lg:px-4 justify-center pt-24 items-center ">
         <div className="w-[86%] flex justify-center items-center lg:mt-[150px]">
           <div className="flex  w-full lg:flex-row flex-col items-center mb-10 justify-center lg:justify-between ">
             <div className="uppercase text-center lg:text-left ">

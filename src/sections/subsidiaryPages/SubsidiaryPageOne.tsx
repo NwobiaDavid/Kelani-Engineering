@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Lenis from "@studio-freight/lenis/types";
-import { easeIn, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 import Footer from "../Footer";
 import ConnectSection from "./subsidiaryComponents/ConnectSection";
@@ -15,8 +17,6 @@ import ParallexCardsMobile from "./subsidiaryComponents/ParallexCardsMobile";
 import SlideshowSection2 from "./subsidiaryComponents/SlideshowSection2";
 import WavyText from "./subsidiaryComponents/WavyText";
 import "./subsidiaryPages.css";
-import { Helmet } from "react-helmet";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface Contents {
   img: string;

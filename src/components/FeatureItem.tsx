@@ -66,7 +66,7 @@ const FeatureItem = ({ index, item }: { index: number; item: Contents }) => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           src={item.img}
-          className="pb-4 md:p-0 w-[10rem] object-cover md:w-[120px] opacity-90 "
+          className="pb-4 md:p-0 w-[120px] sm:w-[10rem] object-cover md:w-[120px] opacity-90 "
           alt={item.head}
         />
         <img src={item.img2} className="w-[100vw] lg:hidden" alt="" />

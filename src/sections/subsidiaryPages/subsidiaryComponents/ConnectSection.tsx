@@ -66,7 +66,7 @@ const ConnectSection: React.FC<{
           </h1> */}
           <motion.h1
             ref={headerRef}
-            className="text-white text-center w-full justify-center flex-wrap font-semibold text-4xl lg:text-5xl uppercase space-grotesk-medium"
+            className="text-white text-center w-full justify-center flex-wrap font-semibold text-[32px] md:text-4xl lg:text-5xl uppercase space-grotesk-medium"
             style={{ display: "flex", overflow: "hidden" }}
             variants={container}
             initial="hidden"
@@ -87,7 +87,7 @@ const ConnectSection: React.FC<{
               </motion.span>
             ))}
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.45 } } : {}} className="text-xl opacity-85 my-10 museo-sans">{text}</motion.p>
+          <motion.p initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.45 } } : {}} className="text-[14px] md:text-xl opacity-85 my-[15px] md:my-10 museo-sans">{text}</motion.p>
           <motion.div
             onClick={() => setCtaFormShowing(true)}
             variants={ctaButtonVariant}

@@ -58,6 +58,12 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
 
   const card1leftSide = useRef(null);
   const card2leftSide = useRef(null);
+  const card1textContainer = useRef(null);
+  const card2textContainer = useRef(null);
+
+  const card1Container = useRef(null);
+  const card2Container = useRef(null);
+  const card3Container = useRef(null);
 
   useGSAP(() => {
     const timeline = gsap.timeline({
@@ -70,15 +76,13 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
       },
     });
 
-    timeline.to(".card-1", { y: "-200vh", x: "-200vw", duration: 150 });
+    timeline.to(".card-1", { x: "-200vw", duration: 150 });
     timeline.to(".card-2", {
-      y: "-200vh",
       x: "-200vw",
       duration: 150,
       delay: 300,
     });
     timeline.to(".card-3", {
-      y: "-200vh",
       x: "-200vw",
       duration: 150,
       delay: 500,
@@ -100,13 +104,13 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
 
   return (
     <>
-      <div className="relative h-[210vh] bg-black  ">
+      {/* <div className="relative h-[210vh] bg-black  ">
         <div className=" pb-3 h-[100vh] card-animation-container items-center  pt-10 flex-col text-white w-full flex">
           <div className=" w-[70%] text-center mb-16">
             <h3 className=" opacity-80 tracking-widest  mb-2 uppercase">
               {data.subHead}
             </h3>
-            <h1 className=" text-2xl uppercase text-center font-semibold ">
+            <h1 className=" uppercase text-center font-semibold ">
               {data.header}
             </h1>
           </div>
@@ -138,10 +142,10 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                 </div>
                 <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
                   <div className=" max-h-[15%] flex relative mb-20 flex-col px-2 items-start">
-                    <h2 className=" text-2xl md:text-4xl top-10 text-white title">
+                    <h2 className=" md:text-4xl top-10 text-white title space-grotesk-medium text-[26px] md:text-[32px]">
                       {data.data[0].content.head}
                     </h2>
-                    <p className=" mt-[16px]">{data.data[0].content.text}</p>
+                    <p className=" text-[14px] mt-[12px] museo-sans">{data.data[0].content.text}</p>
                     <button className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px] ">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
@@ -181,10 +185,10 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                 </div>
                 <div className="text-left h-[85%] p-3 flex flex-col justify-between items-center ">
                   <div className="  max-h-[15%] flex flex-col px-2 mb-20 items-start">
-                    <h2 className=" text-2xl  md:text-4xl text-white title">
+                    <h2 className="  md:text-4xl text-white title space-grotesk-medium text-[26px] md:text-[32px]">
                       {data.data[1].content.head}
                     </h2>
-                    <p className="mt-[16px]">{data.data[1].content.text}</p>
+                    <p className="text-[14px] mt-[12px] museo-sans">{data.data[1].content.text}</p>
                     <button className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px] ">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
@@ -212,10 +216,10 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
               >
                 <div className="text-left h-full pt-[75px] p-3 flex flex-col justify-between items-center ">
                   <div className=" max-h-[15%] flex flex-col mb-20 px-2 items-start">
-                    <h2 className=" text-2xl md:text-4xl text-white title">
+                    <h2 className=" md:text-4xl text-white title space-grotesk-medium text-[26px] md:text-[32px]">
                       {data.data[1].content.head}
                     </h2>
-                    <p className="mt-[16px]  ">{data.data[1].content.text}</p>
+                    <p className="text-[14px] mt-[12px] museo-sans  ">{data.data[1].content.text}</p>
                     <button className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px]  ">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
@@ -228,26 +232,168 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                 </div>
               </div>
             </div>
-            {/* <div  style={{ background: `linear-gradient(to bottom right, ${data.data[0].colors.one}, ${data.data[0].colors.two})` }}
-                        className="W-full h-[500px] -mt-[100px] border-white border rounded-[20px]  ">
-                          <div className="text-center p-3 flex flex-col items-center ">
-                         <h2 className="text-2xl text-white title">
-                                {data.data[0].content.head }
-                              </h2>
-                
-                              <img
-                              className="w-[100px]  object-cover"
-                              src="/assets/images/icon-talent-card-1.svg"
-                            />
-                              <p className="mt-[16px]">
-                              {data.data[0].content.text }
-                              </p>
-                              <Link to={'#'} >  </Link>
-                         </div>
-                        </div> */}
           </div>
         </div>
+      </div> */}
+      <div style={{
+        //@ts-expect-error
+        minHeight: card1textContainer?.current?.offsetHeight + card2textContainer?.current?.offsetHeight + card3Container?.current?.offsetHeight + 580
+      }} className="relative pt-[120px] ">
+        <div className=" pb-3 items-center card-animation-container flex-col text-white w-full flex">
+          <div className=" w-[70%] text-center mb-16">
+            <h3 className=" opacity-80 tracking-widest  mb-2 uppercase text-[15px]">
+              {data.subHead}
+            </h3>
+            <h1 className=" uppercase text-center space-grotesk-medium text-[26px] md:text-[32px] md:w-[60%] md:mx-auto">
+              {data.header}
+            </h1>
+          </div>
+
+          <div className="relative  w-[90%] mx-auto">
+
+            <div
+              ref={card1Container}
+              style={{
+                background: `url(${data.data[0].img2})`,
+                transform: "rotate(180deg)",
+                backgroundSize: "cover",
+              }}
+              className="w-full overflow-hidden z-20 left-[200vw]  absolute   border-white border rounded-[20px] card-1 "
+            >
+              <div
+                ref={card1leftSide}
+                style={{ transform: "rotate(-180deg)" }}
+                className="h-full w-full"
+              >
+                <div>
+                  <div ref={card1textContainer} className="h-[100px] w-full relative flex  items-center">
+                    <div className="w-[90px] p-2 h-full flex items-center justify-center">
+                      <img
+                        className="h-full opacity-0 top-[100px] left-[100px] relative top-left-image"
+                        src={data.data[0].img}
+                      />
+                    </div>
+                    <div className="h-[2px] w-full relative flex justify-center overflow-hidden ">
+                      <div className="w-[95%] pr-3 bg-[#F4F4F4] h-full  absolute left-[200vw] line-extend"></div>
+                    </div>
+                  </div>
+
+                </div>
+                <div className="text-left p-3 pb-[30px] flex flex-col justify-between items-center ">
+                  <div ref={card1textContainer} className="flex relative mb-[40px] flex-col px-2 items-start">
+                    <h2 className=" md:text-4xl top-10 text-white title space-grotesk-medium text-[26px] md:text-[36px]">
+                      {data.data[0].content.head}
+                    </h2>
+                    <p className=" text-[14px] md:text-[18px] mt-[12px] museo-sans">{data.data[0].content.text}</p>
+                    <button className="text-white md:text-[20px] items-center flex gap-[13px] mt-[25px] md:mt-[44px] museo-sans font-medium">
+                      Learn More
+                      <img src="/assets/images/right-arrow.svg" />
+                    </button>
+                  </div>
+                  <img
+                    className=" w-[80%] max-h-[200px] md:max-h-[280px] object-contain"
+                    src={data.data[0].img3}
+                  />
+                </div>
+              </div>
+            </div>
+
+
+
+            <div
+              ref={card2Container}
+              style={{
+                background: `url(${data.data[0].img2})`,
+                transform: "rotate(180deg)",
+                backgroundSize: "cover",
+                //@ts-expect-error
+                top: card1textContainer?.current?.offsetHeight + 80
+              }}
+              className="w-full overflow-hidden z-20 left-[200vw]  absolute   border-white border rounded-[20px] card-2 "
+            >
+              <div
+                ref={card2leftSide}
+                style={{ transform: "rotate(-180deg)" }}
+                className="h-full w-full"
+              >
+                <div>
+                  <div ref={card2textContainer} className="h-[100px] w-full relative flex  items-center">
+                    <div className="w-[90px] p-2 h-full flex items-center justify-center">
+                      <img
+                        className="h-full opacity-0 top-[100px] left-[100px] relative top-left-image"
+                        src={data.data[1].img}
+                      />
+                    </div>
+                    <div className="h-[2px] w-full relative flex justify-center overflow-hidden ">
+                      <div className="w-[95%] pr-3 bg-[#F4F4F4] h-full  absolute left-[200vw] line-extend"></div>
+                    </div>
+                  </div>
+
+                </div>
+                <div className="text-left p-3 pb-[30px] flex flex-col justify-between items-center ">
+                  <div className="flex relative mb-[40px] flex-col px-2 items-start">
+                    <h2 className=" md:text-4xl top-10 text-white title space-grotesk-medium text-[26px] md:text-[36px]">
+                      {data.data[1].content.head}
+                    </h2>
+                    <p className=" text-[14px] md:text-[18px] mt-[12px] museo-sans">{data.data[1].content.text}</p>
+                    <button className="text-white md:text-[20px] items-center flex gap-[13px] mt-[25px] md:mt-[44px] museo-sans font-medium">
+                      Learn More
+                      <img src="/assets/images/right-arrow.svg" />
+                    </button>
+                  </div>
+                  <img
+                    className=" w-[80%] max-h-[200px] md:max-h-[280px] object-contain"
+                    src={data.data[0].img3}
+                  />
+                </div>
+              </div>
+            </div>
+
+
+            <div
+              ref={card3Container}
+              style={{
+                background: `url(${data.data[2].img2})`,
+                transform: "rotate(180deg)",
+                backgroundSize: "cover",
+                // @ts-expect-error
+                top: card1textContainer?.current?.offsetHeight + card1textContainer?.current?.offsetHeight + 125
+              }}
+              className="w-full overflow-hidden z-40 absolute left-[200vw] border-white border card-3 rounded-[20px]  "
+            >
+              <div
+                style={{ transform: "rotate(-180deg)" }}
+                className="h-full w-full"
+              >
+                <div className="text-left h-full pt-[75px] p-3 pb-[30px] flex flex-col justify-between items-center ">
+                  <div className="flex flex-col mb-[40px] px-2 items-start">
+                    <h2 className=" md:text-4xl text-white title space-grotesk-medium text-[26px] md:text-[32px]">
+                      {data.data[2].content.head}
+                    </h2>
+                    <p className="text-[14px] md:text-[16px] mt-[12px] museo-sans  ">{data.data[2].content.text}</p>
+                    <button className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px]  ">
+                      Learn More
+                      <img src="/assets/images/right-arrow.svg" />
+                    </button>
+                  </div>
+                  <img
+                    className="  -[80%] max-h-[200px] md:max-h-[280px] object-contain"
+                    src={data.data[0].img3}
+                  />
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+
+
       </div>
+
+
+
     </>
   );
 };

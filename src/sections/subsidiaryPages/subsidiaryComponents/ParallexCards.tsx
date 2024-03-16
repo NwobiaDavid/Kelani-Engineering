@@ -95,6 +95,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
       ".card-2 .title",
       {
         scale: 0.35,
+        //@ts-expect-error
         x: getValueFromScreenSize(-100 - ((card1leftSide?.current?.offsetWidth - (card1title?.current?.offsetHeight* 0.35 )) / 2), -135 - ((card2leftSide?.current?.offsetWidth - (card2title?.current?.offsetHeight* 0.35 )) / 2)),
         rotate: -90,
         duration: 600,
