@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Lenis from "@studio-freight/lenis/types";
-import { motion, useAnimation } from "framer-motion";
+import { easeIn, motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Link } from "react-router-dom";
@@ -318,7 +318,7 @@ const SubsidiaryPageOne: React.FC<{
           <div className="relative overflow-x-hidden bg-black ">
             <div className="  md:h-screen h-[600px] relative">
               <div className="absolute inset-0 bg-cover bg-center">
-                <div className=" absolute w-full  z-50">
+                <motion.div initial={{ scale: 1.3 }} animate={{ scale: 1, transition: { duration: 1, ease: [0.43, 0.13, 0.23, 0.96]  } }} className=" absolute w-full  z-50">
                   <LazyLoadImage
                     width={"100%"}
                     height={"100%"}
@@ -326,7 +326,7 @@ const SubsidiaryPageOne: React.FC<{
                     wrapperClassName="lazyLoadImageContainer opacity-50"
                     src={sub.hero_section.home_img}
                   />
-                </div>
+                </motion.div>
               </div>
 
               <div className="relative z-50 h-full flex flex-col">
@@ -345,7 +345,7 @@ const SubsidiaryPageOne: React.FC<{
                 />
 
                 <div className="flex h-full  flex-col justify-center items-center">
-                  <div className="lg:w-[60%] z-50 w-full md:px-0 px-[0px]  text-center flex flex-col items-center justify-center uppercase ">
+                  <div className="md:w-[60%] z-50 w-full md:px-0 px-[0px]  text-center flex flex-col items-center justify-center">
                     <motion.p
                       initial={{ opacity: 0, y: 30 }}
                       animate={{
@@ -441,7 +441,7 @@ const SubsidiaryPageOne: React.FC<{
             </div>
           ) : (
             <div className="relative z-40">
-              <ParallexCards data={sub.parallex_section}  />
+              <ParallexCards data={sub.parallex_section} />
             </div>
           )}
         </div>

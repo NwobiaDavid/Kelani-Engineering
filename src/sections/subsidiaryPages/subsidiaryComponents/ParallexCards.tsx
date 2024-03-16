@@ -41,6 +41,8 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
   // const animated = useRef(null);
   const card1leftSide = useRef(null);
   const card2leftSide = useRef(null);
+  const card1title = useRef(null);
+  const card2title = useRef(null);
 
   useGSAP(() => {
     const timeline = gsap.timeline({
@@ -60,7 +62,8 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
       ".card-1 .title",
       {
         scale: 0.35,
-        x: getValueFromScreenSize(-100, -155),
+        // @ts-ignore
+        x: getValueFromScreenSize(-100 - ((card1leftSide?.current?.offsetWidth - (card1title?.current?.offsetHeight* 0.35 )) / 2), -135 - ((card1leftSide?.current?.offsetWidth - (card1title?.current?.offsetHeight* 0.35 )) / 2)),
         rotate: -90,
         duration: 600,
         opacity: 0.8,
@@ -92,7 +95,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
       ".card-2 .title",
       {
         scale: 0.35,
-        x: getValueFromScreenSize(-100, -155),
+        x: getValueFromScreenSize(-100 - ((card1leftSide?.current?.offsetWidth - (card1title?.current?.offsetHeight* 0.35 )) / 2), -135 - ((card2leftSide?.current?.offsetWidth - (card2title?.current?.offsetHeight* 0.35 )) / 2)),
         rotate: -90,
         duration: 600,
         y: getValueFromScreenSize(
@@ -201,8 +204,8 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                     </div>
 
                     <div className="w-[85%] h-full flex py-[65px] ">
-                      <div className=" w-[30%] ">
-                        <h2 className="text-[26px] xl:text-[32px] mdxlxl:text-[40px] 2xl  pl-[5%] text-white leading-[1.136] title museo-sans font-medium">
+                      <div className=" min-w-[45%] ">
+                        <h2 ref={card1title} className="text-[26px] xl:text-[32px] mdxlxl:text-[40px] 2xl  pl-[5%] text-white leading-[1.136] title museo-sans font-medium w-[80%]">
                           {data.data[0].content.head}
                         </h2>
                         <p className="mt-[16px]  pl-[5%] museo-sans text-[12px] xl:text-[13px] mdxl:text-[16px] font-normal subtext">
@@ -243,7 +246,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                         </div>
                       </div>
                       <img
-                        className="w-[70%] ml-10 object-cover"
+                        className="w-[60%] ml-10 object-contain"
                         src={data.data[0].img3}
                       />
                     </div>
@@ -278,8 +281,8 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                     </div>
 
                     <div className="w-[85%] h-full flex py-[65px]">
-                      <div className="w-[30%]">
-                        <h2 className="text-[26px] xl:text-[32px] mdxlxl:text-[40px] 2xl pl-[5%]  text-white leading-[1.136] title museo-sans font-medium">
+                      <div className="min-w-[45%]">
+                        <h2 ref={card2title} className="text-[26px] xl:text-[32px] mdxlxl:text-[40px] 2xl pl-[5%]  text-white leading-[1.136] title museo-sans font-medium">
                           {data.data[1].content.head}
                         </h2>
                         <p className="mt-[16px] pl-[5%] museo-sans text-[12px] xl:text-[13px] mdxl:text-[16px] font-normal subtext">
@@ -320,7 +323,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                         </div>
                       </div>
                       <img
-                        className="w-[70%] ml-10 transform scale-x-[-1] object-cover"
+                        className="w-[60%] ml-10 transform scale-x-[-1] object-contain"
                         src={data.data[1].img3}
                       />
                     </div>
@@ -339,7 +342,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                     style={{ transform: "rotate(-180deg)" }}
                     className="h-full flex pl-9 "
                   >
-                    <div className="pl-[5%] w-[30%] ">
+                    <div className="pl-[5%] min-w-[40%] ">
                       <h2 className="text-[26px] xl:text-[32px] mdxlxl:text-[40px] 2xl text-white leading-[1.136]  font-medium">
                         {data.data[2].content.head}
                       </h2>
@@ -380,7 +383,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                     </div>
 
                     <img
-                      className="w-full lg:max-w-[calc(80vw-200px)] xl:max-w-[calc(72vw-200px)] ml-14 object-cover"
+                      className="w-full lg:w-[60%] ml-14 object-cover"
                       src={data.data[2].img3}
                     />
                     {/* </figure> */}

@@ -41,7 +41,7 @@ export const sub_one = {
   ],
   hero_section: {
     sub_text: "Kelani Consulting and Talent Management",
-    main_text: "DRIVING SUCCESS with talent and experience",
+    main_text: "Driving Success With Talent And Experience",
     home_img: "/assets/images/subsidiaryPagesImages/talent.png",
     color: {
       c700: "#7e22ce",
@@ -326,7 +326,7 @@ export const sub_two = {
   ],
   hero_section: {
     sub_text: "Kelani Engineering",
-    main_text: "transforming industries, shaping the future.",
+    main_text: "Transforming Industries, Shaping The Future.",
     home_img: "/assets/images/subsidiaryPagesImages/engineering.png",
     color: {
       c700: "#c2410c",
@@ -560,8 +560,8 @@ export const sub_three = {
     },
   ],
   hero_section: {
-    sub_text: "Kelani POWER",
-    main_text: "enhance organizational performance ",
+    sub_text: "Kelani Power",
+    main_text: "Enhance Organizational Performance ",
     home_img: "/assets/images/subsidiaryPagesImages/power.png",
     color: {
       c700: "#15803d",

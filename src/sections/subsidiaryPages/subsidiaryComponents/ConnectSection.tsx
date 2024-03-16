@@ -2,6 +2,7 @@ import React, { Dispatch, SetStateAction, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { motion } from "framer-motion";
+import WavyText from "./WavyText";
 
 const ConnectSection: React.FC<{
   text: string;
@@ -18,6 +19,8 @@ const ConnectSection: React.FC<{
     },
   };
   const [buttonHovered, setButtonHovered] = useState(false);
+
+  // const text = "Connect With Us"
   return (
     <div className="h-screen bg-black  w-full lg:h-screen relative flex flex-col justify-center items-center ">
       <div className=" mt-0 w-full  h-full relative flex justify-center items-center text-white ">
@@ -25,6 +28,7 @@ const ConnectSection: React.FC<{
           <h1 className=" text-4xl lg:text-5xl uppercase  space-grotesk-medium">
             Connect with Us Today
           </h1>
+          {/* <WavyText text="Connect with Us Today"/>  */}
           <p className="text-xl opacity-85 my-10 museo-sans">{text}</p>
           <motion.div
             onClick={() => setCtaFormShowing(true)}
@@ -45,7 +49,7 @@ const ConnectSection: React.FC<{
             className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
           >
             <Link to={"#"} className="text-black">
-              GET CONNECTED{" "}
+            GET CONNECTED{" "}
             </Link>
             <motion.span
               className="sm:block hidden"
