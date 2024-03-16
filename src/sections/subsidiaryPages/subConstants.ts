@@ -286,7 +286,7 @@ export const sub_one = {
   },
 
   connect_text:
-    "Ready to dive into the endless possibilities that our solutions offer? Don't hesitate to connect with our passionate team! We're here to provide tailored support and guide you towards a triumphant journey. Get in touch now and let's make your dreams a reality!",
+    "Explore endless possibilities with our solutions! Connect with our passionate team for tailored support and embark on your triumphant journey today. Let's make your dreams a reality!",
 };
 
 //   page 2 -------------------------------------------------
