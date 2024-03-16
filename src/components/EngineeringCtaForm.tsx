@@ -147,7 +147,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <input
                             {...register("name")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                            className="bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{
@@ -160,11 +160,11 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                           </motion.p>
                         </div>
                       </div>
-                      <div className="flex flex-col ">
+                      <div className="flex flex-col engineering">
                         <label className="museo-sans text-[#888A8B]">
                           Phone Number
                         </label>
-                        {/* <input className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans" /> */}
+                        {/* <input className="bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans" /> */}
                         <div
                           className={
                             errors.phoneNumber ? "error relative" : "relative"
@@ -200,7 +200,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <input
                             {...register("email")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                            className="bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{
@@ -236,9 +236,9 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                             style={{
                               borderColor: errors.companyName
                                 ? "#fe3514"
-                                : "#C3DECE",
+                                : "#FFBC8C",
                             }}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                            className="bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{
@@ -266,9 +266,9 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                               style={{
                                 borderColor: errors.industry
                                   ? "#fe3514"
-                                  : "#C3DECE",
+                                  : "#FFBC8C",
                               }}
-                              className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                              className="bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                             />
                             <motion.p
                               animate={{
@@ -293,7 +293,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <select
                             {...register("need")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                            className="bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           >
                             <option disabled selected value="">
                               Choose Need
@@ -339,7 +339,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                             >
                               <select
                                 {...register("productOfInterest")}
-                                className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                                className="bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                               >
                                 <option disabled selected value="">
                                   Select machine/product of interest
@@ -404,7 +404,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                       >
                         <input
                           {...register("address")}
-                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                          className="bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                         />
                         <motion.p
                           animate={{
@@ -423,7 +423,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                       >
                         <input
                           {...register("city")}
-                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                          className="bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                         />
                         <motion.p
                           animate={{ opacity: errors.city?.message ? 1 : 0 }}
@@ -440,7 +440,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                       >
                         <input
                           {...register("state")}
-                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                          className="bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                         />
                         <motion.p
                           animate={{ opacity: errors.state?.message ? 1 : 0 }}
@@ -465,7 +465,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                   >
                     <textarea
                       {...register("message")}
-                      className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans h-full resize-none"
+                      className="bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans h-full resize-none"
                     />
                     <motion.p
                       animate={{ opacity: errors.message?.message ? 1 : 0 }}

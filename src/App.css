@@ -65,6 +65,15 @@ input[type="tel"],
   @apply bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans;
 }
 
+.engineering input[type="tel"], 
+.engineering .p-inputnumber-input {
+  @apply bg-[#FFBC8C] bg-opacity-5 border-[#FFBC8C] ;
+}
+
+.consulting input[type="tel"], 
+.consulting .p-inputnumber-input {
+  @apply bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4];
+}
 .p-inputnumber {
   @apply w-full;
 }

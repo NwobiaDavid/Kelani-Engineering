@@ -154,7 +154,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <input
                             {...register("name")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                            className="bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{
@@ -167,11 +167,11 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                           </motion.p>
                         </div>
                       </div>
-                      <div className="flex flex-col ">
+                      <div className="flex flex-col consulting">
                         <label className="museo-sans text-[#888A8B]">
                           Phone Number
                         </label>
-                        {/* <input className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans" /> */}
+                        {/* <input className="bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans" /> */}
                         <div
                           className={
                             errors.phoneNumber ? "error relative" : "relative"
@@ -207,7 +207,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <input
                             {...register("email")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                            className="bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{
@@ -239,7 +239,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                       >
                         <input
                           {...register("positionsToFill")}
-                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                          className="bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                         />
                         <motion.p
                           animate={{
@@ -264,7 +264,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                       >
                         <select
                           {...register("typeOfHiringNeeds")}
-                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                          className="bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                         >
                           <option disabled selected value="">
                             Select Type of Hiring Needs
@@ -295,7 +295,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                       >
                         <select
                           {...register("urgencyOfHiring")}
-                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                          className="bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                         >
                           <option disabled selected value="">
                             Select Hiring Needs
@@ -337,9 +337,9 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                             style={{
                               borderColor: errors.companyName
                                 ? "#fe3514"
-                                : "#C3DECE",
+                                : "#CAB6F4",
                             }}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                            className="bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           />
                           <motion.p
                             animate={{
@@ -367,9 +367,9 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                               style={{
                                 borderColor: errors.industry
                                   ? "#fe3514"
-                                  : "#C3DECE",
+                                  : "#CAB6F4",
                               }}
-                              className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                              className="bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                             />
                             <motion.p
                               animate={{
@@ -394,7 +394,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                         >
                           <select
                             {...register("companySize")}
-                            className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                            className="bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                           >
                             <option disabled selected value="">
                               Choose Company Size
@@ -443,7 +443,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                       >
                         <input
                           {...register("additionalInformation")}
-                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                          className="bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                         />
                         <motion.p
                           animate={{
@@ -470,7 +470,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
                       >
                         <input
                           {...register("specificDetailsRelatedToHiringNeeds")}
-                          className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
+                          className="bg-[#CAB6F4] bg-opacity-5 border-[#CAB6F4] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans"
                         />
                         <motion.p
                           animate={{

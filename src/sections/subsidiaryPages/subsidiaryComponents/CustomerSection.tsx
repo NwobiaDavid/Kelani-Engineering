@@ -24,7 +24,7 @@ const CustomerSection = ({ cards }: { cards: Card[] }) => {
     >
       <div className="lg:h-[600px] z-50 relative h-[200px]">
         <h1 className="text-white opacity-60 mb-6 text-center font-semibold text-xs lg:text-base lg:mb-10 tracking-[2.4px]">
-          CUSTOMERS
+          Customers
         </h1>
 
         <div className="flex w-full relative justify-center items-center">
