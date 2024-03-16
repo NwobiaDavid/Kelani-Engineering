@@ -184,7 +184,7 @@ const SubsidiaryCtaForm = ({
                           />
                           <motion.p
                             animate={{ opacity: errors.name?.message ? 1 : 0 }}
-                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                           >
                             {errors.name?.message}
                           </motion.p>
@@ -212,7 +212,7 @@ const SubsidiaryCtaForm = ({
                             animate={{
                               opacity: errors.phoneNumber?.message ? 1 : 0,
                             }}
-                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                           >
                             {errors.phoneNumber?.message}
                           </motion.p>
@@ -233,7 +233,7 @@ const SubsidiaryCtaForm = ({
                           />
                           <motion.p
                             animate={{ opacity: errors.email?.message ? 1 : 0 }}
-                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                           >
                             {errors.email?.message}
                           </motion.p>
@@ -262,7 +262,7 @@ const SubsidiaryCtaForm = ({
                             animate={{
                               opacity: errors.businessNeed?.message ? 1 : 0,
                             }}
-                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                           >
                             {errors.businessNeed?.message}
                           </motion.p>
@@ -293,7 +293,7 @@ const SubsidiaryCtaForm = ({
                             animate={{
                               opacity: errors.address?.message ? 1 : 0,
                             }}
-                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                           >
                             {errors.address?.message}
                           </motion.p>
@@ -314,7 +314,7 @@ const SubsidiaryCtaForm = ({
                           />
                           <motion.p
                             animate={{ opacity: errors.city?.message ? 1 : 0 }}
-                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                           >
                             {errors.city?.message}
                           </motion.p>
@@ -335,7 +335,7 @@ const SubsidiaryCtaForm = ({
                           />
                           <motion.p
                             animate={{ opacity: errors.state?.message ? 1 : 0 }}
-                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                           >
                             {errors.state?.message}
                           </motion.p>
@@ -372,7 +372,7 @@ const SubsidiaryCtaForm = ({
                             animate={{
                               opacity: errors.businessName?.message ? 1 : 0,
                             }}
-                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                           >
                             {errors.businessName?.message}
                           </motion.p>
@@ -414,7 +414,7 @@ const SubsidiaryCtaForm = ({
                               animate={{
                                 opacity: errors.loadType?.message ? 1 : 0,
                               }}
-                              className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                              className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                             >
                               {errors.loadType?.message}
                             </motion.p>
@@ -428,7 +428,7 @@ const SubsidiaryCtaForm = ({
                         {/* <input className="bg-[#F5FAF7] border-[#C3DECE] border p-[10px] mt-[8px] rounded-[8px] focus:outline-none w-full museo-sans" /> */}
                         <div
                           className={
-                            errors.lastMonthUtilityBillInNaira ? "error" : ""
+                            errors.lastMonthUtilityBillInNaira ? "error relative" : "relative "
                           }
                         >
                           <InputNumber
@@ -452,7 +452,7 @@ const SubsidiaryCtaForm = ({
                                 ? 1
                                 : 0,
                             }}
-                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                           >
                             {errors.lastMonthUtilityBillInNaira?.message}
                           </motion.p>
@@ -464,7 +464,7 @@ const SubsidiaryCtaForm = ({
                         </label>
                         <div
                           className={
-                            errors.averageMonthlyConsumptionInKwh ? "error" : ""
+                            errors.averageMonthlyConsumptionInKwh ? "error relative" : "relative "
                           }
                         >
                           <InputNumber
@@ -488,7 +488,7 @@ const SubsidiaryCtaForm = ({
                                 ? 1
                                 : 0,
                             }}
-                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                           >
                             {errors.averageMonthlyConsumptionInKwh?.message}
                           </motion.p>
@@ -499,7 +499,7 @@ const SubsidiaryCtaForm = ({
                           Hours of Power Required
                         </label>
                         <div
-                          className={errors.hoursOfPowerRequired ? "error" : ""}
+                          className={errors.hoursOfPowerRequired ? "error relative" : "relative "}
                         >
                           <InputNumber
                             value={watch("hoursOfPowerRequired")}
@@ -519,7 +519,7 @@ const SubsidiaryCtaForm = ({
                                 ? 1
                                 : 0,
                             }}
-                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px]"
+                            className="text-right text-[12px] text-[#fe3514] absolute -bottom-[20px] right-0"
                           >
                             {errors.hoursOfPowerRequired?.message}
                           </motion.p>
