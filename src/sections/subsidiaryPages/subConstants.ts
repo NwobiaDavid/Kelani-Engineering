@@ -600,7 +600,7 @@ export const sub_three = {
       },
       {
         img: "assets/images/subsidiaryPagesImages/pageThree/save-energy 1-3.png",
-        img2: "assets/images/subsidiaryPagesImages/props/Gap.png",
+        img2: "assets/images/subsidiaryPagesImages/props/Gap (1).png",
         head: "Research",
         desc: "Join us as we lead the charge together, exploring groundbreaking methods and advanced transmission technologies to bring you a cost-effective and sustainable energy supply. ",
         colour: "text-green-400",
