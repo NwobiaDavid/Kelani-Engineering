@@ -19,7 +19,7 @@ const Features: React.FC<{ data: FeaturesProps }> = ({ data }) => {
   return (
     <div className="z-10 lg:h-fit text-white">
       <div className="flex flex-col text-center justify-center items-center h-full ">
-        <div className="flex justify-center w-full lg:mt-auto mt-20 items-center mb-10">
+        <div className="flex justify-center  w-full lg:mt-auto mt-20 items-center mb-10">
           {/* <h1 className="text-2_5xl font-semibold opacity-85 lg:text-4xl w-[90%] lg:w-[55%] space-grotesk-medium">
             {data.header}
           </h1> */}

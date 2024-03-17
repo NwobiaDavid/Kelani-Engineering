@@ -136,7 +136,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps;   setCtaFormShowing: Dispat
                 <h3 className=" opacity-80 tracking-[2.4px] museo-sans lg:font-semibold mb-2 lg:mb-6  ">
                   {data.subHead}
                 </h3>
-                <h1 className="lg:text-[45px] xl:text-5xl text-4xl text-center space-grotesk-medium">
+                <h1 className="lg:text-[45px] capitalize xl:text-5xl text-4xl text-center space-grotesk-medium">
                   {data.header}
                 </h1>
               </div>

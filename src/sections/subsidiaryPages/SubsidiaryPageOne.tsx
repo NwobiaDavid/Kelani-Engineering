@@ -353,7 +353,7 @@ const SubsidiaryPageOne: React.FC<{
                         y: 0,
                         transition: { duration: 1, ease: "easeOut" },
                       }}
-                      className="text-white py-3 opacity-75 font-semibold"
+                      className="text-white py-3 opacity-75 uppercase font-semibold"
                     >
                       {sub.hero_section.sub_text}
                     </motion.p>

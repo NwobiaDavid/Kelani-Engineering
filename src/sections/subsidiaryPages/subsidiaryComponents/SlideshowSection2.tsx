@@ -176,7 +176,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 ref={containerRef}
-                className=" flex-wrap items-center justify-start text-3xl lg:text-5xl my-5 opacity-90 font-semibold space-grotesk-medium"
+                className=" flex-wrap  items-center justify-start text-3xl lg:text-5xl my-5 opacity-90 font-semibold space-grotesk-medium"
               >
                 <div
                   className="w-full flex flex-wrap justify-center lg:justify-start"
