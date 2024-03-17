@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import React, { Dispatch, SetStateAction, useRef } from "react";
+import React, { Dispatch, SetStateAction, Dispatch, SetStateAction, useRef } from "react";
 import useScreenSize from "../../../hooks/useScreenSize";
 
 interface ParallexProps {
@@ -24,7 +24,7 @@ interface ParallexProps {
   }[];
 }
 
-const ParallaxCards: React.FC<{ data: ParallexProps; setCtaFormShowing: Dispatch<SetStateAction<boolean>>; }> = ({ data, setCtaFormShowing }) => {
+const ParallaxCards: React.FC<{ data: ParallexProps;   setCtaFormShowing: Dispatch<SetStateAction<boolean>>;; setCtaFormShowing: Dispatch<SetStateAction<boolean>>; }> = ({ data, setCtaFormShowing, setCtaFormShowing }) => {
   const { width } = useScreenSize();
   const getValueFromScreenSize = (
     smallDesktop: string | number,
@@ -216,6 +216,9 @@ const ParallaxCards: React.FC<{ data: ParallexProps; setCtaFormShowing: Dispatch
                           <div
                             className="btn-seconday relative overflow-hidden cursor-pointer "
                             onClick={() => setCtaFormShowing(true)}
+                          <div
+                            className="btn-seconday relative overflow-hidden cursor-pointer "
+                            onClick={() => setCtaFormShowing(true)}
                           >
                             <span className="relative flex items-center  overflow-hidden">
                               <span className="relative inline-flex museo-sans font-semibold">
@@ -243,6 +246,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps; setCtaFormShowing: Dispatch
                                 </span>
                               </span>
                             </span>
+                          </div>
                           </div>
                         </div>
                       </div>
@@ -293,6 +297,9 @@ const ParallaxCards: React.FC<{ data: ParallexProps; setCtaFormShowing: Dispatch
                           <div
                             className="btn-seconday relative overflow-hidden cursor-pointer "
                             onClick={() => setCtaFormShowing(true)}
+                          <div
+                            className="btn-seconday relative overflow-hidden cursor-pointer "
+                            onClick={() => setCtaFormShowing(true)}
                           >
                             <span className="relative flex items-center  overflow-hidden">
                               <span className="relative inline-flex museo-sans font-semibold">
@@ -320,6 +327,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps; setCtaFormShowing: Dispatch
                                 </span>
                               </span>
                             </span>
+                          </div>
                           </div>
                         </div>
                       </div>
@@ -350,7 +358,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps; setCtaFormShowing: Dispatch
                       <p className="mt-[16px]">{data.data[2].content.text}</p>
                       <div className=" mt-[15px]">
                         <div
-                          className="btn-seconday relative overflow-hidden mt-[15px] cursor-pointer "
+                          className="btn-seconday cursor-pointer relative overflow-hidden mt-[15px]"
                           onClick={() => setCtaFormShowing(true)}
                         >
                           <span className="relative flex items-center  overflow-hidden">
@@ -379,6 +387,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps; setCtaFormShowing: Dispatch
                               </span>
                             </span>
                           </span>
+                        </div>
                         </div>
                       </div>
                     </div>

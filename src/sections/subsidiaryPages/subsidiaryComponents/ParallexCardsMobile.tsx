@@ -2,7 +2,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { Dispatch, SetStateAction, useRef } from "react";
+import React, { Dispatch, SetStateAction, Dispatch, SetStateAction, useRef } from "react";
 
 interface ParallexMobileProps {
   header: string;
@@ -22,7 +22,7 @@ interface ParallexMobileProps {
   }[];
 }
 
-const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps; setCtaFormShowing: Dispatch<SetStateAction<boolean>>; }> = ({
+const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps; setCtaFormShowing: Dispatch<SetStateAction<boolean>>;; setCtaFormShowing: Dispatch<SetStateAction<boolean>>; }> = ({
   data,
   setCtaFormShowing
 }) => {
