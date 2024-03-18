@@ -153,11 +153,11 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
   });
 
   return (
-    <div className="lg:h-[1000px] h-fit w-full z-30 text-white ">
+    <div className="lg:h-[1300px] h-fit w-full z-30 text-white ">
       <div className="w-full mb-6 flex flex-col lg:px-4 justify-center pt-24 items-center ">
         <div className="w-[86%] flex justify-center items-center lg:mt-[150px]">
           <div className="flex  w-full lg:flex-row flex-col items-center mb-10 justify-center lg:justify-between ">
-            <div className="uppercase text-center lg:text-left ">
+            <div className=" text-center lg:text-left ">
               <motion.p
                 ref={topTextRef}
                 initial={{ opacity: 0, y: 30 }}
@@ -166,7 +166,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                   y: topTextInView ? 0 : 30,
                   transition: { duration: 1, ease: "easeOut" },
                 }}
-                className="font-semibold lg:text-base text-xs opacity-60 tracking-wide museo-sans lg:max-w-[540px]"
+                className="font-semibold uppercase lg:text-base text-xs opacity-60 tracking-wide museo-sans lg:max-w-[540px]"
               >
                 {data.text.head}
               </motion.p>
@@ -176,7 +176,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 ref={containerRef}
-                className=" flex-wrap items-center justify-start text-3xl lg:text-5xl my-5 opacity-90 font-semibold space-grotesk-medium"
+                className=" flex-wrap  items-center justify-start text-3xl lg:text-5xl my-5 opacity-90 font-semibold space-grotesk-medium"
               >
                 <div
                   className="w-full flex flex-wrap justify-center lg:justify-start"

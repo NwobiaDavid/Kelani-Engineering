@@ -20,7 +20,7 @@ const ConnectSection: React.FC<{
   };
   const [buttonHovered, setButtonHovered] = useState(false);
 
-  const textToAnimate = "CONNECT WITH US TODAY"
+  const textToAnimate = "Connect With Us Today"
   const splitText = textToAnimate.split(" ");
 
   const container: Variants = {
@@ -66,7 +66,7 @@ const ConnectSection: React.FC<{
           </h1> */}
           <motion.h1
             ref={headerRef}
-            className="text-white text-center w-full justify-center flex-wrap font-semibold text-[32px] md:text-4xl lg:text-5xl uppercase space-grotesk-medium"
+            className="text-white text-center w-full justify-center flex-wrap font-semibold text-[32px] md:text-4xl lg:text-5xl space-grotesk-medium"
             style={{ display: "flex", overflow: "hidden" }}
             variants={container}
             initial="hidden"

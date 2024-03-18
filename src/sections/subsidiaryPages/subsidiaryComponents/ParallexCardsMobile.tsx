@@ -2,7 +2,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useRef } from "react";
+import React, { Dispatch, SetStateAction, useRef } from "react";
 
 interface ParallexMobileProps {
   header: string;
@@ -22,8 +22,9 @@ interface ParallexMobileProps {
   }[];
 }
 
-const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
+const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps; setCtaFormShowing: Dispatch<SetStateAction<boolean>> }> = ({
   data,
+  setCtaFormShowing
 }) => {
   // const animated = useRef(null);
 
@@ -70,9 +71,9 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
       scrollTrigger: {
         trigger: ".card-animation-container",
         scrub: 1,
-        start: "top 50%",
+        start: "center 60%",
         end: "+=1000",
-        // markers: true,
+        markers: true,
       },
     });
 
@@ -240,11 +241,11 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
         minHeight: card1textContainer?.current?.offsetHeight + card2textContainer?.current?.offsetHeight + card3Container?.current?.offsetHeight + 580
       }} className="relative pt-[120px] ">
         <div className=" pb-3 items-center card-animation-container flex-col text-white w-full flex">
-          <div className=" w-[70%] text-center mb-16">
+          <div className=" w-[70%] text-white  text-center mb-16">
             <h3 className=" opacity-80 tracking-widest  mb-2 uppercase text-[15px]">
               {data.subHead}
             </h3>
-            <h1 className=" uppercase text-center space-grotesk-medium text-[26px] md:text-[32px] md:w-[60%] md:mx-auto">
+            <h1 className=" text-center capitalize space-grotesk-medium text-[26px] md:text-[32px] md:w-[60%] md:mx-auto">
               {data.header}
             </h1>
           </div>
@@ -285,7 +286,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                       {data.data[0].content.head}
                     </h2>
                     <p className=" text-[14px] md:text-[18px] mt-[12px] museo-sans">{data.data[0].content.text}</p>
-                    <button className="text-white md:text-[20px] items-center flex gap-[13px] mt-[25px] md:mt-[44px] museo-sans font-medium">
+                    <button onClick={() => setCtaFormShowing(true)} className="text-white md:text-[20px] items-center flex gap-[13px] mt-[25px] md:mt-[44px] museo-sans font-medium">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
                     </button>
@@ -336,7 +337,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                       {data.data[1].content.head}
                     </h2>
                     <p className=" text-[14px] md:text-[18px] mt-[12px] museo-sans">{data.data[1].content.text}</p>
-                    <button className="text-white md:text-[20px] items-center flex gap-[13px] mt-[25px] md:mt-[44px] museo-sans font-medium">
+                    <button onClick={() => setCtaFormShowing(true)} className="text-white md:text-[20px] items-center flex gap-[13px] mt-[25px] md:mt-[44px] museo-sans font-medium">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
                     </button>
@@ -371,7 +372,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps }> = ({
                       {data.data[2].content.head}
                     </h2>
                     <p className="text-[14px] md:text-[16px] mt-[12px] museo-sans  ">{data.data[2].content.text}</p>
-                    <button className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px]  ">
+                    <button onClick={() => setCtaFormShowing(true)} className="text-white items-center flex gap-[13px] mt-[25px] md:mt-[44px]  ">
                       Learn More
                       <img src="/assets/images/right-arrow.svg" />
                     </button>

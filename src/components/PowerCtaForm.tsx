@@ -148,7 +148,7 @@ const SubsidiaryCtaForm = ({
               <header className="text-[24px] lg:text-[32px] space-grotesk-semibold pb-[56px] border-b-zinc-500 border-b border-opacity-50 flex justify-between items-center">
                 Power Your Success With Kelani Power
                 <motion.svg
-                  className={"cursor-pointer focus:outline-none absolute sm:relative sm:top-0 sm:right-0 top-[20px] right-[10px]"}
+                  className={"cursor-pointer lg:w-10 w-32 lg:h-10  focus:outline-none"}
                   whileHover={{ scale: 1.07 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => close()}

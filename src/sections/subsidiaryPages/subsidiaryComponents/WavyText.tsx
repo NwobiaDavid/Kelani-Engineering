@@ -50,7 +50,7 @@ const WavyText: FC<Props> = ({
 
   return (
     <motion.h1
-      className="text-white text-center w-full justify-center flex-wrap font-semibold text-4xl lg:text-7xl mb-4 lg:mb-[4.7rem] space-grotesk-medium"
+      className="text-white text-center w-full justify-center flex-wrap font-semibold text-2xl md:text-4xl lg:text-7xl mb-4 lg:mb-[4.7rem] space-grotesk-medium"
       style={{ display: "flex", overflow: "hidden" }}
       variants={container}
       initial="hidden"

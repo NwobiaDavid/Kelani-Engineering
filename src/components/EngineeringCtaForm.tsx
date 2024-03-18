@@ -84,7 +84,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
         transition={{ duration: 0.35 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: "80dvw", transition: { duration: 0.2 } }}
-        className="lg:w-[80dvw] max-h-screen bg-white z-[90] fixed top-0 right-0 bottom-0 p-[10px] overflow-y-scroll"
+        className="lg:w-[80dvw] w-screen max-h-screen bg-white z-[90] fixed top-0 right-0 bottom-0 p-[10px] overflow-y-scroll"
       >
         <AnimatePresence>
           {thankYouMessageShowing && (
@@ -111,12 +111,12 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                 opacity: 0,
                 transition: { duration: 0.4 },
               }}
-              className=" p-[20px] pt-[56px]  md:p-[56px] relative"
+              className=" pl-[25px] py-[45px] pr-[20px] lg:p-[56px] "
             >
               <header className="text-[24px] lg:text-[32px] space-grotesk-semibold pb-[56px] sm:flex items-center justify-between border-b-zinc-500 border-b border-opacity-50">
                 <span className="inline-block sm:mr-[20px]">Transform Your Industrial Vision With Kelani Engineering</span>
                 <motion.svg
-                  className={"cursor-pointer focus:outline-none absolute sm:relative sm:top-0 sm:right-0 top-[20px] right-[10px]"}
+                  className={"cursor-pointer lg:w-10 w-32 lg:h-10 focus:outline-none"}
                   whileHover={{ scale: 1.07 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => close()}
@@ -129,7 +129,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
                   <path d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path>
                 </motion.svg>
               </header>
-              <div className="grid sm:grid-cols-2 gap-[40px] mt-[40px] sm:mt-[56px] ">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px] lg:gap-[40px]  mt-[56px]">
                 <section className="space-y-[56px]">
                   <div>
                     <p className="text-[18px] space-grotesk-semibold mb-[32px]">
@@ -479,7 +479,7 @@ const EngineeringCtaForm = ({ close }: { close: () => void }) => {
               <motion.button
                 disabled={false}
                 whileTap={{ scale: 0.95 }}
-                className="py-[12px] px-[32px] w-fit text-[#222] border border-[#222] rounded-full disabled:opacity-50 mt-[90px] sm:mt-[40px] cursor-pointer"
+                className="py-[12px] px-[32px] w-fit text-[#222] border border-[#222] rounded-full disabled:opacity-50 mt-[80px] lg:mt-[40px] cursor-pointer"
                 type="submit"
               >
                 {formLoading ? "Please Wait..." : "Send"}

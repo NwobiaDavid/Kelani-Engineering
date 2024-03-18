@@ -241,7 +241,7 @@ export const sub_one = {
   },
   parallex_section_mobile: {
     subHead: "Why Kelani Consulting?",
-    header: "INGENUITY FOR YOUR SUCCESS",
+    header: "Ingenuity For Your Success",
     data: [
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (3).png",
@@ -427,12 +427,12 @@ export const sub_two = {
     ],
     text: {
       head: "INSTANT INSIGHTS FOR INFORMED ACTIONS:\n User SOLUTIONS FOR REAL-TIME DECISIONS ",
-      sub: "Navigating industrial superiority",
+      sub: "Navigating Industrial Superiority",
     },
   },
   parallex_section: {
     subHead: "Why Kelani Engineering?",
-    header: "ALL THE EXCELLENCE YOU NEED.",
+    header: "All The Excellence You Need.",
     data: [
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (7).png",
@@ -477,7 +477,7 @@ export const sub_two = {
   },
   parallex_section_mobile: {
     subHead: "Why Kelani Engineering?",
-    header: "ALL THE EXCELLENCE YOU NEED.",
+    header: "All The Excellence You Need.",
     data: [
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (7).png",
@@ -694,7 +694,7 @@ export const sub_three = {
   },
   parallex_section: {
     subHead: "Why Kelani Power?",
-    header: "YOUR PATH TO PERFECTION.",
+    header: "Your Path To Perfection.",
     data: [
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (5).png",
@@ -739,7 +739,7 @@ export const sub_three = {
   },
   parallex_section_mobile: {
     subHead: "Why Kelani Power?",
-    header: "YOUR PATH TO PERFECTION.",
+    header: "Your Path To Perfection.",
     data: [
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (5).png",

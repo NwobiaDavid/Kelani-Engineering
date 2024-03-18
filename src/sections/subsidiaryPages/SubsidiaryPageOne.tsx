@@ -273,7 +273,7 @@ const SubsidiaryPageOne: React.FC<{
     lightControls.start({
       top: `${lightPosition.top}%`,
       left: `${lightPosition.left}%`,
-      opacity: [0.2],
+      opacity: [0.6],
     });
   }, [lightPosition, lightControls]);
 
@@ -281,7 +281,7 @@ const SubsidiaryPageOne: React.FC<{
     lightControlss.start({
       top: `${lightPosition.top}%`,
       left: `${lightPosition.left}%`,
-      opacity: [0.2],
+      opacity: [0.6],
     });
   }, [lightPosition, lightControlss]);
 
@@ -289,7 +289,7 @@ const SubsidiaryPageOne: React.FC<{
     lightControlsx.start({
       top: `${lightPositionx.top}%`,
       left: `${lightPositionx.left}%`,
-      opacity: [0.2],
+      opacity: [0.6],
     });
   }, [lightPositionx, lightControlsx]);
 
@@ -353,7 +353,7 @@ const SubsidiaryPageOne: React.FC<{
                         y: 0,
                         transition: { duration: 1, ease: "easeOut" },
                       }}
-                      className="text-white py-3 opacity-75 font-semibold"
+                      className="text-white py-3 opacity-75 uppercase font-semibold"
                     >
                       {sub.hero_section.sub_text}
                     </motion.p>
@@ -402,12 +402,8 @@ const SubsidiaryPageOne: React.FC<{
             <div className="relative z-50 ">
               <Features data={sub.features_data} />
               <div
-                style={{
-                  backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)`,
-                }}
-                className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] "
-              >
-                {" "}
+                style={{ backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)`,}}
+                className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] " >
               </div>
               <SlideshowSection2
                 colours={sub.hero_section.color}
@@ -437,11 +433,11 @@ const SubsidiaryPageOne: React.FC<{
 
           {isMobile ? (
             <div className="relative z-40">
-              <ParallexCardsMobile data={sub.parallex_section_mobile} />
+              <ParallexCardsMobile setCtaFormShowing={setCtaFormShowing} data={sub.parallex_section_mobile} />
             </div>
           ) : (
             <div className="relative z-40">
-              <ParallexCards data={sub.parallex_section} />
+              <ParallexCards setCtaFormShowing={setCtaFormShowing} data={sub.parallex_section} />
             </div>
           )}
         </div>
