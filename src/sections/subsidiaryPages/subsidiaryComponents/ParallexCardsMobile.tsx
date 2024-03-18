@@ -22,7 +22,7 @@ interface ParallexMobileProps {
   }[];
 }
 
-const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps; setCtaFormShowing: Dispatch<SetStateAction<boolean>>;; setCtaFormShowing: Dispatch<SetStateAction<boolean>>; }> = ({
+const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps; setCtaFormShowing: Dispatch<SetStateAction<boolean>> }> = ({
   data,
   setCtaFormShowing
 }) => {

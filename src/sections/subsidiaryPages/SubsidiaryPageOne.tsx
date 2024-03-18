@@ -273,7 +273,7 @@ const SubsidiaryPageOne: React.FC<{
     lightControls.start({
       top: `${lightPosition.top}%`,
       left: `${lightPosition.left}%`,
-      opacity: [0.2],
+      // opacity: [1],
     });
   }, [lightPosition, lightControls]);
 
@@ -281,7 +281,7 @@ const SubsidiaryPageOne: React.FC<{
     lightControlss.start({
       top: `${lightPosition.top}%`,
       left: `${lightPosition.left}%`,
-      opacity: [0.2],
+      // opacity: [1],
     });
   }, [lightPosition, lightControlss]);
 
@@ -289,7 +289,7 @@ const SubsidiaryPageOne: React.FC<{
     lightControlsx.start({
       top: `${lightPositionx.top}%`,
       left: `${lightPositionx.left}%`,
-      opacity: [0.2],
+      // opacity: [1],
     });
   }, [lightPositionx, lightControlsx]);
 
@@ -402,12 +402,8 @@ const SubsidiaryPageOne: React.FC<{
             <div className="relative z-50 ">
               <Features data={sub.features_data} />
               <div
-                style={{
-                  backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)`,
-                }}
-                className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] "
-              >
-                {" "}
+                style={{ backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)`,}}
+                className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] " >
               </div>
               <SlideshowSection2
                 colours={sub.hero_section.color}
