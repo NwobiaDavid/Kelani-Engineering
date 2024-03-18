@@ -273,7 +273,7 @@ const SubsidiaryPageOne: React.FC<{
     lightControls.start({
       top: `${lightPosition.top}%`,
       left: `${lightPosition.left}%`,
-      // opacity: [1],
+      opacity: [0.6],
     });
   }, [lightPosition, lightControls]);
 
@@ -281,7 +281,7 @@ const SubsidiaryPageOne: React.FC<{
     lightControlss.start({
       top: `${lightPosition.top}%`,
       left: `${lightPosition.left}%`,
-      // opacity: [1],
+      opacity: [0.6],
     });
   }, [lightPosition, lightControlss]);
 
@@ -289,7 +289,7 @@ const SubsidiaryPageOne: React.FC<{
     lightControlsx.start({
       top: `${lightPositionx.top}%`,
       left: `${lightPositionx.left}%`,
-      // opacity: [1],
+      opacity: [0.6],
     });
   }, [lightPositionx, lightControlsx]);
 
