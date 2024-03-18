@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import React, { useRef } from "react";
+import React, { Dispatch, SetStateAction, useRef } from "react";
 import useScreenSize from "../../../hooks/useScreenSize";
 
 interface ParallexProps {
@@ -24,7 +24,7 @@ interface ParallexProps {
   }[];
 }
 
-const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
+const ParallaxCards: React.FC<{ data: ParallexProps; setCtaFormShowing: Dispatch<SetStateAction<boolean>>; }> = ({ data, setCtaFormShowing }) => {
   const { width } = useScreenSize();
   const getValueFromScreenSize = (
     smallDesktop: string | number,
@@ -213,9 +213,9 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                           {data.data[0].content.text}
                         </p>
                         <div className="pl-[5%] mt-[15px] subtext">
-                          <a
-                            className="btn-seconday relative overflow-hidden"
-                            href="#"
+                          <div
+                            className="btn-seconday relative overflow-hidden cursor-pointer "
+                            onClick={() => setCtaFormShowing(true)}
                           >
                             <span className="relative flex items-center  overflow-hidden">
                               <span className="relative inline-flex museo-sans font-semibold">
@@ -243,7 +243,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                                 </span>
                               </span>
                             </span>
-                          </a>
+                          </div>
                         </div>
                       </div>
                       <img
@@ -290,9 +290,9 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                           {data.data[1].content.text}
                         </p>
                         <div className="pl-[5%] mt-[15px] subtext">
-                          <a
-                            className="btn-seconday relative overflow-hidden"
-                            href="#"
+                          <div
+                            className="btn-seconday relative overflow-hidden cursor-pointer "
+                            onClick={() => setCtaFormShowing(true)}
                           >
                             <span className="relative flex items-center  overflow-hidden">
                               <span className="relative inline-flex museo-sans font-semibold">
@@ -320,7 +320,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                                 </span>
                               </span>
                             </span>
-                          </a>
+                          </div>
                         </div>
                       </div>
                       <img
@@ -349,9 +349,9 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                       </h2>
                       <p className="mt-[16px]">{data.data[2].content.text}</p>
                       <div className=" mt-[15px]">
-                        <a
-                          className="btn-seconday relative overflow-hidden mt-[15px]"
-                          href="#"
+                        <div
+                          className="btn-seconday relative overflow-hidden mt-[15px] cursor-pointer "
+                          onClick={() => setCtaFormShowing(true)}
                         >
                           <span className="relative flex items-center  overflow-hidden">
                             <span className="relative inline-flex museo-sans font-semibold">
@@ -379,7 +379,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps }> = ({ data }) => {
                               </span>
                             </span>
                           </span>
-                        </a>
+                        </div>
                       </div>
                     </div>
 

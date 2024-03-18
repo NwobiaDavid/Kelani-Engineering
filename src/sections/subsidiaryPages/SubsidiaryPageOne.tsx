@@ -437,11 +437,11 @@ const SubsidiaryPageOne: React.FC<{
 
           {isMobile ? (
             <div className="relative z-40">
-              <ParallexCardsMobile data={sub.parallex_section_mobile} />
+              <ParallexCardsMobile setCtaFormShowing={setCtaFormShowing} data={sub.parallex_section_mobile} />
             </div>
           ) : (
             <div className="relative z-40">
-              <ParallexCards data={sub.parallex_section} />
+              <ParallexCards setCtaFormShowing={setCtaFormShowing} data={sub.parallex_section} />
             </div>
           )}
         </div>
