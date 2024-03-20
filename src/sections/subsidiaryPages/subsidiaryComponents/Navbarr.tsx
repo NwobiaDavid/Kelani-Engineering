@@ -76,13 +76,13 @@ const Navbar: React.FC<{
               src="/assets/images/kelani-logo-white.png"
               className="h-[35px] lg:h-[55px]"
             /> */}
-            <img
+            {/* <img
               src={`/assets/images/subsidiary-logos/kelani-${cta_form}-desktop-logo.png`}
               className="h-[55px] hidden lg:block"
-            />
+            /> */}
             <img
               src={`/assets/images/subsidiary-logos/kelani-${cta_form}-mobile-logo.png`}
-              className="h-[35px] lg:hidden"
+              className="h-[55px] "
             />
           </motion.a>
 
