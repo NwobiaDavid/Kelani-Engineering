@@ -21,7 +21,7 @@ const Navbar: React.FC<{
   ctaFormShowing: boolean;
   setCtaFormShowing: (value: boolean) => void;
   lenis: Lenis;
-}> = ({cta_form, ctaFormShowing, setCtaFormShowing, lenis }) => {
+}> = ({ cta_form, ctaFormShowing, setCtaFormShowing, lenis }) => {
   const [isNavOpen] = useState(false);
 
   const ctaButtonVariant = {
@@ -72,9 +72,17 @@ const Navbar: React.FC<{
             }}
             href="/"
           >
-            <img
+            {/* <img
               src="/assets/images/kelani-logo-white.png"
               className="h-[35px] lg:h-[55px]"
+            /> */}
+            <img
+              src={`/assets/images/subsidiary-logos/kelani-${cta_form}-desktop-logo.png`}
+              className="h-[55px] hidden lg:block"
+            />
+            <img
+              src={`/assets/images/subsidiary-logos/kelani-${cta_form}-mobile-logo.png`}
+              className="h-[35px] lg:hidden"
             />
           </motion.a>
 

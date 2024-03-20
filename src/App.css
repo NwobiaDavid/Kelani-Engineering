@@ -79,6 +79,8 @@ input[type="tel"],
 }
 
 .error input,
+.consulting .error input,
+.engineering .error input,
 .error select,
 .error textarea {
   border-color: #fe3514;

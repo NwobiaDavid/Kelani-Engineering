@@ -59,6 +59,7 @@ const ConsultingCtaForm = ({ close }: { close: () => void }) => {
     const requestData = {
       ...data,
     };
+    console.log(requestData)
     try {
       setFormLoading(true);
       const response = await axios.post(url, requestData, options);

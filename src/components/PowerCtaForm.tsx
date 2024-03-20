@@ -74,6 +74,43 @@ const SubsidiaryCtaForm = ({
     mode: "all",
   });
 
+  const [powerSourcesOwned, setPowerSourcesOwned] = useState({
+    solarPanels: false,
+    deiselGenerators: false,
+    inverter: false,
+    petrolGenerators: false,
+    ipp: false
+  });
+
+  const powerSourcePropertyToTextMapping = {
+    solarPanels: "solar panels",
+    deiselGenerators: "deisel generators",
+    inverter: "inverters",
+    petrolGenerators: "petrol generators",
+    ipp: "IPP"
+  }
+
+  const generatePowerSourcesOwnedString = () => {
+    let arrayOfWords = []
+    // @ts-expect-error
+    for (let key of Object.keys(powerSourcesOwned)) {
+      // @ts-expect-error
+      if (powerSourcesOwned[key]) {
+        //@ts-expect-error
+        arrayOfWords.push(powerSourcePropertyToTextMapping[key]);
+      }
+    }
+    return (arrayOfWords.join(","))
+  }
+
+  const togglePowerSourceOwned = (powerSourceName: string) => {
+    const newPowerSources = { ...powerSourcesOwned }
+    //@ts-expect-error
+    newPowerSources[powerSourceName] = !newPowerSources[powerSourceName]
+    setPowerSourcesOwned(newPowerSources)
+  }
+
+
   const handleFormSubmit = async (data: FormSchema) => {
     const url = "https://app.nocodb.com/api/v2/tables/m6oho0240o5tcx8/records";
     const options = {
@@ -83,6 +120,7 @@ const SubsidiaryCtaForm = ({
     };
     const requestData = {
       ...data,
+      ownedPowerSources: generatePowerSourcesOwnedString()
     };
     try {
       setFormLoading(true);
@@ -532,47 +570,63 @@ const SubsidiaryCtaForm = ({
                         </label>
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[5px] museo-sans mt-[5px]">
                           <div className="flex space-x-[8px] items-center">
-                            <input
+                            <input id="solarPanels"
+                              onChange={() => togglePowerSourceOwned("solarPanels")}
+                              value={powerSourcesOwned.solarPanels ? "yes" : "no"}
                               type="checkbox"
                               className="w-[16px] h-[16px]"
                             />
-                            <label className="text-[#888A8B] text-[16px]">
+                            {/* @ts-expect-error */}
+                            <label for="solarPanels" className="text-[#888A8B] text-[16px]">
                               Solar Panels
                             </label>
                           </div>
                           <div className="flex space-x-[8px] items-center">
                             <input
+                              id="deiselGenerators"
+                              onChange={() => togglePowerSourceOwned("deiselGenerators")}
+                              value={powerSourcesOwned.deiselGenerators ? "yes" : "no"}
                               type="checkbox"
                               className="w-[16px] h-[16px]"
                             />
-                            <label className="text-[#888A8B] text-[16px]">
+                            {/* @ts-expect */}
+                            <label for="deiselGenerators" className="text-[#888A8B] text-[16px]">
                               Deisel Generators
                             </label>
                           </div>
                           <div className="flex space-x-[8px] items-center">
                             <input
+                              id="inverter"
+                              onChange={() => togglePowerSourceOwned("inverter")}
+                              value={powerSourcesOwned.inverter ? "yes" : "no"}
                               type="checkbox"
                               className="w-[16px] h-[16px]"
                             />
-                            <label className="text-[#888A8B] text-[16px]">
-                              Inverter
+                            <label for="inverter" className="text-[#888A8B] text-[16px]">
+                              Inverters
                             </label>
                           </div>
                           <div className="flex space-x-[8px] items-center">
                             <input
+                              id="petrolGenerators"
+                              onChange={() => togglePowerSourceOwned("petrolGenerators")}
+                              value={powerSourcesOwned.petrolGenerators ? "yes" : "no"}
                               type="checkbox"
                               className="w-[16px] h-[16px]"
                             />
-                            <label className="text-[#888A8B] text-[16px]">
+                            <label for="petrolGenerators" className="text-[#888A8B] text-[16px]">
                               Petrol Generators
                             </label>
                           </div>
                           <div className="flex space-x-[8px] items-center">
                             <input
+                              id="ipp"
+                              onChange={() => togglePowerSourceOwned("ipp")}
+                              value={powerSourcesOwned.ipp ? "yes" : "no"}
                               type="checkbox"
                               className="w-[16px] h-[16px]"
                             />
-                            <label className="text-[#888A8B] text-[16px]">
+                            <label for="ipp" className="text-[#888A8B] text-[16px]">
                               IPP
                             </label>
                           </div>

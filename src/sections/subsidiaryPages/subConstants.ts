@@ -615,13 +615,13 @@ export const sub_three = {
       {
         img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/image 23.png",
         point1:
-          "Fuel your business growth with tailored funding solutions that provide quick access to capital, so you can seize opportunities and achieve your goals without financial constraints holding you back.",
+          "Get quick capital access for your business growth, without financial constraints.",
         point2:
-          "Gain expert financial guidance to make informed decisions that drive profitability and sustainability, ensuring your business thrives in a competitive market and navigates financial challenges with confidence.",
+          "Get expert financial guidance for thriving in competition and navigating challenges confidently.",
         point3:
-          "Take charge of your credit profile and unlock better funding opportunities by monitoring and improving your credit score, empowering your business to access the capital it needs to succeed.",
+        "Improve your credit score to access better funding opportunities, empowering your business for success.",
         point4:
-          "Protect your business against unforeseen risks with comprehensive risk management solutions that safeguard your assets, minimize liabilities, and ensure your business's resilience in the face of challenges.",
+          "Protect your business with robust risk management for resilience.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
@@ -631,11 +631,11 @@ export const sub_three = {
         point1:
           "Customized Energy Procurement: Secure optimal deals and drive cost savings for a brighter, more efficient tomorrow.",
         point2:
-          "Sustainable Energy Solutions: Partner with us to turn vision into reality. Embark on a journey of large-scale renewable project development, shaping a greener future together.",
+          "Sustainable Energy Solutions: Join us to develop large-scale renewable projects, shaping a greener future together.",
         point3:
-          "Confident Risk Management: Navigate market uncertainties with tailored strategies, ensuring financial resilience for your energy investments.",
+          "Confident Risk Management: Manage market uncertainties with custom strategies for resilient energy investments.",
         point4:
-          "Optimize Energy Efficiency: Reduce costs and environmental impact with personalized energy consultations, enhancing efficiency and promoting sustainability.",
+          "Optimize Energy Efficiency: Reduce costs and environmental impact with personalized energy consultations for sustainability.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",

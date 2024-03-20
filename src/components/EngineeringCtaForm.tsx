@@ -19,7 +19,7 @@ const schema = z.object({
   city: z.string().nonempty({ message: "City is required" }),
   state: z.string().nonempty({ message: "State is required" }),
   companyName: z.string().nonempty({ message: "Company name is required" }),
-  productOfInterest: z.string(),
+  productOfInterest: z.string().optional(),
 });
 
 type FormSchema = z.infer<typeof schema>;
