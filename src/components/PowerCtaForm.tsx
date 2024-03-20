@@ -92,7 +92,6 @@ const SubsidiaryCtaForm = ({
 
   const generatePowerSourcesOwnedString = () => {
     let arrayOfWords = []
-    // @ts-expect-error
     for (let key of Object.keys(powerSourcesOwned)) {
       // @ts-expect-error
       if (powerSourcesOwned[key]) {
@@ -589,7 +588,7 @@ const SubsidiaryCtaForm = ({
                               type="checkbox"
                               className="w-[16px] h-[16px]"
                             />
-                            {/* @ts-expect */}
+                            {/* @ts-expect-error */}
                             <label for="deiselGenerators" className="text-[#888A8B] text-[16px]">
                               Deisel Generators
                             </label>
@@ -602,6 +601,7 @@ const SubsidiaryCtaForm = ({
                               type="checkbox"
                               className="w-[16px] h-[16px]"
                             />
+                            {/* @ts-expect-error */}
                             <label for="inverter" className="text-[#888A8B] text-[16px]">
                               Inverters
                             </label>
@@ -614,6 +614,7 @@ const SubsidiaryCtaForm = ({
                               type="checkbox"
                               className="w-[16px] h-[16px]"
                             />
+                            {/* @ts-expect-error */}
                             <label for="petrolGenerators" className="text-[#888A8B] text-[16px]">
                               Petrol Generators
                             </label>
@@ -626,6 +627,7 @@ const SubsidiaryCtaForm = ({
                               type="checkbox"
                               className="w-[16px] h-[16px]"
                             />
+                            {/* @ts-expect-error */}
                             <label for="ipp" className="text-[#888A8B] text-[16px]">
                               IPP
                             </label>
