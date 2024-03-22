@@ -96,11 +96,11 @@ export const sub_one = {
       {
         img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 17.png",
         point1:
-          "Unlock Exceptional Leadership: Let our executive search services find your organization's perfect match for top-level positions, ensuring a smooth and successful recruitment journey.",
+          "Unlock Exceptional Leadership: Use our executive search services for top-level positions to streamline recruitment.",
         point2:
-          "Strengthen Your Talent Pool: Drive organizational growth with our talent pipeline development service. We identify and engage high-potential candidates, creating a robust pool of future leaders poised to elevate your company.",
+          "Strengthen Your Talent Pool: Boost growth with our talent pipeline service. We identify future leaders, driving company success.",
         point3:
-          "Elevate Leadership Potential: Experience tailored leadership development programs that convert organizational potential into performance. With personalized coaching and strategic succession planning, we empower your top talent to lead with success and innovation.",
+          "Elevate Leadership Potential: Empower your top talent through personalized leadership development programs tailored to drive success and innovation within your organization.",
         // point4: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -123,27 +123,27 @@ export const sub_one = {
       {
         img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 26.png",
         point1:
-          "Engineering Design Services: Transforming ideas into reality with precision and innovation, our expert engineering design solutions are the cornerstone of groundbreaking projects that push boundaries and redefine possibilities.",
+          "Engineering Design Services: Our innovative engineering design solutions turn ideas into reality, driving groundbreaking projects that redefine possibilities.",
         point2:
-          "CAD/CAM Services: Harnessing the power of cutting-edge technology, our CAD/CAM services revolutionize product development and manufacturing processes, empowering businesses to achieve unparalleled efficiency, accuracy, and speed.",
+          "CAD/CAM Services: Our services leverage cutting-edge technology to revolutionize product development and manufacturing, boosting efficiency and speed for businesses.",
         point3:
-          "Innovative Prototyping and Testing: Our services prioritize rigorous prototyping and testing, ensuring flawless execution of concepts to deliver products that surpass expectations and establish new standards of excellence.",
+          "Innovative Prototyping and Testing: We prioritize rigorous prototyping and testing to deliver products that exceed expectations and set new standards.",
         point4:
-          "Empowering Project Success: Our project management services lead with unwavering dedication and expertise, driving successful outcomes through seamless collaboration, meticulous planning, and flawless execution to bring visions to life.",
+          "Empowering Project Success: Our project management ensures successful outcomes through seamless collaboration, meticulous planning, and flawless execution."
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        classname: " ",
+        // classname: " ",
       },
       {
         img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 16.png",
         point1:
-          "Cost Analysis and Optimization: Unleash the power of efficiency and savings with our meticulous cost analysis and optimization services. Let us uncover hidden expenses, streamline processes, and revolutionize your operations for maximum cost-effectiveness.",
+          "Cost Analysis and Optimization: Maximize efficiency with our cost analysis and optimization services. We streamline processes for maximum savings.",
         point2:
-          "Scalable Workforce Solutions: Embrace flexibility like never before with our scalable workforce solutions. Say goodbye to workforce constraints and hello to seamless scalability that adapts to your business needs, ensuring optimal resource utilization and cost efficiency.",
+          "Scalable Workforce Solutions: Embrace flexible workforce solutions for optimal resource utilization and cost efficiency.",
         point3:
-          "Unlock Specialized Expertise: Propel your business forward with unparalleled industry insights and expertise readily available. Our team of seasoned professionals offers innovative solutions and specialized knowledge, empowering you to drive success and achieve cost savings through strategic collaboration.",
+          "Unlock Specialized Expertise: Achieve success with our expert team's innovative solutions and industry insights, driving cost savings through collaboration.",
         point4:
-          "Safeguard Your Business: Shield your business from risks and compliance hurdles with our comprehensive risk mitigation and compliance management services. Let us handle the complexities, allowing you to prioritize growth and profitability with confidence.",
+          "Safeguard Your Business: Secure your business with our risk and compliance services. Focus on growth confidently.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",

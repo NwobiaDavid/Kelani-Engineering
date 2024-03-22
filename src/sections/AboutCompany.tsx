@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../styles/about-company.css";
 
@@ -9,6 +9,8 @@ const AboutCompany = () => {
     target: container,
     offset: ["start end", "end start"],
   });
+
+  const [titleHovered, setTitleHovered] = useState(false);
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.6]);
 
@@ -22,8 +24,9 @@ const AboutCompany = () => {
       //   y: sectionDecimalScroll.get() > 0 ? 0 : 50,
       //   transition: { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] },
       // }}
-      className="relative -z-10 min-h-[100vh] py-[120px] md:py-[170px] flex items-center"
+      className="relative -z-10 min-h-[100vh] py-[60px] md:py-[170px] items-center px-[16px] md:px-[24px] lg:px-[40px] mx-auto"
     >
+      <div className="w-full h-[100px] absolute -top-[10px] left-0 z-30 bg-gradient-to-b from-[rgba(255,255,255,1)] to-[rgba(255,255,255,0)]"></div>
       <figure className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-10">
         <motion.div className="h-full w-full z-10" style={{ scale }}>
           <LazyLoadImage
@@ -31,50 +34,88 @@ const AboutCompany = () => {
             height={"100%"}
             effect="blur"
             wrapperClassName="lazyLoadImageContainer "
-            src={"/assets/images/home.jpg"}
+            src={"/assets/images/about-us-img.jpg"}
           />
         </motion.div>
       </figure>
-      <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-10 bg-black opacity-60"></div>
-      <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 bg-gray-500"></div>
-      <div className="w-full mx-[39px] md:mx-auto md:max-w-[565px] relative text-white z-20">
-        <h1 className="text-[42px] md:text-[55px] leading-[1.1] md:leading-[1.254] space-grotesk-semibold">
-          We Empower Your World!
-        </h1>
-        <p className="museo-sans  mt-[24px] md:mt-[40px] md:text-[23px] leading-[1.1]">
-          Relentlessly pursuing excellence for over 20 years, we strive to
-          develop and enhance African well-being through nurturing and growing
-          indigenous production and providing cutting-edge technological
-          solutions.{" "}
-        </p>
-        <p className="mt-[48px] md:mt-[75px] py-[14px] md:py-[16px] space-grotesk-semibold text-[21px] border-t border-b border-[white]">
-          Kelani at a glance
-        </p>
-        <div>
-          <div className="flex flex-col space-y-[30px] md:space-y-0 md:flex-row  justify-between mt-[26px] w-full">
-            <div className="">
-              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">
-                20+
-              </p>
-              <p className=" museo-sans text-[14px] leading-[1.1]">
-                Years of flawless <br /> delivery
-              </p>
+      <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-10 bg-white opacity-90"></div>
+      {/* <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 bg-gray-500"></div> */}
+      <div className="grid lg:grid-cols-2 gap-[30px] xl:gap-0 w-full mx-auto max-w-[1140px] text-[black]">
+        <a className="order-1 lg:order-[0]" href={`/about`}>
+          <div onMouseEnter={() => setTitleHovered(true)}
+            onMouseLeave={() => setTitleHovered(false)} className="relative z-20 cursor-pointer overflow-hidden h-full">
+            <div className="absolute top-0 flex flex-col justify-end pb-[45px] pl-[30px] right-0 left-0 bottom-0 md:max-w-[500px] lg:max-w-[500px] mx-auto rounded-[10px] bg-gradient-to-b to-[rgba(0,0,0,0.8)] from-[50%] from-[rgba(0,0,0,0)]  z-20">
+              <h2
+                className="text-[28px] md:text-[40px] text-white space-grotesk-semibold relative w-fit"
+              >
+                <span>About Us</span>
+                <motion.svg
+                  className="absolute -right-[40px] -top-[5px] rotate-45"
+                  initial={{ rotate: "-45deg" }}
+                  animate={{
+                    x: titleHovered ? 8 : 0,
+                    y: titleHovered ? -8 : 0,
+                    transition: {
+                      duration: 0.3,
+                      ease: [0.43, 0.13, 0.23, 0.96],
+                    },
+                  }}
+                  width="33"
+                  height="36"
+                  viewBox="0 0 11 12"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="white"
+                >
+                  <path
+                    d="M9.64605 6.36485L6.5523 9.4586C6.45544 9.55547 6.32406 9.60989 6.18707 9.60989C6.05008 9.60989 5.9187 9.55547 5.82184 9.4586C5.72497 9.36173 5.67055 9.23036 5.67055 9.09337C5.67055 8.95638 5.72497 8.825 5.82184 8.72813L8.03516 6.51567H1.71875C1.582 6.51567 1.45085 6.46135 1.35415 6.36465C1.25745 6.26795 1.20312 6.1368 1.20312 6.00005C1.20312 5.86329 1.25745 5.73214 1.35415 5.63544C1.45085 5.53874 1.582 5.48442 1.71875 5.48442H8.03516L5.82269 3.27067C5.72583 3.1738 5.67141 3.04242 5.67141 2.90544C5.67141 2.76845 5.72583 2.63707 5.82269 2.5402C5.91956 2.44333 6.05094 2.38892 6.18793 2.38892C6.32492 2.38892 6.4563 2.44333 6.55316 2.5402L9.64691 5.63395C9.69499 5.68192 9.73312 5.73891 9.75911 5.80166C9.7851 5.8644 9.79844 5.93166 9.79836 5.99958C9.79828 6.06749 9.78478 6.13472 9.75864 6.19741C9.73251 6.26009 9.69425 6.317 9.64605 6.36485Z"
+                    fill={"white"}
+                  />
+                </motion.svg>
+              </h2>
             </div>
-            <div className="">
-              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">
-                $500+
-              </p>
-              <p className=" museo-sans text-[14px] leading-[1.1]">
-                Million dollars in <br /> machinery
-              </p>
-            </div>
-            <div className="">
-              <p className="text-[36px] md:text-[40px] space-grotesk-semibold">
-                250+
-              </p>
-              <p className=" museo-sans text-[14px] leading-[1.1]">
-                Thrilled client <br /> businesses
-              </p>
+            <div className="w-full h-full z-10 mt-[50px] md:mt-0 md:max-w-[500px] min-h-[400px] md:min-h-[400px] lg:max-w-[500px] mx-auto rounded-[10px] overflow-hidden"><motion.img animate={titleHovered ? { scale: 1.5, transition: { duration: 5 } } : { scale: 1, transition: { duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] } }} className="w-full h-full object-cover z-10 md:max-w-[500px] min-h-[400px] md:min-h-[400px] lg:max-w-[500px] mx-auto rounded-[10px]" src="/assets/images/about-us.jpeg" /></div></div>
+        </a>
+        <div className="w-full py-0 md:py-[50px]">
+          <div className="w-full lg:mx-[39px] md:mx-auto md:max-w-[500px] relative text-black z-20">
+            <h1 className="text-[28px] md:text-[40px] leading-[1.1] md:leading-[1.08] space-grotesk-semibold">
+              Elevating African Prosperity Through Indigenous Innovation
+            </h1>
+            <p className="museo-sans  mt-[18px] text-[16px] md:text-[16px] leading-[1.1]">
+              Relentlessly pursuing excellence for over 20 years, we strive to
+              develop and enhance African well-being through nurturing and growing
+              indigenous production and providing cutting-edge technological
+              solutions.{" "}
+            </p>
+            <p className="mt-[30px] md:mt-[30px] py-[14px] md:py-[16px] space-grotesk-semibold text-[16px] md:text-[21px] border-t border-b border-[black]">
+              Kelani at a glance
+            </p>
+            <div>
+              <div className="flex flex-col space-y-[20px] md:space-y-0 md:flex-row  justify-between mt-[20px] md:mt-[26px] w-full">
+                <div className="">
+                  <p className="text-[24px] md:text-[36px] space-grotesk-semibold">
+                    20+
+                  </p>
+                  <p className=" museo-sans text-[14px] leading-[1.1]">
+                    Years of flawless <br className="hidden lg:block" /> delivery
+                  </p>
+                </div>
+                <div className="">
+                  <p className="text-[24px] md:text-[36px] space-grotesk-semibold">
+                    $500+
+                  </p>
+                  <p className=" museo-sans text-[14px] leading-[1.1]">
+                    Million dollars in <br className="hidden lg:block" /> machinery
+                  </p>
+                </div>
+                <div className="">
+                  <p className="text-[24px] md:text-[36px] space-grotesk-semibold">
+                    250+
+                  </p>
+                  <p className=" museo-sans text-[14px] leading-[1.1]">
+                    Thrilled client <br className="hidden lg:block" /> businesses
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
