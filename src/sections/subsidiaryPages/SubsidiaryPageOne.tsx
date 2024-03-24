@@ -37,28 +37,10 @@ interface Contents_Slideshow {
   classname: string;
 }
 
-// interface Content_parallex {
-//  img: string;
-//  content: {
-//   head: string;
-//   text: string;
-//  }
-
-// }
-
 interface Header {
   text: string;
   className: string;
 }
-
-// interface ColourProps {
-//   color: {
-//     c700: string;
-//     c500: string;
-//     c400: string;
-//     c300: string;
-//   }
-// }
 
 interface SubProps {
   customerCards: { height: number; img: string }[];
@@ -132,6 +114,7 @@ const SubsidiaryPageOne: React.FC<{
   title: string;
   cta_form: string;
 }> = ({ sub, lenis, title, cta_form }) => {
+  
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
   const ctaButtonVariant = {
     whileHover: {
@@ -317,6 +300,7 @@ const SubsidiaryPageOne: React.FC<{
           <div className="griddy lg:block hidden z-20 bg-transparent "> </div>
           <div className="relative overflow-x-hidden bg-black ">
             <div className="  md:h-screen h-[600px] relative">
+
               <div className="absolute inset-0 bg-cover bg-center">
                 <motion.div initial={{ scale: 1.3 }} animate={{ scale: 1, transition: { duration: 1, ease: [0.43, 0.13, 0.23, 0.96]  } }} className=" absolute w-full  z-50">
                   <LazyLoadImage

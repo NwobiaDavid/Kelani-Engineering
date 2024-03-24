@@ -12,6 +12,7 @@ import {
   sub_three,
   sub_two,
 } from "./sections/subsidiaryPages/subConstants";
+import ProductPage from "./sections/subsidiaryPages/ProductPage";
 // import { One } from "./sections/subsidiaryPages/subsidiaryComponents/One";
 // import One from "./components/One";
 
@@ -64,7 +65,17 @@ function App() {
               />
             }
           />
-          {/* <Route path="/one" element={< One />} /> */}
+
+          <Route path="/products"
+            element={
+              <ProductPage
+                cta_form="consulting"
+                title="Kelani Talent"
+                lenis={lenis}
+                sub={sub_three}
+              />
+            }
+          />
           {/* <Route path="/parallax" element={<ParallaxCards />} /> */}
         </Routes>
       </AnimatePresence>
