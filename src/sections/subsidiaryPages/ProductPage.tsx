@@ -1,17 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Lenis from '@studio-freight/lenis/types';
 import React, { useEffect, useState } from 'react'
-import { IoIosArrowRoundForward } from 'react-icons/io';
+// import { IoIosArrowRoundForward } from 'react-icons/io';
 import { motion, useAnimation } from "framer-motion"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Navbarr from "./subsidiaryComponents/Navbarr";
-import WavyText from "./subsidiaryComponents/WavyText";
+// import WavyText from "./subsidiaryComponents/WavyText";
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import CustomScrollbar from './subsidiaryComponents/CustomScrollbar';
 import Footer from '../Footer';
 import { CiSearch } from "react-icons/ci";
 import ConnectSection from './subsidiaryComponents/ConnectSection';
+import ProductView from '../../components/ProductPage/ProductView';
+import "./subsidiaryPages.css";
 
 
 interface Contents {
@@ -111,7 +113,7 @@ const ProductPage: React.FC<{
     cta_form: string;
 }> = ({ sub, lenis, title, cta_form }) => {
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
+    // const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
 
 
@@ -127,16 +129,16 @@ const ProductPage: React.FC<{
     };
 
     const [buttonHovered, setButtonHovered] = useState(false);
-    const handleResize = () => {
-        setIsMobile(window.innerWidth <= 1024);
-    };
+    // const handleResize = () => {
+    //     setIsMobile(window.innerWidth <= 1024);
+    // };
 
-    useEffect(() => {
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
+    // useEffect(() => {
+    //     window.addEventListener("resize", handleResize);
+    //     return () => {
+    //         window.removeEventListener("resize", handleResize);
+    //     };
+    // }, []);
 
     const [lightPosition, setLightPosition] = useState({ top: 0, left: 50 });
     const [lightPositionx, setLightPositionx] = useState({ top: 0, left: 50 });
@@ -309,7 +311,7 @@ const ProductPage: React.FC<{
             >
                 <div
                     id="hex-grid"
-                    className=" relative w-[100vw] h-full overflow-x-hidden "
+                    className=" relative w-[100vw] h-screen overflow-x-hidden "
                 >
                     <motion.div
                         animate={lightControls}
@@ -348,11 +350,9 @@ const ProductPage: React.FC<{
                                 />
 
                                 <div className="flex h-full  flex-col justify-center ">
-                                    <div className="md:w-[100%] z-50 w-full md:px-0 px-[0px]  text-center flex flex-col items-center justify-center">
+                                    <div className="md:w-[100%]  lg:h-[500px] h-[500px] z-50 w-full md:px-0 px-[0px]  text-center flex flex-col items-center justify-center">
 
-                                        {/* <h1 className="text-white font-semibold text-3xl lg:text-7xl mb-4 lg:mb-[4.7rem] ">{sub.hero_section.main_text}</h1> */}
-
-                                        <div className='h-[500px] w-[83%] flex-col text-left flex justify-center items-start  ' >
+                                        <div className=' h-[80%] w-[90%] lg:w-[83%] flex-col text-left flex justify-center items-start  ' >
                                             <motion.p
                                                 initial={{ opacity: 0, y: 30 }}
                                                 animate={{
@@ -360,57 +360,59 @@ const ProductPage: React.FC<{
                                                     y: 0,
                                                     transition: { duration: 1, ease: "easeOut" },
                                                 }}
-                                                className="text-white py-3 opacity-75 uppercase font-semibold"
+                                                className="text-white py-3 opacity-75 text-xs uppercase font-semibold"
                                             >
                                                 Solving the procurement dilemma
                                             </motion.p>
-                                            <h2 className=" w-[50%] text-white font-semibold text-6xl mb-3 lg:mb-[3.7rem] " >
+                                            <h2 className=" lg:w-[50%] text-white font-semibold space-grotesk-semibold text-xl lg:text-6xl mb-3 lg:mb-[3.7rem] " >
                                                 Boost renewable
                                                 energy input while
                                                 strengthening grid
                                                 reliability
-                                             </h2>
-                                            <p className='text-white ' >
+                                            </h2>
+                                            <p className='text-white text-sm space-grotesk-medium ' >
                                                 Check out the different solutions that <br />
                                                 you can start deploying today.
                                             </p>
 
                                         </div>
 
-                                        <motion.div
-                                            onClick={() => setCtaFormShowing(true)}
-                                            variants={ctaButtonVariant}
-                                            onMouseEnter={() => {
-                                                setButtonHovered(true);
-                                            }}
-                                            onMouseLeave={() => {
-                                                setButtonHovered(false);
-                                            }}
-                                            initial={{ opacity: 0 }}
-                                            animate={{
-                                                opacity: 1,
-                                                transition: { duration: 0.7, delay: 1.4 },
-                                            }}
-                                            whileHover="whileHover"
-                                            whileTap={"whileTap"}
-                                            className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
-                                        >
-                                            <Link to={"#"} className="">
-                                                Search Products
-                                            </Link>
-                                            <motion.span
-                                                className="sm:block hidden"
-                                                animate={
-                                                    buttonHovered
-                                                        ? { x: 10, transition: { duration: 0.3 } }
-                                                        : {}
-                                                }
-                                                whileHover={"whileHover"}
+                                        <div className="h-[20%]  w-full lg:w-[83%] items-center flex justify-center  ">
+                                            <motion.div
+                                                onClick={() => setCtaFormShowing(true)}
+                                                variants={ctaButtonVariant}
+                                                onMouseEnter={() => {
+                                                    setButtonHovered(true);
+                                                }}
+                                                onMouseLeave={() => {
+                                                    setButtonHovered(false);
+                                                }}
+                                                initial={{ opacity: 0 }}
+                                                animate={{
+                                                    opacity: 1,
+                                                    transition: { duration: 0.7, delay: 1.4 },
+                                                }}
+                                                whileHover="whileHover"
+                                                whileTap={"whileTap"}
+                                                className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
                                             >
-                                                {/* <IoIosArrowRoundForward size={30} /> */}
-                                                <CiSearch size={30} />
-                                            </motion.span>
-                                        </motion.div>
+                                                <Link to={"#"} className="">
+                                                    Search Products
+                                                </Link>
+                                                <motion.span
+                                                    className="sm:block hidden"
+                                                    animate={
+                                                        buttonHovered
+                                                            ? { x: 10, transition: { duration: 0.3 } }
+                                                            : {}
+                                                    }
+                                                    whileHover={"whileHover"}
+                                                >
+                                                    {/* <IoIosArrowRoundForward size={30} /> */}
+                                                    <CiSearch size={30} />
+                                                </motion.span>
+                                            </motion.div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -438,8 +440,11 @@ const ProductPage: React.FC<{
                         </div>
                     </div>
 
-                    <div className='z-40 text-white ' >
-                        <h2 className='text-white text-4xl z-40 ' >hello there</h2>
+                    <div className=' relative w-full h-fit flex flex-col z-40 text-white ' >
+                       
+                        <ProductView 
+                        setCtaFormShowing={setCtaFormShowing} 
+                        />
                     </div>
 
                 </div>
