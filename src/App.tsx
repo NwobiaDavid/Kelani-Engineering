@@ -13,6 +13,7 @@ import {
   sub_two,
 } from "./sections/subsidiaryPages/subConstants";
 import About from "./pages/About";
+import ProductPage from "./sections/subsidiaryPages/ProductPage";
 // import { One } from "./sections/subsidiaryPages/subsidiaryComponents/One";
 // import One from "./components/One";
 
@@ -69,6 +70,18 @@ function App() {
             path="/about"
             element={<About lenis={lenis} />}
           />
+
+          <Route path="/engineering/products"
+            element={
+              <ProductPage
+                cta_form="engineering"
+                title="Kelani Talent"
+                lenis={lenis}
+                sub={sub_three}
+              />
+            }
+          />
+          {/* <Route path="/parallax" element={<ParallaxCards />} /> */}
         </Routes>
       </AnimatePresence>
     </div>
