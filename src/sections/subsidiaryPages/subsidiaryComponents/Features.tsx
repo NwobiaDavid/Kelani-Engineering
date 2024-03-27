@@ -26,7 +26,7 @@ const Features: React.FC<{ data: FeaturesProps }> = ({ data }) => {
           <WavyText2 text={data.header} />
         </div>
 
-        <div className="flex lg:p-4 w-full lg:w-[86%] flex-col xl:flex-row justify-between items-start">
+        <div className="flex lg:p-4 w-full lg:w-[80%] flex-col xl:flex-row justify-between items-start">
           {data.contents.map((item, index) => (
             // <div className="w-full flex-col flex justify-center items-center ">
             //   <div

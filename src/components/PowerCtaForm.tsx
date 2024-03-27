@@ -1,15 +1,13 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { createPortal } from "react-dom";
-import "react-phone-number-input/style.css";
-import Input from "react-phone-number-input/input";
-import { useState } from "react";
-import { InputNumber } from "primereact/inputnumber";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 import axios from "axios";
-import Lenis from "@studio-freight/lenis/types";
+import { AnimatePresence, motion } from "framer-motion";
+import { InputNumber } from "primereact/inputnumber";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import { useForm } from "react-hook-form";
+import Input from "react-phone-number-input/input";
+import "react-phone-number-input/style.css";
+import { z } from "zod";
 // import { Scrollbar } from 'react-scrollbars-custom';
 
 
@@ -47,17 +45,12 @@ type FormSchema = z.infer<typeof schema>;
 
 const SubsidiaryCtaForm = ({
   close,
-  lenis,
 }: {
   close: () => void;
-  lenis: Lenis;
 }) => {
   const ref = useRef(null);
   useEffect(() => { }, [ref]);
-  useEffect(() => {
-    console.log(lenis);
-    lenis.stop();
-  }, []);
+
 
   const [formLoading, setFormLoading] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);

@@ -34,7 +34,7 @@ const CustomerSection = ({ cards }: { cards: Card[] }) => {
             className=" invisible lg:visible left-[8.3rem] top-[14.2rem]"
           />
 
-          <div className=" w-[500px]  lg:w-[76%] 3xl:w-[55%] flex-col relative flex justify-center items-center ">
+          <div className=" w-[500px]  lg:w-[80%] 3xl:w-[55%] flex-col relative flex justify-center items-center ">
             <Marquee
               pauseOnHover={true}
               className="border  border-opacity-40 border-white rounded-xl "

@@ -155,7 +155,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
   return (
     <div className="lg:h-[1300px] h-fit w-full z-30 text-white ">
       <div className="w-full mb-6 flex flex-col lg:px-4 justify-center pt-24 items-center ">
-        <div className="w-[86%] flex justify-center items-center lg:mt-[150px]">
+        <div className="w-[80%] flex justify-center items-center lg:mt-[150px]">
           <div className="flex  w-full lg:flex-row flex-col items-center mb-10 justify-center lg:justify-between ">
             <div className=" text-center lg:text-left ">
               <motion.p
@@ -338,7 +338,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
           }}
           className="w-full lg:mb-6 flex justify-center items-center "
         >
-          <div className="w-[86%] flex justify-center lg:justify-between items-center">
+          <div className="w-[80%] flex justify-center lg:justify-between items-center">
             {data.header.map((item, index) => (
               <div
                 className={`${
@@ -387,7 +387,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
         <AnimatePresence mode="wait">
           <motion.div
             key={display}
-            className="w-full lg:w-[86%] items-center lg:items-start z-30 h-full flex lg:flex-row flex-col"
+            className="w-full lg:w-[80%] items-center lg:items-start z-30 h-full flex lg:flex-row flex-col"
             variants={containerVariants}
             initial="initial"
             animate="animate"
