@@ -26,7 +26,7 @@ const AboutCompany = () => {
       // }}
       className="relative -z-10 min-h-[100vh] py-[60px] md:py-[170px] items-center px-[16px] md:px-[24px] lg:px-[40px] mx-auto"
     >
-      <div className="w-full h-[100px] absolute -top-[10px] left-0 z-30 bg-gradient-to-b from-[rgba(255,255,255,1)] to-[rgba(255,255,255,0)]"></div>
+      <div className="w-full h-[100px] absolute -top-[10px] left-0 z-30 bg-gradient-to-b from-[rgba(255,255,255,1)] to-[rgba(255,255,255,0)] rounded-[10px]"></div>
       <figure className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-10">
         <motion.div className="h-full w-full z-10" style={{ scale }}>
           <LazyLoadImage
@@ -40,10 +40,10 @@ const AboutCompany = () => {
       </figure>
       <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-10 bg-white opacity-90"></div>
       {/* <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 bg-gray-500"></div> */}
-      <div className="grid lg:grid-cols-2 gap-[30px] lg:gap-[80px] xl:gap-[100px]  w-full mx-auto max-w-[1672px] text-[black]">
+      <div className="grid lg:grid-cols-2 gap-[60px] lg:gap-[80px] xl:gap-[100px]  w-full mx-auto max-w-[1672px] text-[black]">
         <a className=" " href={`/about`}>
           <div onMouseEnter={() => setTitleHovered(true)}
-            onMouseLeave={() => setTitleHovered(false)} className="relative z-20 cursor-pointer overflow-hidden h-full">
+            onMouseLeave={() => setTitleHovered(false)} className="relative z-20 cursor-pointer overflow-hidden h-full rounded-[10px]">
             <div className="absolute top-0 flex flex-col justify-end pb-[45px] pl-[30px] right-0 left-0 bottom-0 md:max-w-[500px] lg:max-w-none mx-auto rounded-[10px] overflow-hidden bg-gradient-to-b to-[rgba(0,0,0,0.8)] from-[50%] from-[rgba(0,0,0,0)]  z-20">
               <h2
                 className="text-[28px] md:text-[40px] text-white space-grotesk-semibold relative w-fit"
