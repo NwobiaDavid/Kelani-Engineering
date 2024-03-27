@@ -193,14 +193,14 @@ export const sub_one = {
   },
   parallex_section: {
     subHead: "Why Kelani Consulting?",
-    header: "INGENUITY FOR YOUR SUCCESS",
+    header: "Ingenuity For Your Success",
     data: [
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (3).png",
         img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
-        img3: "/assets/images/icon-talent-card-1.svg",
+        img3: "/assets/images/factory.png",
         content: {
-          head: "Revolutionize Your Industry!",
+          head: "Transform Your Industry!",
           text: "Transform and personalize your business operations with specialized HR and talent solutions designed specifically for you to achieve industrial perfection.",
         },
         colors: {
@@ -211,7 +211,7 @@ export const sub_one = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (4).png",
         img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
-        img3: "/assets/images/icon-talent-card-1.svg",
+        img3: "/assets/images/rocket-with-stars.png",
         content: {
           head: "Ignite Success, Unleash Potential:",
           text: "Unlock your enterprise potential with our Talent Acquisition service. Soar to new heights!",
@@ -224,7 +224,7 @@ export const sub_one = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (3).png",
         img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
-        img3: "/assets/images/icon-talent-card-1.svg",
+        img3: "/assets/images/lightbulb.png",
         content: {
           head: "Expertise and Innovation",
           text: "Experience the pinnacle of expertise and professionalism at Kelani! Our experts deliver flawless responses, ensuring your success!",
@@ -243,7 +243,7 @@ export const sub_one = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (3).png",
         img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
-        img3: "/assets/images/icon-talent-card-1.svg",
+        img3: "/assets/images/factory.png",
         content: {
           head: "Revolutionize Your Industry!",
           text: "Transform and personalize your business operations with specialized HR and talent solutions designed specifically for you to achieve industrial perfection.",
@@ -256,7 +256,7 @@ export const sub_one = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (4).png",
         img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
-        img3: "/assets/images/icon-talent-card-1.svg",
+        img3: "/assets/images/rocket-with-stars.png",
         content: {
           head: "Ignite Success, Unleash Potential:",
           text: "Unlock your enterprise potential with our Talent Acquisition service. Soar to new heights!",
@@ -269,7 +269,7 @@ export const sub_one = {
       {
         img: "/assets/images/icon-talent-card-1.svg",
         img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
-        img3: "/assets/images/icon-talent-card-1.svg",
+        img3: "/assets/images/lightbulb.png",
         content: {
           head: "Expertise and Innovation",
           text: "Experience the pinnacle of expertise and professionalism at Kelani! Our experts deliver flawless responses, ensuring your success!",
@@ -441,7 +441,7 @@ export const sub_two = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (7).png",
         img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (8).png",
+        img3: "/assets/images/shield.png",
         content: {
           head: "Trust and Perfection",
           text: "Experience the ultimate in reliability, quality, and cutting-edge equipment! Trust us to provide the market-leading solutions you need for success!",
@@ -454,7 +454,7 @@ export const sub_two = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Group.png",
         img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (8).png",
+        img3: "/assets/images/medal.png",
         content: {
           head: "Achieve your best!",
           text: "Our Elite Team Unlocks Peak Performance, Guiding You to unleash your full potential and achieve optimal success. Maximize efficiency with us!",
@@ -467,7 +467,7 @@ export const sub_two = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Group.png",
         img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (8).png",
+        img3: "/assets/images/gear.png",
         content: {
           head: "Efficiency and Reliability",
           text: "Unrestricted access to an unwavering team of seasoned specialists, committed to your needs around the clock.",
@@ -486,7 +486,7 @@ export const sub_two = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (7).png",
         img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (8).png",
+        img3: "/assets/images/shield.png",
         content: {
           head: "Trust and Perfection",
           text: "Experience the ultimate in reliability, quality, and cutting-edge equipment! Trust us to provide the market-leading solutions you need for success!",
@@ -499,7 +499,7 @@ export const sub_two = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Group.png",
         img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (8).png",
+        img3: "/assets/images/medal.png",
         content: {
           head: "Achieve your best!",
           text: "Our Elite Team Unlocks Peak Performance, Guiding You to unleash your full potential and achieve optimal success. Maximize efficiency with us!",
@@ -512,7 +512,7 @@ export const sub_two = {
       {
         img: "/assets/images/icon-talent-card-1.svg",
         img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (8).png",
+        img3: "/assets/images/gear.png",
         content: {
           head: "Efficiency and Reliability",
           text: "Unrestricted access to an unwavering team of seasoned specialists, committed to your needs around the clock.",
@@ -703,7 +703,7 @@ export const sub_three = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (5).png",
         img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+        img3: "/assets/images/rocket-with-stars.png",
         content: {
           head: "Drive your progress!",
           text: "Diverse credit and financing options to fuel your business toward the success and progress you crave!",
@@ -716,7 +716,7 @@ export const sub_three = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png",
         img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+        img3: "/assets/images/lightbulb.png",
         content: {
           head: "Be ahead!",
           text: "Outpace market uncertainties and financial challenges with our expert support!",
@@ -729,7 +729,7 @@ export const sub_three = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png",
         img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+        img3: "/assets/images/research.png",
         content: {
           head: "Research",
           text: "Join us in pushing boundaries for a greener, more efficient energy landscape.",
@@ -748,7 +748,7 @@ export const sub_three = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (5).png",
         img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+        img3: "/assets/images/rocket-with-stars.png",
         content: {
           head: "Drive your progress!",
           text: "Diverse credit and financing options to fuel your business toward the success and progress you crave!",
@@ -761,7 +761,7 @@ export const sub_three = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (6).png",
         img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+        img3: "/assets/images/lightbulb.png",
         content: {
           head: "Drive your progress!",
           text: "Diverse credit and financing options to fuel your business toward the success and progress you crave!",
@@ -774,7 +774,7 @@ export const sub_three = {
       {
         img: "/assets/images/icon-talent-card-1.svg",
         img2: "/assets/images/subsidiaryPagesImages/props/gree.png",
-        img3: "/assets/images/subsidiaryPagesImages/props/Vector (9).png",
+        img3: "/assets/images/research.png",
         content: {
           head: "Research",
           text: "Join us in pushing boundaries for a greener, more efficient energy landscape.",

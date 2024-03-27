@@ -344,7 +344,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps; setCtaFormShowi
                   </div>
                   <img
                     className=" w-[80%] max-h-[200px] md:max-h-[280px] object-contain"
-                    src={data.data[0].img3}
+                    src={data.data[1].img3}
                   />
                 </div>
               </div>
@@ -379,7 +379,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps; setCtaFormShowi
                   </div>
                   <img
                     className="  -[80%] max-h-[200px] md:max-h-[280px] object-contain"
-                    src={data.data[0].img3}
+                    src={data.data[2].img3}
                   />
                 </div>
               </div>
