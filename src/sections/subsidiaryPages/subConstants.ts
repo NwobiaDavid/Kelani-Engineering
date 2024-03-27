@@ -454,7 +454,7 @@ export const sub_two = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Group.png",
         img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
-        img3: "/assets/images/medal.png",
+        img3: "/assets/images/lightbulb.png",
         content: {
           head: "Achieve your best!",
           text: "Our Elite Team Unlocks Peak Performance, Guiding You to unleash your full potential and achieve optimal success. Maximize efficiency with us!",
@@ -499,7 +499,7 @@ export const sub_two = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Group.png",
         img2: "/assets/images/subsidiaryPagesImages/props/oran.png",
-        img3: "/assets/images/medal.png",
+        img3: "/assets/images/lightbulb.png",
         content: {
           head: "Achieve your best!",
           text: "Our Elite Team Unlocks Peak Performance, Guiding You to unleash your full potential and achieve optimal success. Maximize efficiency with us!",

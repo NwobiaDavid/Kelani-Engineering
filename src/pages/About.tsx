@@ -23,7 +23,7 @@ const SlidePrevButton = () => {
             onClick={() => {
                 swiper.slidePrev();
             }}
-            className="bg-[rgb(239,239,239)] hover:bg-[#d2d2d2] transition duration-500 w-[30px] h-[30px] md:w-[40px] md:h-[40px] rounded-full flex items-center justify-center cursor-pointer"
+            className="bg-[rgb(239,239,239)] hover:bg-[#d2d2d2] transition duration-500 w-[30px] h-[30px] sm:w-[40px] md:h-[40px] rounded-full flex items-center justify-center cursor-pointer"
         >
             <svg
                 // width="24"
@@ -104,7 +104,7 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
             <Helmet>
                 <title>About Kelani</title>
             </Helmet>
-            <nav className="border-b border-[rgba(166,166,166,0.5)] w-full">          <div className="w-full p-[20px] md:p-[30px] px-[48px] flex justify-between z-20 max-w-[1660px] mx-auto">
+            <nav className="border-b border-[rgba(166,166,166,0.5)] w-full">          <div className="w-full p-[20px] md:p-[30px] md:px-[48px] flex justify-between z-20 max-w-[1660px] mx-auto">
                 <div className=" lg:px-[20px] h-[35px] rounded-full flex items-center justify-center">
                     <img
                         className="h-[40px] md:h-[50px] lg:h-[55px]"
@@ -199,7 +199,7 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
 " />
                     </div>
                     <div className="bg-[#069E7D] py-[40px] px-[4px] md:px-[20px] lg:px-[48px] border-b border-b-[rgba(255,255,255,0.4)]">
-                        <motion.div ref={valuesRef} style={{ width: valuesSectionWidth }} className="bg-white mx-auto  md:w-full pt-[56px] md:pt-[80px] lg:pt-[112px] rounded-[10px] md:px-[30px] md:pb-[80px] lg:pb-[120px]">
+                        <motion.div ref={valuesRef} style={{ width: valuesSectionWidth }} className="bg-white mx-auto  md:w-full pt-[56px] md:pt-[80px] lg:pt-[112px] rounded-[10px] md:px-[30px] pb-[48px] md:pb-[80px] lg:pb-[120px]">
                             <h2 className="md:text-[60px] text-[36px] lg:text-[80px] space-grotesk-medium text-center">Company Values</h2>
                             <p className="text-center text-[12.8px] md:text-[16px] space-grotesk-medium font-normal text-[#7d7d7d] mt-[5px] md:mt-[10px]">Why are these our values?</p>
                             <div className="pt-[42px] md:pt-[60px] lg:pt-[72px] flex flex-col space-y-[18px] md:px-[8%]">
@@ -218,19 +218,19 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
                             </div>
                         </motion.div>
                     </div>
-                    <div className="pt-[120px] bg-[#069E7D] pb-[60px]">
-                        <h2 className="text-[50px] sm:text-[95px] md:text-[110px] lg:text-[150px] xl:text-[165px] px-[20px] lg:px-[48px] space-grotesk-medium leading-[1] text-white tracking-tighter">Empowerment</h2>
-                        <div className="w-full grid grid-cols-[35%_65%] museo-sans text-white mt-[80px] px-[20px] lg:px-[48px]">
-                            <div className="flex w-full h-full   items-center">
-                                <img className="grayscale lg:w-[300px] opacity-45" src="/assets/images/kelani-icon.svg" />
+                    <div className="pt-[48px] md:pt-[80px] lg:pt-[120px] bg-[#069E7D] pb-[60px]">
+                        <h2 className="text-[44px] sm:text-[95px] md:text-[110px] lg:text-[150px] xl:text-[165px] px-[20px] lg:px-[48px] space-grotesk-medium leading-[1] text-white tracking-tighter">Empowerment</h2>
+                        <div className="w-full md:grid md:grid-cols-[35%_65%] museo-sans text-white mt-[30px] md:mt-[80px] px-[20px] lg:px-[48px]">
+                            <div className="hidden w-full h-full sm:flex   items-center">
+                                <img className="grayscale sm:w-[180px] lg:w-[300px] opacity-45" src="/assets/images/kelani-icon.svg" />
                             </div>
-                            <div className="text-[19px] leading-[1.25]">
-                                <div className="grid grid-cols-2 gap-[10%] w-[85%]">
+                            <div className="text-[13px] sm:text-[15px] lg:text-[16px] xl:text-[19px] leading-[1.25]">
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-[15px] lg:gap-[10%] md:w-[85%]">
                                     <p className="">
                                         Kelani envisions empowering 500 million Africans for improved well-being and productivity through technology and education. We are dedicated to fostering a resilient African landscape by establishing sustainable systems for enduring success.
                                     </p>
                                 </div>
-                                <div className="mt-[40px] grid grid-cols-2 gap-[10%] w-[85%]">
+                                <div className="mt-[15px] lg:mt-[40px] grid grid-cols-1 lg:grid-cols-2 gap-[15px] lg:gap-[10%] md:w-[85%]">
                                     <p className="">
                                         Our mission at Kelani is to drive African well-being and indigenous production through innovative technology. We provide tools to optimize efficiency and guide users toward sustainable practices, ensuring positive impacts for years to come.
                                     </p>
@@ -238,7 +238,7 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
                                         Kelani is committed to uplifting the entire African community by instilling responsibility and providing actionable tools. We champion a collective movement towards a brighter future, fostering sustainability and prosperity for generations.
                                     </p>
                                 </div>
-                                <div className="w-full pr-[48px] mt-[40px]"><img className="w-full max-h-[400px] object-cover" src="/assets/images/empowerment-section.png" /></div>
+                                <div className="w-full md:pr-[48px] mt-[40px]"><img className="w-full max-h-[400px] object-cover" src="/assets/images/empowerment-section.png" /></div>
                             </div>
                         </div>
                     </div>
