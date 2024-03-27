@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Footer from "../Footer";
 import ConnectSection from "./subsidiaryComponents/ConnectSection";
 import CustomScrollbar from "./subsidiaryComponents/CustomScrollbar";
@@ -219,7 +219,10 @@ const SubsidiaryPageOne: React.FC<{
   const lightControlss = useAnimation();
   const lightControlsx = useAnimation();
 
-  const [ctaFormShowing, setCtaFormShowing] = useState(false);
+  const [searchParams] = useSearchParams();
+  const [ctaFormShowing, setCtaFormShowing] = useState(searchParams.get("cta_form_open") == "true");
+
+  useEffect(() => searchParams.delete("cta_form_showing"))
 
   useEffect(() => {
     const handleScroll = () => {

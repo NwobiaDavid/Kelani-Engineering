@@ -420,7 +420,7 @@ const SlideshowSection2: React.FC<{ data: SlideshowProps; colours: color }> = ({
               transition={{ duration: 0.5, delay: 0.1 }}
               className="xl:w-[42%] h-full lg:w-[60%] lg:ml-6 ml-0 "
             >
-              <ul className="grid h-full text-sm lg:text-sm w-full xl:gap-y-5 lg:gap-y-0 gap-y-5 gap-6 px-1 xl:pt-10 lg:pt-[10px] pt-10 xl:p-4 lg:grid-rows-3 md:grid-cols-2 grid-cols-1 lg:grid-cols-2">
+              <ul className="grid h-full text-sm lg:text-sm w-full xl:gap-y-5 lg:gap-y-[10px] gap-y-5 gap-6 px-1 xl:pt-10 lg:pt-[10px] pt-10 xl:p-4 lg:grid-rows-3 md:grid-cols-2 grid-cols-1 lg:grid-cols-2">
                 {[
                   data.content[display].point1,
                   data.content[display].point2,

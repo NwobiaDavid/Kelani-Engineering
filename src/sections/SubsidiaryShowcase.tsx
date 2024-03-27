@@ -295,7 +295,7 @@ const SubsidiaryShowcase = ({
                 <a
                   onMouseEnter={() => setPowerCtaHovered(true)}
                   onMouseLeave={() => setPowerCtaHovered(false)}
-                  href={"/power"}
+                  href={"/power?cta_form_open=true"}
                   target="_blank"
                   className="w-full rounded-[9.6px] overflow-hidden border-[#D2DADF] flex flex-col cursor-pointer relative h-[60dvh] min-h-[300px] max-h-[600px] lg:min-h-[600px]"
                 >
@@ -307,7 +307,7 @@ const SubsidiaryShowcase = ({
                     className="w-full h-full top-0 bottom-0 left-0 z-[1] absolute"
                   ></div>
                   <div className="w-full h-full absolute top-0 right-0 left-0 bottom-0  bg-opacity-[0.4] px-[26px] lg:px-[48px] flex flex-col justify-end pb-[64px] z-30">
-                    <h4 className="relative w-fit space-grotesk-semibold text-[26px] md:text-[28px] lg:text-[40px] text-white z-30">
+                    <motion.h4 animate={{y: powerCtaHovered ? -20 : 0, transition: {duration: 0.3}}} className="relative w-fit space-grotesk-semibold text-[26px] md:text-[28px] lg:text-[40px] text-white z-30">
                       Buy Power Now
                       <motion.svg
                         className="absolute -right-[40px] -top-[5px] rotate-45"
@@ -331,7 +331,7 @@ const SubsidiaryShowcase = ({
                           fill={"white"}
                         />
                       </motion.svg>
-                    </h4>
+                    </motion.h4>
                   </div>
                   <motion.div
                     className="w-full h-full absolute bg-gradient-to-t from-[rgba(2,42,33,1)] to-[rgba(7,158,126,0)] top-0 right-0 left-0 bottom-0 bg-opacity-70  flex text-white items-center justify-center z-20"
