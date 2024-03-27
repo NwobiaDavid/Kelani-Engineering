@@ -312,14 +312,6 @@ const SubsidiaryShowcase = ({
                 </SwiperSlide>
               ))}
             </div>
-            {/* <div className="absolute bottom-[23px] flex items-center gap-[40px] z-10 w-full lg:pr-[46px]">
-                    <p>01 - 0{engineeringData?.length}</p>
-                    <div className="flex-grow h-[1px] bg-[#D2DADF]"></div>
-                    <div className="gap-[9px] flex">
-                      <SlidePrevButton themeColor={themeColor} />
-                      <SlideNextButton themeColor={themeColor} />
-                    </div>
-                  </div> */}
           </Swiper>
         </div>
       )}

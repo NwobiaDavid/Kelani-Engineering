@@ -40,11 +40,11 @@ const AboutCompany = () => {
       </figure>
       <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-10 bg-white opacity-90"></div>
       {/* <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 bg-gray-500"></div> */}
-      <div className="grid lg:grid-cols-2 gap-[30px] xl:gap-0 w-full mx-auto max-w-[1140px] text-[black]">
+      <div className="grid lg:grid-cols-2 gap-[30px] lg:gap-[80px] xl:gap-[100px]  w-full mx-auto max-w-[1672px] text-[black]">
         <a className="order-1 lg:order-[0]" href={`/about`}>
           <div onMouseEnter={() => setTitleHovered(true)}
             onMouseLeave={() => setTitleHovered(false)} className="relative z-20 cursor-pointer overflow-hidden h-full">
-            <div className="absolute top-0 flex flex-col justify-end pb-[45px] pl-[30px] right-0 left-0 bottom-0 md:max-w-[500px] lg:max-w-[500px] mx-auto rounded-[10px] bg-gradient-to-b to-[rgba(0,0,0,0.8)] from-[50%] from-[rgba(0,0,0,0)]  z-20">
+            <div className="absolute top-0 flex flex-col justify-end pb-[45px] pl-[30px] right-0 left-0 bottom-0 md:max-w-[500px] lg:max-w-none mx-auto rounded-[10px] bg-gradient-to-b to-[rgba(0,0,0,0.8)] from-[50%] from-[rgba(0,0,0,0)]  z-20">
               <h2
                 className="text-[28px] md:text-[40px] text-white space-grotesk-semibold relative w-fit"
               >
@@ -73,7 +73,7 @@ const AboutCompany = () => {
                 </motion.svg>
               </h2>
             </div>
-            <div className="w-full h-full z-10 mt-[50px] md:mt-0 md:max-w-[500px] min-h-[400px] md:min-h-[400px] lg:max-w-[500px] mx-auto rounded-[10px] overflow-hidden"><motion.img animate={titleHovered ? { scale: 1.5, transition: { duration: 5 } } : { scale: 1, transition: { duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] } }} className="w-full h-full object-cover z-10 md:max-w-[500px] min-h-[400px] md:min-h-[400px] lg:max-w-[500px] mx-auto rounded-[10px]" src="/assets/images/about-us.jpeg" /></div></div>
+            <div className="w-full h-full z-10 mt-[50px] md:mt-0 md:max-w-[500px] min-h-[400px] md:min-h-[400px] lg:max-w-none mx-auto rounded-[10px] overflow-hidden"><motion.img animate={titleHovered ? { scale: 1.5, transition: { duration: 5 } } : { scale: 1, transition: { duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] } }} className="w-full h-full object-cover z-10 md:max-w-[500px] min-h-[400px] md:min-h-[400px] lg:max-w-none mx-auto rounded-[10px]" src="/assets/images/about-us.jpeg" /></div></div>
         </a>
         <div className="w-full py-0 md:py-[50px]">
           <div className="w-full lg:mx-[39px] md:mx-auto md:max-w-[500px] relative text-black z-20">

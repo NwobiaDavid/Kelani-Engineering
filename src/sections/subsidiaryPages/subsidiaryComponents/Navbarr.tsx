@@ -82,7 +82,7 @@ const Navbar: React.FC<{
             /> */}
             <img
               src={`/assets/images/subsidiary-logos/kelani-${cta_form}-mobile-logo.png`}
-              className="h-[55px] "
+              className="max-w-[120px] md:max-w-none lg:h-[55px] lg:w-fit"
             />
           </motion.a>
 

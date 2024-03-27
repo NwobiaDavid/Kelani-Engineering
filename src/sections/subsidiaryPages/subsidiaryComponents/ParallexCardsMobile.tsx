@@ -73,7 +73,7 @@ const ParallexCardsMobile: React.FC<{ data: ParallexMobileProps; setCtaFormShowi
         scrub: 1,
         start: "center 60%",
         end: "+=1000",
-        markers: true,
+        markers: false,
       },
     });
 

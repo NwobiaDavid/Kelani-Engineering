@@ -357,6 +357,13 @@ export const sub_two = {
         colour: "text-orange-400",
       },
       {
+        img: "assets/images/factory-icon.svg",
+        img2: "assets/images/subsidiaryPagesImages/props/Gap (2).png",
+        head: "Operations Management",
+        desc: "With cutting-edge facility consulting and production management services, we empower new and existing companies to soar to the highest levels of efficiency.",
+        colour: "text-orange-400",
+      },
+      {
         img: "assets/images/subsidiaryPagesImages/pageTwo/save-energy 1-1.png",
         img2: "assets/images/subsidiaryPagesImages/props/Gap (2).png",
         head: "Plastics - Recycling and Repurposing",

@@ -12,6 +12,7 @@ import {
   sub_three,
   sub_two,
 } from "./sections/subsidiaryPages/subConstants";
+import About from "./pages/About";
 // import { One } from "./sections/subsidiaryPages/subsidiaryComponents/One";
 // import One from "./components/One";
 
@@ -64,8 +65,10 @@ function App() {
               />
             }
           />
-          {/* <Route path="/one" element={< One />} /> */}
-          {/* <Route path="/parallax" element={<ParallaxCards />} /> */}
+          <Route
+            path="/about"
+            element={<About lenis={lenis} />}
+          />
         </Routes>
       </AnimatePresence>
     </div>
