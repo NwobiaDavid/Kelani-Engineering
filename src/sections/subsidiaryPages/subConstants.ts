@@ -96,26 +96,23 @@ export const sub_one = {
       {
         img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 17.png",
         point1:
-          "Unlock Exceptional Leadership: Use our executive search services for top-level positions to streamline recruitment.",
+          "Use our executive search services for top-level positions to streamline recruitment.",
         point2:
-          "Strengthen Your Talent Pool: Boost growth with our talent pipeline service. We identify future leaders, driving company success.",
+          "Boost growth with our talent pipeline service. We identify future leaders, driving company success.",
         point3:
-          "Elevate Leadership Potential: Empower your top talent through personalized leadership development programs tailored to drive success and innovation within your organization.",
-        // point4: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
-        // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
+          "Empower your top talent through personalized leadership development programs tailored to drive success and innovation within your organization.",
         classname: " ",
       },
       {
         img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/onee.jpg",
         point1:
-          "Recruitment Excellence: We find the perfect fit for your team through top-tier talent sourcing, rigorous screening, and seamless hiring processes.",
+          "We find the perfect fit for your team through top-tier talent sourcing, rigorous screening, and seamless hiring processes.",
         point2:
-          "Tailored Training Programs: Elevate your workforce with customized training solutions that drive skill enhancement and continuous improvement.",
+          "Elevate your workforce with customized training solutions that drive skill enhancement and continuous improvement.",
         point3:
-          "Engaging Employee Initiatives: Boost morale and productivity with fun team-building activities, recognition programs, and feedback mechanisms.",
+          "Boost morale and productivity with fun team-building activities, recognition programs, and feedback mechanisms.",
         point4:
-          "Future Leaders Development: Nurture high-potential employees, create succession plans, and offer career growth opportunities to retain top talent.",
+          "Nurture high-potential employees, create succession plans, and offer career growth opportunities to retain top talent.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
@@ -123,13 +120,13 @@ export const sub_one = {
       {
         img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 26.png",
         point1:
-          "Engineering Design Services: Our innovative engineering design solutions turn ideas into reality, driving groundbreaking projects that redefine possibilities.",
+          "Our innovative engineering design solutions turn ideas into reality, driving groundbreaking projects that redefine possibilities.",
         point2:
-          "CAD/CAM Services: Our services leverage cutting-edge technology to revolutionize product development and manufacturing, boosting efficiency and speed for businesses.",
+          "Our services leverage cutting-edge technology to boost efficiency and speed for businesses.",
         point3:
-          "Innovative Prototyping and Testing: We prioritize rigorous prototyping and testing to deliver products that exceed expectations and set new standards.",
+          "We prioritize rigorous prototyping and testing to deliver products that exceed expectations and set new standards.",
         point4:
-          "Empowering Project Success: Our project management ensures successful outcomes through seamless collaboration, meticulous planning, and flawless execution."
+          "Our project management ensures successful outcomes through seamless collaboration, meticulous planning, and flawless execution."
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // classname: " ",
@@ -137,13 +134,13 @@ export const sub_one = {
       {
         img: "assets/images/subsidiaryPagesImages/pageOne/slideshow/image 16.png",
         point1:
-          "Cost Analysis and Optimization: Maximize efficiency with our cost analysis and optimization services. We streamline processes for maximum savings.",
+          "Maximize efficiency with our cost analysis and optimization services. We streamline processes for maximum savings.",
         point2:
-          "Scalable Workforce Solutions: Embrace flexible workforce solutions for optimal resource utilization and cost efficiency.",
+          "Embrace flexible workforce solutions for optimal resource utilization and cost efficiency.",
         point3:
-          "Unlock Specialized Expertise: Achieve success with our expert team's innovative solutions and industry insights, driving cost savings through collaboration.",
+          " success with our expert team's innovative solutions and industry insights, driving cost savings through collaboration.",
         point4:
-          "Safeguard Your Business: Secure your business with our risk and compliance services. Focus on growth confidently.",
+          "Secure your business with our risk and compliance services. Focus on growth confidently.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
@@ -394,11 +391,11 @@ export const sub_two = {
       {
         img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 25.png",
         point1:
-          "Financial Advisory Services: Empower your financial future with confident, smart investment decisions and secure retirement.",
+          "Empower your financial future with confident, smart investment decisions and secure retirement.",
         point2:
-          "Business Advisory: Partner to unlock your business potential, navigate challenges, and achieve sustainable growth.",
+          "Partner to unlock your business potential, navigate challenges, and achieve sustainable growth.",
         point3:
-          "Legal Advisory: Expert guidance to protect your interests, ensure compliance, and navigate legal landscapes effortlessly.",
+          "Expert guidance to protect your interests, ensure compliance, and navigate legal landscapes effortlessly.",
         point4:
           "Tech advisory guides innovation, efficiency, and security in your organization through the ever-evolving tech landscape.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -412,7 +409,7 @@ export const sub_two = {
         point2:
           "Repurpose your plastic waste with innovative solutions, showcasing a commitment to the environment and positive impact.",
         point3:
-          "Sustainable Packaging Solutions: Embrace eco-friendly options, replacing harmful single-use plastics to protect both products and the planet for future generations.",
+          "Embrace eco-friendly options, replacing harmful single-use plastics to protect both products and the planet for future generations.",
         point4:
           "Educate for a greener world. Join our programs to spread environmental responsibility and empower change through informed choices.",
         classname: " ",
@@ -626,7 +623,7 @@ export const sub_three = {
         point2:
           "Get expert financial guidance for thriving in competition and navigating challenges confidently.",
         point3:
-        "Improve your credit score to access better funding opportunities, empowering your business for success.",
+          "Improve your credit score to access better funding opportunities, empowering your business for success.",
         point4:
           "Protect your business with robust risk management for resilience.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
@@ -636,27 +633,27 @@ export const sub_three = {
       {
         img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/one.png",
         point1:
-          "Customized Energy Procurement: Secure optimal deals and drive cost savings for a brighter, more efficient tomorrow.",
+          " Secure optimal deals and drive cost savings for a brighter, more efficient tomorrow.",
         point2:
-          "Sustainable Energy Solutions: Join us to develop large-scale renewable projects, shaping a greener future together.",
+          " Join us to develop large-scale renewable projects, shaping a greener future together.",
         point3:
-          "Confident Risk Management: Manage market uncertainties with custom strategies for resilient energy investments.",
+          "Manage market uncertainties with custom strategies for resilient energy investments.",
         point4:
-          "Optimize Energy Efficiency: Reduce costs and environmental impact with personalized energy consultations for sustainability.",
+          "Reduce costs and environmental impact with personalized energy consultations for sustainability.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/image 29.png",
+        img: "assets/images/compass.png",
         point1:
           "Discover hidden opportunities, mitigate risks, and unlock maximum value through strategic portfolio analysis tailored to your financial goals.",
         point2:
-          "Tailored Risk Mitigation: Shield your investments with customized strategies, optimizing financial outcomes through proactive debt management and mitigating potential losses.",
+          "Shield your investments with customized strategies, optimizing financial outcomes through proactive debt management and mitigating potential losses.",
         point3:
-          "Transform Decision-Making: Utilize advanced analytics to unlock actionable insights, revolutionizing debt collection with data-driven strategies.",
+          "Utilize advanced analytics to unlock actionable insights, revolutionizing debt collection with data-driven strategies.",
         point4:
-          "Ensure Compliance: Rely on our experts for unwavering support, ensuring adherence to legal standards and industry regulations, fostering sound debt management.",
+          "Rely on our experts for unwavering support, ensuring adherence to legal standards and industry regulations, fostering sound debt management.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
@@ -664,13 +661,13 @@ export const sub_three = {
       {
         img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/image 24.png",
         point1:
-          "Informed Decision-Making: Empower decisions with meticulous feasibility studies, exploring technology, budget, and risks for successful engineering projects.",
+          "Empower decisions with meticulous feasibility studies, exploring technology, budget, and risks for successful engineering projects.",
         point2:
-          "Innovative Product Development: Collaborate with us to pioneer groundbreaking solutions, transforming ideas into tangible products with cutting-edge engineering methods.",
+          "Collaborate with us to pioneer groundbreaking solutions, transforming ideas into tangible products with cutting-edge engineering methods.",
         point3:
-          "Precise Simulation and Modeling: Navigate complexity with advanced simulations, optimizing systems and engineering solutions with efficiency and accuracy.",
+          " Navigate complexity with advanced simulations, optimizing systems and engineering solutions with efficiency and accuracy.",
         point4:
-          "Engineering Excellence in Materials: From property analysis to durability testing, trust our expertise for optimal material selection and performance evaluation, ensuring engineering excellence.",
+          "From property analysis to durability testing, trust our expertise for optimal material selection and performance evaluation, ensuring engineering excellence.",
         // point5: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         // point6: "Forecast, detect, and resolve curtailment and congestion issues wi remote and process automation",
         classname: " ",
