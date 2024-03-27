@@ -21,7 +21,7 @@ const Navbar: React.FC<{
   ctaFormShowing: boolean;
   setCtaFormShowing: (value: boolean) => void;
   lenis: Lenis;
-}> = ({ cta_form, ctaFormShowing, setCtaFormShowing, lenis }) => {
+}> = ({ cta_form, ctaFormShowing, setCtaFormShowing}) => {
   const [isNavOpen] = useState(false);
 
   const ctaButtonVariant = {
@@ -43,7 +43,6 @@ const Navbar: React.FC<{
           <>
             {cta_form == "power" && (
               <PowerCtaForm
-                lenis={lenis}
                 close={() => setCtaFormShowing(false)}
               />
             )}
