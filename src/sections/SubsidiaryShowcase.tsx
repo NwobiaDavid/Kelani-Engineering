@@ -93,7 +93,6 @@ const SubsidiaryShowcase = ({
   spotlightData?: Record<string, string>;
 }) => {
   const containerRef = useRef(null);
-  const [titleHovered, setTitleHovered] = useState(false);
   const themeColor =
     type == "engineering" ? "#E36E1B" : type == "power" ? "#069E7D" : "#79188C";
   const accentColor =
@@ -157,8 +156,6 @@ const SubsidiaryShowcase = ({
               <div className="relative px-[20px] lg:px-[48px] py-[54px] text-white">
                 <a href={`/${type}`}>
                   <h2
-                    onMouseEnter={() => setTitleHovered(true)}
-                    onMouseLeave={() => setTitleHovered(false)}
                     className="text-[45px] md:text-[56px] lg:text-[60px] space-grotesk-semibold relative w-fit"
                   >
                     <span>{title}</span>

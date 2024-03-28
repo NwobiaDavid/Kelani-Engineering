@@ -11,7 +11,7 @@ interface SpotlightCardProps {
   subtext: string;
 }
 
-const SpotlightCard = ({ image, description, link, themeColor, accentColor, index, subtext }: SpotlightCardProps) => {
+const SpotlightCard = ({ description, link, accentColor, index, subtext }: SpotlightCardProps) => {
   const [hovered, setHovered] = useState(false);
   const videoRef = useRef(null)
   return (

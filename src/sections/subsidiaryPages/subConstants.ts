@@ -198,7 +198,7 @@ export const sub_one = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (3).png",
         img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
-        img3: "/assets/images/factory.png",
+        img3: "/assets/images/gear.png",
         content: {
           head: "Transform Your Industry!",
           text: "Transform and personalize your business operations with specialized HR and talent solutions designed specifically for you to achieve industrial perfection.",
@@ -243,9 +243,9 @@ export const sub_one = {
       {
         img: "/assets/images/subsidiaryPagesImages/props/Vector (3).png",
         img2: "/assets/images/subsidiaryPagesImages/props/purp.png",
-        img3: "/assets/images/factory.png",
+        img3: "/assets/images/gear.png",
         content: {
-          head: "Revolutionize Your Industry!",
+          head: "Transform Your Industry!",
           text: "Transform and personalize your business operations with specialized HR and talent solutions designed specifically for you to achieve industrial perfection.",
         },
         colors: {
