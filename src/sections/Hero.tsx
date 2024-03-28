@@ -54,7 +54,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
             <div className=" lg:px-[20px] h-[35px] rounded-full flex items-center justify-center">
               <img
                 className=" h-[50px] lg:h-[55px]"
-                src="/assets/images/kelani-logo.png"
+                src="/assets/images/kelani-logo-white.png"
               />
             </div>
             <motion.div
