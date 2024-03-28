@@ -26,9 +26,7 @@ const SlidePrevButton = ({ themeColor }: { themeColor: string }) => {
       className="bg-[#E98B49] w-[30px] h-[30px] md:w-[40px] md:h-[40px] rounded-full flex items-center justify-center cursor-pointer"
     >
       <svg
-        // width="24"
-        // height="20"
-        className="md:w-[24px] md:h-[20px] w-[18px] h-[14.4px]"
+        className="md:w-[24px] md:h-[20px] w-[18px] h-[14.4px] scale-50"
         viewBox="0 0 24 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +56,7 @@ const SlideNextButton = ({ themeColor }: { themeColor: string }) => {
       className=" w-[30px] h-[30px] md:w-[40px] md:h-[40px] rounded-full flex items-center justify-center cursor-pointer"
     >
       <svg
-        className="md:w-[24px] md:h-[20px] w-[18px] h-[14.4px]"
+        className="md:w-[24px] md:h-[20px] w-[18px] h-[14.4px] scale-50"
         viewBox="0 0 24 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -100,6 +98,7 @@ const SubsidiaryShowcase = ({
     type == "engineering" ? "#E36E1B" : type == "power" ? "#069E7D" : "#79188C";
   const accentColor =
     type == "engineering" ? "#E98B49" : type == "power" ? "#38B197" : "#9446A3";
+  const spotlightColor = type == "engineering" ? "#4a2a15" : type == "power" ? "#0E3738" : "#231937"
   const { y } = useScrollPosition()
   const [powerCtaHovered, setPowerCtaHovered] = useState(false);
 
@@ -160,31 +159,9 @@ const SubsidiaryShowcase = ({
                   <h2
                     onMouseEnter={() => setTitleHovered(true)}
                     onMouseLeave={() => setTitleHovered(false)}
-                    className="text-[40px] lg:text-[55px] space-grotesk-semibold relative w-fit"
+                    className="text-[45px] md:text-[56px] lg:text-[60px] space-grotesk-semibold relative w-fit"
                   >
                     <span>{title}</span>
-                    <motion.svg
-                      className="absolute -right-[40px] -top-[5px] rotate-45 hidden lg:block"
-                      initial={{ rotate: "-45deg" }}
-                      animate={{
-                        x: titleHovered ? 8 : 0,
-                        y: titleHovered ? -8 : 0,
-                        transition: {
-                          duration: 0.3,
-                          ease: [0.43, 0.13, 0.23, 0.96],
-                        },
-                      }}
-                      width="33"
-                      height="36"
-                      viewBox="0 0 11 12"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="white"
-                    >
-                      <path
-                        d="M9.64605 6.36485L6.5523 9.4586C6.45544 9.55547 6.32406 9.60989 6.18707 9.60989C6.05008 9.60989 5.9187 9.55547 5.82184 9.4586C5.72497 9.36173 5.67055 9.23036 5.67055 9.09337C5.67055 8.95638 5.72497 8.825 5.82184 8.72813L8.03516 6.51567H1.71875C1.582 6.51567 1.45085 6.46135 1.35415 6.36465C1.25745 6.26795 1.20312 6.1368 1.20312 6.00005C1.20312 5.86329 1.25745 5.73214 1.35415 5.63544C1.45085 5.53874 1.582 5.48442 1.71875 5.48442H8.03516L5.82269 3.27067C5.72583 3.1738 5.67141 3.04242 5.67141 2.90544C5.67141 2.76845 5.72583 2.63707 5.82269 2.5402C5.91956 2.44333 6.05094 2.38892 6.18793 2.38892C6.32492 2.38892 6.4563 2.44333 6.55316 2.5402L9.64691 5.63395C9.69499 5.68192 9.73312 5.73891 9.75911 5.80166C9.7851 5.8644 9.79844 5.93166 9.79836 5.99958C9.79828 6.06749 9.78478 6.13472 9.75864 6.19741C9.73251 6.26009 9.69425 6.317 9.64605 6.36485Z"
-                        fill={"white"}
-                      />
-                    </motion.svg>
                   </h2>
                 </a>
                 <p className="mt-[12px] text-[18px] museo-sans leading-[1.5]">
@@ -252,7 +229,7 @@ const SubsidiaryShowcase = ({
               key={index}
               className="w-full relative px-[20px] pt-[55px] xl:px-[40px] h-[350px]  lg:h-[420px] border-b border-white"
             >
-              <h3 className="text-[32px] lg:text-[40px] leading-[1.1] space-grotesk-semibold md:max-w-[85%]">
+              <h3 className="text-[32px] lg:text-[32px] leading-[1.1] space-grotesk-medium md:max-w-[85%]">
                 {service?.title}
               </h3>
               <p className="museo-sans mt-[8px] lg:mt-[10px] md:max-w-[85%] leading-[1.5] text-[14px] lg:text-[15px]">
@@ -270,24 +247,24 @@ const SubsidiaryShowcase = ({
           className="relative py-[70px]"
         >
           <Swiper
-            className="static overflow-y-visible flex flex-col-reverse px-[20px] lg:px-[48px]"
-            slidesPerView={width > 1024 ? 2.5 : 1}
+            className="md:min-w-[25rem] lg:min-w-[35rem]  static overflow-y-visible flex flex-col-reverse px-[20px] lg:px-[48px]"
+            slidesPerView={width > 1024 ? 2.1 : 1}
             spaceBetween={23}
           >
             {/* @ts-ignore */}
-            <div className="flex justify-between mb-[52px] pt-[12px]">
-              <div className=" space-grotesk-medium text-white space-x-[16px] md:space-x-[32px] flex">
-                <div className="text-[26px] lg:text-[32px]">Spotlight</div>
+            <div className="flex mb-[20px] md:mb-[31px] pt-[12px] md:space-x-[16px] ">
+              <div className="text-[26px] lg:text-[28px] text-white space-grotesk-medium">Spotlight</div>
+              <div className="flex items-center space-x-[12px]">
+                <SlidePrevButton themeColor={accentColor} />
+                <SlideNextButton themeColor={accentColor} />
+              </div>
+              <div className="museo-sans font-light text-[12px] text-[#7c7c7c] space-x-[16px] md:space-x-[32px] flex items-center">
                 <div
                   style={{ backgroundColor: accentColor }}
-                  className="text-[14px] py-[3px] md:py-[6px] px-[10px] md:px-[20px]  lg:text-[20px] font-normal rounded-[12px] leading-[0.8] md:leading-[1] flex items-center justify-center"
+                  className="text-[12px] md:text-[14px] py-[3px] md:py-[6px] px-[10px] md:px-[20px]  font-normal rounded-[8px] leading-[0.8] md:leading-[1] flex items-center justify-center museo-sans text-white h-[80%] uppercase "
                 >
                   Drag
                 </div>
-              </div>
-              <div className="flex space-x-[12px] md:space-x-[16px]">
-                <SlidePrevButton themeColor={accentColor} />
-                <SlideNextButton themeColor={accentColor} />
               </div>
             </div>
             <div className="cursor-grabbing">
@@ -297,46 +274,22 @@ const SubsidiaryShowcase = ({
                   onMouseLeave={() => setPowerCtaHovered(false)}
                   href={"/power?cta_form_open=true"}
                   target="_blank"
-                  className="w-full rounded-[9.6px] overflow-hidden border-[#D2DADF] flex flex-col cursor-pointer relative h-[60dvh] min-h-[300px] max-h-[600px] lg:min-h-[600px]"
+                  className="w-full overflow-hidden border-[#D2DADF] flex flex-col cursor-pointer relative h-[60dvh] min-h-[300px] max-h-[600px] lg:min-h-[600px]"
                 >
-                  <figure className="w-full h-full absolute">
-                    <img src="assets/images/power-plant.png" className="w-full h-full object-cover" />
-                  </figure>
-                  <div
-                    style={{ backgroundColor: themeColor, opacity: 0.4 }}
+                  <img src="assets/images/power-plant.png" className="absolu top-0 right-0 left-0 bottom-0 w-full h-full object-cover" />
+                  <motion.div
+                    animate={{ opacity: powerCtaHovered ? 0.8 : 1, transition: { duration: 0.4 } }}
+                    style={{ backgroundColor: spotlightColor, opacity: 0.4 }}
                     className="w-full h-full top-0 bottom-0 left-0 z-[1] absolute"
-                  ></div>
-                  <div className="w-full h-full absolute top-0 right-0 left-0 bottom-0  bg-opacity-[0.4] px-[26px] lg:px-[48px] flex flex-col justify-end pb-[64px] z-30">
-                    <motion.h4 animate={{ y: powerCtaHovered ? -20 : 0, transition: { duration: 0.3 } }} className="relative w-fit space-grotesk-semibold text-[26px] md:text-[28px] lg:text-[40px] text-white z-30">
+                  ></motion.div>
+                  <motion.div animate={{ opacity: powerCtaHovered ? 1 : 0, transition: { duration: powerCtaHovered ? 0.4 : 0.2 } }} className="w-full h-full inset-0 absolute flex flex-col justify-end py-[40px] md:py-[48px] px-[27px] md:px-[40px] z-10"><p className="text-white museo-sans text-[16px] h-[95px]">Empower your Business with Kelani Power Today. Scalability, Efficiency, and Success at it's peak. Take the next step towards unlocking your full potential today.</p></motion.div>
+                  <div className="w-full h-full absolute top-0 right-0 left-0 bottom-0 text-white bg-opacity-[0.4] py-[40px] md:py-[48px] px-[27px] md:px-[40px] flex flex-col justify-between  ">
+                    <p className="text-white text-[32px] md:text-[44px] lg:text-[54px] z-10">{"01"}</p>
+                    <motion.h4 animate={{ y: powerCtaHovered ? -100 : 0, transition: { duration: 0.3, ease: [0.43, 0.13, 0.23, 0.96] } }}
+                      className="space-grotesk-medium text-[26px] md:text-[28px] lg:text-[36px] z-10 leading-[1.1]">
                       Buy Power Now
-                      <motion.svg
-                        className="absolute -right-[40px] -top-[5px] rotate-45"
-                        initial={{ rotate: "-45deg" }}
-                        animate={{
-                          x: powerCtaHovered ? 8 : 0,
-                          y: powerCtaHovered ? -8 : 0,
-                          transition: {
-                            duration: 0.3,
-                            ease: [0.43, 0.13, 0.23, 0.96],
-                          },
-                        }}
-                        width="33"
-                        height="36"
-                        viewBox="0 0 11 12"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="white"
-                      >
-                        <path
-                          d="M9.64605 6.36485L6.5523 9.4586C6.45544 9.55547 6.32406 9.60989 6.18707 9.60989C6.05008 9.60989 5.9187 9.55547 5.82184 9.4586C5.72497 9.36173 5.67055 9.23036 5.67055 9.09337C5.67055 8.95638 5.72497 8.825 5.82184 8.72813L8.03516 6.51567H1.71875C1.582 6.51567 1.45085 6.46135 1.35415 6.36465C1.25745 6.26795 1.20312 6.1368 1.20312 6.00005C1.20312 5.86329 1.25745 5.73214 1.35415 5.63544C1.45085 5.53874 1.582 5.48442 1.71875 5.48442H8.03516L5.82269 3.27067C5.72583 3.1738 5.67141 3.04242 5.67141 2.90544C5.67141 2.76845 5.72583 2.63707 5.82269 2.5402C5.91956 2.44333 6.05094 2.38892 6.18793 2.38892C6.32492 2.38892 6.4563 2.44333 6.55316 2.5402L9.64691 5.63395C9.69499 5.68192 9.73312 5.73891 9.75911 5.80166C9.7851 5.8644 9.79844 5.93166 9.79836 5.99958C9.79828 6.06749 9.78478 6.13472 9.75864 6.19741C9.73251 6.26009 9.69425 6.317 9.64605 6.36485Z"
-                          fill={"white"}
-                        />
-                      </motion.svg>
                     </motion.h4>
                   </div>
-                  <motion.div
-                    className="w-full h-full absolute bg-gradient-to-t from-[rgba(2,42,33,1)] to-[rgba(7,158,126,0)] top-0 right-0 left-0 bottom-0 bg-opacity-70  flex text-white items-center justify-center z-20"
-                  >
-                  </motion.div>
                 </a>
               </SwiperSlide>
               }
@@ -344,6 +297,9 @@ const SubsidiaryShowcase = ({
               {spotlightData?.map((item: any, index: number) => (
                 <SwiperSlide key={index}>
                   <SpotlightCard
+                    subtext={item["Spotlight Subtext"]}
+                    index={`0${index + 1}`}
+                    accentColor={spotlightColor}
                     description={item["Spotlight Description"]}
                     link={item["Spotlight Link"]}
                     image={item["Image Url / Video Thumbnail Url"]}

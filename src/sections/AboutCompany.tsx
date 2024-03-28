@@ -76,7 +76,7 @@ const AboutCompany = () => {
             <div className="w-full h-full z-10 mt-[50px] md:mt-0 md:max-w-[500px] min-h-[400px] md:min-h-[400px] lg:max-w-none mx-auto rounded-[10px] overflow-hidden"><motion.img animate={titleHovered ? { scale: 1.5, transition: { duration: 10 } } : { scale: 1, transition: { duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] } }} className="w-full h-full object-cover z-10 md:max-w-[500px] min-h-[400px] md:min-h-[400px] lg:max-w-none mx-auto rounded-[10px]" src="/assets/images/about-us.jpeg" /></div></div>
         </a>
         <div className="w-full py-0 md:py-[50px]">
-          <div className="w-full lg:mx-[39px] md:mx-auto md:max-w-[500px] relative text-black z-20">
+          <div className="w-full xl:mx-[39px] md:mx-auto md:max-w-[500px] relative text-black z-20">
             <h1 className="text-[28px] md:text-[40px] leading-[1.1] md:leading-[1.08] space-grotesk-semibold">
               Elevating African Prosperity Through Indigenous Innovation
             </h1>
