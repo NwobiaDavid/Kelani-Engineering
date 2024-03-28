@@ -226,7 +226,7 @@ const SubsidiaryShowcase = ({
               key={index}
               className="w-full relative px-[20px] pt-[55px] xl:px-[40px] h-[350px]  lg:h-[420px] border-b border-white"
             >
-              <h3 className="text-[32px] lg:text-[32px] leading-[1.1] space-grotesk-medium md:max-w-[85%]">
+              <h3 className="text-[24px] md:text-[28px] lg:text-[32px] leading-[1.1] space-grotesk-medium md:max-w-[85%]">
                 {service?.title}
               </h3>
               <p className="museo-sans mt-[8px] lg:mt-[10px] md:max-w-[85%] leading-[1.5] text-[14px] lg:text-[15px]">
@@ -249,7 +249,7 @@ const SubsidiaryShowcase = ({
             spaceBetween={23}
           >
             {/* @ts-ignore */}
-            <div className="flex mb-[20px] md:mb-[31px] pt-[12px] md:space-x-[16px] ">
+            <div className="flex mb-[20px] md:mb-[31px] pt-[12px] space-x-[12px] md:space-x-[16px] ">
               <div className="text-[26px] lg:text-[28px] text-white space-grotesk-medium">Spotlight</div>
               <div className="flex items-center space-x-[12px]">
                 <SlidePrevButton themeColor={accentColor} />
@@ -279,7 +279,7 @@ const SubsidiaryShowcase = ({
                     style={{ backgroundColor: spotlightColor, opacity: 0.4 }}
                     className="w-full h-full top-0 bottom-0 left-0 z-[1] absolute"
                   ></motion.div>
-                  <motion.div animate={{ opacity: powerCtaHovered ? 1 : 0, transition: { duration: powerCtaHovered ? 0.4 : 0.2 } }} className="w-full h-full inset-0 absolute flex flex-col justify-end py-[40px] md:py-[48px] px-[27px] md:px-[40px] z-10"><p className="text-white museo-sans text-[16px] h-[95px]">Empower your Business with Kelani Power Today. Scalability, Efficiency, and Success at it's peak. Take the next step towards unlocking your full potential today.</p></motion.div>
+                  <motion.div animate={{ opacity: powerCtaHovered ? 1 : 0, transition: { duration: powerCtaHovered ? 0.4 : 0.2 } }} className="w-full h-full inset-0 absolute flex flex-col justify-end py-[40px] md:py-[48px] px-[27px] md:px-[40px] z-10"><p className="text-white museo-sans text-[13px] md:text-[16px] h-[95px]">Empower your Business with Kelani Power Today. Scalability, Efficiency, and Success at it's peak. Take the next step towards unlocking your full potential today.</p></motion.div>
                   <div className="w-full h-full absolute top-0 right-0 left-0 bottom-0 text-white bg-opacity-[0.4] py-[40px] md:py-[48px] px-[27px] md:px-[40px] flex flex-col justify-between  ">
                     <p className="text-white text-[32px] md:text-[44px] lg:text-[54px] z-10">{"01"}</p>
                     <motion.h4 animate={{ y: powerCtaHovered ? -100 : 0, transition: { duration: 0.3, ease: [0.43, 0.13, 0.23, 0.96] } }}
@@ -295,7 +295,7 @@ const SubsidiaryShowcase = ({
                 <SwiperSlide key={index}>
                   <SpotlightCard
                     subtext={item["Spotlight Subtext"]}
-                    index={`0${index + 1}`}
+                    index={`0${type == 'power' ? index + 2 : index + 1}`}
                     accentColor={spotlightColor}
                     description={item["Spotlight Description"]}
                     link={item["Spotlight Link"]}
