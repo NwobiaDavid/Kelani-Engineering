@@ -252,10 +252,10 @@ const SubsidiaryShowcase = ({
               key={index}
               className="w-full relative px-[20px] pt-[55px] xl:px-[40px] h-[350px]  lg:h-[420px] border-b border-white"
             >
-              <h3 className="text-[32px] lg:text-[40px] leading-[1.1] space-grotesk-semibold lg:max-w-[85%]">
+              <h3 className="text-[32px] lg:text-[40px] leading-[1.1] space-grotesk-semibold md:max-w-[85%]">
                 {service?.title}
               </h3>
-              <p className="museo-sans mt-[8px] lg:mt-[10px] lg:max-w-[85%] leading-[1.5] text-[14px] lg:text-[15px]">
+              <p className="museo-sans mt-[8px] lg:mt-[10px] md:max-w-[85%] leading-[1.5] text-[14px] lg:text-[15px]">
                 {service?.paragraphs && service?.paragraphs[0]}
               </p>
             </div>
@@ -307,7 +307,7 @@ const SubsidiaryShowcase = ({
                     className="w-full h-full top-0 bottom-0 left-0 z-[1] absolute"
                   ></div>
                   <div className="w-full h-full absolute top-0 right-0 left-0 bottom-0  bg-opacity-[0.4] px-[26px] lg:px-[48px] flex flex-col justify-end pb-[64px] z-30">
-                    <motion.h4 animate={{y: powerCtaHovered ? -20 : 0, transition: {duration: 0.3}}} className="relative w-fit space-grotesk-semibold text-[26px] md:text-[28px] lg:text-[40px] text-white z-30">
+                    <motion.h4 animate={{ y: powerCtaHovered ? -20 : 0, transition: { duration: 0.3 } }} className="relative w-fit space-grotesk-semibold text-[26px] md:text-[28px] lg:text-[40px] text-white z-30">
                       Buy Power Now
                       <motion.svg
                         className="absolute -right-[40px] -top-[5px] rotate-45"

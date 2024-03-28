@@ -11,6 +11,7 @@ import WhyKelaniCard from "../components/WhyKelaniCard";
 import useScreenSize from "../hooks/useScreenSize";
 import Footer from "../sections/Footer";
 import useNavStore from "../store/nav";
+import FadeUpAnimation from "../components/FadeUpAnimation";
 
 interface AboutProps {
     lenis: Lenis
@@ -90,7 +91,7 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
     const imageScale = useTransform(
         imageScrollYProgress,
         [0, 1],
-        [window.innerWidth > 1560 ? window.innerWidth / 1560 : (window.innerWidth - 160) / window.innerWidth, 1]
+        [window.innerWidth > 1560 ? window.innerWidth / 1560 : (window.innerWidth > 768 ? ((window.innerWidth - 160) / window.innerWidth) : (window.innerWidth - 40)), 1]
     );
 
 
@@ -122,22 +123,22 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
             </div></nav>
             <main className="relative z-10">
                 <section className="grid grid-cols-[1fr_2fr] max-w-[1560px] px-[20px] md:px-[48px] lg:px-[80px]">
-                    <div className="flex flex-col items-center border-r border-[rgba(166,166,166,0.5)] pr-[20px] md:pr-[70px] lg:pr-[80px]">
+                    <FadeUpAnimation delay={1} className="flex flex-col items-center border-r border-[rgba(166,166,166,0.5)] pr-[20px] md:pr-[70px] lg:pr-[80px]">
                         <img className="w-[100px] md:w-[80%] lg:w-[90%] h-[80%]" src="/assets/images/kelani-icon.svg" />
-                    </div>
+                    </FadeUpAnimation>
                     <div className="py-[80px] xl:py-[100px] pb-[150px] pl-[20px] md:pl-[70px] lg:pl-[80px]">
-                        <p className="museo-sans font-[500] text-[18px] md:text-[26px] lg:text-[32px] xl:text-[36px] leading-[1.1] ">For more than two decades, our unwavering commitment has been to uplift Africa by fostering local industries and offering state of the art technological advancements. We're dedicated to fostering African prosperity by promoting local production and innovative solutions.
-                        </p>
-                        <div className="mt-[60px] md:mt-[100px]"><img src="/assets/images/mouse.svg" className="h-[30px] md:h-[40px]" /></div>
+                        <FadeUpAnimation className="museo-sans font-[500] text-[18px] md:text-[26px] lg:text-[32px] xl:text-[36px] leading-[1.1] ">For more than two decades, our unwavering commitment has been to uplift Africa by fostering local industries and offering state of the art technological advancements. We're dedicated to fostering African prosperity by promoting local production and innovative solutions.
+                        </FadeUpAnimation>
+                        <FadeUpAnimation delay={1} className="mt-[60px] md:mt-[100px]"><img src="/assets/images/mouse.svg" className="h-[30px] md:h-[40px]" /></FadeUpAnimation>
                     </div>
                 </section>
-                <section className="w-full relative top-[-100px] mt-[30px]">
+                <FadeUpAnimation delay={1} className="w-full relative top-[-100px] mt-[30px]">
                     <motion.img style={{ scale: imageScale }} ref={imageRef} className="w-full md:h-[80%] object-cover" src="/assets/images/kelani-home-image.png" />
-                </section>
+                </FadeUpAnimation>
                 <section>
-                    <div className="lg:ml-[41.6%] w-full sm:w-[70%] md:w-[60%] lg:w-[38%] text-[28px] md:text-[28px] lg:text-[36px] leading-[1.1] px-[20px] lg:px-0 museo-sans font-medium">
-                        Kelani has built a business grounded in three core pillars.
-                    </div>
+                    <FadeUpAnimation y={50} className="lg:ml-[41.6%] w-full sm:w-[70%] md:w-[60%] lg:w-[38%] text-[28px] md:text-[28px] lg:text-[36px] xl:text-[50px] leading-[1.1] px-[20px] lg:px-0 museo-sans font-medium">
+                        Kelani has built a business with three main subsidiaries.
+                    </FadeUpAnimation>
                 </section>
                 <section className="pt-[100px] md:pt-[150px]">
                     <div className="relative py-[70ox]">
@@ -175,8 +176,8 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
                         </Swiper>
                     </div>
                 </section>
-                <section className="w-full mt-[55px] md:mt-[100px] px-[20px] lg:px-[48px]">
-                    <h2 className="space-grotesk-medium text-[30px] md:text-[42px] mb-[32px] md:mb-[32px]">Meet The Team</h2>
+                <section className="w-full mt-[55px] md:mt-[100px] lg:mt-[200px] px-[20px] lg:px-[48px]">
+                    <FadeUpAnimation className="space-grotesk-medium text-[30px] md:text-[42px] lg:text-[46px] mb-[32px] md:mb-[32px]">Meet The Team</FadeUpAnimation>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-[18px] sm:gap-[20px] "
                     >
                         <TeamMemberCard name="David Ojimba" position="Director" imageUrl="https://media.licdn.com/dms/image/C4D03AQHLKPrCvMWsBg/profile-displayphoto-shrink_800_800/0/1643831454208?e=1717027200&v=beta&t=fqX7h8wrmo5HMzdtt_B2qPrvzeCaoEnOYwUYfz-wbfs" />
@@ -190,7 +191,7 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
                     </div>
                 </section>
                 <section className="mt-[70px] md:mt-[100px] ">
-                    <h2 className="text-[50px] sm:text-[95px] md:text-[110px] lg:text-[150px] xl:text-[165px] px-[20px] lg:px-[48px] space-grotesk-medium leading-[1] tracking-tighter">Why Kelani?</h2>
+                    <FadeUpAnimation y={40} className="text-[50px] sm:text-[95px] md:text-[110px] lg:text-[150px] xl:text-[165px] px-[20px] lg:px-[48px] space-grotesk-medium leading-[1] tracking-tighter">Why Kelani?</FadeUpAnimation>
                     <div className="mt-[34px] md:mt-[50px] bg-[#069E7D] grid grid-cols-1 md:grid-cols-2 border-b border-b-[rgba(255,255,255,0.4)]">
                         <WhyKelaniCard index={1} icon="/assets/images/enhanced-productivity.svg" title="Enhanced Productivity" text="With unparalleled expertise and infallible experience, our platform is meticulously tailored towards propelling your productivity to unprecedented heights and unlocking your full potential.
 "/>
@@ -202,7 +203,7 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
                         <motion.div ref={valuesRef} style={{ width: valuesSectionWidth }} className="bg-white mx-auto  md:w-full pt-[56px] md:pt-[80px] lg:pt-[112px] rounded-[10px] md:px-[30px] pb-[48px] md:pb-[80px] lg:pb-[120px]">
                             <h2 className="md:text-[60px] text-[36px] lg:text-[80px] space-grotesk-medium text-center">Company Values</h2>
                             <p className="text-center text-[12.8px] md:text-[16px] space-grotesk-medium font-normal text-[#7d7d7d] mt-[5px] md:mt-[10px]">Why are these our values?</p>
-                            <div className="pt-[42px] md:pt-[60px] lg:pt-[72px] flex flex-col space-y-[18px] md:px-[8%]">
+                            <div className="pt-[42px] md:pt-[60px] lg:pt-[72px] flex flex-col space-y-[18px] md:px-[6%]">
                                 <ValueCard image="/assets/images/empowerment.png" backgroundColor="#ffd559" header="Empowerment" paragraph=" We foster an environment for individuals and enterprises to take ownership, make decisions, and contribute unique perspectives.
 " />
                                 <ValueCard image="/assets/images/growth.png" backgroundColor="#97b991" header="Growth" paragraph="Committed to growth, we foster an environment where potential thrives. Through continuous improvement, we drive progress and embrace change for a brighter future.
@@ -219,26 +220,32 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
                         </motion.div>
                     </div>
                     <div className="pt-[48px] md:pt-[80px] lg:pt-[120px] bg-[#069E7D] pb-[60px]">
-                        <h2 className="text-[44px] sm:text-[95px] md:text-[110px] lg:text-[150px] xl:text-[165px] px-[20px] lg:px-[48px] space-grotesk-medium leading-[1] text-white tracking-tighter">Empowerment</h2>
+                        <FadeUpAnimation><h2 className="text-[44px] sm:text-[95px] md:text-[110px] lg:text-[150px] xl:text-[165px] px-[20px] lg:px-[48px] space-grotesk-medium leading-[1] text-white tracking-tighter">Empowerment</h2></FadeUpAnimation>
                         <div className="w-full md:grid md:grid-cols-[35%_65%] museo-sans text-white mt-[30px] md:mt-[80px] px-[20px] lg:px-[48px]">
                             <div className="hidden w-full h-full sm:flex   items-center">
                                 <img className="grayscale sm:w-[180px] lg:w-[300px] opacity-45" src="/assets/images/kelani-icon.svg" />
                             </div>
                             <div className="text-[13px] sm:text-[15px] lg:text-[16px] xl:text-[19px] leading-[1.25]">
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-[15px] lg:gap-[10%] md:w-[85%]">
-                                    <p className="">
-                                        Kelani envisions empowering 500 million Africans for improved well-being and productivity through technology and education. We are dedicated to fostering a resilient African landscape by establishing sustainable systems for enduring success.
-                                    </p>
+                                    <FadeUpAnimation>
+                                        <p className="">
+                                            Kelani envisions empowering 500 million Africans for improved well-being and productivity through technology and education. We are dedicated to fostering a resilient African landscape by establishing sustainable systems for enduring success.
+                                        </p>
+                                    </FadeUpAnimation>
                                 </div>
                                 <div className="mt-[15px] lg:mt-[40px] grid grid-cols-1 lg:grid-cols-2 gap-[15px] lg:gap-[10%] md:w-[85%]">
-                                    <p className="">
-                                        Our mission at Kelani is to drive African well-being and indigenous production through innovative technology. We provide tools to optimize efficiency and guide users toward sustainable practices, ensuring positive impacts for years to come.
-                                    </p>
-                                    <p className="">
-                                        Kelani is committed to uplifting the entire African community by instilling responsibility and providing actionable tools. We champion a collective movement towards a brighter future, fostering sustainability and prosperity for generations.
-                                    </p>
+                                    <FadeUpAnimation>
+                                        <p className="">
+                                            Our mission at Kelani is to drive African well-being and indigenous production through innovative technology. We provide tools to optimize efficiency and guide users toward sustainable practices, ensuring positive impacts for years to come.
+                                        </p>
+                                    </FadeUpAnimation>
+                                    <FadeUpAnimation>
+                                        <p className="">
+                                            Kelani is committed to uplifting the entire African community by instilling responsibility and providing actionable tools. We champion a collective movement towards a brighter future, fostering sustainability and prosperity for generations.
+                                        </p>
+                                    </FadeUpAnimation>
                                 </div>
-                                <div className="w-full md:pr-[48px] mt-[40px]"><img className="w-full max-h-[400px] object-cover" src="/assets/images/empowerment-section.png" /></div>
+                                <FadeUpAnimation y={20} className="w-full md:pr-[48px] mt-[40px]"><img className="w-full max-h-[400px] object-cover" src="/assets/images/empowerment-section.png" /></FadeUpAnimation>
                             </div>
                         </div>
                     </div>

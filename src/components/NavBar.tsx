@@ -3,6 +3,7 @@ import useScreenSize from "../hooks/useScreenSize";
 import NavSubsidiarySection from "./NavSubsidiarySection";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface NavBarProps {
   closeNav: () => void;
@@ -12,6 +13,7 @@ interface NavBarProps {
 const NavBar = ({ closeNav, lenis }: NavBarProps) => {
   const { width } = useScreenSize();
   const [contactHovered, setContactHovered] = useState(false);
+  const navigate = useNavigate()
   return (
     <>
       <motion.div
@@ -51,7 +53,7 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
             <div
               className={`h-full lg:hidden border-[#FEFEFE]  lg:border-t-0  flex-grow flex items-center justify-center relative`}
             >
-              <p className="lg:absolute bottom-[32px] left-[20px] text-white text-[16px] lg:text-[21.2px] flex justify-between items-center w-[calc(100%-40px)]">
+              <p onClick={() => navigate("/")} className="lg:absolute bottom-[32px] left-[20px] text-white text-[16px] lg:text-[21.2px] flex justify-between items-center w-[calc(100%-40px)]">
                 <img
                   className="h-[40px]"
                   src="/assets/images/kelani-logo.png"

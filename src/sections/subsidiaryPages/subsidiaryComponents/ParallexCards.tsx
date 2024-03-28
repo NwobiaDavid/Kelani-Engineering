@@ -205,11 +205,11 @@ const ParallaxCards: React.FC<{ data: ParallexProps;  setCtaFormShowing: Dispatc
                   </div>
 
                   <div className="w-[85%] h-full flex py-[65px] ">
-                    <div className=" min-w-[45%] ">
+                    <div className=" min-w-[50%] ">
                       <h2 ref={card1title} className="text-[26px] xl:text-[32px] mdxlxl:text-[40px] 2xl  pl-[5%] text-white leading-[1.136] title museo-sans font-medium w-[80%]">
                         {data.data[0].content.head}
                       </h2>
-                      <p className="mt-[16px]  pl-[5%] museo-sans text-[12px] xl:text-[13px] mdxl:text-[16px] font-normal subtext">
+                      <p className="mt-[16px]  pl-[5%] museo-sans text-[12px] xl:text-[13px] mdxl:text-[14.8px] font-normal subtext">
                         {data.data[0].content.text}
                       </p>
                       <div className="pl-[5%] mt-[15px] subtext">
@@ -247,7 +247,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps;  setCtaFormShowing: Dispatc
                       </div>
                     </div>
                     <img
-                      className="w-[60%] ml-10 object-contain"
+                      className="w-[5-%] ml-10 object-contain"
                       src={data.data[0].img3}
                     />
                   </div>
@@ -282,11 +282,11 @@ const ParallaxCards: React.FC<{ data: ParallexProps;  setCtaFormShowing: Dispatc
                   </div>
 
                   <div className="w-[85%] h-full flex py-[65px]">
-                    <div className="min-w-[45%]">
+                    <div className="min-w-[50%]">
                       <h2 ref={card2title} className="text-[26px] xl:text-[32px] mdxlxl:text-[40px] 2xl pl-[5%]  text-white leading-[1.136] title museo-sans font-medium">
                         {data.data[1].content.head}
                       </h2>
-                      <p className="mt-[16px] pl-[5%] museo-sans text-[12px] xl:text-[13px] mdxl:text-[16px] font-normal subtext">
+                      <p className="mt-[16px] pl-[5%] museo-sans text-[12px] xl:text-[13px] mdxl:text-[14.8px] font-normal subtext">
                         {data.data[1].content.text}
                       </p>
                       <div className="pl-[5%] mt-[15px] subtext">
@@ -324,7 +324,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps;  setCtaFormShowing: Dispatc
                       </div>
                     </div>
                     <img
-                      className="w-[60%] ml-10 transform scale-x-[-1] object-contain"
+                      className="w-[50%] ml-10 transform scale-x-[-1] object-contain"
                       src={data.data[1].img3}
                     />
                   </div>
@@ -343,11 +343,11 @@ const ParallaxCards: React.FC<{ data: ParallexProps;  setCtaFormShowing: Dispatc
                   style={{ transform: "rotate(-180deg)" }}
                   className="h-full flex pl-9 "
                 >
-                  <div className="pl-[5%] min-w-[40%] ">
+                  <div className="pl-[5%] min-w-[50%] ">
                     <h2 className="text-[26px] xl:text-[32px] mdxlxl:text-[40px] 2xl text-white leading-[1.136]  font-medium">
                       {data.data[2].content.head}
                     </h2>
-                    <p className="mt-[16px]">{data.data[2].content.text}</p>
+                    <p className="mt-[16px] text-[12px] xl:text-[13px] mdxl:text-[14.8px]">{data.data[2].content.text}</p>
                     <div className=" mt-[15px]">
                       <a
                         className="btn-seconday cursor-pointer relative overflow-hidden mt-[15px]"
@@ -384,7 +384,7 @@ const ParallaxCards: React.FC<{ data: ParallexProps;  setCtaFormShowing: Dispatc
                   </div>
 
                   <img
-                    className="w-full lg:w-[60%] ml-14 object-cover"
+                    className="w-full lg:w-[50%] ml-14 object-cover"
                     src={data.data[2].img3}
                   />
                   {/* </figure> */}
