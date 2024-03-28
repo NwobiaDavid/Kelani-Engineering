@@ -14,6 +14,7 @@ import { CiSearch } from "react-icons/ci";
 import ConnectSection from './subsidiaryComponents/ConnectSection';
 import ProductView from '../../components/ProductPage/ProductView';
 import "./subsidiaryPages.css";
+import axios from "axios";
 
 
 interface Contents {
@@ -295,8 +296,45 @@ const ProductPage: React.FC<{
     // };
 
 
+//     const [data, setData] = useState([]);
+
+//   useEffect(() => {
+//     fetchData();
+//   }, []);
+
+//   const fetchData = async () => {
+//     try {
+//       const response = await axios.get('https://app.nocodb.com/api/v2/tables/m8b3fl84ik1zrb1/records', {
+//         params: {
+//           offset: '0',
+//           limit: '25',
+//           where: '',
+//           viewId: 'vwhokgceoueuuiss'
+//         },
+//         headers: {
+//           'xc-auth': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtlbGFuaWVuZ2luZWVyaW5nc2VydmljZXNAZ21haWwuY29tIiwiZGlzcGxheV9uYW1lIjpudWxsLCJhdmF0YXIiOm51bGwsInVzZXJfbmFtZSI6bnVsbCwiaWQiOiJ1c3lwdG1lcWk5eHcwa2dhIiwicm9sZXMiOiJvcmctbGV2ZWwtdmlld2VyIiwidG9rZW5fdmVyc2lvbiI6Ijg5NjJhZDI0YWUwZTYzNmJiYjY1ZGE4NjhlNzZmOGVjZjI3M2VkNjhiY2MyMjFjOTY1NTFmNDkxMGM2ZGRmNjBiNzY2ZjIxODhhMmU5MmM5IiwicHJvdmlkZXIiOiJjb2duaXRvIiwiaWF0IjoxNzExNjQ5NTI3LCJleHAiOjE3MTE2ODU1Mjd9.j01VjlYy5R3RgEUoxQjxQLg-Nvr5Jni_X_XkTCfBsbU'
+//         },
+//         method: 'GET'
+//       });
+//       setData(response.data.list);
+//     } catch (error) {
+//       console.error('Error fetching data:', error);
+//     }
+//   };
+
+
 
     return (
+        // <>
+        // <div className='bg-blue-200' >
+        // {data.map((item:any , index:number) => (
+        //   <li className='text-black bg-red-200 ' key={index}>{item.Product}</li>
+        // ))}
+        // hello
+        // </div>
+        // </>
+
+
         <>
             <Helmet>
                 <title>{title}</title>
