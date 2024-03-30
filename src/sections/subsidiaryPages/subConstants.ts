@@ -375,7 +375,7 @@ export const sub_two = {
       "linear-gradient(0deg, rgba(81, 34, 34, 0.8), rgba(174, 71, 71, 0.8) 99.78%);",
     content: [
       {
-        img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 20.png",
+        img: "assets/images/machine-procurement.png",
         point1:
           "We find and provide high-quality machines and tools that excel in meeting your project needs",
         point2:
@@ -389,7 +389,7 @@ export const sub_two = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/image 25.png",
+        img: "assets/images/advisory.png",
         point1:
           "Empower your financial future with confident, smart investment decisions and secure retirement.",
         point2:
@@ -403,7 +403,7 @@ export const sub_two = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/pageTwo/slideshow/plastic-waste-11.jpg",
+        img: "assets/images/plastic-recycling.png",
         point1:
           "Collaborate for a cleaner planet. Collect and recycle plastic waste responsibly for a sustainable future.",
         point2:
