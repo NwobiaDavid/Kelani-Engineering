@@ -37,7 +37,7 @@ const ValueCard = ({ header, paragraph, backgroundColor, image }: ValueCardProps
         <motion.div ref={valueCardRef} className="w-full relative">
             <motion.div style={{ opacity: progress }} className="pt-[30px] md:pt-[64px] pb-[20px] md:pb-[40px] px-[8%] relative z-20">
                 <h4 className="text-[20px] md:text-[28px] lg:text-[36px] space-grotesk-medium">{header}</h4>
-                <p className="w-[85%] md:w-[50%] text-[12.8px] leading-[1.1] lg:text-[20px] museo-sans">{paragraph}</p>
+                <p className="w-[85%] md:w-[50%] text-[12.8px] leading-[1.1] lg:text-[16px] museo-sans">{paragraph}</p>
                 <img className="grayscale w-[40px] md:w-[60px] mt-[80px] md:mt-[40px]" src="/assets/images/kelani-icon.svg" />
             </motion.div>
             <motion.div style={{ width: valueCardWidth }} className="overflow-hidden w-full h-full absolute top-0 left-0">
