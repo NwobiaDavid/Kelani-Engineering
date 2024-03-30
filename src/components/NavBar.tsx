@@ -61,24 +61,31 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
               </p>
             </div>
             <NavSubsidiarySection
+              icon="/assets/images/icon-contact.svg"
+              hasRightBorder
+              text="About Us"
+              link="/about"
+              index={1}
+            />
+            <NavSubsidiarySection
               icon="/assets/images/icon-industrials.svg"
               hasRightBorder
               text="Engineering"
               link="/engineering"
-              index={1}
+              index={2}
             />
             <NavSubsidiarySection
               icon="/assets/images/icon-consulting.svg"
               hasRightBorder
               text="Consulting and Talent"
               link="/consulting"
-              index={2}
+              index={3}
             />
             <NavSubsidiarySection
               icon="/assets/images/icon-power-and-energy.svg"
               text="Power and Energy"
               link="/power"
-              index={3}
+              index={4}
             />
             {/* <NavSubsidiarySection
             icon="/assets/images/icon-contact.svg"
@@ -124,7 +131,7 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
                 ease: [0.43, 0.13, 0.23, 0.96],
               },
             }}
-            className="lg:w-[calc(100%/3)] w-full  flex-shrink h-full border-b lg:border-b-0 lg:border-r border-[#FEFEFE]  flex items-center justify-between px-[20px] lg:px-[40px] cursor-pointer"
+            className="lg:w-[calc(100%/4)] w-full  flex-shrink h-full border-b lg:border-b-0 lg:border-r border-[#FEFEFE]  flex items-center justify-between px-[20px] lg:px-[40px] cursor-pointer"
           >
             <p className="text-white text-[14px] lg:text-[17.28px]">
               Contact Us
@@ -140,7 +147,7 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
               src="/assets/images/icon-link.svg"
             />
           </motion.div>
-          <div className="lg:w-[calc(200%/3)] w-full h-full flex">
+          <div className="lg:w-[calc(75%)] w-full h-full flex">
             <motion.a
               target="_blank"
               whileTap={{ scale: 0.95, transition: { duration: 0.6 } }}
