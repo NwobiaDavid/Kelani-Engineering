@@ -16,11 +16,11 @@ const ProductItem:React.FC<{
             <img className=" w-full h-full object-cover " src="assets/images/productImages/Layer_Img.png" alt="" />
         </div>
         <div className="w-full h-[40%] flex flex-col " >
-            <div className=" h-[30%] px-8 py-2 flex  " >
+            <div className=" h-[30%] px-4 md:px-8 py-2 flex  " >
                 <span className="bg-[#1D2D25] opacity-80 rounded-lg px-2 py-[3px] flex justify-center items-center "> {data.Product_Collection} </span>
                 <span className="bg-[#1D2D25] opacity-80 rounded-lg px-2 py-[3px] flex justify-center items-center ml-3 ">Tag1</span>
             </div>
-            <div className=" h-[70%] text-lg flex w-full justify-center items-center " >
+            <div className=" h-[70%] text-center text-lg flex w-full justify-center items-center " >
                 {data.Product}
             </div>
         </div>

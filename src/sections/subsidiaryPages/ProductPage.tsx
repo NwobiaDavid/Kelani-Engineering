@@ -349,7 +349,7 @@ const ProductPage: React.FC<{
             >
                 <div
                     id="hex-grid"
-                    className=" relative w-[100vw] h-screen overflow-x-hidden "
+                    className=" relative w-[100vw] overflow-x-hidden "
                 >
                     <motion.div
                         animate={lightControls}
