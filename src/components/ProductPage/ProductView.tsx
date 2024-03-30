@@ -22,7 +22,8 @@ const ProductView: React.FC<{
 
   const [buttonHovered, setButtonHovered] = useState(false);
   const [data, setData] = useState([]);
-  const [selectedCollection, setSelectedCollection] = useState("all"); // Set default value to "all"
+  const [selectedCollection, setSelectedCollection] = useState("all");
+  const [filterText, setFilterText] = useState('Filter');
 
   useEffect(() => {
     fetchData();
@@ -58,6 +59,7 @@ const ProductView: React.FC<{
 
   const handleCollectionSelect = (collection: string) => {
     setSelectedCollection(collection);
+    setFilterText(collection === 'all' ? 'Filter' : collection);
   };
 
   const [dropOpen, setDropOpen] = useState(false);
@@ -71,19 +73,19 @@ const ProductView: React.FC<{
       <div className="w-full py-4 relative">
         <div
           onClick={handleClick}
-          className="px-5 py-2 w-[100px] ml-[2%] active:scale-95 duration-200 hover:border-gray-500 text-center text-white rounded-lg border border-gray-700 cursor-pointer"
+          className="px-5 py-2 w-fit ml-[2%] active:scale-95 duration-200 hover:border-gray-500 text-center text-white rounded-lg border border-gray-700 cursor-pointer"
         >
-          Filter
+           {filterText}
         </div>
         {dropOpen && (
           <div className="absolute flex flex-col rounded-xl z-[60] top-[calc(100%+5px)] p-2 bg-black border ">
             <div className=" flex flex-col text-center uppercase items-center ">
-              <a className=" w-full p-2 cursor-pointer hover:bg-gray-800 duration-200 rounded-lg  " onClick={() => handleCollectionSelect("all")}>all</a>
+              <a className=" w-full p-2 cursor-pointer hover:bg-gray-800 duration-200 rounded-lg  " onClick={() => {handleCollectionSelect("all"); setDropOpen(false)}}>all</a>
               {uniqueCollections.map((collection, index) => (
                 <a
                 className=" w-full p-2 cursor-pointer hover:bg-gray-800 duration-200 rounded-lg  " 
                   key={index}
-                  onClick={() => handleCollectionSelect(collection)}
+                  onClick={() => {handleCollectionSelect(collection); setDropOpen(false) }}
                 >
                   {collection}
                 </a>
