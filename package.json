@@ -16,7 +16,7 @@
     "@studio-freight/lenis": "^1.0.33",
     "@types/react-helmet": "^6.1.11",
     "@types/react-lazy-load-image-component": "^1.6.3",
-    "axios": "^1.6.5",
+    "axios": "^1.6.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
