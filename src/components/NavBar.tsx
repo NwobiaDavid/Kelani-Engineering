@@ -54,10 +54,12 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
               className={`h-full lg:hidden border-[#FEFEFE]  lg:border-t-0  flex-grow flex items-center justify-center relative`}
             >
               <p onClick={() => navigate("/")} className="lg:absolute bottom-[32px] left-[20px] text-white text-[16px] lg:text-[21.2px] flex justify-between items-center w-[calc(100%-40px)]">
-                <img
-                  className="h-[40px]"
-                  src="/assets/images/kelani-logo.png"
-                />
+                <a href="/">
+                  <img
+                    className="h-[40px]"
+                    src="/assets/images/kelani-logo.png"
+                  />
+                </a>
               </p>
             </div>
             <NavSubsidiarySection
@@ -77,20 +79,16 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
             <NavSubsidiarySection
               icon="/assets/images/icon-consulting.svg"
               hasRightBorder
-              text="Consulting and Talent"
+              text="Consulting"
               link="/consulting"
               index={3}
             />
             <NavSubsidiarySection
               icon="/assets/images/icon-power-and-energy.svg"
-              text="Power and Energy"
+              text="Power"
               link="/power"
               index={4}
             />
-            {/* <NavSubsidiarySection
-            icon="/assets/images/icon-contact.svg"
-            text="Contact"
-          /> */}
           </motion.div>
         </motion.div>
         <motion.div
@@ -131,7 +129,7 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
                 ease: [0.43, 0.13, 0.23, 0.96],
               },
             }}
-            className="lg:w-[calc(100%/4)] w-full  flex-shrink h-full border-b lg:border-b-0 lg:border-r border-[#FEFEFE]  flex items-center justify-between px-[20px] lg:px-[40px] cursor-pointer"
+            className="lg:w-[calc(100%/4)] w-full  flex-shrink h-full border-b lg:border-b-0 lg:border-r border-[#FEFEFE]  flex items-center justify-between px-[20px] md:px-[40px] cursor-pointer"
           >
             <p className="text-white text-[14px] lg:text-[17.28px]">
               Contact Us

@@ -362,7 +362,7 @@ const SubsidiaryPageOne: React.FC<{
                       }}
                       whileHover="whileHover"
                       whileTap={"whileTap"}
-                      className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
+                      className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[12px] md:text-[16px]"
                     >
                       <Link to={"#"} className="">
                         GET CONNECTED{" "}

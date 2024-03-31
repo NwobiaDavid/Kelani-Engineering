@@ -12,6 +12,7 @@ import useScreenSize from "../hooks/useScreenSize";
 import Footer from "../sections/Footer";
 import useNavStore from "../store/nav";
 import FadeUpAnimation from "../components/FadeUpAnimation";
+import TopNav from "../components/TopNav";
 
 interface AboutProps {
     lenis: Lenis
@@ -86,7 +87,6 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
     );
 
     const { width } = useScreenSize();
-    const { navShowing, setNavShowing } = useNavStore();
 
     const imageScale = useTransform(
         imageScrollYProgress,
@@ -97,30 +97,7 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
 
     return (
         <>
-            <AnimatePresence >
-                {navShowing && (
-                    <NavBar lenis={lenis} closeNav={() => setNavShowing(false)} />
-                )}
-            </AnimatePresence>
-            <Helmet>
-                <title>About Kelani</title>
-            </Helmet>
-            <nav className="border-b border-[rgba(166,166,166,0.5)] w-full">          <div className="w-full p-[20px] md:p-[30px] md:px-[48px] flex justify-between z-20 max-w-[1660px] mx-auto">
-                <div className=" lg:px-[20px] h-[35px] rounded-full flex items-center justify-center">
-                    <img
-                        className="h-[40px] md:h-[50px] lg:h-[55px]"
-                        src="/assets/images/kelani-logo.png"
-                    />
-                </div>
-                <motion.div
-                    onClick={() => setNavShowing(true)}
-                    whileHover={{ scale: 1.05, transition: { duration: 0.4 } }}
-                    whileTap={{ scale: 0.95, transition: { duration: 0.3 } }}
-                    className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] bg-white rounded-full flex justify-center items-center cursor-pointer shadow-md"
-                >
-                    <img className="scale-90 sm:scale-100" src="/assets/images/icon-nav.svg" />
-                </motion.div>
-            </div></nav>
+            <TopNav lenis={lenis} />
             <main className="relative z-10">
                 <section className="grid grid-cols-[1fr_2fr] max-w-[1560px] px-[20px] md:px-[48px] lg:px-[80px]">
                     <FadeUpAnimation delay={1} className="flex flex-col items-center border-r border-[rgba(166,166,166,0.5)] pr-[20px] md:pr-[70px] lg:pr-[80px]">

@@ -14,6 +14,7 @@ import {
 } from "./sections/subsidiaryPages/subConstants";
 import About from "./pages/About";
 import ProductPage from "./sections/subsidiaryPages/ProductPage";
+import Blog from "./pages/Blog";
 // import { One } from "./sections/subsidiaryPages/subsidiaryComponents/One";
 // import One from "./components/One";
 
@@ -70,7 +71,6 @@ function App() {
             path="/about"
             element={<About lenis={lenis} />}
           />
-
           <Route path="/engineering/products"
             element={
               <ProductPage
@@ -78,6 +78,13 @@ function App() {
                 title="Kelani Talent"
                 lenis={lenis}
                 sub={sub_three}
+              />
+            }
+          />
+          <Route path="/blog"
+            element={
+              <Blog
+                lenis={lenis}
               />
             }
           />

@@ -100,7 +100,7 @@ const ConnectSection: React.FC<{
             initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.8 } } : {}}
             whileHover="whileHover"
             whileTap={"whileTap"}
-            className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
+            className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[12px] md:text-[16px]"
           >
             <Link to={"#"} className="text-black">
               GET CONNECTED{" "}

@@ -85,7 +85,7 @@ const NavSubsidiarySection = ({
               : undefined,
         }}
         initial={{ y: width < 1024 ? 15 : 0 }}
-        className="lg:absolute bottom-[32px] left-[20px] md:left-[40px] text-white text-[16px] lg:text-[21.2px] flex justify-between items-center w-[calc(100%-40px)] md:w-[calc(100%-80px)]"
+        className="lg:absolute bottom-[32px] left-[20px] md:left-[40px] text-white text-[16px] lg:text-[21.2px] flex justify-between items-center w-[calc(100%-40px)] md:w-[calc(100%-80px)] z-10"
       >
         {text}
         <img
