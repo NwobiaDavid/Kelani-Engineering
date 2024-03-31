@@ -10,7 +10,6 @@ interface BlogCardProps {
     title: string;
     id: string;
     datePublished: string;
-    text: string;
 }
 const BlogCard: React.FC<BlogCardProps> = ({ featuredImage, title, datePublished }) => {
     const [cardHovered, setCardHovered] = useState(false)

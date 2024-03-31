@@ -1,15 +1,20 @@
 import Lenis from "@studio-freight/lenis/types";
-import TopNav from "../components/TopNav";
-import Container from "../components/Container";
-import { Helmet } from "react-helmet";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import BlogCard from "../components/BlogCard";
 import FadeUpAnimation from "../components/FadeUpAnimation";
-import Footer from "../sections/Footer";
+import TopNav from "../components/TopNav";
 
 interface BlogProps {
     lenis: Lenis;
+}
+
+interface BlogPost {
+    title: string;
+    featuredImage: string;
+    Id: string;
+    datePublished: string;
 }
 
 const Blog: React.FC<BlogProps> = ({ lenis }) => {
@@ -50,10 +55,11 @@ const Blog: React.FC<BlogProps> = ({ lenis }) => {
                 </FadeUpAnimation>
 
                 {!loading && <div className="w-full grid md:grid-cols-3 lg:grid-cols-4 gap-y-[60px] gap-x-[20px] mt-[60px]">
-                    {blogPosts?.map(blogPost => (<BlogCard
+                    {blogPosts?.map((blogPost: BlogPost) => (<BlogCard
                         title={blogPost.title}
                         featuredImage={blogPost.featuredImage}
                         datePublished={blogPost.datePublished}
+                        id={blogPost.Id}
                     />))}
                 </div>}
                 {loading && <div className="h-[400px] flex items-center justify-center">

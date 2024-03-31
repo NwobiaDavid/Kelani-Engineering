@@ -1,18 +1,15 @@
 import Lenis from "@studio-freight/lenis/types";
-import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Helmet } from "react-helmet";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import NavBar from "../components/NavBar";
+import FadeUpAnimation from "../components/FadeUpAnimation";
 import SubsidiaryCard from "../components/SubsidiaryCard";
 import TeamMemberCard from "../components/TeamMemberCard";
+import TopNav from "../components/TopNav";
 import ValueCard from "../components/ValueCard";
 import WhyKelaniCard from "../components/WhyKelaniCard";
 import useScreenSize from "../hooks/useScreenSize";
 import Footer from "../sections/Footer";
-import useNavStore from "../store/nav";
-import FadeUpAnimation from "../components/FadeUpAnimation";
-import TopNav from "../components/TopNav";
 
 interface AboutProps {
     lenis: Lenis
