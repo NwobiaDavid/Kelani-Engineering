@@ -105,7 +105,9 @@ interface SubProps {
       };
     }[];
   };
-  // connect_text: string;
+  connect_text: string;
+  connect_title: string;
+  connect_function: string;
 }
 
 const SubsidiaryPageOne: React.FC<{
@@ -432,7 +434,6 @@ const SubsidiaryPageOne: React.FC<{
         <div className="  overflow-hidden relative mb-0 ">
           <div id="hex-gridx" className=" flex flex-col relative h-full   ">
             <div className=" bg-black relative z-[50] ">
-              {/* <div className=" z-10 h-full  relative "> */}
               <motion.div
                 animate={lightControlsx}
                 className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
@@ -451,6 +452,9 @@ const SubsidiaryPageOne: React.FC<{
               <ConnectSection
                 setCtaFormShowing={setCtaFormShowing}
                 text={sub.connect_text}
+                title={sub.connect_title}
+                func = {sub.connect_function}
+
               />
             </div>
 

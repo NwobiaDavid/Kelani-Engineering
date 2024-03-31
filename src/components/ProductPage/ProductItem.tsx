@@ -31,7 +31,6 @@ const ProductItem:React.FC<{
             </div>
             <div className=" h-[70%] text-center text-lg flex w-full justify-center items-center " >
                 {data.Product}
-                {/* {console.log(JSON.stringify(data.image[0]))} */}
             </div>
         </div>
 
