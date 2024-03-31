@@ -14,7 +14,6 @@ import { CiSearch } from "react-icons/ci";
 import ConnectSection from './subsidiaryComponents/ConnectSection';
 import ProductView from '../../components/ProductPage/ProductView';
 import "./subsidiaryPages.css";
-import axios from "axios";
 
 
 interface Contents {
@@ -130,17 +129,6 @@ const ProductPage: React.FC<{
     };
 
     const [buttonHovered, setButtonHovered] = useState(false);
-    // const handleResize = () => {
-    //     setIsMobile(window.innerWidth <= 1024);
-    // };
-
-    // useEffect(() => {
-    //     window.addEventListener("resize", handleResize);
-    //     return () => {
-    //         window.removeEventListener("resize", handleResize);
-    //     };
-    // }, []);
-
     const [lightPosition, setLightPosition] = useState({ top: 0, left: 50 });
     const [lightPositionx, setLightPositionx] = useState({ top: 0, left: 50 });
 
@@ -213,10 +201,6 @@ const ProductPage: React.FC<{
             document.removeEventListener("mousemove", handleMouseMove);
         };
     }, []);
-
-    // const [buttonHovered, setButtonHovered] = useState(false);
-    // const [ctaFormShowing, setCtaFormShowing] = useState(false);
-
     const [ctaFormShowing, setCtaFormShowing] = useState(false);
 
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -232,7 +216,6 @@ const ProductPage: React.FC<{
         const handleScroll = () => {
             const currentScrollPosition = window.scrollY;
             setScrollPosition(currentScrollPosition);
-            // console.log("The scroll num => " + currentScrollPosition);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -244,7 +227,6 @@ const ProductPage: React.FC<{
 
     useEffect(() => {
         const handleScrollReset = () => {
-            // console.log(scrollPosition)
             setIsTopNear(scrollPosition > 5180);
         };
 
@@ -325,16 +307,6 @@ const ProductPage: React.FC<{
 
 
     return (
-        // <>
-        // <div className='bg-blue-200' >
-        // {data.map((item:any , index:number) => (
-        //   <li className='text-black bg-red-200 ' key={index}>{item.Product}</li>
-        // ))}
-        // hello
-        // </div>
-        // </>
-
-
         <>
             <Helmet>
                 <title>{title}</title>
