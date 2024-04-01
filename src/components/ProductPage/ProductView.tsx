@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import ProductItem from './ProductItem';
 import { motion } from 'framer-motion';
 import axios from 'axios';
-import { IoIosArrowRoundForward } from 'react-icons/io';
+// import { IoIosArrowRoundForward } from 'react-icons/io';
 
 const ProductView: React.FC<{
   setCtaFormShowing: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ setCtaFormShowing }) => {
-  const ctaButtonVariant = {
-    whileHover: {
-      scale: 1.05,
-      transition: { duration: 0.3 },
-    },
-    whileTap: {
-      scale: 0.98,
-      transition: { duration: 0.15 },
-    },
-  };
+  // const ctaButtonVariant = {
+  //   whileHover: {
+  //     scale: 1.05,
+  //     transition: { duration: 0.3 },
+  //   },
+  //   whileTap: {
+  //     scale: 0.98,
+  //     transition: { duration: 0.15 },
+  //   },
+  // };
 
-  const [buttonHovered, setButtonHovered] = useState(false);
+  // const [buttonHovered, setButtonHovered] = useState(false);
   const [data, setData] = useState<any[]>([]);
   const [selectedCollection, setSelectedCollection] = useState('all');
   const [filterText, setFilterText] = useState('Filter');
@@ -74,15 +74,18 @@ const ProductView: React.FC<{
 
   return (
     <div className="w-full py-10 h-full md:px-5 px-2 lg:px-10 flex justify-center flex-col items-center">
-      <div className="w-full py-4 relative">
+      <div className="w-full py-10 relative ">
+        <div className=" py-2 ml-[2%] ">
+          <p>Our Products: </p>
+        </div>
         <div
           onClick={handleClick}
-          className="px-5 py-2 w-fit ml-[2%] active:scale-95 duration-200 hover:border-gray-500 text-center text-white rounded-lg border border-gray-700 cursor-pointer"
+          className="px-5 py-2 w-fit ml-[2%] hover:bg-neutral-500 active:scale-95 duration-200  text-center bg-neutral-300 text-black rounded-lg  cursor-pointer"
         >
           {filterText}
         </div>
         {dropOpen && (
-          <div className="absolute flex flex-col rounded-xl z-[60] top-[calc(100%+5px)] p-2 bg-black border">
+          <div className="absolute flex flex-col rounded-xl z-[60] top-[calc(100%-10px)] p-2 bg-black border">
             <div className="flex flex-col text-center uppercase items-center">
               <a
                 className="w-full p-2 cursor-pointer hover:bg-gray-800 duration-200 rounded-lg"
@@ -129,7 +132,7 @@ const ProductView: React.FC<{
         </div>
       )}
       <div className="w-full justify-center h-[200px] flex items-center">
-        <motion.div
+        {/* <motion.div
           onClick={() => setCtaFormShowing(true)}
           variants={ctaButtonVariant}
           onMouseEnter={() => {
@@ -157,7 +160,7 @@ const ProductView: React.FC<{
           >
             <IoIosArrowRoundForward size={30} />
           </motion.span>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

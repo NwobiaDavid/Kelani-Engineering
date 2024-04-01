@@ -377,50 +377,18 @@ const ProductPage: React.FC<{
                                                 Solving the procurement dilemma
                                             </motion.p>
                                             <h2 className=" lg:w-[50%] text-white font-semibold space-grotesk-semibold text-xl lg:text-6xl mb-3 lg:mb-[3.7rem] " >
-                                            Enhance Renewable Energy Integration to Improve Grid Reliability
+                                            Explore Various Solutions Available for Immediate Deployment
                                             </h2>
                                             <p className='text-white text-sm space-grotesk-medium ' >
-                                            Explore Various Solutions Available <br /> for Immediate Deployment
+                                            Enhance Renewable Energy Integration <br /> to Improve Grid Reliability
+                                            
                                             </p>
 
                                         </div>
 
-                                        <div className="h-[20%]  w-full lg:w-[83%] items-center flex justify-center  ">
-                                            <motion.div
-                                                onClick={() => setCtaFormShowing(true)}
-                                                variants={ctaButtonVariant}
-                                                onMouseEnter={() => {
-                                                    setButtonHovered(true);
-                                                }}
-                                                onMouseLeave={() => {
-                                                    setButtonHovered(false);
-                                                }}
-                                                initial={{ opacity: 0 }}
-                                                animate={{
-                                                    opacity: 1,
-                                                    transition: { duration: 0.7, delay: 1.4 },
-                                                }}
-                                                whileHover="whileHover"
-                                                whileTap={"whileTap"}
-                                                className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
-                                            >
-                                                <Link to={"#"} className="">
-                                                    Search Products
-                                                </Link>
-                                                <motion.span
-                                                    className="sm:block hidden"
-                                                    animate={
-                                                        buttonHovered
-                                                            ? { x: 10, transition: { duration: 0.3 } }
-                                                            : {}
-                                                    }
-                                                    whileHover={"whileHover"}
-                                                >
-                                                    {/* <IoIosArrowRoundForward size={30} /> */}
-                                                    <CiSearch size={30} />
-                                                </motion.span>
-                                            </motion.div>
-                                        </div>
+                                        {/* <div className="h-[20%]  w-full lg:w-[83%] items-center flex justify-center  ">
+                                            
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
