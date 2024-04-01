@@ -41,7 +41,7 @@ const ProductView: React.FC<{
             viewId: "vwhokgceoueuuiss",
           },
           headers: {
-            "xc-auth": import.meta.env.VITE_APP_NOCODB_XC_AUTH,
+            "xc-token": import.meta.env.VITE_APP_NOCODB_AUTH_TOKEN,
           },
           method: "GET",
         }

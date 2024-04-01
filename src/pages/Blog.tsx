@@ -54,7 +54,7 @@ const Blog: React.FC<BlogProps> = ({ lenis }) => {
                     <p className="text-[13px] md:text-[20px] museo-sans max-w-[820px] text-center mx-auto opacity-60">Stay in the Loop. Discover Our Latest Events, News, Online Trainings, and Products</p>
                 </FadeUpAnimation>
 
-                {!loading && <div className="w-full grid md:grid-cols-3 lg:grid-cols-4 gap-y-[60px] gap-x-[20px] mt-[60px]">
+                {!loading && <div className="w-full grid md:grid-cols-3 gap-y-[60px] gap-x-[20px] mt-[60px]">
                     {blogPosts?.map((blogPost: BlogPost) => (<BlogCard
                         title={blogPost.title}
                         featuredImage={blogPost.featuredImage}

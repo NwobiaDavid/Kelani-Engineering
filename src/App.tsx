@@ -15,6 +15,7 @@ import {
 import About from "./pages/About";
 import ProductPage from "./sections/subsidiaryPages/ProductPage";
 import Blog from "./pages/Blog";
+import BlogItem from "./pages/BlogItem";
 // import { One } from "./sections/subsidiaryPages/subsidiaryComponents/One";
 // import One from "./components/One";
 
@@ -84,6 +85,13 @@ function App() {
           <Route path="/blog"
             element={
               <Blog
+                lenis={lenis}
+              />
+            }
+          />
+          <Route path="/blog/:id"
+            element={
+              <BlogItem
                 lenis={lenis}
               />
             }

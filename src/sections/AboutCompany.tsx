@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../styles/about-company.css";
+import "../styles/blog.css";
 
 const AboutCompany = () => {
   const container = useRef(null);

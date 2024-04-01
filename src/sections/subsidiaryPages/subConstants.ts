@@ -631,7 +631,7 @@ export const sub_three = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/one.png",
+        img: "assets/images/energy-deals.png",
         point1:
           " Secure optimal deals and drive cost savings for a brighter, more efficient tomorrow.",
         point2:
@@ -659,7 +659,7 @@ export const sub_three = {
         classname: " ",
       },
       {
-        img: "assets/images/subsidiaryPagesImages/pageThree/slideshow/image 24.png",
+        img: "assets/images/research-image.png",
         point1:
           "Empower decisions with meticulous feasibility studies, exploring technology, budget, and risks for successful engineering projects.",
         point2:
