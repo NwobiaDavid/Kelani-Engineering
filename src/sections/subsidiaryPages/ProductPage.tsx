@@ -16,6 +16,7 @@ import ProductView from '../../components/ProductPage/ProductView';
 import "./subsidiaryPages.css";
 import axios from "axios";
 import ConnectSection2 from './subsidiaryComponents/ConnectSection2';
+import FadeUpAnimation from '../../components/FadeUpAnimation';
 
 
 interface Contents {
@@ -376,13 +377,16 @@ const ProductPage: React.FC<{
                                             >
                                                 Solving the procurement dilemma
                                             </motion.p>
+                                            <FadeUpAnimation>
+
                                             <h2 className=" lg:w-[50%] text-white font-semibold space-grotesk-semibold text-xl lg:text-6xl mb-3 lg:mb-[3.7rem] " >
                                             Explore Various Solutions Available for Immediate Deployment
                                             </h2>
                                             <p className='text-white text-sm space-grotesk-medium ' >
                                             Enhance Renewable Energy Integration <br /> to Improve Grid Reliability
-                                            
                                             </p>
+
+                                            </FadeUpAnimation>
 
                                         </div>
 
