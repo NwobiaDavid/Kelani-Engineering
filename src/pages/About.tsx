@@ -150,7 +150,7 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
                         </Swiper>
                     </div>
                 </section>
-                <section className="w-full mt-[55px] md:mt-[100px] lg:mt-[200px] px-[20px] lg:px-[48px]">
+                {/* <section className="w-full mt-[55px] md:mt-[100px] lg:mt-[200px] px-[20px] lg:px-[48px]">
                     <FadeUpAnimation className="space-grotesk-medium text-[30px] md:text-[42px] lg:text-[46px] mb-[32px] md:mb-[32px]">Meet The Team</FadeUpAnimation>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-[18px] sm:gap-[20px] "
                     >
@@ -163,8 +163,8 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
                         <TeamMemberCard name="David Ojimba" position="Director" imageUrl="https://media.licdn.com/dms/image/C4D03AQHLKPrCvMWsBg/profile-displayphoto-shrink_800_800/0/1643831454208?e=1717027200&v=beta&t=fqX7h8wrmo5HMzdtt_B2qPrvzeCaoEnOYwUYfz-wbfs" />
                         <TeamMemberCard name="David Ojimba" position="Director" imageUrl="https://media.licdn.com/dms/image/C4D03AQHLKPrCvMWsBg/profile-displayphoto-shrink_800_800/0/1643831454208?e=1717027200&v=beta&t=fqX7h8wrmo5HMzdtt_B2qPrvzeCaoEnOYwUYfz-wbfs" />
                     </div>
-                </section>
-                <section className="mt-[70px] md:mt-[100px] ">
+                </section> */}
+                <section className="mt-[90px] md:mt-[150px] ">
                     <FadeUpAnimation y={40} className="text-[50px] sm:text-[95px] md:text-[110px] lg:text-[150px] xl:text-[165px] px-[20px] lg:px-[48px] space-grotesk-medium leading-[1] tracking-tighter">Why Kelani?</FadeUpAnimation>
                     <div className="mt-[34px] md:mt-[50px] bg-[#069E7D] grid grid-cols-1 md:grid-cols-2 border-b border-b-[rgba(255,255,255,0.4)]">
                         <WhyKelaniCard index={1} icon="/assets/images/enhanced-productivity.svg" title="Enhanced Productivity" text="With unparalleled expertise and infallible experience, our platform is meticulously tailored towards propelling your productivity to unprecedented heights and unlocking your full potential.
