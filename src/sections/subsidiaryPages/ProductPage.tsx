@@ -1,22 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Lenis from '@studio-freight/lenis/types';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 // import { IoIosArrowRoundForward } from 'react-icons/io';
-import { motion, useAnimation } from "framer-motion"
+import { motion, useAnimation } from "framer-motion";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Navbarr from "./subsidiaryComponents/Navbarr";
 // import WavyText from "./subsidiaryComponents/WavyText";
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import CustomScrollbar from './subsidiaryComponents/CustomScrollbar';
-import Footer from '../Footer';
-import { CiSearch } from "react-icons/ci";
-import ConnectSection from './subsidiaryComponents/ConnectSection';
-import ProductView from '../../components/ProductPage/ProductView';
-import "./subsidiaryPages.css";
-import axios from "axios";
-import ConnectSection2 from './subsidiaryComponents/ConnectSection2';
 import FadeUpAnimation from '../../components/FadeUpAnimation';
+import ProductView from '../../components/ProductPage/ProductView';
+import Footer from '../Footer';
+import ConnectSection2 from './subsidiaryComponents/ConnectSection2';
+import CustomScrollbar from './subsidiaryComponents/CustomScrollbar';
+import "./subsidiaryPages.css";
 
 
 interface Contents {
@@ -116,22 +112,7 @@ const ProductPage: React.FC<{
     cta_form: string;
 }> = ({ sub, lenis, title, cta_form }) => {
 
-    // const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
-
-
-    const ctaButtonVariant = {
-        whileHover: {
-            scale: 1.05,
-            transition: { duration: 0.3 },
-        },
-        whileTap: {
-            scale: 0.98,
-            transition: { duration: 0.15 },
-        },
-    };
-
-    const [buttonHovered, setButtonHovered] = useState(false);
     const [lightPosition, setLightPosition] = useState({ top: 0, left: 50 });
     const [lightPositionx, setLightPositionx] = useState({ top: 0, left: 50 });
 

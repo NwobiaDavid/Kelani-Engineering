@@ -1,16 +1,15 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
-import { Link } from "react-router-dom";
-import { IoIosArrowRoundForward } from "react-icons/io";
 import { Variants, motion } from "framer-motion";
+import React, { Dispatch, SetStateAction, useState } from "react";
+import { IoIosArrowRoundForward } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ConnectSection: React.FC<{
   text: string;
   title: string;
   func: string;
   setCtaFormShowing: Dispatch<SetStateAction<boolean>>;
-}> = ({ text, setCtaFormShowing, title, func }) => {
+}> = ({ text, title, func }) => {
   const ctaButtonVariant = {
     whileHover: {
       scale: 1.05,
@@ -35,8 +34,6 @@ const ConnectSection: React.FC<{
       transition: { staggerChildren: 0.02, delayChildren: i * 0 },
     }),
   };
-
-  const navigate = useNavigate();
 
   const { ref: headerRef, inView } = useInView({
     triggerOnce: true,

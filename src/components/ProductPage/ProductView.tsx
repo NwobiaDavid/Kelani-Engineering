@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
-import ProductItem from './ProductItem';
-import { motion } from 'framer-motion';
 import axios from 'axios';
+import ProductItem from './ProductItem';
 // import { IoIosArrowRoundForward } from 'react-icons/io';
 
 const ProductView: React.FC<{
   setCtaFormShowing: React.Dispatch<React.SetStateAction<boolean>>;
-}> = ({ setCtaFormShowing }) => {
+}> = ({ }) => {
   // const ctaButtonVariant = {
   //   whileHover: {
   //     scale: 1.05,

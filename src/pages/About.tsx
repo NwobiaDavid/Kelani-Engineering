@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import FadeUpAnimation from "../components/FadeUpAnimation";
 import SubsidiaryCard from "../components/SubsidiaryCard";
-import TeamMemberCard from "../components/TeamMemberCard";
 import TopNav from "../components/TopNav";
 import ValueCard from "../components/ValueCard";
 import WhyKelaniCard from "../components/WhyKelaniCard";
