@@ -3,14 +3,11 @@ import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Variants, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useNavigate } from "react-router-dom";
 
-const ConnectSection: React.FC<{
+const ConnectSection2: React.FC<{
   text: string;
-  title: string;
-  func: string;
   setCtaFormShowing: Dispatch<SetStateAction<boolean>>;
-}> = ({ text, setCtaFormShowing, title, func }) => {
+}> = ({ text, setCtaFormShowing }) => {
   const ctaButtonVariant = {
     whileHover: {
       scale: 1.05,
@@ -36,7 +33,6 @@ const ConnectSection: React.FC<{
     }),
   };
 
-  const navigate = useNavigate();
 
   const { ref: headerRef, inView } = useInView({
     triggerOnce: true,
@@ -93,7 +89,7 @@ const ConnectSection: React.FC<{
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.45 } } : {}} className="text-[14px] md:text-xl opacity-85 my-[15px] md:my-10 museo-sans">{text}</motion.p>
           <motion.div
-            onClick={eval(func)}
+            onClick={() => setCtaFormShowing(true)}
             variants={ctaButtonVariant}
             onMouseEnter={() => {
               setButtonHovered(true);
@@ -104,10 +100,10 @@ const ConnectSection: React.FC<{
             initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.8 } } : {}}
             whileHover="whileHover"
             whileTap={"whileTap"}
-            className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[12px] md:text-[16px]"
+            className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
           >
             <Link to={"#"} className="text-black">
-              {title}
+            GET CONNECTED
             </Link>
             <motion.span
               className="sm:block hidden"
@@ -129,4 +125,4 @@ const ConnectSection: React.FC<{
   );
 };
 
-export default ConnectSection;
+export default ConnectSection2;

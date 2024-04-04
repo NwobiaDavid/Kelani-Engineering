@@ -14,6 +14,9 @@ import { CiSearch } from "react-icons/ci";
 import ConnectSection from './subsidiaryComponents/ConnectSection';
 import ProductView from '../../components/ProductPage/ProductView';
 import "./subsidiaryPages.css";
+import axios from "axios";
+import ConnectSection2 from './subsidiaryComponents/ConnectSection2';
+import FadeUpAnimation from '../../components/FadeUpAnimation';
 
 
 interface Contents {
@@ -374,55 +377,22 @@ const ProductPage: React.FC<{
                                             >
                                                 Solving the procurement dilemma
                                             </motion.p>
+                                            <FadeUpAnimation>
+
                                             <h2 className=" lg:w-[50%] text-white font-semibold space-grotesk-semibold text-xl lg:text-6xl mb-3 lg:mb-[3.7rem] " >
-                                                Boost renewable
-                                                energy input while
-                                                strengthening grid
-                                                reliability
+                                            Explore Various Solutions Available for Immediate Deployment
                                             </h2>
                                             <p className='text-white text-sm space-grotesk-medium ' >
-                                                Check out the different solutions that <br />
-                                                you can start deploying today.
+                                            Enhance Renewable Energy Integration <br /> to Improve Grid Reliability
                                             </p>
 
+                                            </FadeUpAnimation>
+
                                         </div>
 
-                                        <div className="h-[20%]  w-full lg:w-[83%] items-center flex justify-center  ">
-                                            <motion.div
-                                                onClick={() => setCtaFormShowing(true)}
-                                                variants={ctaButtonVariant}
-                                                onMouseEnter={() => {
-                                                    setButtonHovered(true);
-                                                }}
-                                                onMouseLeave={() => {
-                                                    setButtonHovered(false);
-                                                }}
-                                                initial={{ opacity: 0 }}
-                                                animate={{
-                                                    opacity: 1,
-                                                    transition: { duration: 0.7, delay: 1.4 },
-                                                }}
-                                                whileHover="whileHover"
-                                                whileTap={"whileTap"}
-                                                className=" cursor-pointer py-2 w-fit flex justify-center items-center rounded-full px-4 lg:px-5 bg-white inter text-[14px] md:text-[16px]"
-                                            >
-                                                <Link to={"#"} className="">
-                                                    Search Products
-                                                </Link>
-                                                <motion.span
-                                                    className="sm:block hidden"
-                                                    animate={
-                                                        buttonHovered
-                                                            ? { x: 10, transition: { duration: 0.3 } }
-                                                            : {}
-                                                    }
-                                                    whileHover={"whileHover"}
-                                                >
-                                                    {/* <IoIosArrowRoundForward size={30} /> */}
-                                                    <CiSearch size={30} />
-                                                </motion.span>
-                                            </motion.div>
-                                        </div>
+                                        {/* <div className="h-[20%]  w-full lg:w-[83%] items-center flex justify-center  ">
+                                            
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -466,14 +436,12 @@ const ProductPage: React.FC<{
                 <div className="  overflow-hidden relative mb-0 ">
                     <div id="hex-gridx" className=" flex flex-col relative h-full   ">
                         <div className=" bg-black relative z-[50] ">
-                            {/* <div className=" z-10 h-full  relative "> */}
                             <motion.div
                                 animate={lightControlsx}
                                 className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
                             ></motion.div>
-                            <div className="griddy lg:block hidden z-20 bg-transparent "></div>
+                            <div className="griddy lg:block p-3 hidden z-20 bg-transparent "></div>
 
-                            {/* </div> */}
                             <div className="z-20 h-full  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
                                 <div className="border border-white rounded-full min-w-[680px] w-[680px] min-h-[680px] h-[680px] border-opacity-20  lg:h-[750px] lg:w-[750px] flex items-center justify-center">
                                     <div className="border border-white rounded-full min-w-[480px] w-[480px] min-h-[480px] h-[480px] border-opacity-20  lg:h-[520px] lg:w-[520px] flex items-center justify-center">
@@ -482,7 +450,7 @@ const ProductPage: React.FC<{
                                 </div>
                             </div>
 
-                            <ConnectSection
+                            <ConnectSection2
                                 setCtaFormShowing={setCtaFormShowing}
                                 text={sub.connect_text}
                             />

@@ -284,7 +284,12 @@ export const sub_one = {
 
   connect_text:
     "Explore endless possibilities with our solutions! Connect with our passionate team for tailored support and embark on your triumphant journey today. Let's make your dreams a reality!",
-};
+
+  connect_title: "GET CONNECTED",
+  connect_function: `() => setCtaFormShowing(true)`
+
+
+  };
 
 //   page 2 -------------------------------------------------
 
@@ -524,9 +529,11 @@ export const sub_two = {
       },
     ],
   },
-  connect_text:
-    "Got burning questions or eager to unlock the potential of our solutions? It's time to make contact! Our devoted team is primed to provide tailored support. Reach out for a personalized journey toward your triumph!",
-};
+  connect_text: "Got burning questions or eager to unlock the potential of our solutions? It's time to make contact! Our devoted team is primed to provide tailored support. Reach out for a personalized journey toward your triumph!",
+  connect_title: "VIEW PRODUCTS",
+  connect_function: `() => navigate("/engineering/products")`,
+
+  };
 
 //   page 3 ---------------------------------------------------------------
 
@@ -786,6 +793,8 @@ export const sub_three = {
       },
     ],
   },
-  connect_text:
-    "Have questions or ready to explore how our solutions can benefit you? Reach out to us! Our dedicated team is here to assist. Contact us for personalized assistance and let's embark on a journey towards your success.",
-};
+  connect_text: "Have questions or ready to explore how our solutions can benefit you? Reach out to us! Our dedicated team is here to assist. Contact us for personalized assistance and let's embark on a journey towards your success.",
+  connect_title: "GET CONNECTED",
+  connect_function: `() => setCtaFormShowing(true)`
+
+  };

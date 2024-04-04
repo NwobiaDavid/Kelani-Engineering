@@ -105,7 +105,9 @@ interface SubProps {
       };
     }[];
   };
-  // connect_text: string;
+  connect_text: string;
+  connect_title: string;
+  connect_function: string;
 }
 
 const SubsidiaryPageOne: React.FC<{
@@ -114,7 +116,7 @@ const SubsidiaryPageOne: React.FC<{
   title: string;
   cta_form: string;
 }> = ({ sub, lenis, title, cta_form }) => {
-  
+
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
   const ctaButtonVariant = {
     whileHover: {
@@ -305,7 +307,7 @@ const SubsidiaryPageOne: React.FC<{
             <div className="  md:h-screen h-[600px] relative">
 
               <div className="absolute inset-0 bg-cover bg-center">
-                <motion.div initial={{ scale: 1.3 }} animate={{ scale: 1, transition: { duration: 1, ease: [0.43, 0.13, 0.23, 0.96]  } }} className=" absolute w-full  z-50">
+                <motion.div initial={{ scale: 1.3 }} animate={{ scale: 1, transition: { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] } }} className=" absolute w-full  z-50">
                   <LazyLoadImage
                     width={"100%"}
                     height={"100%"}
@@ -389,23 +391,25 @@ const SubsidiaryPageOne: React.FC<{
             <div className="relative z-50 ">
               <Features data={sub.features_data} />
               <div
-                style={{ backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)`,}}
+                style={{ backgroundImage: `linear-gradient(to bottom, black, ${sub.hero_section.color.c700}, black)`, }}
                 className=" absolute top-[10rem]  w-full  opacity-15 h-[800px] " >
               </div>
               <SlideshowSection2
                 colours={sub.hero_section.color}
                 data={sub.slideshow_section}
               />
+
             </div>
           </div>
         </div>
+            
 
         <div id="hex-gridd" className="  relative bg-black">
           <motion.div
             animate={lightControls}
             className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
           ></motion.div>
-          <div className="griddy lg:block hidden z-20 bg-transparent"></div>
+          <div className="griddy lg:block hidden  z-20 bg-transparent"></div>
 
           <div className="w-full relative z-40">
             <div
@@ -432,7 +436,6 @@ const SubsidiaryPageOne: React.FC<{
         <div className="  overflow-hidden relative mb-0 ">
           <div id="hex-gridx" className=" flex flex-col relative h-full   ">
             <div className=" bg-black relative z-[50] ">
-              {/* <div className=" z-10 h-full  relative "> */}
               <motion.div
                 animate={lightControlsx}
                 className="light hidden lg:block z-10 top-[50%] left-[50%] rounded-full bg-white w-[40rem] h-[40rem]"
@@ -451,6 +454,9 @@ const SubsidiaryPageOne: React.FC<{
               <ConnectSection
                 setCtaFormShowing={setCtaFormShowing}
                 text={sub.connect_text}
+                title={sub.connect_title}
+                func={sub.connect_function}
+
               />
             </div>
 
