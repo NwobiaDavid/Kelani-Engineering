@@ -4,4 +4,5 @@ export interface BlogPost {
     Id: string;
     datePublished: string;
     content: string;
+    type: string;
 }

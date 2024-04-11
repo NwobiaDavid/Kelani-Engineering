@@ -16,6 +16,7 @@ interface BlogPost {
     featuredImage: string;
     Id: string;
     datePublished: string;
+    type: string
 }
 
 const Blog: React.FC<BlogProps> = ({ lenis }) => {

@@ -1,23 +1,20 @@
-import { useParams } from "react-router-dom"
-import TopNav from "../components/TopNav";
 import Lenis from "@studio-freight/lenis/types";
-import { useState, useEffect } from "react";
 import axios from "axios";
-import Markdown from 'markdown-to-jsx'
-import dayjs from "dayjs"
-import LocalizedFormat from "dayjs/plugin/localizedFormat"
-dayjs.extend(LocalizedFormat);
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
-import { BlogPost } from "../types/blog";
-import { AnimatePresence } from "framer-motion";
-import useNavStore from "../store/nav";
-import NavBar from "../components/NavBar";
-import { motion } from "framer-motion"
-import localizedFormat from "dayjs/plugin/localizedFormat"
-import FadeUpAnimation from "../components/FadeUpAnimation";
+import dayjs from "dayjs";
+import { default as LocalizedFormat, default as localizedFormat } from "dayjs/plugin/localizedFormat";
+import { AnimatePresence, motion } from "framer-motion";
+import Markdown from 'markdown-to-jsx';
+import { useEffect, useState } from "react";
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+import { useParams } from "react-router-dom";
 import BlogCard from "../components/BlogCard";
+import FadeUpAnimation from "../components/FadeUpAnimation";
+import NavBar from "../components/NavBar";
 import Footer from "../sections/Footer";
+import useNavStore from "../store/nav";
+import { BlogPost } from "../types/blog";
+dayjs.extend(LocalizedFormat);
 dayjs.extend(localizedFormat)
 
 interface BlogItemProps {
@@ -32,7 +29,8 @@ const BlogItem: React.FC<BlogItemProps> = ({ lenis }) => {
         title: "",
         featuredImage: "",
         Id: "",
-        datePublished: ""
+        datePublished: "", 
+        type: ""
     })
     const url = `https://app.nocodb.com/api/v2/tables/mhmtgilh33ggz63/records/${id}`;
     const options = {
@@ -142,7 +140,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ lenis }) => {
                     <section className="relative text-[64px] p-[20px] md:p-[30px] md:px-[48px] md:pb-[80px]">
                         <h2 className="text-[36px] md:text-[48px] text-black space-grotesk-medium tracking-tighter">Recommended from Kelani</h2>
                         <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-y-[20px] gap-x-[20px] mt-[60px]">
-                            {blogPosts?.filter(item => item.Id !== id).slice(0, 3)?.map((blogPost: BlogPost, index: number) => (<BlogCard
+                            {blogPosts?.filter((item: BlogPost) => item.Id !== id).slice(0, 3)?.map((blogPost: BlogPost, index: number) => (<BlogCard
                                 title={blogPost.title}
                                 type={blogPost.type}
                                 id={blogPost.Id}
