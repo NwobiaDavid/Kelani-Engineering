@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import BlogCard from "../components/BlogCard";
 import FadeUpAnimation from "../components/FadeUpAnimation";
 import TopNav from "../components/TopNav";
+import Footer from "../sections/Footer";
 
 interface BlogProps {
     lenis: Lenis;
@@ -48,27 +49,27 @@ const Blog: React.FC<BlogProps> = ({ lenis }) => {
             </Helmet>
             <TopNav lenis={lenis} />
 
-            <main className="mt-[40px] p-[20px] md:p-[30px] md:px-[48px] mb-[100px] relative">
+            <main className="mt-[40px] z-10 bg-white p-[20px] md:p-[30px] md:px-[20px] lg:px-[50px] pb-[100px] md:pb-[100px] relative max-w-[1600px] shadow-md mx-auto">
                 <FadeUpAnimation>
-                    <h1 className="text-[40px] md:text-[60px] space-grotesk-semibold text-center">OUR BLOG</h1>
-                    <p className="text-[13px] md:text-[20px] museo-sans max-w-[820px] text-center mx-auto opacity-60">Stay in the Loop. Discover Our Latest Events, News, Online Trainings, and Products</p>
+                    <h1 className="text-[60px] mb-[10px] md:mb-[20px]  md:text-[120px] lg:text-[160px] space-grotesk-medium text-left tracking-tighter leading-[1.08]">Our Blog</h1>
+                    <p className="text-[13px] md:text-[15px] museo-sans text-left max-w-[276px] opacity-60 leading-[1.375]">Stay in the Loop. Discover Our Latest Events, News, Online Trainings, Workshops, and Products.</p>
                 </FadeUpAnimation>
 
-                {!loading && <div className="w-full grid md:grid-cols-3 gap-y-[60px] gap-x-[20px] mt-[60px]">
-                    {blogPosts?.map((blogPost: BlogPost) => (<BlogCard
+                {!loading && <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-y-[20px] gap-x-[20px] mt-[60px]">
+                    {blogPosts?.map((blogPost: BlogPost, index: number) => (<BlogCard
                         title={blogPost.title}
-                        featuredImage={blogPost.featuredImage}
-                        datePublished={blogPost.datePublished}
+                        type={blogPost.type}
                         id={blogPost.Id}
+                        index={index}
                     />))}
                 </div>}
-                {loading && <div className="h-[400px] flex items-center justify-center">
+                {loading && <div className="h-[200px] flex items-center justify-center">
                     <img className="w-[30px]" src="/assets/images/loader.gif" />
                 </div>}
             </main>
-            {/* <Footer contactUsUrl={
+            <Footer contactUsUrl={
                 "https://app.nocodb.com/api/v2/tables/mjgtqh17rbqo28w/records"
-            } /> */}
+            } />
         </>
     );
 }

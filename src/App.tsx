@@ -16,6 +16,7 @@ import About from "./pages/About";
 import ProductPage from "./sections/subsidiaryPages/ProductPage";
 import Blog from "./pages/Blog";
 import BlogItem from "./pages/BlogItem";
+import { useEffect } from "react";
 // import { One } from "./sections/subsidiaryPages/subsidiaryComponents/One";
 // import One from "./components/One";
 
@@ -29,6 +30,12 @@ function App() {
 
   requestAnimationFrame(raf);
   const location = useLocation();
+
+
+  useEffect(() => {
+    // setTimeout(() => window.scrollTo(0, 0), 300);
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="overflow-y-clip">
