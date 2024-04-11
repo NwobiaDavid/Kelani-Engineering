@@ -87,7 +87,7 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
     const imageScale = useTransform(
         imageScrollYProgress,
         [0, 1],
-        [window.innerWidth > 1560 ? window.innerWidth / 1560 : (window.innerWidth > 768 ? ((window.innerWidth - 160) / window.innerWidth) : (window.innerWidth - 40)), 1]
+        [window.innerWidth > 1560 ? window.innerWidth / 1560 : (window.innerWidth > 768 ? ((window.innerWidth - 160) / window.innerWidth) : 0.85), 1]
     );
 
 
