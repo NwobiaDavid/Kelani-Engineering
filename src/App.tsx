@@ -5,18 +5,18 @@ import "./App.css";
 // import Footer from './sections/Footer'
 // import SubsidiaryShowcase from './sections/SubsidiaryShowcase'
 import { AnimatePresence } from "framer-motion";
+import { useLayoutEffect } from "react";
+import About from "./pages/About";
+import Blog from "./pages/Blog";
+import BlogItem from "./pages/BlogItem";
 import Home from "./pages/Home";
+import ProductPage from "./sections/subsidiaryPages/ProductPage";
 import SubsidiaryPageOne from "./sections/subsidiaryPages/SubsidiaryPageOne";
 import {
   sub_one,
   sub_three,
   sub_two,
 } from "./sections/subsidiaryPages/subConstants";
-import About from "./pages/About";
-import ProductPage from "./sections/subsidiaryPages/ProductPage";
-import Blog from "./pages/Blog";
-import BlogItem from "./pages/BlogItem";
-import { useEffect, useLayoutEffect } from "react";
 // import { One } from "./sections/subsidiaryPages/subsidiaryComponents/One";
 // import One from "./components/One";
 
