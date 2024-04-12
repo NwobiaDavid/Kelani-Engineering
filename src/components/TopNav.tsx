@@ -16,7 +16,7 @@ const TopNav: React.FC<TopNavProps> = ({ lenis }) => {
                     <NavBar lenis={lenis} closeNav={() => setNavShowing(false)} />
                 )}
             </AnimatePresence>
-            <nav className="border-b border-[rgba(166,166,166,0.5)] w-full">          <div className="w-full p-[20px] md:p-[30px] md:px-[48px] flex justify-between z-20 max-w-[1660px] mx-auto">
+            <nav className="border-b bg-white border-[rgba(166,166,166,0.5)] w-full">          <div className="w-full p-[20px] md:p-[30px] md:px-[48px] flex justify-between z-20 max-w-[1660px] mx-auto">
                 <div className=" lg:px-[20px] h-[35px] rounded-full flex items-center justify-center">
                     <a href="/">
                         <img

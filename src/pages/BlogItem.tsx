@@ -29,7 +29,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ lenis }) => {
         title: "",
         featuredImage: "",
         Id: "",
-        datePublished: "", 
+        datePublished: "",
         type: ""
     })
     const url = `https://app.nocodb.com/api/v2/tables/mhmtgilh33ggz63/records/${id}`;
@@ -65,6 +65,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ lenis }) => {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         try {
             setLoading(true)
             fetchBlogPost()
@@ -104,7 +105,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ lenis }) => {
                 </div></nav>
             </>
             {<main className="w-full relative z-[10] bg-white shadow-md">
-                <section className="w-full h-[60dvh] lg:h-[100vh] bg-[#0E3738] relative overflow-hidden pt-[22%] flex justify-between flex-col">
+                <section className="w-full min-h-[60dvh] lg:h-[100vh] bg-[#0E3738] relative overflow-hidden pt-[22%] flex justify-between flex-col">
                     {loading && <div className="w-full h-full flex items-center justify-center absolute z-10 top-0">
                         <img className="w-[30px]" src="/assets/images/loader-white.gif" />
                     </div>}
@@ -125,7 +126,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ lenis }) => {
                                 <img src="/assets/images/mouse-white.svg" className="h-[30px] md:h-[40px] mb-[44px]" />
                             </div>
                         </FadeUpAnimation>
-                        <img className="grayscale w-[100%] absolute opacity-10 z-0 -bottom-[70%]" src="/assets/images/kelani-icon.svg" />
+                        <motion.img initial={{ opacity: 0 }} animate={{ opacity: 0.1, transition: { duration: 0.3 } }} className="grayscale w-[100%] absolute opacity-10 z-0 -bottom-[70%]" src="/assets/images/kelani-icon.svg" />
                     </>}
                 </section>
                 <FadeUpAnimation delay={0.5}>

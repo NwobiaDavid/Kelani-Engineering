@@ -16,7 +16,7 @@ import About from "./pages/About";
 import ProductPage from "./sections/subsidiaryPages/ProductPage";
 import Blog from "./pages/Blog";
 import BlogItem from "./pages/BlogItem";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 // import { One } from "./sections/subsidiaryPages/subsidiaryComponents/One";
 // import One from "./components/One";
 
@@ -32,13 +32,16 @@ function App() {
   const location = useLocation();
 
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // setTimeout(() => window.scrollTo(0, 0), 300);
     window.scrollTo(0, 0);
+    // lenis.scrollTo("#top", {
+    //   duration: 0
+    // })
   }, [location.pathname]);
 
   return (
-    <div className="overflow-y-clip">
+    <div id="top" className="overflow-y-clip">
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home lenis={lenis} />} />

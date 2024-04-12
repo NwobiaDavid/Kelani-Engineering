@@ -1,6 +1,6 @@
 import Lenis from "@studio-freight/lenis/types";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import BlogCard from "../components/BlogCard";
 import FadeUpAnimation from "../components/FadeUpAnimation";
@@ -43,6 +43,9 @@ const Blog: React.FC<BlogProps> = ({ lenis }) => {
             setLoading(false)
         }
     }, [])
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <>
             <Helmet>
@@ -50,7 +53,7 @@ const Blog: React.FC<BlogProps> = ({ lenis }) => {
             </Helmet>
             <TopNav lenis={lenis} />
 
-            <main className="mt-[40px] z-10 bg-white p-[20px] md:p-[30px] md:px-[20px] lg:px-[50px] pb-[100px] md:pb-[100px] relative max-w-[1600px] shadow-md mx-auto">
+            <main className="z-20 bg-white pt-[60px] p-[20px] md:pt-[70px] md:p-[30px] md:px-[20px] lg:px-[50px] pb-[100px] md:pb-[100px] relative max-w-[1600px] shadow-md mx-auto min-h-screen">
                 <FadeUpAnimation>
                     <h1 className="text-[60px] mb-[10px] md:mb-[20px]  md:text-[120px] lg:text-[160px] space-grotesk-medium text-left tracking-tighter leading-[1.08]">Our Blog</h1>
                     <p className="text-[13px] md:text-[15px] museo-sans text-left max-w-[276px] opacity-60 leading-[1.375]">Stay in the Loop. Discover Our Latest Events, News, Online Trainings, Workshops, and Products.</p>
