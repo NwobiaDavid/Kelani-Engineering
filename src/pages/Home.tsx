@@ -22,7 +22,7 @@ import { Helmet } from "react-helmet";
 
 const Home = ({ lenis }: { lenis: Lenis }) => {
   const { y: scrollY } = useScrollPosition();
-  const { height } = useScreenSize();
+  const { height, width } = useScreenSize();
   const [scrollTops, setScrollTops] = useState({
     engineering: 0,
     power: 0,
@@ -145,7 +145,6 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
     [0, 1],
     [1, 1.7]
   );
-  // const { width } = useScreenSize();
 
   return (
     <>
@@ -158,14 +157,14 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
         className="bg-[#FEFEFE] shadow-lg z-[2] relative"
       >
         <Hero lenis={lenis} />
-        <motion.div style={{ y: aboutUsY }} className="">
+        <motion.div style={{ y: width <= 768 ? 0 : aboutUsY }} className="">
           <AboutCompany />
         </motion.div>
 
         <motion.div
           className="engineering"
           ref={engineeringSpotlightRef}
-          style={{ y: engineeringY }}
+          style={{ y: width <= 768 ? 0 : engineeringY }}
         >
           <SubsidiaryShowcase
             setScrollTops={setScrollTops}
@@ -209,7 +208,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
         </motion.div>
         <motion.div
           className="power"
-          style={{ y: powerY }}
+          style={{ y: width <= 768 ? 0 : powerY }}
           ref={powerSpotlightRef}
         >
           <SubsidiaryShowcase
@@ -421,12 +420,12 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
                 scrollY > document.body.scrollHeight - window.innerHeight * 2
                   ? ""
                   : scrollY > scrollTops.consulting
-                  ? "consulting"
-                  : scrollY > scrollTops.power
-                  ? "power"
-                  : scrollY > scrollTops.engineering
-                  ? "engineering"
-                  : ""
+                    ? "consulting"
+                    : scrollY > scrollTops.power
+                      ? "power"
+                      : scrollY > scrollTops.engineering
+                        ? "engineering"
+                        : ""
               }
             />
           )}
