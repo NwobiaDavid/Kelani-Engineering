@@ -13,6 +13,7 @@ interface NavBarProps {
 const NavBar = ({ closeNav, lenis }: NavBarProps) => {
   const { width } = useScreenSize();
   const [contactHovered, setContactHovered] = useState(false);
+  const [blogHovered, setBlogHovered] = useState(false)
   const navigate = useNavigate()
   return (
     <>
@@ -145,7 +146,36 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
               src="/assets/images/icon-link.svg"
             />
           </motion.div>
-          <div className="lg:w-[calc(75%)] w-full h-full flex">
+          <motion.a
+            onMouseEnter={() => setBlogHovered(true)}
+            onMouseLeave={() => setBlogHovered(false)}
+            href={"/blog"}
+            initial={{ y: width >= 1024 ? 69 : 138 }}
+            animate={{
+              y: 0,
+              transition: {
+                duration: 0.6,
+                delay: 0.35,
+                ease: [0.43, 0.13, 0.23, 0.96],
+              },
+            }}
+            className="lg:w-[calc(100%/4)] w-full  flex-shrink h-full border-b lg:border-b-0 lg:border-r border-[#FEFEFE]  flex items-center justify-between px-[20px] md:px-[40px] cursor-pointer"
+          >
+            <p className="text-white text-[14px] lg:text-[17.28px]">
+              Our Blog
+            </p>
+            <motion.img
+              animate={{
+                x: blogHovered ? 3 : 0,
+                y: blogHovered ? -3 : 0,
+                scale: 1.1,
+                // transition: { duration: 0.3 },
+              }}
+              className="w-[14px] lg:w-[16px]"
+              src="/assets/images/icon-link.svg"
+            />
+          </motion.a>
+          <div className="lg:w-[calc(50%)] w-full h-full flex">
             <motion.a
               target="_blank"
               whileTap={{ scale: 0.95, transition: { duration: 0.6 } }}

@@ -13,6 +13,7 @@ import NavBar from "../components/NavBar";
 import useNavStore from "../store/nav";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import useScreenSize from "../hooks/useScreenSize";
+import FadeUpAnimation from "../components/FadeUpAnimation";
 
 const Hero = ({ lenis }: { lenis: Lenis }) => {
   // const [navShowing, setNavShowing] = useState(false);
@@ -89,7 +90,9 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
                 lineHeight={getValueFromScreenSize(44, 57, 83)}
                 text="Building Africa’s Future"
               /> */}
-              Building Africa’s Future With
+              <FadeUpAnimation delay={0.4}>
+                Building Africa’s Future With
+              </FadeUpAnimation>
               <img
                 src="/assets/images/curved-fill-tl.svg"
                 className="w-[20px] h-[20px] lg:w-[36px] lg:h-[36px] absolute lg:top-[-35px] top-[-19px] left-[1px]"
@@ -99,22 +102,22 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
                 className="w-[26px] h-[26px] md:w-[36px] md:h-[36px] absolute right-[-26px] md:right-[-36px] -bottom-[1px] hidden lg:block"
               />
             </h1>
-            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative lg:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px]">
+            <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[59px] xl:leading-[64px] px-[14px] pb-[10px] md:px-[24px] pt-[10px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative lg:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] lg:overflow-hidden">
               {/* <TextAnimation
                 lineHeight={getValueFromScreenSize(44, 57, 83)}
                 text="With Engineering Excellence"
               /> */}
-              Engineering Excellence
+              <FadeUpAnimation delay={0.4}>Engineering Excellence</FadeUpAnimation>
               <img
                 src="/assets/images/curved-fill-tl.svg"
                 className="w-[26px] h-[26px] md:w-[36px] md:h-[36px] hidden sm:block absolute right-[-26px] md:right-[-36px] -top-[1px] rotate-90 lg:hidden"
               />
-              <span className="hidden lg:block pl-[18px]">
+              <span className="hidden lg:block pl-[8px]">
                 {/* <TextAnimation
                   lineHeight={getValueFromScreenSize(44, 57, 83)}
                   text="For Growth"
                 /> */}
-                For Growth
+                <FadeUpAnimation delay={0.4}>For Growth</FadeUpAnimation>
               </span>
               <img
                 src="/assets/images/curved-fill-tl.svg"
@@ -122,7 +125,7 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
               />
             </h1>
             <h1 className="space-grotesk-semibold bg-[#FEFEFE] text-[36px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[39px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[14px] md:px-[24px] pt-[10px] pb-[10px] md:pb-[14px] lg:pt-[20px] lg:pb-[24px] top-[-1px] relative  w-fit block lg:hidden">
-              For Growth{" "}
+              <FadeUpAnimation>For Growth</FadeUpAnimation>
               <img
                 src="/assets/images/curved-fill-tl.svg"
                 className="w-[28px] h-[28px] absolute rotate-90  top-0  -right-[27px] "
@@ -133,12 +136,14 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
               />
             </h1>
             <div className="bg-[#FEFEFE] px-[24px] pt-[8px] pb-[16px] relative  w-fit bottom-[2px] rounded-tr-[36px] lg:rounded-tr-[0] hidden md:block">
-              <p className="max-w-[400px] md:max-w-[600px] lg:max-w-[700px] text-[17.28px] leading-[26px] w-fit museo-sans font-light">
-                At Kelani, industrial expertise, talent development, and a
-                commitment to sustainable energy converge. Join us on a
-                transformative journey shaping an extraordinary future across
-                Africa.
-              </p>
+              <FadeUpAnimation delay={0.5}>
+                <p className="max-w-[400px] md:max-w-[600px] lg:max-w-[700px] text-[17.28px] leading-[26px] w-fit museo-sans font-light">
+                  At Kelani, industrial expertise, talent development, and a
+                  commitment to sustainable energy converge. Join us on a
+                  transformative journey shaping an extraordinary future across
+                  Africa.
+                </p>
+              </FadeUpAnimation>
               <img
                 src="/assets/images/curved-fill-tl.svg"
                 className="w-[36px] h-[36px] absolute top-0 -right-[36px] rotate-90 hidden lg:block"
@@ -163,15 +168,19 @@ const Hero = ({ lenis }: { lenis: Lenis }) => {
             </h1>
           </div> */}
         </div>
-        <h1 className="space-grotesk-semibold font-semibold bg-[#FEFEFE] md:hidden text-[26px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[0px] pb-[5px] md:px-[24px] pt-[15px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex md:flex- lg:space-x-[18px] space-y-[18px]">
-          Building Africa's Future With Engineering Excellence For Growth
-        </h1>
+        <FadeUpAnimation y={40}>
+          <h1 className="space-grotesk-semibold font-semibold bg-[#FEFEFE] md:hidden text-[26px] md:text-[45px] lg:text-[50px] xl:text-[55px] leading-[36px] md:leading-[52px] lg:leading-[55px] xl:leading-[64px] px-[0px] pb-[5px] md:px-[24px] pt-[15px] md:pb-[14px] lg:pt-[10px] lg:pb-[12px] top-[-1px] relative sm:rounded-tr-[28px] rounded-br-[20px] md:rounded-br-[20px] sm:rounded-br-[0] w-fit flex lg:space-x-[18px] space-y-[18px]">
+            Building Africa's Future With Engineering Excellence For Growth
+          </h1>
+        </FadeUpAnimation>
         {/* <Container className="md:hidden"> */}
-        <p className=" md:pl-[14px] text-[16px] leading-[20px] w-full pt-[5px] md:hidden museo-sans font-normal">
-          At Kelani, industrial expertise, talent development, and a commitment
-          to sustainable energy converge. Join us on a transformative journey
-          shaping an extraordinary future across Africa.
-        </p>
+        <FadeUpAnimation y={40} delay={0.45}>
+          <p className=" md:pl-[14px] text-[16px] leading-[20px] w-full pt-[5px] md:hidden museo-sans font-normal">
+            At Kelani, industrial expertise, talent development, and a commitment
+            to sustainable energy converge. Join us on a transformative journey
+            shaping an extraordinary future across Africa.
+          </p>
+        </FadeUpAnimation>
 
         {/* </Container> */}
         <InfiniteCarousel />

@@ -109,9 +109,7 @@ const About: React.FC<AboutProps> = ({ lenis }) => {
                     <motion.img style={{ scale: imageScale }} ref={imageRef} className="w-full md:h-[80%] object-cover" src="/assets/images/kelani-home-image.png" />
                 </FadeUpAnimation>
                 <section>
-                    <FadeUpAnimation y={50} className="lg:ml-[41.6%] w-full sm:w-[70%] md:w-[60%] lg:w-[38%] text-[28px] md:text-[28px] lg:text-[36px] xl:text-[50px] leading-[1.1] px-[20px] lg:px-0 museo-sans font-medium">
                         Kelani has built a business with three main subsidiaries.
-                    </FadeUpAnimation>
                 </section>
                 <section className="pt-[100px] md:pt-[150px]">
                     <div className="relative py-[70ox]">
