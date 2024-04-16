@@ -108,7 +108,7 @@ const NavBar = ({ closeNav, lenis }: NavBarProps) => {
             opacity: 0.3,
             transition: { duration: 0.4, ease: [0.43, 0.13, 0.23, 0.96] },
           }}
-          className="w-full h-[100px] lg:h-[69px] bg-[linear-gradient(135deg,rgba(255,154,83,.9),rgba(212,128,69))] backdrop-blur-[18px] rounded-[9.6px] overflow-hidden flex flex-col lg:flex-row"
+          className="w-full h-[142px] lg:h-[69px] bg-[linear-gradient(135deg,rgba(255,154,83,.9),rgba(212,128,69))] backdrop-blur-[18px] rounded-[9.6px] overflow-hidden flex flex-col lg:flex-row"
         >
           <motion.div
             onMouseEnter={() => setContactHovered(true)}
