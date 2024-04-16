@@ -1,7 +1,6 @@
+import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
-import FadeUpAnimation from "./FadeUpAnimation";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion"
 import useScreenSize from "../hooks/useScreenSize";
 
 const InfiniteCarousel = () => {
