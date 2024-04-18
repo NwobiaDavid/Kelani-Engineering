@@ -5,7 +5,7 @@ import "./App.css";
 // import Footer from './sections/Footer'
 // import SubsidiaryShowcase from './sections/SubsidiaryShowcase'
 import { AnimatePresence } from "framer-motion";
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogItem from "./pages/BlogItem";
@@ -17,20 +17,24 @@ import {
   sub_three,
   sub_two,
 } from "./sections/subsidiaryPages/subConstants";
+import { unknown } from "zod";
 // import { One } from "./sections/subsidiaryPages/subsidiaryComponents/One";
 // import One from "./components/One";
 
 function App() {
-  const lenis = new Lenis();
+  const [lenis, setLenis] = useState(null as unknown as Lenis)
+  useEffect(() => {
+    const lenis = new Lenis();
 
-  function raf(time: number) {
-    lenis.raf(time);
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
     requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
+    setLenis(lenis)
+  }, [])
   const location = useLocation();
-
 
   useLayoutEffect(() => {
     // setTimeout(() => window.scrollTo(0, 0), 300);
