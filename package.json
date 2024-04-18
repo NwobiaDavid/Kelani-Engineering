@@ -25,6 +25,7 @@
     "gsap": "^3.12.4",
     "lucide-react": "^0.303.0",
     "markdown-to-jsx": "^7.4.5",
+    "million": "^3.0.6",
     "primereact": "^10.5.1",
     "rc-scrollbars": "^1.1.6",
     "react": "^18.2.0",
