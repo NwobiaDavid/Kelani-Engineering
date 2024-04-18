@@ -137,7 +137,7 @@ const SubsidiaryShowcase = ({
         style={{ backgroundColor: themeColor }}
         className="w-full grid grid-cols-1 lg:grid-cols-2 relative"
       >
-        <div id={type}>
+        <div className="lg:border-r-[0.5px] border-[rgba(255,255,255,0.3)]" id={type}>
           <div className="sticky top-0 overflow-hidden border-b-white border-b lg:border-b-0">
             <div className="relative w-full min-h-[60dvh] lg:h-[100dvh]">
               <figure className="overflow-hidden absolute top-0 right-0 left-0 bottom-0">
