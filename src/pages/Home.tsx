@@ -22,7 +22,7 @@ import { Helmet } from "react-helmet";
 
 const Home = ({ lenis }: { lenis: Lenis }) => {
   const { y: scrollY } = useScrollPosition();
-  const { height, width } = useScreenSize();
+  const { height } = useScreenSize();
   const [scrollTops, setScrollTops] = useState({
     engineering: 0,
     power: 0,
@@ -157,14 +157,14 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
         className="bg-[#FEFEFE] shadow-lg z-[2] relative"
       >
         <Hero lenis={lenis} />
-        <motion.div style={{ y: width <= 768 ? 0 : aboutUsY }} className="">
+        <motion.div style={{ y: window.innerWidth <= 768 ? 0 : aboutUsY }} className="">
           <AboutCompany />
         </motion.div>
 
         <motion.div
           className="engineering"
           ref={engineeringSpotlightRef}
-          style={{ y: width <= 768 ? 0 : engineeringY }}
+          style={{ y: window.innerWidth <= 768 ? 0 : engineeringY }}
         >
           <SubsidiaryShowcase
             setScrollTops={setScrollTops}
@@ -208,7 +208,7 @@ const Home = ({ lenis }: { lenis: Lenis }) => {
         </motion.div>
         <motion.div
           className="power"
-          style={{ y: width <= 768 ? 0 : powerY }}
+          style={{ y: window.innerWidth <= 768 ? 0 : powerY }}
           ref={powerSpotlightRef}
         >
           <SubsidiaryShowcase
