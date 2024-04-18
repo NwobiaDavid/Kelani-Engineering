@@ -9,7 +9,7 @@ const ConnectSection: React.FC<{
   title: string;
   func: string;
   setCtaFormShowing: Dispatch<SetStateAction<boolean>>;
-}> = ({ text, title, func }) => {
+}> = ({ text, title, setCtaFormShowing }) => {
   const ctaButtonVariant = {
     whileHover: {
       scale: 1.05,
@@ -90,7 +90,7 @@ const ConnectSection: React.FC<{
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.45 } } : {}} className="text-[14px] md:text-xl opacity-85 my-[15px] md:my-10 museo-sans">{text}</motion.p>
           <motion.div
-            onClick={eval(func)}
+            onClick={() => setCtaFormShowing(true)}
             variants={ctaButtonVariant}
             onMouseEnter={() => {
               setButtonHovered(true);

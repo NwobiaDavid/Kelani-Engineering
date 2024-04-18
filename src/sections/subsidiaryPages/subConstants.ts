@@ -289,7 +289,7 @@ export const sub_one = {
   connect_function: `() => setCtaFormShowing(true)`
 
 
-  };
+};
 
 //   page 2 -------------------------------------------------
 
@@ -530,10 +530,10 @@ export const sub_two = {
     ],
   },
   connect_text: "Got burning questions or eager to unlock the potential of our solutions? It's time to make contact! Our devoted team is primed to provide tailored support. Reach out for a personalized journey toward your triumph!",
-  connect_title: "VIEW PRODUCTS",
-  connect_function: `() => navigate("/engineering/products")`,
+  connect_title: "GET CONNECTED",
+  connect_function: `() => setCtaFormShowing(true)`,
 
-  };
+};
 
 //   page 3 ---------------------------------------------------------------
 
@@ -797,4 +797,4 @@ export const sub_three = {
   connect_title: "GET CONNECTED",
   connect_function: `() => setCtaFormShowing(true)`
 
-  };
+};

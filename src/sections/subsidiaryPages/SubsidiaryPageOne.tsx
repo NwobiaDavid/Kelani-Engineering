@@ -402,7 +402,7 @@ const SubsidiaryPageOne: React.FC<{
             </div>
           </div>
         </div>
-            
+
 
         <div id="hex-gridd" className="  relative bg-black">
           <motion.div
