@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../styles/about-company.css";
 import "../styles/blog.css";
+import { useNavigate } from "react-router-dom";
 
 const AboutCompany = () => {
   const container = useRef(null);
@@ -14,6 +15,8 @@ const AboutCompany = () => {
   const [titleHovered, setTitleHovered] = useState(false);
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.6]);
+
+  const navigate = useNavigate();
 
   return (
     <motion.section
@@ -42,7 +45,7 @@ const AboutCompany = () => {
       <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-10 bg-white opacity-90"></div>
       {/* <div className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 bg-gray-500"></div> */}
       <div className="grid lg:grid-cols-2 gap-[60px] lg:gap-[80px] xl:gap-[100px]  w-full mx-auto max-w-[1672px] text-[black]">
-        <a className=" " href={`/about`}>
+        <a onClick={() => navigate("/about")} className=" " href={`/about`}>
           <div onMouseEnter={() => setTitleHovered(true)}
             onMouseLeave={() => setTitleHovered(false)} className="relative z-20 cursor-pointer overflow-hidden h-full rounded-[10px]">
             <div className="absolute top-0 flex flex-col justify-end pb-[45px] pl-[30px] right-0 left-0 bottom-0 md:max-w-[500px] lg:max-w-none mx-auto rounded-[10px] overflow-hidden bg-gradient-to-b to-[rgba(0,0,0,0.8)] from-[50%] from-[rgba(0,0,0,0)]  z-20">
