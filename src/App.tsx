@@ -1,5 +1,5 @@
 import Lenis from "@studio-freight/lenis";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 // import AboutCompany from './sections/AboutCompany'
 // import Footer from './sections/Footer'
@@ -109,7 +109,7 @@ function App() {
               />
             }
           />
-          {/* <Route path="/parallax" element={<ParallaxCards />} /> */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </AnimatePresence>
     </div>
