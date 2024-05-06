@@ -28,7 +28,7 @@ const AboutCompany = () => {
       //   y: sectionDecimalScroll.get() > 0 ? 0 : 50,
       //   transition: { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] },
       // }}
-      className="relative -z-10 min-h-[100vh] py-[60px] md:py-[170px] items-center px-[16px] md:px-[24px] lg:px-[40px] mx-auto"
+      className="relative z-10 min-h-[100vh] py-[60px] md:py-[170px] items-center px-[16px] md:px-[24px] lg:px-[40px] mx-auto"
     >
       <div className="w-full h-[100px] absolute -top-[10px] left-0 z-30 bg-gradient-to-b from-[rgba(255,255,255,1)] to-[rgba(255,255,255,0)] rounded-[10px]"></div>
       <figure className="w-full overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-10">
